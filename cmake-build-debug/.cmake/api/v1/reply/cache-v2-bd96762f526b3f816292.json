@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "d:/Labs-2-cours/cmake-build-debug"
+			"value" : "d:/Labs-2-cours/Labs-2-cours/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -575,7 +575,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Labs-2-cours/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -647,7 +647,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/Labs-2-cours"
+			"value" : "D:/Labs-2-cours/Labs-2-cours"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -659,7 +659,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/Clion_project"
+			"value" : "C:/Program Files (x86)/Labs-2-cours"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -875,7 +875,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "Clion_project"
+			"value" : "Labs-2-cours"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1270,7 +1270,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "Clion_project_BINARY_DIR",
+			"name" : "Labs-2-cours_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1279,10 +1279,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Labs-2-cours/cmake-build-debug"
+			"value" : "D:/Labs-2-cours/Labs-2-cours/cmake-build-debug"
 		},
 		{
-			"name" : "Clion_project_IS_TOP_LEVEL",
+			"name" : "Labs-2-cours_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1294,7 +1294,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "Clion_project_SOURCE_DIR",
+			"name" : "Labs-2-cours_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1303,7 +1303,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Labs-2-cours"
+			"value" : "D:/Labs-2-cours/Labs-2-cours"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",

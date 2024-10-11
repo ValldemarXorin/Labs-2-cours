@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Clion_project.exe"
+			"path" : "Labs-2-cours.exe"
 		},
 		{
-			"path" : "Clion_project.pdb"
+			"path" : "Labs-2-cours.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -52,7 +52,7 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "D:/Labs-2-cours/SQLiteLibrary"
+					"path" : "D:/Labs-2-cours/Labs-2-cours/SQLiteLibrary"
 				}
 			],
 			"language" : "CXX",
@@ -82,7 +82,7 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "D:/Labs-2-cours/SQLiteLibrary"
+					"path" : "D:/Labs-2-cours/Labs-2-cours/SQLiteLibrary"
 				}
 			],
 			"language" : "C",
@@ -92,7 +92,7 @@
 			]
 		}
 	],
-	"id" : "Clion_project::@6890427a1f51a3e7e1df",
+	"id" : "Labs-2-cours::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -112,8 +112,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "Clion_project",
-	"nameOnDisk" : "Clion_project.exe",
+	"name" : "Labs-2-cours",
+	"nameOnDisk" : "Labs-2-cours.exe",
 	"paths" : 
 	{
 		"build" : ".",

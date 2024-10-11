@@ -817,8 +817,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "D:/Labs-2-cours/cmake-build-debug",
-		"source" : "D:/Labs-2-cours"
+		"build" : "D:/Labs-2-cours/Labs-2-cours/cmake-build-debug",
+		"source" : "D:/Labs-2-cours/Labs-2-cours"
 	},
 	"version" : 
 	{

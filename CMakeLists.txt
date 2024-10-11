@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.29)
-project(Clion_project)
+project(Labs-2-cours)
 
 set(CMAKE_CXX_STANDARD 20)
 
@@ -19,7 +19,7 @@ set(SQLITE3_SOURCES
 include_directories(${SQLITE3_DIR})
 
 
-add_executable(Clion_project sours/main.cpp ${SQLITE3_SOURCES}
+add_executable(Labs-2-cours sours/main.cpp ${SQLITE3_SOURCES}
         headers/Movie.h
         headers/MovieDatabase.h
 )

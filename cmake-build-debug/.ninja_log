@@ -1,7 +1,8 @@
 # ninja log v6
-11	1121	7503496562403154	CMakeFiles/Clion_project.dir/sours/main.cpp.obj	adc2fa73664ff35e
-134	1066	7503496563619288	CMakeFiles/Clion_project.dir/sours/Movie.cpp.obj	df869fa8d6ee4550
 7473	8620	7503496637012601	Clion_project.exe	d97d60a87ada4d32
-3	346	7503501039816420	build.ninja	2562e63382d911b0
-62	7473	7503496562911465	CMakeFiles/Clion_project.dir/SQLiteLibrary/sqlite3.c.obj	358f1280bacc1be3
-192	1270	7503496564204679	CMakeFiles/Clion_project.dir/sours/MovieDatabase.cpp.obj	f1c3c6948887fa3b
+3	346	7503507836423647	build.ninja	2562e63382d911b0
+3	1200	7503507889286132	CMakeFiles/Labs-2-cours.dir/sours/main.cpp.obj	5cfaf1cf3be0be86
+412	1206	7503507893352778	CMakeFiles/Labs-2-cours.dir/sours/Movie.cpp.obj	a6839c637d133ba7
+474	1425	7503507893991350	CMakeFiles/Labs-2-cours.dir/sours/MovieDatabase.cpp.obj	c0fd00812ccd5fc6
+277	5187	7503507892029959	CMakeFiles/Labs-2-cours.dir/SQLiteLibrary/sqlite3.c.obj	1dacef4b6bc4f1be
+5188	6325	7503507941126755	Labs-2-cours.exe	1143780c2f5fe16c

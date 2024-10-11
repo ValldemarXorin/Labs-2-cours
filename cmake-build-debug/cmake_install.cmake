@@ -1,8 +1,8 @@
-# Install script for directory: D:/Labs-2-cours
+# Install script for directory: D:/Labs-2-cours/Labs-2-cours
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Clion_project")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Labs-2-cours")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/Labs-2-cours/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
