@@ -1,0 +1,7 @@
+# ninja log v6
+11	1121	7503496562403154	CMakeFiles/Clion_project.dir/sours/main.cpp.obj	adc2fa73664ff35e
+134	1066	7503496563619288	CMakeFiles/Clion_project.dir/sours/Movie.cpp.obj	df869fa8d6ee4550
+7473	8620	7503496637012601	Clion_project.exe	d97d60a87ada4d32
+3	346	7503501039816420	build.ninja	2562e63382d911b0
+62	7473	7503496562911465	CMakeFiles/Clion_project.dir/SQLiteLibrary/sqlite3.c.obj	358f1280bacc1be3
+192	1270	7503496564204679	CMakeFiles/Clion_project.dir/sours/MovieDatabase.cpp.obj	f1c3c6948887fa3b
