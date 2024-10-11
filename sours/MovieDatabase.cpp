@@ -71,7 +71,7 @@ const std::vector<Movie>& MovieDatabase::getMovies() const {
     return movies; // Возвращение вектора фильмов
 }
 
-void MovieDatabase::findMovieByTitle(const std::string &title) {
+void MovieDatabase::findMovieByTitle(std::string_view  title) const {
     for (const auto& movie : movies) {
         if (movie.getTitle() == title) {
             movie.display(); // Используем обычную функцию для отображения

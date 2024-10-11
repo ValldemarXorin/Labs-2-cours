@@ -6,6 +6,7 @@
 #include "../headers/Movie.h"
 #include <string>
 #include <vector>
+#include <string_view>
 
 
 class MovieDatabase {
@@ -22,7 +23,7 @@ public:
     void loadMoviesFromDB();
     void saveMoviesToDB();
     const std::vector<Movie>& getMovies() const;
-    void findMovieByTitle(const std::string &title);
+    void findMovieByTitle(std::string_view title) const;
     void updateMovie(const Movie &movie, int id);
     void deleteMovie(int id); // Удаление по ID
     void deleteMovie(const std::string &title); // Перегрузка для удаления по заголовку

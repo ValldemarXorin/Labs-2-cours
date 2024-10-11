@@ -20,7 +20,7 @@ void displayMenu() {
 int main() {
 
 
-        std::unique_ptr<MovieDatabase> db = std::make_unique<MovieDatabase>("MovieDatabase.sqlite");
+        auto db = std::make_unique<MovieDatabase>("MovieDatabase.sqlite");
         int choice;
 
         do {
