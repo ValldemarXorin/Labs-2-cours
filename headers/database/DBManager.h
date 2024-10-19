@@ -10,15 +10,15 @@
 #include "../map_requests.h"
 #include "../../SQLiteLibrary/sqlite3.h"
 
-//class DBManager {
-//    sqlite3* db;
-//    std::string db_name;  // если не используется нигде кроме конструктора - убрать
-//
-//public:
-//
-//    explicit DBManager(std::string db_name);
-//    ~DBManager();
-//
-//
-//};
+class DBManager {
+    sqlite3* db;
+    std::string db_name;  // если не используется нигде кроме конструктора - убрать
+
+    void CreateTable();
+public:
+    explicit DBManager(std::string db_name);
+    ~DBManager();
+
+
+};
 #endif //LABS_2_COURS_DBMANAGER_H
