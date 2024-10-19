@@ -25,8 +25,12 @@ MovieDatabase::~MovieDatabase() {
 void MovieDatabase::createTable() {
     const char *sql = "CREATE TABLE IF NOT EXISTS movies ("
                       "id INTEGER PRIMARY KEY AUTOINCREMENT, "
-                      "title TEXT NOT NULL, "
-                      "year INTEGER NOT NULL);";
+                      "title VARCHAR(50), "
+                      "year INTEGER, "
+                      "genre VARCHAR(30), "
+                      "director VARCHAR(50), "
+                      "rating NUMERIC(3, 1)"
+                      ");";
     char *errMsg;
     if (sqlite3_exec(db, sql, nullptr, nullptr, &errMsg) != SQLITE_OK) {
         std::cerr << "SQL error: " << errMsg << std::endl;
@@ -39,14 +43,17 @@ void MovieDatabase::addMovie(const Movie &movie) {
 }
 
 void MovieDatabase::loadMoviesFromDB() {
-    const char *sql = "SELECT title, year FROM movies;";
+    const char *sql = "SELECT title, year, genre, director, rating FROM movies;";
     sqlite3_stmt *stmt;
     sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr);
 
     while (sqlite3_step(stmt) == SQLITE_ROW) {
         std::string title = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 0));
         int year = sqlite3_column_int(stmt, 1);
-        movies.emplace_back(title, year); // Добавление фильма в вектор
+        std::string genre = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 2));
+        std::string director = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 3));
+        auto rating = static_cast<float> (sqlite3_column_double(stmt, 4));  // записывает в таблицу movie в колонку rating большую точность нежели нужна
+        movies.emplace_back(title, year, genre, director, rating); // Добавление фильма в вектор
     }
 
     sqlite3_finalize(stmt);
@@ -57,11 +64,14 @@ void MovieDatabase::saveMoviesToDB() {
     sqlite3_exec(db, deleteSql, nullptr, nullptr, nullptr);
 
     for (const auto& movie : movies) {
-        const char *sql = "INSERT INTO movies (title, year) VALUES (?, ?);";
+        const char *sql = "INSERT INTO movies (title, year, genre, director, rating) VALUES (?, ?, ?, ?, ?);";
         sqlite3_stmt *stmt;
         sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr);
         sqlite3_bind_text(stmt, 1, movie.getTitle().c_str(), -1, SQLITE_STATIC);
         sqlite3_bind_int(stmt, 2, movie.getYear());
+        sqlite3_bind_text(stmt, 3, movie.getGenre().c_str(), -1, SQLITE_STATIC);
+        sqlite3_bind_text(stmt, 4, movie.getDirector().c_str(), -1, SQLITE_STATIC);
+        sqlite3_bind_double(stmt, 5, movie.getRating());
         sqlite3_step(stmt);
         sqlite3_finalize(stmt);
     }

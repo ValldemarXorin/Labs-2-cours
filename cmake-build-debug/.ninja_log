@@ -1,8 +1,14 @@
 # ninja log v6
 7473	8620	7503496637012601	Clion_project.exe	d97d60a87ada4d32
-3	346	7503507836423647	build.ninja	2562e63382d911b0
-3	1200	7503507889286132	CMakeFiles/Labs-2-cours.dir/sours/main.cpp.obj	5cfaf1cf3be0be86
-412	1206	7503507893352778	CMakeFiles/Labs-2-cours.dir/sours/Movie.cpp.obj	a6839c637d133ba7
-474	1425	7503507893991350	CMakeFiles/Labs-2-cours.dir/sours/MovieDatabase.cpp.obj	c0fd00812ccd5fc6
-277	5187	7503507892029959	CMakeFiles/Labs-2-cours.dir/SQLiteLibrary/sqlite3.c.obj	1dacef4b6bc4f1be
-5188	6325	7503507941126755	Labs-2-cours.exe	1143780c2f5fe16c
+1499	3185	7510778360679579	Labs-2-cours.exe	143908ef7ee57b13
+740	1793	7510777476097204	CMakeFiles/Labs-2-cours.dir/sours/MovieDatabase.cpp.obj	72f0cdd912fd88e6
+727	1719	7510777475960208	CMakeFiles/Labs-2-cours.dir/sours/main.cpp.obj	98249323bdb5e30c
+3	762	7510789023670521	build.ninja	eebb3fca4b222ff0
+734	1543	7510777476036162	CMakeFiles/Labs-2-cours.dir/sours/Movie.cpp.obj	ae63561ab42b03df
+714	1028	7510777475828617	CMakeFiles/Labs-2-cours.dir/Labs-2-cours_autogen/mocs_compilation.cpp.obj	f6d008d517c77e1e
+720	6883	7510777475896126	CMakeFiles/Labs-2-cours.dir/SQLiteLibrary/sqlite3.c.obj	643c70b4511626c3
+11	527	7510778345793542	Labs-2-cours_autogen/timestamp	c4043d153041627a
+11	527	7510778345793542	Labs-2-cours_autogen/mocs_compilation.cpp	c4043d153041627a
+11	527	7510778345793542	D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/mocs_compilation.cpp	c4043d153041627a
+11	527	7510778345793542	D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/timestamp	c4043d153041627a
+528	1499	7510778350963322	CMakeFiles/Labs-2-cours.dir/sours/DBManager.cpp.obj	c8a9e375d16cf221

@@ -35,14 +35,24 @@ int main() {
                     std::cin >> numMovies;
 
                     for (int i = 0; i < numMovies; ++i) {
-                        std::string title;
+                        std::string title, genre, director;
                         int year;
-                        std::cin.ignore();
+                        float rating;
                         std::cout << "Enter title for movie " << (i + 1) << ": ";
+                        std::cin.ignore();
                         std::getline(std::cin, title);
-                        std::cout << "Enter year for movie " << (i + 1) << ": ";
+                        std::cout << "Enter year for movie " << title << ": ";
                         std::cin >> year;
-                        db->addMovie(Movie(title, year));
+                        std::cout << "Enter genre for movie " << title << ": ";
+                        std::cin.ignore();
+                        std::getline(std::cin, genre);
+                        std::cout << "Enter director for movie " << title << ": ";
+                        std::cin.ignore();
+                        std::getline(std::cin, director);
+                        std::cout << "Enter rating for movie " << title << ": ";
+                        std::cin >> rating;
+                        db->addMovie(Movie(title, year, genre, director, rating));
+                        std::cout << std::endl;
                     }
                     break;
                 }
@@ -67,14 +77,23 @@ int main() {
                     int id;
                     std::cout << "Enter the index of the movie to update: ";
                     std::cin >> id;
-                    std::string title;
+                    std::string title, genre, director;
                     int year;
+                    float rating;
                     std::cout << "Enter new title: ";
                     std::cin.ignore();
                     std::getline(std::cin, title);
                     std::cout << "Enter new year: ";
                     std::cin >> year;
-                    db->updateMovie(Movie(title, year), id);
+                    std::cout << "Enter new genre genre for movie " << title << ": ";
+                    std::cin.ignore();
+                    std::getline(std::cin, genre);
+                    std::cout << "Enter new director for movie " << title << ": ";
+                    std::cin.ignore();
+                    std::getline(std::cin, director);
+                    std::cout << "Enter new rating for movie " << title << ": ";
+                    std::cin >> rating;
+                    db->updateMovie(Movie(title, year, genre, director, rating), id);
                     std::cout << "Movie updated.\n";
                     break;
                 }

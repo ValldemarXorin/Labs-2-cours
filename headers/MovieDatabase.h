@@ -22,7 +22,7 @@ public:
     void addMovie(const Movie &movie);
     void loadMoviesFromDB();
     void saveMoviesToDB();
-    const std::vector<Movie>& getMovies() const;
+    [[nodiscard]]const std::vector<Movie>& getMovies() const;
     void findMovieByTitle(std::string_view title) const;
     void updateMovie(const Movie &movie, int id);
     void deleteMovie(int id); // Удаление по ID
