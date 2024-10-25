@@ -47,7 +47,7 @@ std::vector<Movie> MoviesDBManager::load_data_from_DB() {
 
 void MoviesDBManager::save_data_to_DB(std::vector<Movie> movies) {
     sqlite3_exec(db, sql_requests[Movies_delete].c_str(), nullptr, nullptr, nullptr);
-    sqlite3_stmt *stmt;
+    sqlite3_stmt *stmt = nullptr; // убрать nullptr если надо будет
 
     for (const auto& movie : movies) {
         sqlite3_prepare_v2(db, sql_requests[Movies_save].c_str(), -1, &stmt, nullptr);
