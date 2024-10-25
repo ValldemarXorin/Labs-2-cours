@@ -1,126 +1,100 @@
 #include <iostream>
-#include "..\headers\Movie.h"
+#include "../headers/models/Movie.h"
 #include "..\SQLiteLibrary\sqlite3.h"
-#include "..\headers\MovieDatabase.h"
+#include "..\headers\repositories\IMoviesRepository.h"
+#include "..\headers\interface\MainWindow.h"
+#include <QLabel>
+#include <QApplication>
 #include <memory>
 
 
 void displayMenu() {
     std::cout << "\nMenu:\n";
     std::cout << "1. Add movies\n";
-    std::cout << "2. Delete movie by ID\n"; // Новый пункт меню
-    std::cout << "3. Delete movie by title\n"; // Новый пункт меню
-    std::cout << "4. Update a movie\n";
-    std::cout << "5. Find a movie by title\n";
-    std::cout << "6. Display all movies\n";
-    std::cout << "7. Exit\n";
+    std::cout << "2. Delete movie by title\n"; // Новый пункт меню
+    std::cout << "3. Update a movie\n";
+    std::cout << "4. Display all movies\n";
+    std::cout << "5. Exit\n";
 }
 
 
-int main() {
+int main(int argc, char* argv[]) {
+    std::string db_name = "MovieDatabase.sqlite";
+    auto movies_repos = std::make_unique<IMoviesRepository> (db_name);
 
-
-        auto db = std::make_unique<MovieDatabase>("MovieDatabase.sqlite");
-        int choice;
-
-        do {
-            displayMenu();
-            std::cout << "Enter your choice: ";
-            std::cin >> choice;
-
-            switch (choice) {
-                case 1: {
-                    int numMovies;
-                    std::cout << "How many movies would you like to add? ";
-                    std::cin >> numMovies;
-
-                    for (int i = 0; i < numMovies; ++i) {
-                        std::string title, genre, director;
-                        int year;
-                        float rating;
-                        std::cout << "Enter title for movie " << (i + 1) << ": ";
-                        std::cin.ignore();
-                        std::getline(std::cin, title);
-                        std::cout << "Enter year for movie " << title << ": ";
-                        std::cin >> year;
-                        std::cout << "Enter genre for movie " << title << ": ";
-                        std::cin.ignore();
-                        std::getline(std::cin, genre);
-                        std::cout << "Enter director for movie " << title << ": ";
-                        std::cin.ignore();
-                        std::getline(std::cin, director);
-                        std::cout << "Enter rating for movie " << title << ": ";
-                        std::cin >> rating;
-                        db->addMovie(Movie(title, year, genre, director, rating));
-                        std::cout << std::endl;
-                    }
-                    break;
-                }
-                case 2: { // Удаление по ID
-                    int id;
-                    std::cout << "Enter the index of the movie to delete: ";
-                    std::cin >> id;
-                    db->deleteMovie(id);
-                    std::cout << "Movie deleted.\n";
-                    break;
-                }
-                case 3: { // Удаление по заголовку
-                    std::string title;
-                    std::cout << "Enter the title of the movie to delete: ";
-                    std::cin.ignore();
-                    std::getline(std::cin, title);
-                    db->deleteMovie(title);
-                    std::cout << "Movie deleted if it existed.\n";
-                    break;
-                }
-                case 4: {
-                    int id;
-                    std::cout << "Enter the index of the movie to update: ";
-                    std::cin >> id;
-                    std::string title, genre, director;
+    bool end_prog = false;
+    short cont_func;
+    short choose;
+    while (!end_prog) {
+        displayMenu();
+        std::cin >> choose;
+        std::cin.ignore();
+        cont_func = 1;
+        switch (choose) {
+            case 1:
+                while (cont_func == 1) {
+                    std::string title, age_limit, short_description, time;
                     int year;
-                    float rating;
-                    std::cout << "Enter new title: ";
-                    std::cin.ignore();
+                    std::cout << "Enter title of movie: " << std::endl;
                     std::getline(std::cin, title);
-                    std::cout << "Enter new year: ";
-                    std::cin >> year;
-                    std::cout << "Enter new genre genre for movie " << title << ": ";
+                    std::cout << "Enter short description of " << title << ": " << std::endl;
+                    std::getline(std::cin, short_description);
+                    std::cout << "Enter year of " << title << ": " << std::endl;
+                    std::cin >> year; // переделать проверку на вводимый тип данных
+                    std::cout << "Enter time of " << title << ": " << std::endl;
                     std::cin.ignore();
-                    std::getline(std::cin, genre);
-                    std::cout << "Enter new director for movie " << title << ": ";
-                    std::cin.ignore();
-                    std::getline(std::cin, director);
-                    std::cout << "Enter new rating for movie " << title << ": ";
-                    std::cin >> rating;
-                    db->updateMovie(Movie(title, year, genre, director, rating), id);
-                    std::cout << "Movie updated.\n";
-                    break;
+                    std::getline(std::cin, time);
+                    std::cout << "Enter age limit of " << title << ": " << std::endl;
+                    std::getline(std::cin, age_limit);
+                    movies_repos->add_movie(title, short_description, time,
+                                            age_limit, year);
+                    std::cout << "Enter 1 to add another movie and 0 to back menu:" << std::endl;
+                    std::cin >> cont_func;
                 }
-                case 5: {
+                break;
+            case 2:
+                while (cont_func == 1) {
                     std::string title;
-                    std::cout << "Enter the title of the movie to find: ";
-                    std::cin.ignore();
+                    std::cout << "Enter title of movie: " << std::endl;
                     std::getline(std::cin, title);
-                    db->findMovieByTitle(title);
-                    break;
+                    movies_repos->delete_movie(title);
+                    std::cout << "Enter 1 to delete another movie and 0 to back menu:" << std::endl;
+                    std::cin >> cont_func;
                 }
-                case 6: {
-                    std::cout << "All movies:\n";
-                    const auto& movies = db->getMovies(); // Получаем все фильмы
-                    for (size_t i = 0; i < movies.size(); ++i) {
-                        std::cout << i << ": " << movies[i] << std::endl; // Выводим индекс для удобства
-                    }
-                    break;
+                break;
+            case 3:
+                while (cont_func == 1) {
+                    std::string title, new_title, new_age_limit, new_short_description, new_time;
+                    int new_year;
+                    std::cout << "Enter title of movie to update: " << std::endl;
+                    std::getline(std::cin, title);
+                    std::cout << "Enter new title of movie: " << std::endl;
+                    std::getline(std::cin, new_title);
+                    std::cout << "Enter short description of " << new_title << ": " << std::endl;
+                    std::getline(std::cin, new_short_description);
+                    std::cout << "Enter year of " << new_title << ": " << std::endl;
+                    std::cin >> new_year; // переделать проверку на вводимый тип данных
+                    std::cin.ignore();
+                    std::cout << "Enter time of " << new_title << ": " << std::endl;
+                    std::getline(std::cin, new_time);
+                    std::cout << "Enter age limit of " << new_title << ": "<< std::endl;
+                    std::getline(std::cin, new_age_limit);
+                    movies_repos->update_movie(title, new_title, new_short_description,
+                                               new_time, new_age_limit, new_year);
+                    std::cout << "Enter 1 to update another movie and 0 to back menu:" << std::endl;
+                    std::cin >> cont_func;
                 }
-                case 7:
-                    std::cout << "Exiting the program...\n";
-                    break;
-                default:
-                    std::cout << "Invalid choice. Please try again.\n";
-                    break;
-            }
-        } while (choice != 7);
-
-        return 0;
+                break;
+            case 4:
+                movies_repos->display_info();
+                std::cin.ignore();
+                break;
+            case 5:
+                std::cout << "Exit..." << std::endl;
+                end_prog = true;
+                break;
+        }
+        std::system("cls");
+    }
+    return 0;
 }

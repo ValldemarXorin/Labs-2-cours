@@ -7,18 +7,26 @@
 
 #include <iostream>
 #include <string>
-#include "../map_requests.h"
+#include <vector>
+#include "../models/Movie.h"
 #include "../../SQLiteLibrary/sqlite3.h"
 
+template<typename T>
 class DBManager {
-    sqlite3* db;
+protected:
+    sqlite3 *db;
     std::string db_name;  // если не используется нигде кроме конструктора - убрать
 
-    void CreateTable();
 public:
-    explicit DBManager(std::string db_name);
-    ~DBManager();
+    explicit DBManager(std::string &db_name) : db_name(db_name), db(nullptr) {}
 
+    virtual ~DBManager() = default;
 
+    virtual void create_table() = 0;
+
+    virtual std::vector<T> load_data_from_DB() = 0;
+
+    virtual void save_data_to_DB(std::vector<T> data) = 0;
 };
+
 #endif //LABS_2_COURS_DBMANAGER_H

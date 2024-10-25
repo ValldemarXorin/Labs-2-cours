@@ -25,22 +25,13 @@ std::map<int, std::string> sql_requests = {
                                     "short_description TEXT,"
                                     "`time` VARCHAR(10),"
                                     "age_limit VARCHAR(3),"
-                                    "Genre_id INT,"
-                                    "Human_id INT,"
-                                    "Rate_id INT,"
-                                    "Money_id INT,"
-                                    "Links_id INT,"
-                                    "FOREIGN KEY (Genre_id) REFERENCES Genres(id),"
-                                    "FOREIGN KEY (Human_id) REFERENCES Humans(id),"
-                                    "FOREIGN KEY (Rate_id) REFERENCES Rate(id),"
-                                    "FOREIGN KEY (Money_id) REFERENCES Money(id),"
-                                    "FOREIGN KEY (Links_id) REFERENCES Links(id)"
+                                    "year INT"
                                     ");"},
 
         {Movies_select, "SELECT * FROM Movies"},
         {Movies_delete, "DELETE FROM Movies"},
-        {Movies_save, "INSERT INTO movies (title, short_description, time, age_limit,"
-                            "Genre_id, Human_id, Rate_id, Money_id, Links_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);"},
+        {Movies_save, "INSERT INTO Movies (title, short_description, time, age_limit, year) "
+                            "VALUES (?, ?, ?, ?, ?)"},
 
         {Genres_create_table, "CREATE TABLE IF NOT EXISTS Genres ("
                                     "id INT PRIMARY KEY,"

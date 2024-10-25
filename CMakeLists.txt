@@ -28,14 +28,21 @@ add_executable(Labs-2-cours
         ${SQLITE3_DIR}/sqlite3.c
         ${SQLITE3_DIR}/sqlite3.h
         source/main.cpp
-        headers/Movie.h
-        headers/MovieDatabase.h
-        source/main.cpp
-        source/Movie.cpp
-        source/MovieDatabase.cpp
+        headers/models/Movie.h
+        source/models/Movie.cpp
         headers/database/DBManager.h
         headers/map_requests.h
-        source/database/DBManager.cpp
+        source/interface/MainWindow.cpp
+        headers/interface/MainWindow.h
+        source/interface/MainWindow.ui
+        headers/database/MoviesDBManager.h
+        source/database/MoviesDBManager.cpp
+        headers/repositories/IMoviesRepository.h
+        source/repositories/IMoviesRepository.cpp
+        headers/filters/MovieFilters.h
+        headers/filters/Filters.h
+        headers/MovieErrorExceptions.h
+        source/MovieErrorExceptions.cpp
 )
 
 target_link_libraries(Labs-2-cours

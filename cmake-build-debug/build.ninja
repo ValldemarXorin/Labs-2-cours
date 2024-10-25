@@ -73,29 +73,45 @@ build CMakeFiles/Labs-2-cours.dir/source/main.cpp.obj: CXX_COMPILER__Labs-2-cour
   OBJECT_DIR = CMakeFiles\Labs-2-cours.dir
   OBJECT_FILE_DIR = CMakeFiles\Labs-2-cours.dir\source
 
-build CMakeFiles/Labs-2-cours.dir/source/Movie.cpp.obj: CXX_COMPILER__Labs-2-cours_unscanned_Debug D$:/Labs-2-cours/Labs-2-cours/source/Movie.cpp || cmake_object_order_depends_target_Labs-2-cours
+build CMakeFiles/Labs-2-cours.dir/source/models/Movie.cpp.obj: CXX_COMPILER__Labs-2-cours_unscanned_Debug D$:/Labs-2-cours/Labs-2-cours/source/models/Movie.cpp || cmake_object_order_depends_target_Labs-2-cours
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\Labs-2-cours.dir\source\Movie.cpp.obj.d
+  DEP_FILE = CMakeFiles\Labs-2-cours.dir\source\models\Movie.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -isystem D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/include -isystem D:/Qt/6.7.3/mingw_64/include/QtCore -isystem D:/Qt/6.7.3/mingw_64/include -isystem D:/Qt/6.7.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.7.3/mingw_64/include/QtGui -isystem D:/Qt/6.7.3/mingw_64/include/QtWidgets
   OBJECT_DIR = CMakeFiles\Labs-2-cours.dir
-  OBJECT_FILE_DIR = CMakeFiles\Labs-2-cours.dir\source
+  OBJECT_FILE_DIR = CMakeFiles\Labs-2-cours.dir\source\models
 
-build CMakeFiles/Labs-2-cours.dir/source/MovieDatabase.cpp.obj: CXX_COMPILER__Labs-2-cours_unscanned_Debug D$:/Labs-2-cours/Labs-2-cours/source/MovieDatabase.cpp || cmake_object_order_depends_target_Labs-2-cours
+build CMakeFiles/Labs-2-cours.dir/source/interface/MainWindow.cpp.obj: CXX_COMPILER__Labs-2-cours_unscanned_Debug D$:/Labs-2-cours/Labs-2-cours/source/interface/MainWindow.cpp || cmake_object_order_depends_target_Labs-2-cours
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\Labs-2-cours.dir\source\MovieDatabase.cpp.obj.d
+  DEP_FILE = CMakeFiles\Labs-2-cours.dir\source\interface\MainWindow.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -isystem D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/include -isystem D:/Qt/6.7.3/mingw_64/include/QtCore -isystem D:/Qt/6.7.3/mingw_64/include -isystem D:/Qt/6.7.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.7.3/mingw_64/include/QtGui -isystem D:/Qt/6.7.3/mingw_64/include/QtWidgets
   OBJECT_DIR = CMakeFiles\Labs-2-cours.dir
-  OBJECT_FILE_DIR = CMakeFiles\Labs-2-cours.dir\source
+  OBJECT_FILE_DIR = CMakeFiles\Labs-2-cours.dir\source\interface
 
-build CMakeFiles/Labs-2-cours.dir/source/database/DBManager.cpp.obj: CXX_COMPILER__Labs-2-cours_unscanned_Debug D$:/Labs-2-cours/Labs-2-cours/source/database/DBManager.cpp || cmake_object_order_depends_target_Labs-2-cours
+build CMakeFiles/Labs-2-cours.dir/source/database/MoviesDBManager.cpp.obj: CXX_COMPILER__Labs-2-cours_unscanned_Debug D$:/Labs-2-cours/Labs-2-cours/source/database/MoviesDBManager.cpp || cmake_object_order_depends_target_Labs-2-cours
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\Labs-2-cours.dir\source\database\DBManager.cpp.obj.d
+  DEP_FILE = CMakeFiles\Labs-2-cours.dir\source\database\MoviesDBManager.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -isystem D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/include -isystem D:/Qt/6.7.3/mingw_64/include/QtCore -isystem D:/Qt/6.7.3/mingw_64/include -isystem D:/Qt/6.7.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.7.3/mingw_64/include/QtGui -isystem D:/Qt/6.7.3/mingw_64/include/QtWidgets
   OBJECT_DIR = CMakeFiles\Labs-2-cours.dir
   OBJECT_FILE_DIR = CMakeFiles\Labs-2-cours.dir\source\database
+
+build CMakeFiles/Labs-2-cours.dir/source/repositories/IMoviesRepository.cpp.obj: CXX_COMPILER__Labs-2-cours_unscanned_Debug D$:/Labs-2-cours/Labs-2-cours/source/repositories/IMoviesRepository.cpp || cmake_object_order_depends_target_Labs-2-cours
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Labs-2-cours.dir\source\repositories\IMoviesRepository.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -isystem D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/include -isystem D:/Qt/6.7.3/mingw_64/include/QtCore -isystem D:/Qt/6.7.3/mingw_64/include -isystem D:/Qt/6.7.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.7.3/mingw_64/include/QtGui -isystem D:/Qt/6.7.3/mingw_64/include/QtWidgets
+  OBJECT_DIR = CMakeFiles\Labs-2-cours.dir
+  OBJECT_FILE_DIR = CMakeFiles\Labs-2-cours.dir\source\repositories
+
+build CMakeFiles/Labs-2-cours.dir/source/MovieErrorExceptions.cpp.obj: CXX_COMPILER__Labs-2-cours_unscanned_Debug D$:/Labs-2-cours/Labs-2-cours/source/MovieErrorExceptions.cpp || cmake_object_order_depends_target_Labs-2-cours
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Labs-2-cours.dir\source\MovieErrorExceptions.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -isystem D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/include -isystem D:/Qt/6.7.3/mingw_64/include/QtCore -isystem D:/Qt/6.7.3/mingw_64/include -isystem D:/Qt/6.7.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.7.3/mingw_64/include/QtGui -isystem D:/Qt/6.7.3/mingw_64/include/QtWidgets
+  OBJECT_DIR = CMakeFiles\Labs-2-cours.dir
+  OBJECT_FILE_DIR = CMakeFiles\Labs-2-cours.dir\source
 
 
 # =============================================================================
@@ -105,7 +121,7 @@ build CMakeFiles/Labs-2-cours.dir/source/database/DBManager.cpp.obj: CXX_COMPILE
 #############################################
 # Link the executable Labs-2-cours.exe
 
-build Labs-2-cours.exe: CXX_EXECUTABLE_LINKER__Labs-2-cours_Debug CMakeFiles/Labs-2-cours.dir/Labs-2-cours_autogen/mocs_compilation.cpp.obj CMakeFiles/Labs-2-cours.dir/SQLiteLibrary/sqlite3.c.obj CMakeFiles/Labs-2-cours.dir/source/main.cpp.obj CMakeFiles/Labs-2-cours.dir/source/Movie.cpp.obj CMakeFiles/Labs-2-cours.dir/source/MovieDatabase.cpp.obj CMakeFiles/Labs-2-cours.dir/source/database/DBManager.cpp.obj | D$:/Qt/6.7.3/mingw_64/lib/libQt6Widgets.a D$:/Qt/6.7.3/mingw_64/lib/libQt6Gui.a D$:/Qt/6.7.3/mingw_64/lib/libQt6Core.a || Labs-2-cours_autogen Labs-2-cours_autogen_timestamp_deps
+build Labs-2-cours.exe: CXX_EXECUTABLE_LINKER__Labs-2-cours_Debug CMakeFiles/Labs-2-cours.dir/Labs-2-cours_autogen/mocs_compilation.cpp.obj CMakeFiles/Labs-2-cours.dir/SQLiteLibrary/sqlite3.c.obj CMakeFiles/Labs-2-cours.dir/source/main.cpp.obj CMakeFiles/Labs-2-cours.dir/source/models/Movie.cpp.obj CMakeFiles/Labs-2-cours.dir/source/interface/MainWindow.cpp.obj CMakeFiles/Labs-2-cours.dir/source/database/MoviesDBManager.cpp.obj CMakeFiles/Labs-2-cours.dir/source/repositories/IMoviesRepository.cpp.obj CMakeFiles/Labs-2-cours.dir/source/MovieErrorExceptions.cpp.obj | D$:/Qt/6.7.3/mingw_64/lib/libQt6Widgets.a D$:/Qt/6.7.3/mingw_64/lib/libQt6Gui.a D$:/Qt/6.7.3/mingw_64/lib/libQt6Core.a || Labs-2-cours_autogen Labs-2-cours_autogen_timestamp_deps
   FLAGS = -g
   LINK_LIBRARIES = D:/Qt/6.7.3/mingw_64/lib/libQt6Widgets.a  D:/Qt/6.7.3/mingw_64/lib/libQt6Gui.a  D:/Qt/6.7.3/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Labs-2-cours.dir
@@ -148,7 +164,7 @@ build Labs-2-cours_autogen_timestamp_deps: phony
 #############################################
 # Utility command for Labs-2-cours_autogen
 
-build Labs-2-cours_autogen: phony CMakeFiles/Labs-2-cours_autogen Labs-2-cours_autogen/timestamp Labs-2-cours_autogen/mocs_compilation.cpp Labs-2-cours_autogen_timestamp_deps
+build Labs-2-cours_autogen: phony CMakeFiles/Labs-2-cours_autogen Labs-2-cours_autogen/include/source/interface/ui_mainwindow.h Labs-2-cours_autogen/timestamp Labs-2-cours_autogen/mocs_compilation.cpp Labs-2-cours_autogen_timestamp_deps
 
 
 #############################################
@@ -165,7 +181,7 @@ build Labs-2-cours_autogen/timestamp Labs-2-cours_autogen/mocs_compilation.cpp |
 #############################################
 # Phony custom command for CMakeFiles\Labs-2-cours_autogen
 
-build CMakeFiles/Labs-2-cours_autogen | ${cmake_ninja_workdir}CMakeFiles/Labs-2-cours_autogen: phony Labs-2-cours_autogen/timestamp || Labs-2-cours_autogen_timestamp_deps
+build CMakeFiles/Labs-2-cours_autogen Labs-2-cours_autogen/include/source/interface/ui_mainwindow.h | ${cmake_ninja_workdir}CMakeFiles/Labs-2-cours_autogen ${cmake_ninja_workdir}Labs-2-cours_autogen/include/source/interface/ui_mainwindow.h: phony Labs-2-cours_autogen/timestamp || Labs-2-cours_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.
