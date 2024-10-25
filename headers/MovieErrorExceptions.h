@@ -4,7 +4,7 @@
 
 #ifndef LABS_2_COURS_ERROREXCEPTIONS_H
 #define LABS_2_COURS_ERROREXCEPTIONS_H
-#include <stdio.h>
+#include <iostream>
 #include <regex>
 
 class MovieErrorExceptions {

@@ -1,7 +1,7 @@
 #include "../../headers/models/Movie.h"
 
-Movie::Movie(const std::string &title, std::string &short_description, std::string &time,
-             std::string &age_limit, int year) : title(title), short_description(short_description),
+Movie::Movie(const std::string &title, const std::string &short_description, const std::string &time,
+             const std::string &age_limit, int year) : title(title), short_description(short_description),
                                                  time(time), age_limit(age_limit), year(year) {};
 
 

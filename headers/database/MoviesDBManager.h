@@ -13,9 +13,9 @@ class MoviesDBManager : protected DBManager<Movie> {
     //static MoviesDBManager* instance;
 
 public:
-    explicit MoviesDBManager(std::string &db_name);
+    explicit MoviesDBManager(std::string& db_name);
 
-    virtual ~MoviesDBManager() override;
+    ~MoviesDBManager() override;
 
     void create_table() override;
 

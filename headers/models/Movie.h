@@ -13,12 +13,10 @@ class Movie {
     int year;
 
 public:
-    Movie(const std::string &title, std::string &short_description, std::string &time,
-          std::string &age_limit, int year);
+    Movie(const std::string &title, const std::string &short_description, const std::string &time,
+          const std::string &age_limit, int year);
 
     ~Movie() = default;
-
-    //Movie& operator=(const Movie& other) = default;
 
     [[nodiscard]] const std::string &get_title() const;
 
@@ -43,19 +41,6 @@ public:
         return os;
     }
 };
-
-
-//[[nodiscard]] int get_Genre_id() const;
-//[[nodiscard]] int get_Human_id() const;
-//[[nodiscard]] int get_Rate_id() const;
-//[[nodiscard]] int get_Money_id() const;
-//[[nodiscard]] int get_Links_id() const;
-
-//int Genre_id;
-//int Human_id;
-//int Rate_id;
-//int Money_id;
-//int Links_id;
 
 #endif //CLION_PROJECT_FILM_H
 

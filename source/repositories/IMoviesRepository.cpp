@@ -4,7 +4,7 @@
 
 #include "../../headers/repositories/IMoviesRepository.h"
 
-bool IMoviesRepository::check_arguments(std::string &time, std::string &age_limit, int year) {
+bool IMoviesRepository::check_arguments(std::string &time, std::string &age_limit, int year) const {
     try {
         MovieErrorExceptions::validate_year(year);
     }
