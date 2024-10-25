@@ -17,7 +17,7 @@
 class IMoviesRepository : public MoviesDBManager, public MovieErrorExceptions {
     std::vector<Movie> movies;
 
-    bool check_arguments(std::string &time, std::string &age_limit, int year) const;
+    bool check_arguments(const std::string &time, const std::string &age_limit, int year) const;
 
 public:
     explicit IMoviesRepository(std::string &db_name);
@@ -29,7 +29,7 @@ public:
 
     void display_info();
 
-    void update_movie(const std::string &title, const std::string &new_title, const std::string &new_short_description,
+    void update_movie(std::string_view title, const std::string &new_title, const std::string &new_short_description,
                       std::string &new_time, std::string &new_age_limit, int new_year);
 
     void delete_movie(std::string_view title);

@@ -5,7 +5,7 @@
 #include "../../headers/map_requests.h"
 #include "../../headers/models/Movie.h"
 
-MoviesDBManager::MoviesDBManager(std::string& db_name) : DBManager<Movie>(db_name) {
+MoviesDBManager::MoviesDBManager(const std::string& db_name) : DBManager<Movie>(db_name) {
     if (sqlite3_open(db_name.c_str(), &db)) {
         std::cerr << "Can't open database: " << sqlite3_errmsg(db) << std::endl;
         db = nullptr;

@@ -5,26 +5,26 @@
 #include "../../headers/repositories/IMoviesRepository.h"
 #include <string_view>
 
-bool IMoviesRepository::check_arguments(std::string &time, std::string &age_limit, int year) const {
+bool IMoviesRepository::check_arguments(const std::string &time, const std::string &age_limit, int year) const {
     try {
         MovieErrorExceptions::validate_year(year);
     }
     catch (const std::invalid_argument& err) {
-        std::cout << "This movie invalid" << std::endl;
+        std::cout << "This movie invalid" << err.what() << std::endl;
         return false;
     }
     try {
         MovieErrorExceptions::validate_time(time);
     }
     catch (const std::invalid_argument& err) {
-        std::cout << "This movie invalid" << std::endl;
+        std::cout << "This movie invalid" << err.what() << std::endl;
         return false;
     }
     try {
         MovieErrorExceptions::validate_age_limit(age_limit);
     }
     catch (const std::invalid_argument& err) {
-        std::cout << "This movie invalid" << std::endl;
+        std::cout << "This movie invalid" << err.what() << std::endl;
         return false;
     }
     return true;
@@ -50,7 +50,7 @@ void IMoviesRepository::display_info() {
     }
 }
 
-void IMoviesRepository::update_movie(const std::string &title, const std::string &new_title,
+void IMoviesRepository::update_movie(std::string_view title, const std::string &new_title,
                                      const std::string &new_short_description, std::string &new_time,
                                      std::string &new_age_limit, int new_year) {
     if (!check_arguments(new_time, new_age_limit, new_year))
