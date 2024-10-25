@@ -8,21 +8,21 @@ bool IMoviesRepository::check_arguments(std::string &time, std::string &age_limi
     try {
         MovieErrorExceptions::validate_year(year);
     }
-    catch (const std::invalid_argument err) {
+    catch (const std::invalid_argument& err) {
         std::cout << "This movie invalid" << std::endl;
         return false;
     }
     try {
         MovieErrorExceptions::validate_time(time);
     }
-    catch (const std::invalid_argument err) {
+    catch (const std::invalid_argument& err) {
         std::cout << "This movie invalid" << std::endl;
         return false;
     }
     try {
         MovieErrorExceptions::validate_age_limit(age_limit);
     }
-    catch (const std::invalid_argument err) {
+    catch (const std::invalid_argument& err) {
         std::cout << "This movie invalid" << std::endl;
         return false;
     }
