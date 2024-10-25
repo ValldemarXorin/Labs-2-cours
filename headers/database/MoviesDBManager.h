@@ -15,6 +15,10 @@ class MoviesDBManager : protected DBManager<Movie> {
 public:
     explicit MoviesDBManager(const std::string& db_name);
 
+    MoviesDBManager(const MoviesDBManager& other) = delete;
+
+    MoviesDBManager& operator=(const MoviesDBManager& other) = delete;
+
     ~MoviesDBManager() override;
 
     void create_table() override;

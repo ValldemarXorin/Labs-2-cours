@@ -22,6 +22,10 @@ class IMoviesRepository : public MoviesDBManager, public MovieErrorExceptions {
 public:
     explicit IMoviesRepository(const std::string &db_name);
 
+    IMoviesRepository(const IMoviesRepository& other) = delete;
+
+    IMoviesRepository& operator=(const IMoviesRepository& other) = delete;
+
     ~IMoviesRepository() override;
 
     void add_movie(const std::string &title, const std::string &short_description,

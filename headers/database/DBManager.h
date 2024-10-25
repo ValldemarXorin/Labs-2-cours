@@ -20,6 +20,10 @@ protected:
 public:
     explicit DBManager(const std::string &db_name) : db_name(db_name) {}
 
+    DBManager(const DBManager& other) = delete;
+
+    DBManager& operator=(const DBManager& other) = delete;
+
     virtual ~DBManager() = default;
 
     virtual void create_table() = 0;
