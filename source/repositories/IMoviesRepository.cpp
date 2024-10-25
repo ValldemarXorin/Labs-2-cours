@@ -30,7 +30,7 @@ bool IMoviesRepository::check_arguments(const std::string &time, const std::stri
     return true;
 }
 
-IMoviesRepository::IMoviesRepository(std::string &db_name) : MoviesDBManager(db_name) {
+IMoviesRepository::IMoviesRepository(const std::string &db_name) : MoviesDBManager(db_name) {
     movies = MoviesDBManager::load_data_from_DB();
 }
 
@@ -39,7 +39,7 @@ IMoviesRepository::~IMoviesRepository() {
 }
 
 void IMoviesRepository::add_movie(const std::string &title, const std::string &short_description,
-                                  std::string &time, std::string &age_limit, int year) {
+                                  const std::string &time, const std::string &age_limit, int year) {
     if (check_arguments(time, age_limit, year))
         movies.emplace_back(Movie(title, short_description, time, age_limit, year));
 }

@@ -20,12 +20,12 @@ class IMoviesRepository : public MoviesDBManager, public MovieErrorExceptions {
     bool check_arguments(const std::string &time, const std::string &age_limit, int year) const;
 
 public:
-    explicit IMoviesRepository(std::string &db_name);
+    explicit IMoviesRepository(const std::string &db_name);
 
     ~IMoviesRepository() override;
 
     void add_movie(const std::string &title, const std::string &short_description,
-                   std::string &time, std::string &age_limit, int year);
+                   const std::string &time, const std::string &age_limit, int year);
 
     void display_info();
 
