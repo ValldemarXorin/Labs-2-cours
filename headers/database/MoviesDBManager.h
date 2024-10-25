@@ -9,7 +9,7 @@
 #include "../../SQLiteLibrary/sqlite3.h"
 
 
-class MoviesDBManager : protected DBManager<Movie> {
+class MoviesDBManager : private DBManager<Movie> {
     //static MoviesDBManager* instance;
 
 public:

@@ -13,7 +13,6 @@
 
 template<typename T>
 class DBManager {
-protected:
     sqlite3 *db;
     std::string db_name;  // если не используется нигде кроме конструктора - убрать
 
