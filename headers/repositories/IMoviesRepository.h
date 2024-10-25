@@ -34,7 +34,7 @@ public:
     void display_info();
 
     void update_movie(std::string_view title, const std::string &new_title, const std::string &new_short_description,
-                      std::string &new_time, std::string &new_age_limit, int new_year);
+                      const std::string &new_time, const std::string &new_age_limit, int new_year);
 
     void delete_movie(std::string_view title);
 

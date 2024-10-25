@@ -51,8 +51,8 @@ void IMoviesRepository::display_info() {
 }
 
 void IMoviesRepository::update_movie(std::string_view title, const std::string &new_title,
-                                     const std::string &new_short_description, std::string &new_time,
-                                     std::string &new_age_limit, int new_year) {
+                                     const std::string &new_short_description, const std::string &new_time,
+                                     const std::string &new_age_limit, int new_year) {
     if (!check_arguments(new_time, new_age_limit, new_year))
         return;
     for (int i = 0; i < movies.size(); ++i) {
