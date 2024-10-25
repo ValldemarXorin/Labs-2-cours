@@ -10,7 +10,6 @@
 
 
 class MoviesDBManager : protected DBManager<Movie> {
-    //static MoviesDBManager* instance;
 
 public:
     explicit MoviesDBManager(const std::string& db_name);

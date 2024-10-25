@@ -10,7 +10,7 @@ MoviesDBManager::MoviesDBManager(const std::string& db_name) : DBManager<Movie>(
         std::cerr << "Can't open database: " << sqlite3_errmsg(db) << std::endl;
         db = nullptr;
     }
-    create_table();
+    MoviesDBManager::create_table();
 }
 
 MoviesDBManager::~MoviesDBManager() { // следить за тем, чтобы перед деструктором вызывался метод сохранения в бд данных
