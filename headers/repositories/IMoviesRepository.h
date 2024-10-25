@@ -10,6 +10,7 @@
 #include "../database/DBManager.h"
 #include "../MovieErrorExceptions.h"
 #include <vector>
+#include <string_view>
 
 
 //начал делать
@@ -23,15 +24,15 @@ public:
 
     ~IMoviesRepository() override;
 
-    void add_movie(std::string &title, std::string &short_description,
+    void add_movie(const std::string &title, const std::string &short_description,
                    std::string &time, std::string &age_limit, int year);
 
     void display_info();
 
-    void update_movie(std::string &title, std::string &new_title, std::string &new_short_description,
+    void update_movie(const std::string &title, const std::string &new_title, const std::string &new_short_description,
                       std::string &new_time, std::string &new_age_limit, int new_year);
 
-    void delete_movie(const std::string& title);
+    void delete_movie(std::string_view title);
 
     const Movie &operator[](size_t index) const {
         if (index >= movies.size())

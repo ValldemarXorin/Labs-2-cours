@@ -3,6 +3,7 @@
 //
 
 #include "../../headers/repositories/IMoviesRepository.h"
+#include <string_view>
 
 bool IMoviesRepository::check_arguments(std::string &time, std::string &age_limit, int year) const {
     try {
@@ -37,7 +38,7 @@ IMoviesRepository::~IMoviesRepository() {
     MoviesDBManager::save_data_to_DB(movies);
 }
 
-void IMoviesRepository::add_movie(std::string &title, std::string &short_description,
+void IMoviesRepository::add_movie(const std::string &title, const std::string &short_description,
                                   std::string &time, std::string &age_limit, int year) {
     if (check_arguments(time, age_limit, year))
         movies.emplace_back(Movie(title, short_description, time, age_limit, year));
@@ -49,8 +50,8 @@ void IMoviesRepository::display_info() {
     }
 }
 
-void IMoviesRepository::update_movie(std::string &title, std::string &new_title,
-                                     std::string &new_short_description, std::string &new_time,
+void IMoviesRepository::update_movie(const std::string &title, const std::string &new_title,
+                                     const std::string &new_short_description, std::string &new_time,
                                      std::string &new_age_limit, int new_year) {
     if (!check_arguments(new_time, new_age_limit, new_year))
         return;
@@ -63,7 +64,7 @@ void IMoviesRepository::update_movie(std::string &title, std::string &new_title,
     std::cout << "This movie doesn't exist." << std::endl;
 }
 
-void IMoviesRepository::delete_movie(const std::string& title) {
+void IMoviesRepository::delete_movie(std::string_view title) {
     for (int i = 0; i < movies.size(); ++i) {
         if (movies[i].get_title() == title) {
             movies.erase(movies.begin() + i);
