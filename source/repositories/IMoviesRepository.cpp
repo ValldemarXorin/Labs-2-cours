@@ -40,7 +40,7 @@ IMoviesRepository::~IMoviesRepository() {
 void IMoviesRepository::add_movie(std::string &title, std::string &short_description,
                                   std::string &time, std::string &age_limit, int year) {
     if (check_arguments(time, age_limit, year))
-        movies.push_back(Movie(title, short_description, time, age_limit, year));
+        movies.emplace_back(Movie(title, short_description, time, age_limit, year));
 }
 
 void IMoviesRepository::display_info() {
@@ -63,7 +63,7 @@ void IMoviesRepository::update_movie(std::string &title, std::string &new_title,
     std::cout << "This movie doesn't exist." << std::endl;
 }
 
-void IMoviesRepository::delete_movie(std::string title) {
+void IMoviesRepository::delete_movie(const std::string& title) {
     for (int i = 0; i < movies.size(); ++i) {
         if (movies[i].get_title() == title) {
             movies.erase(movies.begin() + i);

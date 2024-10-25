@@ -9,20 +9,20 @@
 #include "../../SQLiteLibrary/sqlite3.h"
 
 
-class MoviesDBManager : private DBManager<Movie> {
+class MoviesDBManager : protected DBManager<Movie> {
     //static MoviesDBManager* instance;
 
 public:
     explicit MoviesDBManager(std::string &db_name);
 
-    virtual ~MoviesDBManager();
+    virtual ~MoviesDBManager() override;
 
     void create_table() override;
 
     std::vector<Movie> load_data_from_DB() override; // может уменьшить количесто кода не теряя читаемости. Так же это может улучшить расширяемость проекта
     void save_data_to_DB(std::vector<Movie> movies) override; // то же самое, что в 18 строке надо доделать
 
-    //static MoviesDBManager* get_instance();
+    //friend MoviesDBManager* get_instance();
 };
 
 #endif //LABS_2_COURS_MOVIESDBMANAGER_H

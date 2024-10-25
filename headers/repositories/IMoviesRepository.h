@@ -31,7 +31,7 @@ public:
     void update_movie(std::string &title, std::string &new_title, std::string &new_short_description,
                       std::string &new_time, std::string &new_age_limit, int new_year);
 
-    void delete_movie(std::string title);
+    void delete_movie(const std::string& title);
 
     const Movie &operator[](size_t index) const {
         if (index >= movies.size())

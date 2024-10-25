@@ -13,11 +13,12 @@
 
 template<typename T>
 class DBManager {
-    sqlite3 *db;
+protected:
+    sqlite3 *db{nullptr};
     std::string db_name;  // если не используется нигде кроме конструктора - убрать
 
 public:
-    explicit DBManager(std::string &db_name) : db_name(db_name), db(nullptr) {}
+    explicit DBManager(const std::string &db_name) : db_name(db_name) {}
 
     virtual ~DBManager() = default;
 

@@ -50,6 +50,7 @@ int main(int argc, char* argv[]) {
                                             age_limit, year);
                     std::cout << "Enter 1 to add another movie and 0 to back menu:" << std::endl;
                     std::cin >> cont_func;
+                    std::cin.ignore();
                 }
                 break;
             case 2:
@@ -60,6 +61,7 @@ int main(int argc, char* argv[]) {
                     movies_repos->delete_movie(title);
                     std::cout << "Enter 1 to delete another movie and 0 to back menu:" << std::endl;
                     std::cin >> cont_func;
+                    std::cin.ignore();
                 }
                 break;
             case 3:
@@ -83,13 +85,14 @@ int main(int argc, char* argv[]) {
                                                new_time, new_age_limit, new_year);
                     std::cout << "Enter 1 to update another movie and 0 to back menu:" << std::endl;
                     std::cin >> cont_func;
+                    std::cin.ignore();
                 }
                 break;
             case 4:
                 movies_repos->display_info();
                 std::cin.ignore();
                 break;
-            case 5:
+            default:
                 std::cout << "Exit..." << std::endl;
                 end_prog = true;
                 break;
