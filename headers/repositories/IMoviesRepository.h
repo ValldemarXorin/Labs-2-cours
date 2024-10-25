@@ -16,6 +16,7 @@
 //начал делать
 class IMoviesRepository : public MoviesDBManager, public MovieErrorExceptions {
     std::vector<Movie> movies;
+    IMoviesRepository* instance; //
 
     bool check_arguments(const std::string &time, const std::string &age_limit, int year) const;
 
@@ -43,6 +44,8 @@ public:
             throw std::out_of_range("Index out of range");
         return movies[index];
     }
+
+    IMoviesRepository* get_instance();
 };
 
 #endif //LABS_2_COURS_IMOVIESREPOSITORY_H

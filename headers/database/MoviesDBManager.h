@@ -25,8 +25,6 @@ public:
 
     std::vector<Movie> load_data_from_DB() override; // может уменьшить количесто кода не теряя читаемости. Так же это может улучшить расширяемость проекта
     void save_data_to_DB(std::vector<Movie> movies) override; // то же самое, что в 18 строке надо доделать
-
-    //friend MoviesDBManager* get_instance();
 };
 
 #endif //LABS_2_COURS_MOVIESDBMANAGER_H

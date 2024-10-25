@@ -73,3 +73,10 @@ void IMoviesRepository::delete_movie(std::string_view title) {
     }
     std::cout << "This movie doesn't exist." << std::endl;
 }
+
+IMoviesRepository* IMoviesRepository::get_instance() {
+    std::string db_name = "MovieDatabase.sqlite";
+    if (IMoviesRepository::instance == nullptr)
+        IMoviesRepository::instance = new IMoviesRepository(db_name);
+    return IMoviesRepository::instance;
+}

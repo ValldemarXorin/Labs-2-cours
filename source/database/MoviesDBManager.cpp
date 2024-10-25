@@ -61,10 +61,3 @@ void MoviesDBManager::save_data_to_DB(std::vector<Movie> movies) {
     }
     sqlite3_finalize(stmt);
 }
-
-//MoviesDBManager* MoviesDBManager::get_instance() {
-//    std::string db_name = "MovieDatabase.sqlite";
-//    if (MoviesDBManager::instance == nullptr)
-//        MoviesDBManager::instance = new MoviesDBManager(db_name);
-//    return MoviesDBManager::instance;
-//}
