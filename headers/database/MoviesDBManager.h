@@ -7,9 +7,13 @@
 
 #include "DBManager.h"
 #include "../../SQLiteLibrary/sqlite3.h"
+#include <math.h>
 
 
 class MoviesDBManager : protected DBManager<Movie> {
+
+    enum {TITLE = 1, DESCRIPTION, GENRE, REALEASE_YEAR, RUNTIME,
+            RATING, AGE_LIMIT, LINK_ID};
 
 public:
     explicit MoviesDBManager(const std::string& db_name);

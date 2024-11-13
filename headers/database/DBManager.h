@@ -11,6 +11,7 @@
 #include "../models/Movie.h"
 #include "../../SQLiteLibrary/sqlite3.h"
 
+
 template<typename T>
 class DBManager {
 protected:

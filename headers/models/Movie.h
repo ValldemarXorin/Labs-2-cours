@@ -7,39 +7,37 @@
 
 class Movie {
     std::string title;
-    std::string short_description;
-    std::string time;
+    std::string description;
+    std::string genre;
+    int release_year;
+    std::string runtime;
+    float rating;
+    int link_id;
     std::string age_limit;
-    int year;
 
 public:
-    Movie(const std::string &title, const std::string &short_description, const std::string &time,
-          const std::string &age_limit, int year);
+    Movie(const std::string &title, const std::string &description, const std::string &genre,
+          int realease_year, const std::string &runtime, float rating, int link_id, std::string& age_limit);
 
     ~Movie() = default;
 
     [[nodiscard]] const std::string &get_title() const;
 
-    [[nodiscard]] const std::string &get_short_description() const;
+    [[nodiscard]] const std::string &get_description() const;
 
-    [[nodiscard]] const std::string &get_time() const;
+    [[nodiscard]] const std::string &get_genre() const;
+
+    [[nodiscard]] int get_release_year() const;
+
+    [[nodiscard]] const std::string &get_runtime() const;
+
+    [[nodiscard]] float get_rating() const;
+
+    [[nodiscard]] int get_link_id() const;
 
     [[nodiscard]] const std::string &get_age_limit() const;
 
-    [[nodiscard]] int get_year() const;
-
-    bool operator==(const Movie &other) const {
-        return title == other.title && short_description == other.short_description &&
-               time == other.time && age_limit == other.age_limit && year == other.year;
-    }
-
-    Movie &operator<<(const Movie &other); // Пересмотреть
-    friend std::ostream &operator<<(std::ostream &os, const Movie &movie) {
-        os << "Title: " << movie.get_title() << ", year: " << movie.get_year() <<
-           ", time: " << movie.get_time() << ", age limit: " << movie.get_age_limit() <<
-           std::endl << "Short description: " << movie.get_short_description();
-        return os;
-    }
+    bool operator==(const Movie &other) const;
 };
 
 #endif //CLION_PROJECT_FILM_H

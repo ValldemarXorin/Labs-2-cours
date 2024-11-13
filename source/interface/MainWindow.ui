@@ -6,52 +6,275 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>492</width>
-    <height>403</height>
+    <width>615</width>
+    <height>445</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>mainwindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+                background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, 
+                                    stop: 0 #1E1E1E, /* Начальный цвет (темный) */
+                                    stop: 1 #001f3f); /* Конечный цвет (темно-синий) */
+        color: #FFFFFF; /* Цвет текста по умолчанию */
+    }</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QStackedWidget" name="PageSwitcher">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>70</y>
-      <width>75</width>
-      <height>24</height>
+      <x>0</x>
+      <y>0</y>
+      <width>621</width>
+      <height>451</height>
      </rect>
     </property>
-    <property name="text">
-     <string>PushButton</string>
+    <property name="currentIndex">
+     <number>1</number>
     </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>230</x>
-      <y>150</y>
-      <width>51</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
-    </property>
+    <widget class="QWidget" name="AutoselectionMoviePage">
+     <widget class="QListWidget" name="MenuListAutoselectionMoviePage">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>0</y>
+        <width>141</width>
+        <height>441</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QListWidget {
+    background-color: #2E2E2E; /* Темный фон для списка */
+    border: 2px solid #0078d7; /* Цвет границы */
+    border-radius: 10px; /* Закругленные углы */
+    padding: 5px; /* Отступы */
+}
+
+QScrollBar:vertical, QScrollBar:horizontal {
+    width: 0px; /* Убираем ширину вертикального скролла */
+    background: transparent; /* Делаем фон прозрачным */
+}
+
+QListWidget::item {
+    background-color: #2E2E2E; /* Темный фон для элементов */
+    color: #FFFFFF; /* Белый текст */
+    padding: 10px; /* Отступы для элементов */
+    border-radius: 5px; /* Закругленные углы для элементов */
+	outline: none;
+}
+
+QListWidget::item:selected {
+    background-color: #0078d7; /* Цвет фона выбранного элемента */
+    color: #FFFFFF; /* Белый текст для выбранного элемента */
+	outline: none;
+}
+
+QListWidget::item:hover {
+    background-color: #1E1E1E; /* Цвет фона при наведении */
+    color: #FFFFFF;
+}</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Search</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Autoselection Movie</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Liked</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Tops</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Back</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="MenuButtonAutoselectionMoviePage">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>75</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        background-color: #2E2E2E; /* Темный фон */
+        color: #FFFFFF; /* Белый текст */
+        border: 2px solid #0078d7; /* Цвет границы */
+        border-radius: 10px; /* Закругленные углы */
+        padding: 5px; /* Отступы */
+    }
+
+QPushButton:hover {
+		background-color: #1E1E1E
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Menu</string>
+      </property>
+     </widget>
+     <zorder>MenuButtonAutoselectionMoviePage</zorder>
+     <zorder>MenuListAutoselectionMoviePage</zorder>
+    </widget>
+    <widget class="QWidget" name="SearchPage">
+     <widget class="QLineEdit" name="SearchField">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>20</y>
+        <width>271</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+        background-color: #2E2E2E; /* Темный фон */
+        color: #FFFFFF; /* Белый текст */
+        border: 2px solid #0078d7; /* Цвет границы */
+        border-radius: 10px; /* Закругленные углы */
+        padding: 5px; /* Отступы */
+    }
+
+QLineEdit:hover {
+		background-color: #1E1E1E
+}
+
+    QLineEdit:focus {
+        border: 2px solid #0056a1; /* Цвет границы при фокусе */
+        background-color: #3E3E3E; /* Цвет фона при фокусе */
+    }</string>
+      </property>
+      <property name="placeholderText">
+       <string>Search</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="MenuListSearchPage">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>0</y>
+        <width>141</width>
+        <height>441</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QListWidget {
+    background-color: #2E2E2E; /* Темный фон для списка */
+    border: 2px solid #0078d7; /* Цвет границы */
+    border-radius: 10px; /* Закругленные углы */
+    padding: 5px; /* Отступы */
+}
+
+QScrollBar:vertical, QScrollBar:horizontal {
+    width: 0px; /* Убираем ширину вертикального скролла */
+    background: transparent; /* Делаем фон прозрачным */
+}
+
+QListWidget::item {
+    background-color: #2E2E2E; /* Темный фон для элементов */
+    color: #FFFFFF; /* Белый текст */
+    padding: 10px; /* Отступы для элементов */
+    border-radius: 5px; /* Закругленные углы для элементов */
+	outline: none;
+}
+
+QListWidget::item:selected {
+    background-color: #0078d7; /* Цвет фона выбранного элемента */
+    color: #FFFFFF; /* Белый текст для выбранного элемента */
+	outline: none;
+}
+
+QListWidget::item:hover {
+    background-color: #1E1E1E; /* Цвет фона при наведении */
+    color: #FFFFFF;
+}</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Search</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Autoselection Movie</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Liked</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Tops</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Back</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="MenuButtonSearchPage">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>75</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        background-color: #2E2E2E; /* Темный фон */
+        color: #FFFFFF; /* Белый текст */
+        border: 2px solid #0078d7; /* Цвет границы */
+        border-radius: 10px; /* Закругленные углы */
+        padding: 5px; /* Отступы */
+    }
+
+QPushButton:hover {
+		background-color: #1E1E1E
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Menu</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="MoviesListSearchPage">
+      <property name="geometry">
+       <rect>
+        <x>145</x>
+        <y>71</y>
+        <width>451</width>
+        <height>351</height>
+       </rect>
+      </property>
+     </widget>
+     <zorder>MenuButtonSearchPage</zorder>
+     <zorder>SearchField</zorder>
+     <zorder>MenuListSearchPage</zorder>
+     <zorder>MoviesListSearchPage</zorder>
+    </widget>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>492</width>
-     <height>33</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

@@ -16,9 +16,6 @@
 //начал делать
 class IMoviesRepository : public MoviesDBManager, public MovieErrorExceptions {
     std::vector<Movie> movies;
-    IMoviesRepository* instance; //
-
-    bool check_arguments(const std::string &time, const std::string &age_limit, int year) const;
 
 public:
     explicit IMoviesRepository(const std::string &db_name);
@@ -29,23 +26,15 @@ public:
 
     ~IMoviesRepository() override;
 
-    void add_movie(const std::string &title, const std::string &short_description,
-                   const std::string &time, const std::string &age_limit, int year);
+    void add_movie(const std::string &title, const std::string &description, const std::string &genre,
+                   int realease_year, const std::string &runtime, float rating, int link_id, std::string& age_limit);
 
-    void display_info();
-
-    void update_movie(std::string_view title, const std::string &new_title, const std::string &new_short_description,
-                      const std::string &new_time, const std::string &new_age_limit, int new_year);
+    std::vector<Movie> find_movies_by_autocomplete(const std::string& part_of_autocomplete);
 
     void delete_movie(std::string_view title);
 
-    const Movie &operator[](size_t index) const {
-        if (index >= movies.size())
-            throw std::out_of_range("Index out of range");
-        return movies[index];
-    }
+    const Movie &operator[](size_t index) const;
 
-    IMoviesRepository* get_instance();
 };
 
 #endif //LABS_2_COURS_IMOVIESREPOSITORY_H

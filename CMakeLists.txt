@@ -18,10 +18,14 @@ find_package(Qt6 COMPONENTS
         Widgets
         REQUIRED)
 
+#find_package(OpenSSl REQUIRED)
+
 qt6_wrap_ui(UI_HEADERS ${UI_FILES})
 
 # Укажите путь к папке, куда вы распаковали SQLite
 set(SQLITE3_DIR "${CMAKE_SOURCE_DIR}/SQLiteLibrary") # Замените <version> на актуальную папку#
+
+#set(OpenSSl "D:/Labs-2-cours/Labs-2-cours/openssl") #########################
 
 
 add_executable(Labs-2-cours
@@ -43,12 +47,26 @@ add_executable(Labs-2-cours
         headers/filters/Filters.h
         headers/MovieErrorExceptions.h
         source/MovieErrorExceptions.cpp
+        headers/auth_models/UserRole.h
+        source/interface/loginwindow.cpp
+        headers/interface/loginwindow.h
+        source/interface/loginwindow.ui
+        headers/auth_models/User.h
+        source/auth_models/User.cpp
+        headers/UserErrorExceptions.h
+        source/UserErrorExceptions.cpp
+        headers/repositories/IUsersRepository.h
+        headers/database/UsersDBManager.h
+        source/database/UsersDBManager.cpp
+        source/repositories/IUsersRepository.cpp
 )
 
 target_link_libraries(Labs-2-cours
         Qt::Core
         Qt::Gui
         Qt::Widgets
+        #OpenSSl::SSL
+        #OpenSSl::Crypto
 )
 
 if (WIN32 AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)
