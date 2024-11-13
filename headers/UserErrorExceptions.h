@@ -11,8 +11,8 @@
 class UserErrorExceptions {
 public:
 
-    bool email_is_valid(const std::string& email);
+    bool email_is_valid(const std::string& email) const;
 
-    bool password_is_vaild(const std::string& password);
+    bool password_is_vaild(const std::string& password) const;
 };
 #endif //LABS_2_COURS_USERERROREXCEPTIONS_H
