@@ -59,6 +59,7 @@ add_executable(Labs-2-cours
         headers/database/UsersDBManager.h
         source/database/UsersDBManager.cpp
         source/repositories/IUsersRepository.cpp
+        source/auth_models/UserRole.cpp
 )
 
 target_link_libraries(Labs-2-cours

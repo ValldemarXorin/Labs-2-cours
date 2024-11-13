@@ -26,7 +26,7 @@ public:
                      const std::string& role);
 
     bool user_exist(const std::string& email, const std::string& password,
-                    const std::string& role);
+                    const std::string& role) const;
 
     bool email_exist(const std::string& email);
 };

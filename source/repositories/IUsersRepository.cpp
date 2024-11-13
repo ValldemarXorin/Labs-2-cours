@@ -29,7 +29,7 @@ void IUserRepository::delete_user(const std::string &email, const std::string &p
     std::cout << "This user doesn't exist.";
 }
 
-bool IUserRepository::user_exist(const std::string& email, const std::string& password, const std::string& role) {
+bool IUserRepository::user_exist(const std::string& email, const std::string& password, const std::string& role) const {
     User check_user(email, password, role);
     for (const User& user: users) {
         if (user == check_user)

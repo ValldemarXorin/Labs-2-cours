@@ -16,7 +16,7 @@ protected:
 public:
 
     UserRole(std::string_view email, std::string_view password, std::string_view role)
-        : email(email), password(password), role(role) {};
+            : email(email), password(password), role(role) {};
 
     virtual ~UserRole() = default;
 

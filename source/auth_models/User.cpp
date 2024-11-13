@@ -4,7 +4,7 @@
 #include "../../headers/auth_models/User.h"
 
 User::User(std::string_view email, std::string_view password, std::string_view role)
-    : UserRole(email, password, role) {};
+        : UserRole(email, password, role) {};
 
 std::string User::get_email() const { return email; }
 

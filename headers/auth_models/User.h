@@ -30,4 +30,5 @@ public:
 
     bool operator==(const User& other) const;
 };
+
 #endif //LABS_2_COURS_USER_H
