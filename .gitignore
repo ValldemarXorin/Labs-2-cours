@@ -1,3 +1,4 @@
 .idea/
-cmake-build-debug/
-SQLiteLibrary/
+.cmake-build-debug/
+.SQLiteLibrary/
+.github
