@@ -18,11 +18,7 @@ class IMoviesRepository : public MoviesDBManager, public MovieErrorExceptions {
     std::vector<Movie> movies;
 
 public:
-    explicit IMoviesRepository(const std::string &db_name);
-
-    IMoviesRepository(const IMoviesRepository& other) = delete;
-
-    IMoviesRepository& operator=(const IMoviesRepository& other) = delete;
+    IMoviesRepository();
 
     ~IMoviesRepository() override;
 
@@ -32,6 +28,10 @@ public:
     std::vector<Movie> find_movies_by_autocomplete(const std::string& part_of_autocomplete);
 
     void delete_movie(std::string_view title);
+
+    void display_info() const;
+
+    std::vector<Movie> get_movies();
 
     const Movie &operator[](size_t index) const;
 

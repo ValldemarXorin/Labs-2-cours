@@ -7,11 +7,16 @@
 
 #include "../repositories/IUsersRepository.h"
 #include "../repositories/IMoviesRepository.h"
+#include "../search/search_engine.h"
+#include "MovieCard.h"
+#include <windows.h>
+#include <map>
 #include <QMainWindow>
 #include <QListView>
 #include <QStandardItemModel>
 #include <QPropertyAnimation>
 #include <QListWidget>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -21,7 +26,7 @@ class MainWindow : public QMainWindow {
 Q_OBJECT
 
 public:
-    explicit MainWindow(IMoviesRepository* movies, IUserRepository* users,
+    explicit MainWindow(IMoviesRepository* movies_repository, IUserRepository* users,
                         QWidget *parent = nullptr);
 
     ~MainWindow() override;
@@ -31,12 +36,25 @@ private slots:
 
     void on_MenuListAutoselectionMoviePage_itemClicked(QListWidgetItem *item);
 
+    void using_search_enging();
+
+    void add_movie_card(const QString& title, const QString& genre,
+                              const QString& rating, const QString& release_year, const QString& age_limit);
+
 private:
     Ui::MainWindow *ui;
     IUserRepository* users;
-    IMoviesRepository* movies;
-    enum {AUTOSELECTION_MOVIE_PAGE_INDEX, SEARCH_PAGE_INDEX,
-            LIKED_PAGE_INDEX};
+    IMoviesRepository* movies_repository;
+    SearchEngine* search_engine;
+    int precurrent_length_text_search_field{0};
+    enum pages_ingex {AUTOSELECTION_MOVIE_PAGE_INDEX, SEARCH_PAGE_INDEX,
+            LIKED_PAGE_INDEX, TOPS_PAGE_INDEX};
+    std::map<QString, int> pages = {
+            {"Autoselection Movie", AUTOSELECTION_MOVIE_PAGE_INDEX},
+            {"Search", SEARCH_PAGE_INDEX},
+            {"Liked", LIKED_PAGE_INDEX},
+            {"Tops", TOPS_PAGE_INDEX}
+                                      };
 };
 
 

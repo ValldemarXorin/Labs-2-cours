@@ -8,21 +8,17 @@
 #include "DBManager.h"
 #include "../../SQLiteLibrary/sqlite3.h"
 #include <math.h>
+#include "Database.h"
 
 
-class MoviesDBManager : protected DBManager<Movie> {
-
+class MoviesDBManager : public DBManager<Movie> {
     enum {TITLE = 1, DESCRIPTION, GENRE, REALEASE_YEAR, RUNTIME,
             RATING, AGE_LIMIT, LINK_ID};
 
 public:
-    explicit MoviesDBManager(const std::string& db_name);
+    MoviesDBManager();
 
-    MoviesDBManager(const MoviesDBManager& other) = delete;
-
-    MoviesDBManager& operator=(const MoviesDBManager& other) = delete;
-
-    ~MoviesDBManager() override;
+    ~MoviesDBManager() override = default;
 
     void create_table() override;
 

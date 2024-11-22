@@ -15,15 +15,10 @@
 template<typename T>
 class DBManager {
 protected:
-    sqlite3 *db{nullptr};
-    std::string db_name;  // если не используется нигде кроме конструктора - убрать
+    std::string db_name;
 
 public:
-    explicit DBManager(const std::string &db_name) : db_name(db_name) {}
-
-    DBManager(const DBManager& other) = delete;
-
-    DBManager& operator=(const DBManager& other) = delete;
+    DBManager() : db_name("MovieDatabase.sqlite") {};
 
     virtual ~DBManager() = default;
 

@@ -133,7 +133,7 @@ QPushButton:hover {
      <zorder>MenuListAutoselectionMoviePage</zorder>
     </widget>
     <widget class="QWidget" name="SearchPage">
-     <widget class="QLineEdit" name="SearchField">
+     <widget class="QLineEdit" name="SearchFieldSearchPage">
       <property name="geometry">
        <rect>
         <x>330</x>
@@ -267,9 +267,49 @@ QPushButton:hover {
         <height>351</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QListWidget {
+    background-color: #2E2E2E; /* Темный фон для списка */
+    border: 2px solid #0078d7; /* Цвет границы */
+    border-radius: 10px; /* Закругленные углы */
+    padding: 5px; /* Отступы */
+}
+
+QScrollBar:vertical, QScrollBar:horizontal {
+    width: 6px; /* Ширина вертикального скролла */
+    background-color: #1E1E1E; /* Цвет фона скролла */
+}
+
+QScrollBar::handle {
+    background-color: #0078d7; /* Цвет ползунка скролла */
+    border-radius: 3px; /* Закругленные углы ползунка */
+}
+
+QScrollBar::add-line, QScrollBar::sub-line {
+    background-color: transparent; /* Убираем стрелки прокрутки */
+}
+
+QListWidget::item {
+    background-color: #2E2E2E; /* Темный фон для элементов */
+    color: #FFFFFF; /* Белый текст */
+    padding: 10px; /* Отступы для элементов */
+    border: 1px solid #0078d7; /* Цвет границы элементов */
+    border-radius: 5px; /* Закругленные углы для элементов */
+}
+
+QListWidget::item:selected {
+    background-color: #0078d7; /* Цвет фона выбранного элемента */
+    color: #FFFFFF; /* Белый текст для выбранного элемента */
+}
+
+QListWidget::item:hover {
+    background-color: #1E1E1E; /* Цвет фона при наведении */
+}
+</string>
+      </property>
      </widget>
      <zorder>MenuButtonSearchPage</zorder>
-     <zorder>SearchField</zorder>
+     <zorder>SearchFieldSearchPage</zorder>
      <zorder>MenuListSearchPage</zorder>
      <zorder>MoviesListSearchPage</zorder>
     </widget>

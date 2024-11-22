@@ -1,9 +1,7 @@
 //
 // Created by vova3 on 19.10.2024.
 //
-
-#ifndef LABS_2_COURS_MAP_REQUESTS_H
-#define LABS_2_COURS_MAP_REQUESTS_H
+#pragma once
 
 #include <string>
 #include <map>  // [[rewrite]] написать свой контейнер map
@@ -24,17 +22,20 @@ namespace map_sql {
 
             {Movies_create_table,    "CREATE TABLE IF NOT EXISTS Movies ("
                                      "id INT PRIMARY KEY,"
-                                     "title VARCHAR(255),"
-                                     "short_description TEXT,"
-                                     "`time` VARCHAR(10),"
-                                     "age_limit VARCHAR(3),"
-                                     "year INT"
+                                     "title TEXT,"
+                                     "description TEXT,"
+                                     "genre TEXT,"
+                                     "release_year INTEGER,"
+                                     "runtime VARCHAR(8),"
+                                     "rating REAL"
+                                     "age_limit TEXT"
+                                     "link_id INTEGER"
                                      ");"},
 
             {Movies_select,          "SELECT * FROM Movies"},
             {Movies_delete,          "DELETE FROM Movies"},
-            {Movies_save,            "INSERT INTO Movies (title, short_description, time, age_limit, year) "
-                                     "VALUES (?, ?, ?, ?, ?)"},
+            {Movies_save,            "INSERT INTO Movies (title, description, genre, release_year, runtime, rating, age_limit, link_id) "
+                                     "VALUES (?, ?, ?, ?, ?, ?, ?, ?)"},
 
             {Genres_create_table,    "CREATE TABLE IF NOT EXISTS Genres ("
                                      "id INT PRIMARY KEY,"
@@ -113,5 +114,3 @@ namespace map_sql {
             {Money_save,             "INSERT INTO Money (budget, world_fees) VALUES (?, ?);"}
     };
 }
-
-#endif //LABS_2_COURS_MAP_REQUESTS_H

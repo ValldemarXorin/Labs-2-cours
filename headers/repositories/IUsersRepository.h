@@ -15,7 +15,7 @@ class IUserRepository : public UsersDBManager, public UserErrorExceptions {
 
 
 public:
-    explicit IUserRepository(const std::string& db_name);
+    IUserRepository();
 
     ~IUserRepository() override;
 

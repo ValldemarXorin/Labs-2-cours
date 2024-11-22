@@ -9,8 +9,8 @@
 
 class MovieErrorExceptions {
 public:
-    void validate_time(const std::string& time) const;
-    void validate_age_limit(const std::string& age_limit) const;
-    void validate_year(int year) const;
+    bool validate_time(const std::string& time) const;
+    bool validate_age_limit(const std::string& age_limit) const;
+    bool validate_year(int year) const;
 };
 #endif //LABS_2_COURS_ERROREXCEPTIONS_H

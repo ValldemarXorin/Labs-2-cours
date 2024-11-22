@@ -43,8 +43,6 @@ add_executable(Labs-2-cours
         source/database/MoviesDBManager.cpp
         headers/repositories/IMoviesRepository.h
         source/repositories/IMoviesRepository.cpp
-        headers/filters/MovieFilters.h
-        headers/filters/Filters.h
         headers/MovieErrorExceptions.h
         source/MovieErrorExceptions.cpp
         headers/auth_models/UserRole.h
@@ -60,6 +58,15 @@ add_executable(Labs-2-cours
         source/database/UsersDBManager.cpp
         source/repositories/IUsersRepository.cpp
         source/auth_models/UserRole.cpp
+        headers/database/Database.h
+        source/database/Database.cpp
+        headers/search/search_engine.h
+        source/search/search_engine.cpp
+        headers/search/Filters.h
+        source/search/Filters.cpp
+        source/interface/MovieCard.cpp
+        headers/interface/MovieCard.h
+        source/interface/MovieCard.ui
 )
 
 target_link_libraries(Labs-2-cours

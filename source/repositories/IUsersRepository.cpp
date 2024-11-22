@@ -4,7 +4,7 @@
 
 #include "../../headers/repositories/IUsersRepository.h"
 
-IUserRepository::IUserRepository(const std::string &db_name) : UsersDBManager(db_name) {
+IUserRepository::IUserRepository() : UsersDBManager() {
     users = UsersDBManager::load_data_from_DB();
 }
 

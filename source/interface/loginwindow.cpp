@@ -13,7 +13,7 @@
 
 LoginWindow::LoginWindow(IMoviesRepository* movies,
                          IUserRepository* users, QWidget *parent) :
-        QWidget(parent), ui(new Ui::LoginWindow), movies(movies), users(users) {
+        QWidget(parent), ui(new Ui::LoginWindow), movies_repository(movies_repository), users(users) {
 
     ui->setupUi(this);
 

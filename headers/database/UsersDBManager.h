@@ -8,13 +8,14 @@
 #include "DBManager.h"
 #include "../auth_models/User.h"
 #include "../../SQLiteLibrary/sqlite3.h"
+#include "Database.h"
 
 
 class UsersDBManager : public DBManager<User> {
 public:
-    explicit UsersDBManager(const std::string& db_name);
+    UsersDBManager();
 
-    ~UsersDBManager() override;
+    ~UsersDBManager() override = default;
 
     void create_table() override;
 
