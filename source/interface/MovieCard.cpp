@@ -7,9 +7,8 @@
 #include "../../headers/interface/MovieCard.h"
 #include "ui_MovieCard.h"
 
-
 MovieCard::MovieCard(QWidget *parent) :
-        QWidget(parent), ui(new Ui::MovieCard) {
+        QWidget(parent), ui(new Ui::MovieCard), movie_card_info(new MovieCardInfo) {
     ui->setupUi(this);
 }
 
@@ -24,4 +23,13 @@ void MovieCard::set_movie_card_data(const QString &title, const QString &genre, 
     ui->RatingMovie->setText(rating);
     ui->YearMovie->setText(release_year);
     ui->AgeLimitMovie->setText(age_limit);
+    movie_card_info->set_information(title, genre, release_year, "01:00:55", age_limit);
+}
+
+QPushButton* MovieCard::getViewDetailsButton() {
+    return ui->ViewDetailsButton;
+}
+
+MovieCardInfo* MovieCard::getMovieCardInfo() {
+    return movie_card_info;
 }

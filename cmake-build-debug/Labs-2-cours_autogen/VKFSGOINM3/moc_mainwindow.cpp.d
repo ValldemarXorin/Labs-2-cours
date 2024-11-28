@@ -513,10 +513,15 @@ D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/VKFSGOINM3/m
   D:/Labs-2-cours/Labs-2-cours/headers/database/MoviesDBManager.h \
   D:/Labs-2-cours/Labs-2-cours/headers/database/UsersDBManager.h \
   D:/Labs-2-cours/Labs-2-cours/headers/interface/MovieCard.h \
+  D:/Labs-2-cours/Labs-2-cours/headers/interface/MovieCardInfo.h \
   D:/Labs-2-cours/Labs-2-cours/headers/models/Movie.h \
   D:/Labs-2-cours/Labs-2-cours/headers/repositories/IMoviesRepository.h \
   D:/Labs-2-cours/Labs-2-cours/headers/repositories/IUsersRepository.h \
-  D:/Labs-2-cours/Labs-2-cours/headers/search/Filters.h \
+  D:/Labs-2-cours/Labs-2-cours/headers/search/AgeLimitFilter.h \
+  D:/Labs-2-cours/Labs-2-cours/headers/search/CompositeFilters.h \
+  D:/Labs-2-cours/Labs-2-cours/headers/search/GenreFilter.h \
+  D:/Labs-2-cours/Labs-2-cours/headers/search/ICompositFilters.h \
+  D:/Labs-2-cours/Labs-2-cours/headers/search/IFilter.h \
   D:/Labs-2-cours/Labs-2-cours/headers/search/search_engine.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/QPropertyAnimation \
   D:/Qt/6.7.3/mingw_64/include/QtCore/q20functional.h \
@@ -675,7 +680,9 @@ D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/VKFSGOINM3/m
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/QListView \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/QListWidget \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/QMainWindow \
+  D:/Qt/6.7.3/mingw_64/include/QtWidgets/QPushButton \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/QWidget \
+  D:/Qt/6.7.3/mingw_64/include/QtWidgets/qabstractbutton.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qabstractitemview.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qabstractscrollarea.h \
@@ -685,6 +692,7 @@ D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/VKFSGOINM3/m
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qlistview.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qlistwidget.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qmainwindow.h \
+  D:/Qt/6.7.3/mingw_64/include/QtWidgets/qpushbutton.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qrubberband.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qsizepolicy.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qslider.h \

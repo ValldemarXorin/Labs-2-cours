@@ -245,6 +245,7 @@ D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/VKFSGOINM3/m
   C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
+  D:/Labs-2-cours/Labs-2-cours/headers/interface/MovieCardInfo.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/q20functional.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/q20memory.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/q20type_traits.h \
@@ -387,7 +388,10 @@ D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/VKFSGOINM3/m
   D:/Qt/6.7.3/mingw_64/include/QtGui/qtransform.h \
   D:/Qt/6.7.3/mingw_64/include/QtGui/qwindowdefs.h \
   D:/Qt/6.7.3/mingw_64/include/QtGui/qwindowdefs_win.h \
+  D:/Qt/6.7.3/mingw_64/include/QtWidgets/QPushButton \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/QWidget \
+  D:/Qt/6.7.3/mingw_64/include/QtWidgets/qabstractbutton.h \
+  D:/Qt/6.7.3/mingw_64/include/QtWidgets/qpushbutton.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qsizepolicy.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qtwidgets-config.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qtwidgetsexports.h \

@@ -13,7 +13,6 @@
 class IUserRepository : public UsersDBManager, public UserErrorExceptions {
     std::vector<User> users;
 
-
 public:
     IUserRepository();
 

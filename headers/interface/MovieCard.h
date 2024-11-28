@@ -6,6 +6,9 @@
 #define LABS_2_COURS_MOVIECARD_H
 
 #include <QWidget>
+#include "MovieCardInfo.h"
+#include <QPushButton>
+
 
 
 QT_BEGIN_NAMESPACE
@@ -25,8 +28,13 @@ public:
     void set_movie_card_data(const QString& title, const QString& genre,
                         const QString& rating, const QString& release_year, const QString& age_limit);
 
+    QPushButton* getViewDetailsButton();
+
+    MovieCardInfo* getMovieCardInfo();
+
 private:
     Ui::MovieCard *ui;
+    MovieCardInfo* movie_card_info;
 };
 
 

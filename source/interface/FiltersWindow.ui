@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FiltersWindow</class>
+ <widget class="QWidget" name="FiltersWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>FiltersWindow</string>
+  </property>
+  <widget class="QLabel" name="GenreText">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Genre</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="AgeLimitText">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>20</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Age Limit</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="isHorror">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>66</y>
+     <width>81</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>horror</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>92</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>drama</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_3">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>60</y>
+     <width>92</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>18+</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_4">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>90</y>
+     <width>92</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>12+</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_5">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>120</y>
+     <width>92</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>16+</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

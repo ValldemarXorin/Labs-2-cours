@@ -553,16 +553,26 @@ Labs-2-cours_autogen/timestamp: \
 	D:/Labs-2-cours/Labs-2-cours/headers/auth_models/UserRole.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/database/DBManager.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/database/Database.h \
+	D:/Labs-2-cours/Labs-2-cours/headers/database/LikedDBManager.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/database/MoviesDBManager.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/database/UsersDBManager.h \
+	D:/Labs-2-cours/Labs-2-cours/headers/interface/FiltersWindow.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/interface/MainWindow.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/interface/MovieCard.h \
+	D:/Labs-2-cours/Labs-2-cours/headers/interface/MovieCardInfo.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/interface/loginwindow.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/map_requests.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/models/Movie.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/repositories/IMoviesRepository.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/repositories/IUsersRepository.h \
-	D:/Labs-2-cours/Labs-2-cours/headers/search/Filters.h \
+	D:/Labs-2-cours/Labs-2-cours/headers/search/AgeLimitFilter.h \
+	D:/Labs-2-cours/Labs-2-cours/headers/search/CompositeFilters.h \
+	D:/Labs-2-cours/Labs-2-cours/headers/search/GenreFilter.h \
+	D:/Labs-2-cours/Labs-2-cours/headers/search/ICompositFilters.h \
+	D:/Labs-2-cours/Labs-2-cours/headers/search/IFilter.h \
+	D:/Labs-2-cours/Labs-2-cours/headers/search/RatingFilter.h \
+	D:/Labs-2-cours/Labs-2-cours/headers/search/RuntimeFilter.h \
+	D:/Labs-2-cours/Labs-2-cours/headers/search/YearFilter.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/search/search_engine.h \
 	D:/Labs-2-cours/Labs-2-cours/source/MovieErrorExceptions.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/UserErrorExceptions.cpp \
@@ -571,14 +581,21 @@ Labs-2-cours_autogen/timestamp: \
 	D:/Labs-2-cours/Labs-2-cours/source/database/Database.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/database/MoviesDBManager.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/database/UsersDBManager.cpp \
+	D:/Labs-2-cours/Labs-2-cours/source/interface/FiltersWindow.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/interface/MainWindow.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/interface/MovieCard.cpp \
+	D:/Labs-2-cours/Labs-2-cours/source/interface/MovieCardInfo.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/interface/loginwindow.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/main.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/models/Movie.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/repositories/IMoviesRepository.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/repositories/IUsersRepository.cpp \
-	D:/Labs-2-cours/Labs-2-cours/source/search/Filters.cpp \
+	D:/Labs-2-cours/Labs-2-cours/source/search/AgeLimitFilter.cpp \
+	D:/Labs-2-cours/Labs-2-cours/source/search/CompositeFilters.cpp \
+	D:/Labs-2-cours/Labs-2-cours/source/search/GenreFilter.cpp \
+	D:/Labs-2-cours/Labs-2-cours/source/search/RatingFilter.cpp \
+	D:/Labs-2-cours/Labs-2-cours/source/search/RuntimeFilter.cpp \
+	D:/Labs-2-cours/Labs-2-cours/source/search/YearFilter.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/search/search_engine.cpp \
 	D:/Qt/6.7.3/mingw_64/include/QtCore/QCryptographicHash \
 	D:/Qt/6.7.3/mingw_64/include/QtCore/QPropertyAnimation \
@@ -751,6 +768,7 @@ Labs-2-cours_autogen/timestamp: \
 	D:/Qt/6.7.3/mingw_64/include/QtWidgets/QListView \
 	D:/Qt/6.7.3/mingw_64/include/QtWidgets/QListWidget \
 	D:/Qt/6.7.3/mingw_64/include/QtWidgets/QMainWindow \
+	D:/Qt/6.7.3/mingw_64/include/QtWidgets/QPushButton \
 	D:/Qt/6.7.3/mingw_64/include/QtWidgets/QToolButton \
 	D:/Qt/6.7.3/mingw_64/include/QtWidgets/QWidget \
 	D:/Qt/6.7.3/mingw_64/include/QtWidgets/qabstractbutton.h \
@@ -765,6 +783,7 @@ Labs-2-cours_autogen/timestamp: \
 	D:/Qt/6.7.3/mingw_64/include/QtWidgets/qlistview.h \
 	D:/Qt/6.7.3/mingw_64/include/QtWidgets/qlistwidget.h \
 	D:/Qt/6.7.3/mingw_64/include/QtWidgets/qmainwindow.h \
+	D:/Qt/6.7.3/mingw_64/include/QtWidgets/qpushbutton.h \
 	D:/Qt/6.7.3/mingw_64/include/QtWidgets/qrubberband.h \
 	D:/Qt/6.7.3/mingw_64/include/QtWidgets/qsizepolicy.h \
 	D:/Qt/6.7.3/mingw_64/include/QtWidgets/qslider.h \
@@ -944,7 +963,9 @@ Labs-2-cours_autogen/timestamp: \
 	D:/Qt/6.7.3/mingw_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateConfigVersionImpl.cmake \
 	D:/Qt/6.7.3/mingw_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateTargets.cmake \
 	D:/Qt/6.7.3/mingw_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateVersionlessTargets.cmake \
+	D:/Labs-2-cours/Labs-2-cours/source/interface/FiltersWindow.ui \
 	D:/Labs-2-cours/Labs-2-cours/source/interface/MovieCard.ui \
+	D:/Labs-2-cours/Labs-2-cours/source/interface/MovieCardInfo.ui \
 	D:/Labs-2-cours/Labs-2-cours/source/interface/loginwindow.ui \
 	D:/Labs-2-cours/Labs-2-cours/source/interface/mainwindow.ui \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/cmake/win/x64/bin/cmake.exe

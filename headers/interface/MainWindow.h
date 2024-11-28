@@ -8,9 +8,12 @@
 #include "../repositories/IUsersRepository.h"
 #include "../repositories/IMoviesRepository.h"
 #include "../search/search_engine.h"
+#include "../search/CompositeFilters.h"
+#include "../search/GenreFilter.h"
+#include "../search/AgeLimitFilter.h"
 #include "MovieCard.h"
+#include "MovieCardInfo.h"
 #include <windows.h>
-#include <map>
 #include <QMainWindow>
 #include <QListView>
 #include <QStandardItemModel>
@@ -34,7 +37,19 @@ public:
 private slots:
     void on_MenuButtonAutoselectionMoviePage_clicked();
 
+    void on_MenuButtonSearchPage_clicked();
+
+    void on_MenuButtonLikedPage_clicked();
+
+    void on_MenuButtonTopsPage_clicked();
+
     void on_MenuListAutoselectionMoviePage_itemClicked(QListWidgetItem *item);
+
+    void on_MenuListSearchPage_itemClicked(QListWidgetItem *item);
+
+    void on_MenuListLikedPage_itemClicked(QListWidgetItem *item);
+
+    void on_MenuListTopsPage_itemClicked(QListWidgetItem *item);
 
     void using_search_enging();
 
@@ -49,12 +64,6 @@ private:
     int precurrent_length_text_search_field{0};
     enum pages_ingex {AUTOSELECTION_MOVIE_PAGE_INDEX, SEARCH_PAGE_INDEX,
             LIKED_PAGE_INDEX, TOPS_PAGE_INDEX};
-    std::map<QString, int> pages = {
-            {"Autoselection Movie", AUTOSELECTION_MOVIE_PAGE_INDEX},
-            {"Search", SEARCH_PAGE_INDEX},
-            {"Liked", LIKED_PAGE_INDEX},
-            {"Tops", TOPS_PAGE_INDEX}
-                                      };
 };
 
 

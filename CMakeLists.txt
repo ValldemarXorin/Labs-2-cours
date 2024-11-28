@@ -62,11 +62,30 @@ add_executable(Labs-2-cours
         source/database/Database.cpp
         headers/search/search_engine.h
         source/search/search_engine.cpp
-        headers/search/Filters.h
-        source/search/Filters.cpp
         source/interface/MovieCard.cpp
         headers/interface/MovieCard.h
         source/interface/MovieCard.ui
+        headers/database/LikedDBManager.h
+        source/interface/MovieCardInfo.cpp
+        headers/interface/MovieCardInfo.h
+        source/interface/MovieCardInfo.ui
+        headers/search/IFilter.h
+        headers/search/ICompositFilters.h
+        headers/search/GenreFilter.h
+        source/search/GenreFilter.cpp
+        headers/search/YearFilter.h
+        source/search/YearFilter.cpp
+        headers/search/RuntimeFilter.h
+        source/search/RuntimeFilter.cpp
+        headers/search/RatingFilter.h
+        source/search/RatingFilter.cpp
+        headers/search/AgeLimitFilter.h
+        source/search/AgeLimitFilter.cpp
+        headers/search/CompositeFilters.h
+        source/search/CompositeFilters.cpp
+        source/interface/FiltersWindow.cpp
+        headers/interface/FiltersWindow.h
+        source/interface/FiltersWindow.ui
 )
 
 target_link_libraries(Labs-2-cours

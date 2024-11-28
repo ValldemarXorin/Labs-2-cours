@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -24,12 +25,13 @@ public:
     QLabel *YearMovie;
     QLabel *GenreMovie;
     QLabel *AgeLimitMovie;
+    QPushButton *ViewDetailsButton;
 
     void setupUi(QWidget *MovieCard)
     {
         if (MovieCard->objectName().isEmpty())
             MovieCard->setObjectName("MovieCard");
-        MovieCard->resize(451, 90);
+        MovieCard->resize(451, 127);
         MovieCard->setStyleSheet(QString::fromUtf8("MovieCard {\n"
 "    background-color: #2E2E2E; /* \320\242\320\265\320\274\320\275\321\213\320\271 \321\204\320\276\320\275 \320\264\320\273\321\217 \320\272\320\260\321\200\321\202\320\276\321\207\320\272\320\270 */\n"
 "    border: 1px solid #0078d7; /* \320\246\320\262\320\265\321\202 \320\263\321\200\320\260\320\275\320\270\321\206\321\213 \320\272\320\260\321\200\321\202\320\276\321\207\320\272\320\270 */\n"
@@ -111,6 +113,9 @@ public:
 "	qproperty-wordWrap: true;\n"
 "    qproperty-scaledContents: true;\n"
 "}"));
+        ViewDetailsButton = new QPushButton(MovieCard);
+        ViewDetailsButton->setObjectName("ViewDetailsButton");
+        ViewDetailsButton->setGeometry(QRect(50, 70, 91, 24));
 
         retranslateUi(MovieCard);
 
@@ -125,6 +130,7 @@ public:
         YearMovie->setText(QCoreApplication::translate("MovieCard", "TextLabel", nullptr));
         GenreMovie->setText(QCoreApplication::translate("MovieCard", "TextLabel", nullptr));
         AgeLimitMovie->setText(QCoreApplication::translate("MovieCard", "TextLabel", nullptr));
+        ViewDetailsButton->setText(QCoreApplication::translate("MovieCard", "View Details", nullptr));
     } // retranslateUi
 
 };

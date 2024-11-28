@@ -177,17 +177,73 @@ build CMakeFiles/Labs-2-cours.dir/source/search/search_engine.cpp.obj: CXX_COMPI
   OBJECT_DIR = CMakeFiles\Labs-2-cours.dir
   OBJECT_FILE_DIR = CMakeFiles\Labs-2-cours.dir\source\search
 
-build CMakeFiles/Labs-2-cours.dir/source/search/Filters.cpp.obj: CXX_COMPILER__Labs-2-cours_unscanned_Debug D$:/Labs-2-cours/Labs-2-cours/source/search/Filters.cpp || cmake_object_order_depends_target_Labs-2-cours
+build CMakeFiles/Labs-2-cours.dir/source/interface/MovieCard.cpp.obj: CXX_COMPILER__Labs-2-cours_unscanned_Debug D$:/Labs-2-cours/Labs-2-cours/source/interface/MovieCard.cpp || cmake_object_order_depends_target_Labs-2-cours
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\Labs-2-cours.dir\source\search\Filters.cpp.obj.d
+  DEP_FILE = CMakeFiles\Labs-2-cours.dir\source\interface\MovieCard.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -isystem D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/include -isystem D:/Qt/6.7.3/mingw_64/include/QtCore -isystem D:/Qt/6.7.3/mingw_64/include -isystem D:/Qt/6.7.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.7.3/mingw_64/include/QtGui -isystem D:/Qt/6.7.3/mingw_64/include/QtWidgets
+  OBJECT_DIR = CMakeFiles\Labs-2-cours.dir
+  OBJECT_FILE_DIR = CMakeFiles\Labs-2-cours.dir\source\interface
+
+build CMakeFiles/Labs-2-cours.dir/source/interface/MovieCardInfo.cpp.obj: CXX_COMPILER__Labs-2-cours_unscanned_Debug D$:/Labs-2-cours/Labs-2-cours/source/interface/MovieCardInfo.cpp || cmake_object_order_depends_target_Labs-2-cours
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Labs-2-cours.dir\source\interface\MovieCardInfo.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -isystem D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/include -isystem D:/Qt/6.7.3/mingw_64/include/QtCore -isystem D:/Qt/6.7.3/mingw_64/include -isystem D:/Qt/6.7.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.7.3/mingw_64/include/QtGui -isystem D:/Qt/6.7.3/mingw_64/include/QtWidgets
+  OBJECT_DIR = CMakeFiles\Labs-2-cours.dir
+  OBJECT_FILE_DIR = CMakeFiles\Labs-2-cours.dir\source\interface
+
+build CMakeFiles/Labs-2-cours.dir/source/search/GenreFilter.cpp.obj: CXX_COMPILER__Labs-2-cours_unscanned_Debug D$:/Labs-2-cours/Labs-2-cours/source/search/GenreFilter.cpp || cmake_object_order_depends_target_Labs-2-cours
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Labs-2-cours.dir\source\search\GenreFilter.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -isystem D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/include -isystem D:/Qt/6.7.3/mingw_64/include/QtCore -isystem D:/Qt/6.7.3/mingw_64/include -isystem D:/Qt/6.7.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.7.3/mingw_64/include/QtGui -isystem D:/Qt/6.7.3/mingw_64/include/QtWidgets
   OBJECT_DIR = CMakeFiles\Labs-2-cours.dir
   OBJECT_FILE_DIR = CMakeFiles\Labs-2-cours.dir\source\search
 
-build CMakeFiles/Labs-2-cours.dir/source/interface/MovieCard.cpp.obj: CXX_COMPILER__Labs-2-cours_unscanned_Debug D$:/Labs-2-cours/Labs-2-cours/source/interface/MovieCard.cpp || cmake_object_order_depends_target_Labs-2-cours
+build CMakeFiles/Labs-2-cours.dir/source/search/YearFilter.cpp.obj: CXX_COMPILER__Labs-2-cours_unscanned_Debug D$:/Labs-2-cours/Labs-2-cours/source/search/YearFilter.cpp || cmake_object_order_depends_target_Labs-2-cours
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\Labs-2-cours.dir\source\interface\MovieCard.cpp.obj.d
+  DEP_FILE = CMakeFiles\Labs-2-cours.dir\source\search\YearFilter.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -isystem D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/include -isystem D:/Qt/6.7.3/mingw_64/include/QtCore -isystem D:/Qt/6.7.3/mingw_64/include -isystem D:/Qt/6.7.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.7.3/mingw_64/include/QtGui -isystem D:/Qt/6.7.3/mingw_64/include/QtWidgets
+  OBJECT_DIR = CMakeFiles\Labs-2-cours.dir
+  OBJECT_FILE_DIR = CMakeFiles\Labs-2-cours.dir\source\search
+
+build CMakeFiles/Labs-2-cours.dir/source/search/RuntimeFilter.cpp.obj: CXX_COMPILER__Labs-2-cours_unscanned_Debug D$:/Labs-2-cours/Labs-2-cours/source/search/RuntimeFilter.cpp || cmake_object_order_depends_target_Labs-2-cours
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Labs-2-cours.dir\source\search\RuntimeFilter.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -isystem D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/include -isystem D:/Qt/6.7.3/mingw_64/include/QtCore -isystem D:/Qt/6.7.3/mingw_64/include -isystem D:/Qt/6.7.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.7.3/mingw_64/include/QtGui -isystem D:/Qt/6.7.3/mingw_64/include/QtWidgets
+  OBJECT_DIR = CMakeFiles\Labs-2-cours.dir
+  OBJECT_FILE_DIR = CMakeFiles\Labs-2-cours.dir\source\search
+
+build CMakeFiles/Labs-2-cours.dir/source/search/RatingFilter.cpp.obj: CXX_COMPILER__Labs-2-cours_unscanned_Debug D$:/Labs-2-cours/Labs-2-cours/source/search/RatingFilter.cpp || cmake_object_order_depends_target_Labs-2-cours
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Labs-2-cours.dir\source\search\RatingFilter.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -isystem D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/include -isystem D:/Qt/6.7.3/mingw_64/include/QtCore -isystem D:/Qt/6.7.3/mingw_64/include -isystem D:/Qt/6.7.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.7.3/mingw_64/include/QtGui -isystem D:/Qt/6.7.3/mingw_64/include/QtWidgets
+  OBJECT_DIR = CMakeFiles\Labs-2-cours.dir
+  OBJECT_FILE_DIR = CMakeFiles\Labs-2-cours.dir\source\search
+
+build CMakeFiles/Labs-2-cours.dir/source/search/AgeLimitFilter.cpp.obj: CXX_COMPILER__Labs-2-cours_unscanned_Debug D$:/Labs-2-cours/Labs-2-cours/source/search/AgeLimitFilter.cpp || cmake_object_order_depends_target_Labs-2-cours
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Labs-2-cours.dir\source\search\AgeLimitFilter.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -isystem D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/include -isystem D:/Qt/6.7.3/mingw_64/include/QtCore -isystem D:/Qt/6.7.3/mingw_64/include -isystem D:/Qt/6.7.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.7.3/mingw_64/include/QtGui -isystem D:/Qt/6.7.3/mingw_64/include/QtWidgets
+  OBJECT_DIR = CMakeFiles\Labs-2-cours.dir
+  OBJECT_FILE_DIR = CMakeFiles\Labs-2-cours.dir\source\search
+
+build CMakeFiles/Labs-2-cours.dir/source/search/CompositeFilters.cpp.obj: CXX_COMPILER__Labs-2-cours_unscanned_Debug D$:/Labs-2-cours/Labs-2-cours/source/search/CompositeFilters.cpp || cmake_object_order_depends_target_Labs-2-cours
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Labs-2-cours.dir\source\search\CompositeFilters.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -isystem D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/include -isystem D:/Qt/6.7.3/mingw_64/include/QtCore -isystem D:/Qt/6.7.3/mingw_64/include -isystem D:/Qt/6.7.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.7.3/mingw_64/include/QtGui -isystem D:/Qt/6.7.3/mingw_64/include/QtWidgets
+  OBJECT_DIR = CMakeFiles\Labs-2-cours.dir
+  OBJECT_FILE_DIR = CMakeFiles\Labs-2-cours.dir\source\search
+
+build CMakeFiles/Labs-2-cours.dir/source/interface/FiltersWindow.cpp.obj: CXX_COMPILER__Labs-2-cours_unscanned_Debug D$:/Labs-2-cours/Labs-2-cours/source/interface/FiltersWindow.cpp || cmake_object_order_depends_target_Labs-2-cours
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Labs-2-cours.dir\source\interface\FiltersWindow.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -isystem D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/include -isystem D:/Qt/6.7.3/mingw_64/include/QtCore -isystem D:/Qt/6.7.3/mingw_64/include -isystem D:/Qt/6.7.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.7.3/mingw_64/include/QtGui -isystem D:/Qt/6.7.3/mingw_64/include/QtWidgets
   OBJECT_DIR = CMakeFiles\Labs-2-cours.dir
@@ -201,7 +257,7 @@ build CMakeFiles/Labs-2-cours.dir/source/interface/MovieCard.cpp.obj: CXX_COMPIL
 #############################################
 # Link the executable Labs-2-cours.exe
 
-build Labs-2-cours.exe: CXX_EXECUTABLE_LINKER__Labs-2-cours_Debug CMakeFiles/Labs-2-cours.dir/Labs-2-cours_autogen/mocs_compilation.cpp.obj CMakeFiles/Labs-2-cours.dir/SQLiteLibrary/sqlite3.c.obj CMakeFiles/Labs-2-cours.dir/source/main.cpp.obj CMakeFiles/Labs-2-cours.dir/source/models/Movie.cpp.obj CMakeFiles/Labs-2-cours.dir/source/interface/MainWindow.cpp.obj CMakeFiles/Labs-2-cours.dir/source/database/MoviesDBManager.cpp.obj CMakeFiles/Labs-2-cours.dir/source/repositories/IMoviesRepository.cpp.obj CMakeFiles/Labs-2-cours.dir/source/MovieErrorExceptions.cpp.obj CMakeFiles/Labs-2-cours.dir/source/interface/loginwindow.cpp.obj CMakeFiles/Labs-2-cours.dir/source/auth_models/User.cpp.obj CMakeFiles/Labs-2-cours.dir/source/UserErrorExceptions.cpp.obj CMakeFiles/Labs-2-cours.dir/source/database/UsersDBManager.cpp.obj CMakeFiles/Labs-2-cours.dir/source/repositories/IUsersRepository.cpp.obj CMakeFiles/Labs-2-cours.dir/source/auth_models/UserRole.cpp.obj CMakeFiles/Labs-2-cours.dir/source/database/Database.cpp.obj CMakeFiles/Labs-2-cours.dir/source/search/search_engine.cpp.obj CMakeFiles/Labs-2-cours.dir/source/search/Filters.cpp.obj CMakeFiles/Labs-2-cours.dir/source/interface/MovieCard.cpp.obj | D$:/Qt/6.7.3/mingw_64/lib/libQt6Widgets.a D$:/Qt/6.7.3/mingw_64/lib/libQt6Gui.a D$:/Qt/6.7.3/mingw_64/lib/libQt6Core.a || Labs-2-cours_autogen Labs-2-cours_autogen_timestamp_deps
+build Labs-2-cours.exe: CXX_EXECUTABLE_LINKER__Labs-2-cours_Debug CMakeFiles/Labs-2-cours.dir/Labs-2-cours_autogen/mocs_compilation.cpp.obj CMakeFiles/Labs-2-cours.dir/SQLiteLibrary/sqlite3.c.obj CMakeFiles/Labs-2-cours.dir/source/main.cpp.obj CMakeFiles/Labs-2-cours.dir/source/models/Movie.cpp.obj CMakeFiles/Labs-2-cours.dir/source/interface/MainWindow.cpp.obj CMakeFiles/Labs-2-cours.dir/source/database/MoviesDBManager.cpp.obj CMakeFiles/Labs-2-cours.dir/source/repositories/IMoviesRepository.cpp.obj CMakeFiles/Labs-2-cours.dir/source/MovieErrorExceptions.cpp.obj CMakeFiles/Labs-2-cours.dir/source/interface/loginwindow.cpp.obj CMakeFiles/Labs-2-cours.dir/source/auth_models/User.cpp.obj CMakeFiles/Labs-2-cours.dir/source/UserErrorExceptions.cpp.obj CMakeFiles/Labs-2-cours.dir/source/database/UsersDBManager.cpp.obj CMakeFiles/Labs-2-cours.dir/source/repositories/IUsersRepository.cpp.obj CMakeFiles/Labs-2-cours.dir/source/auth_models/UserRole.cpp.obj CMakeFiles/Labs-2-cours.dir/source/database/Database.cpp.obj CMakeFiles/Labs-2-cours.dir/source/search/search_engine.cpp.obj CMakeFiles/Labs-2-cours.dir/source/interface/MovieCard.cpp.obj CMakeFiles/Labs-2-cours.dir/source/interface/MovieCardInfo.cpp.obj CMakeFiles/Labs-2-cours.dir/source/search/GenreFilter.cpp.obj CMakeFiles/Labs-2-cours.dir/source/search/YearFilter.cpp.obj CMakeFiles/Labs-2-cours.dir/source/search/RuntimeFilter.cpp.obj CMakeFiles/Labs-2-cours.dir/source/search/RatingFilter.cpp.obj CMakeFiles/Labs-2-cours.dir/source/search/AgeLimitFilter.cpp.obj CMakeFiles/Labs-2-cours.dir/source/search/CompositeFilters.cpp.obj CMakeFiles/Labs-2-cours.dir/source/interface/FiltersWindow.cpp.obj | D$:/Qt/6.7.3/mingw_64/lib/libQt6Widgets.a D$:/Qt/6.7.3/mingw_64/lib/libQt6Gui.a D$:/Qt/6.7.3/mingw_64/lib/libQt6Core.a || Labs-2-cours_autogen Labs-2-cours_autogen_timestamp_deps
   FLAGS = -g
   LINK_LIBRARIES = D:/Qt/6.7.3/mingw_64/lib/libQt6Widgets.a  D:/Qt/6.7.3/mingw_64/lib/libQt6Gui.a  D:/Qt/6.7.3/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Labs-2-cours.dir
@@ -244,7 +300,7 @@ build Labs-2-cours_autogen_timestamp_deps: phony
 #############################################
 # Utility command for Labs-2-cours_autogen
 
-build Labs-2-cours_autogen: phony CMakeFiles/Labs-2-cours_autogen Labs-2-cours_autogen/include/source/interface/ui_mainwindow.h Labs-2-cours_autogen/include/source/interface/ui_loginwindow.h Labs-2-cours_autogen/include/source/interface/ui_MovieCard.h Labs-2-cours_autogen/timestamp Labs-2-cours_autogen/mocs_compilation.cpp Labs-2-cours_autogen_timestamp_deps
+build Labs-2-cours_autogen: phony CMakeFiles/Labs-2-cours_autogen Labs-2-cours_autogen/include/source/interface/ui_mainwindow.h Labs-2-cours_autogen/include/source/interface/ui_loginwindow.h Labs-2-cours_autogen/include/source/interface/ui_MovieCard.h Labs-2-cours_autogen/include/source/interface/ui_MovieCardInfo.h Labs-2-cours_autogen/include/source/interface/ui_FiltersWindow.h Labs-2-cours_autogen/timestamp Labs-2-cours_autogen/mocs_compilation.cpp Labs-2-cours_autogen_timestamp_deps
 
 
 #############################################
@@ -261,7 +317,7 @@ build Labs-2-cours_autogen/timestamp Labs-2-cours_autogen/mocs_compilation.cpp |
 #############################################
 # Phony custom command for CMakeFiles\Labs-2-cours_autogen
 
-build CMakeFiles/Labs-2-cours_autogen Labs-2-cours_autogen/include/source/interface/ui_mainwindow.h Labs-2-cours_autogen/include/source/interface/ui_loginwindow.h Labs-2-cours_autogen/include/source/interface/ui_MovieCard.h | ${cmake_ninja_workdir}CMakeFiles/Labs-2-cours_autogen ${cmake_ninja_workdir}Labs-2-cours_autogen/include/source/interface/ui_mainwindow.h ${cmake_ninja_workdir}Labs-2-cours_autogen/include/source/interface/ui_loginwindow.h ${cmake_ninja_workdir}Labs-2-cours_autogen/include/source/interface/ui_MovieCard.h: phony Labs-2-cours_autogen/timestamp || Labs-2-cours_autogen_timestamp_deps
+build CMakeFiles/Labs-2-cours_autogen Labs-2-cours_autogen/include/source/interface/ui_mainwindow.h Labs-2-cours_autogen/include/source/interface/ui_loginwindow.h Labs-2-cours_autogen/include/source/interface/ui_MovieCard.h Labs-2-cours_autogen/include/source/interface/ui_MovieCardInfo.h Labs-2-cours_autogen/include/source/interface/ui_FiltersWindow.h | ${cmake_ninja_workdir}CMakeFiles/Labs-2-cours_autogen ${cmake_ninja_workdir}Labs-2-cours_autogen/include/source/interface/ui_mainwindow.h ${cmake_ninja_workdir}Labs-2-cours_autogen/include/source/interface/ui_loginwindow.h ${cmake_ninja_workdir}Labs-2-cours_autogen/include/source/interface/ui_MovieCard.h ${cmake_ninja_workdir}Labs-2-cours_autogen/include/source/interface/ui_MovieCardInfo.h ${cmake_ninja_workdir}Labs-2-cours_autogen/include/source/interface/ui_FiltersWindow.h: phony Labs-2-cours_autogen/timestamp || Labs-2-cours_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.

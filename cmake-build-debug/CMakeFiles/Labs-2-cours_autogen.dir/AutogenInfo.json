@@ -307,6 +307,12 @@
 			null
 		],
 		[
+			"D:/Labs-2-cours/Labs-2-cours/headers/database/LikedDBManager.h",
+			"MU",
+			"FZRWDSMTFO/moc_LikedDBManager.cpp",
+			null
+		],
+		[
 			"D:/Labs-2-cours/Labs-2-cours/headers/database/MoviesDBManager.h",
 			"MU",
 			"FZRWDSMTFO/moc_MoviesDBManager.cpp",
@@ -319,6 +325,12 @@
 			null
 		],
 		[
+			"D:/Labs-2-cours/Labs-2-cours/headers/interface/FiltersWindow.h",
+			"MU",
+			"VKFSGOINM3/moc_FiltersWindow.cpp",
+			null
+		],
+		[
 			"D:/Labs-2-cours/Labs-2-cours/headers/interface/MainWindow.h",
 			"MU",
 			"VKFSGOINM3/moc_MainWindow.cpp",
@@ -328,6 +340,12 @@
 			"D:/Labs-2-cours/Labs-2-cours/headers/interface/MovieCard.h",
 			"MU",
 			"VKFSGOINM3/moc_MovieCard.cpp",
+			null
+		],
+		[
+			"D:/Labs-2-cours/Labs-2-cours/headers/interface/MovieCardInfo.h",
+			"MU",
+			"VKFSGOINM3/moc_MovieCardInfo.cpp",
 			null
 		],
 		[
@@ -361,9 +379,51 @@
 			null
 		],
 		[
-			"D:/Labs-2-cours/Labs-2-cours/headers/search/Filters.h",
+			"D:/Labs-2-cours/Labs-2-cours/headers/search/AgeLimitFilter.h",
 			"MU",
-			"N75IJGAIRM/moc_Filters.cpp",
+			"N75IJGAIRM/moc_AgeLimitFilter.cpp",
+			null
+		],
+		[
+			"D:/Labs-2-cours/Labs-2-cours/headers/search/CompositeFilters.h",
+			"MU",
+			"N75IJGAIRM/moc_CompositeFilters.cpp",
+			null
+		],
+		[
+			"D:/Labs-2-cours/Labs-2-cours/headers/search/GenreFilter.h",
+			"MU",
+			"N75IJGAIRM/moc_GenreFilter.cpp",
+			null
+		],
+		[
+			"D:/Labs-2-cours/Labs-2-cours/headers/search/ICompositFilters.h",
+			"MU",
+			"N75IJGAIRM/moc_ICompositFilters.cpp",
+			null
+		],
+		[
+			"D:/Labs-2-cours/Labs-2-cours/headers/search/IFilter.h",
+			"MU",
+			"N75IJGAIRM/moc_IFilter.cpp",
+			null
+		],
+		[
+			"D:/Labs-2-cours/Labs-2-cours/headers/search/RatingFilter.h",
+			"MU",
+			"N75IJGAIRM/moc_RatingFilter.cpp",
+			null
+		],
+		[
+			"D:/Labs-2-cours/Labs-2-cours/headers/search/RuntimeFilter.h",
+			"MU",
+			"N75IJGAIRM/moc_RuntimeFilter.cpp",
+			null
+		],
+		[
+			"D:/Labs-2-cours/Labs-2-cours/headers/search/YearFilter.h",
+			"MU",
+			"N75IJGAIRM/moc_YearFilter.cpp",
 			null
 		],
 		[
@@ -481,12 +541,22 @@
 			null
 		],
 		[
+			"D:/Labs-2-cours/Labs-2-cours/source/interface/FiltersWindow.cpp",
+			"MU",
+			null
+		],
+		[
 			"D:/Labs-2-cours/Labs-2-cours/source/interface/MainWindow.cpp",
 			"MU",
 			null
 		],
 		[
 			"D:/Labs-2-cours/Labs-2-cours/source/interface/MovieCard.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Labs-2-cours/Labs-2-cours/source/interface/MovieCardInfo.cpp",
 			"MU",
 			null
 		],
@@ -507,7 +577,36 @@
 			"MU",
 			null
 		],
-		[ "D:/Labs-2-cours/Labs-2-cours/source/search/Filters.cpp", "MU", null ],
+		[
+			"D:/Labs-2-cours/Labs-2-cours/source/search/AgeLimitFilter.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Labs-2-cours/Labs-2-cours/source/search/CompositeFilters.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Labs-2-cours/Labs-2-cours/source/search/GenreFilter.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Labs-2-cours/Labs-2-cours/source/search/RatingFilter.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Labs-2-cours/Labs-2-cours/source/search/RuntimeFilter.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Labs-2-cours/Labs-2-cours/source/search/YearFilter.cpp",
+			"MU",
+			null
+		],
 		[
 			"D:/Labs-2-cours/Labs-2-cours/source/search/search_engine.cpp",
 			"MU",
