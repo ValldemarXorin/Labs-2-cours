@@ -277,6 +277,12 @@
 			null
 		],
 		[
+			"D:/Labs-2-cours/Labs-2-cours/headers/MyStack.h",
+			"MU",
+			"K6S233IZAZ/moc_MyStack.cpp",
+			null
+		],
+		[
 			"D:/Labs-2-cours/Labs-2-cours/headers/UserErrorExceptions.h",
 			"MU",
 			"K6S233IZAZ/moc_UserErrorExceptions.cpp",
@@ -286,12 +292,6 @@
 			"D:/Labs-2-cours/Labs-2-cours/headers/auth_models/User.h",
 			"MU",
 			"ZRI2XBC6GC/moc_User.cpp",
-			null
-		],
-		[
-			"D:/Labs-2-cours/Labs-2-cours/headers/auth_models/UserRole.h",
-			"MU",
-			"ZRI2XBC6GC/moc_UserRole.cpp",
 			null
 		],
 		[
@@ -352,12 +352,6 @@
 			"D:/Labs-2-cours/Labs-2-cours/headers/interface/loginwindow.h",
 			"MU",
 			"VKFSGOINM3/moc_loginwindow.cpp",
-			null
-		],
-		[
-			"D:/Labs-2-cours/Labs-2-cours/headers/map_requests.h",
-			"MU",
-			"K6S233IZAZ/moc_map_requests.cpp",
 			null
 		],
 		[
@@ -510,6 +504,7 @@
 			"MU",
 			null
 		],
+		[ "D:/Labs-2-cours/Labs-2-cours/source/MyStack.cpp", "MU", null ],
 		[
 			"D:/Labs-2-cours/Labs-2-cours/source/UserErrorExceptions.cpp",
 			"MU",
@@ -517,11 +512,6 @@
 		],
 		[
 			"D:/Labs-2-cours/Labs-2-cours/source/auth_models/User.cpp",
-			"MU",
-			null
-		],
-		[
-			"D:/Labs-2-cours/Labs-2-cours/source/auth_models/UserRole.cpp",
 			"MU",
 			null
 		],

@@ -32,10 +32,11 @@ std::vector<User> UsersDBManager::load_data_from_DB() {
                        -1,&stmt, nullptr);
 
     while (sqlite3_step(stmt) == SQLITE_ROW) {
+        int id = sqlite3_column_int(stmt, 0);
         std::string email = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 1));
         std::string password = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 2));
         std::string role = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 3));
-        users.emplace_back(email, password, role); // Добавление фильма в вектор
+        users.emplace_back(id, email, password, role); // Добавление фильма в вектор
     }
     sqlite3_finalize(stmt);
 
@@ -50,11 +51,12 @@ void UsersDBManager::save_data_to_DB(std::vector<User> users) {
 
     for (const auto& user : users) {
         sqlite3_prepare_v2(Database::get_instance(db_name)->get_db(),
-                           "INSERT INTO Users (email, password, role) VALUES (?, ?, ?);",
+                           "INSERT INTO Users (id, email, password, role) VALUES (?, ?, ?, ?);",
                            -1, &stmt, nullptr);
-        sqlite3_bind_text(stmt, 1, user.get_email().c_str(), -1, SQLITE_TRANSIENT);
-        sqlite3_bind_text(stmt, 2, user.get_password().c_str(), -1, SQLITE_TRANSIENT);
-        sqlite3_bind_text(stmt, 3, user.get_role().c_str(), -1, SQLITE_TRANSIENT);
+        sqlite3_bind_int(stmt, 1, user.get_id());
+        sqlite3_bind_text(stmt, 2, user.get_email().c_str(), -1, SQLITE_TRANSIENT);
+        sqlite3_bind_text(stmt, 3, user.get_password().c_str(), -1, SQLITE_TRANSIENT);
+        sqlite3_bind_text(stmt, 4, user.get_role().c_str(), -1, SQLITE_TRANSIENT);
         sqlite3_step(stmt);
         sqlite3_reset(stmt);
     }

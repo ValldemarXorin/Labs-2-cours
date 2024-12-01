@@ -14,5 +14,7 @@ public:
     RatingFilter(bool ascending);
 
     std::vector<Movie> apply(std::vector<Movie> movies) override;
+
+    ~RatingFilter() override = default;
 };
 #endif //LABS_2_COURS_RATINGFILTER_H

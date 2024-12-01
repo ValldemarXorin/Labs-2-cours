@@ -20,6 +20,15 @@ public:
 
     ~FiltersWindow() override;
 
+public slots:
+    void onApplyButtonClicked();
+
+    //void on_ClearAllButton_clicked();
+
+    signals:
+    void filters_applied(const QString& genre, const QString& age_limit, const QString& rating,
+                         const QString& year, const QString& runtime);
+
 private:
     Ui::FiltersWindow *ui;
 };

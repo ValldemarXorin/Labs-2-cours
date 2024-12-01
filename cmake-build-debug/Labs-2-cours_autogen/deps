@@ -548,9 +548,9 @@ Labs-2-cours_autogen/timestamp: \
 	D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/CMakeFiles/3.29.6/CMakeSystem.cmake \
 	D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/moc_predefs.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/MovieErrorExceptions.h \
+	D:/Labs-2-cours/Labs-2-cours/headers/MyStack.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/UserErrorExceptions.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/auth_models/User.h \
-	D:/Labs-2-cours/Labs-2-cours/headers/auth_models/UserRole.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/database/DBManager.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/database/Database.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/database/LikedDBManager.h \
@@ -561,7 +561,6 @@ Labs-2-cours_autogen/timestamp: \
 	D:/Labs-2-cours/Labs-2-cours/headers/interface/MovieCard.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/interface/MovieCardInfo.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/interface/loginwindow.h \
-	D:/Labs-2-cours/Labs-2-cours/headers/map_requests.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/models/Movie.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/repositories/IMoviesRepository.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/repositories/IUsersRepository.h \
@@ -575,9 +574,9 @@ Labs-2-cours_autogen/timestamp: \
 	D:/Labs-2-cours/Labs-2-cours/headers/search/YearFilter.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/search/search_engine.h \
 	D:/Labs-2-cours/Labs-2-cours/source/MovieErrorExceptions.cpp \
+	D:/Labs-2-cours/Labs-2-cours/source/MyStack.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/UserErrorExceptions.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/auth_models/User.cpp \
-	D:/Labs-2-cours/Labs-2-cours/source/auth_models/UserRole.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/database/Database.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/database/MoviesDBManager.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/database/UsersDBManager.cpp \

@@ -507,11 +507,11 @@ D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/VKFSGOINM3/m
   D:/Labs-2-cours/Labs-2-cours/headers/MovieErrorExceptions.h \
   D:/Labs-2-cours/Labs-2-cours/headers/UserErrorExceptions.h \
   D:/Labs-2-cours/Labs-2-cours/headers/auth_models/User.h \
-  D:/Labs-2-cours/Labs-2-cours/headers/auth_models/UserRole.h \
   D:/Labs-2-cours/Labs-2-cours/headers/database/DBManager.h \
   D:/Labs-2-cours/Labs-2-cours/headers/database/Database.h \
   D:/Labs-2-cours/Labs-2-cours/headers/database/MoviesDBManager.h \
   D:/Labs-2-cours/Labs-2-cours/headers/database/UsersDBManager.h \
+  D:/Labs-2-cours/Labs-2-cours/headers/interface/FiltersWindow.h \
   D:/Labs-2-cours/Labs-2-cours/headers/interface/MovieCard.h \
   D:/Labs-2-cours/Labs-2-cours/headers/interface/MovieCardInfo.h \
   D:/Labs-2-cours/Labs-2-cours/headers/models/Movie.h \
@@ -522,6 +522,9 @@ D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/VKFSGOINM3/m
   D:/Labs-2-cours/Labs-2-cours/headers/search/GenreFilter.h \
   D:/Labs-2-cours/Labs-2-cours/headers/search/ICompositFilters.h \
   D:/Labs-2-cours/Labs-2-cours/headers/search/IFilter.h \
+  D:/Labs-2-cours/Labs-2-cours/headers/search/RatingFilter.h \
+  D:/Labs-2-cours/Labs-2-cours/headers/search/RuntimeFilter.h \
+  D:/Labs-2-cours/Labs-2-cours/headers/search/YearFilter.h \
   D:/Labs-2-cours/Labs-2-cours/headers/search/search_engine.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/QPropertyAnimation \
   D:/Qt/6.7.3/mingw_64/include/QtCore/q20functional.h \

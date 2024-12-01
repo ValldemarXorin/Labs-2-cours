@@ -18,6 +18,6 @@ public:
 
     void removeFilter(IFilter* filter) override;
 
-    ~CompositeFilter();
+    ~CompositeFilter() override;
 };
 #endif //LABS_2_COURS_COMPOSITEFILTERS_H

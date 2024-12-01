@@ -1,10 +1,11 @@
 #include "../../headers/models/Movie.h"
 
-Movie::Movie(const std::string &title, const std::string &description, const std::string &genre,
+Movie::Movie(int id, const std::string &title, const std::string &description, const std::string &genre,
              int realease_year, const std::string &runtime, float rating, int link_id, std::string& age_limit)
-             : title(title), description(description), genre(genre), release_year(realease_year),
+             : id(id), title(title), description(description), genre(genre), release_year(realease_year),
              runtime(runtime), rating(rating), link_id(link_id), age_limit(age_limit) {};
 
+int Movie::get_id() const { return id; }
 
 const std::string &Movie::get_title() const { return title; }
 

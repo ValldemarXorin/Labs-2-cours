@@ -308,90 +308,38 @@ QListWidget::item:hover {
 </string>
       </property>
      </widget>
-     <widget class="QComboBox" name="AgeLimitFilter">
+     <widget class="QPushButton" name="FiltersButtonSearchPage">
       <property name="geometry">
        <rect>
-        <x>250</x>
+        <x>200</x>
         <y>20</y>
-        <width>68</width>
+        <width>91</width>
         <height>31</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">QComboBox {
-		background-color: #2E2E2E; /* Темный фон */
+       <string notr="true">QPushButton {
+        background-color: #2E2E2E; /* Темный фон */
         color: #FFFFFF; /* Белый текст */
         border: 2px solid #0078d7; /* Цвет границы */
         border-radius: 10px; /* Закругленные углы */
         padding: 5px; /* Отступы */
-}</string>
+    }
+
+QPushButton:hover {
+		background-color: #1E1E1E
+}
+</string>
       </property>
-      <item>
-       <property name="text">
-        <string/>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>18+</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>16+</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>12+</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="GenreFilter">
-      <property name="geometry">
-       <rect>
-        <x>160</x>
-        <y>20</y>
-        <width>68</width>
-        <height>31</height>
-       </rect>
+      <property name="text">
+       <string>Filters</string>
       </property>
-      <property name="styleSheet">
-       <string notr="true">QComboBox {
-background-color: #2E2E2E; /* Темный фон */
-        color: #FFFFFF; /* Белый текст */
-        border: 2px solid #0078d7; /* Цвет границы */
-        border-radius: 10px; /* Закругленные углы */
-        padding: 5px; /* Отступы */
-}</string>
-      </property>
-      <item>
-       <property name="text">
-        <string/>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>horror</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>drama</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>sci-fi</string>
-       </property>
-      </item>
      </widget>
      <zorder>MenuButtonSearchPage</zorder>
      <zorder>SearchFieldSearchPage</zorder>
      <zorder>MenuListSearchPage</zorder>
      <zorder>MoviesListSearchPage</zorder>
-     <zorder>AgeLimitFilter</zorder>
-     <zorder>GenreFilter</zorder>
+     <zorder>FiltersButtonSearchPage</zorder>
     </widget>
     <widget class="QWidget" name="LikedPage">
      <widget class="QListWidget" name="MoviesListLikedPage">

@@ -35,7 +35,6 @@ add_executable(Labs-2-cours
         headers/models/Movie.h
         source/models/Movie.cpp
         headers/database/DBManager.h
-        headers/map_requests.h
         source/interface/MainWindow.cpp
         headers/interface/MainWindow.h
         source/interface/MainWindow.ui
@@ -45,7 +44,6 @@ add_executable(Labs-2-cours
         source/repositories/IMoviesRepository.cpp
         headers/MovieErrorExceptions.h
         source/MovieErrorExceptions.cpp
-        headers/auth_models/UserRole.h
         source/interface/loginwindow.cpp
         headers/interface/loginwindow.h
         source/interface/loginwindow.ui
@@ -57,7 +55,6 @@ add_executable(Labs-2-cours
         headers/database/UsersDBManager.h
         source/database/UsersDBManager.cpp
         source/repositories/IUsersRepository.cpp
-        source/auth_models/UserRole.cpp
         headers/database/Database.h
         source/database/Database.cpp
         headers/search/search_engine.h
@@ -86,6 +83,8 @@ add_executable(Labs-2-cours
         source/interface/FiltersWindow.cpp
         headers/interface/FiltersWindow.h
         source/interface/FiltersWindow.ui
+        headers/MyStack.h
+        source/MyStack.cpp
 )
 
 target_link_libraries(Labs-2-cours

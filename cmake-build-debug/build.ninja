@@ -153,14 +153,6 @@ build CMakeFiles/Labs-2-cours.dir/source/repositories/IUsersRepository.cpp.obj: 
   OBJECT_DIR = CMakeFiles\Labs-2-cours.dir
   OBJECT_FILE_DIR = CMakeFiles\Labs-2-cours.dir\source\repositories
 
-build CMakeFiles/Labs-2-cours.dir/source/auth_models/UserRole.cpp.obj: CXX_COMPILER__Labs-2-cours_unscanned_Debug D$:/Labs-2-cours/Labs-2-cours/source/auth_models/UserRole.cpp || cmake_object_order_depends_target_Labs-2-cours
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\Labs-2-cours.dir\source\auth_models\UserRole.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -isystem D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/include -isystem D:/Qt/6.7.3/mingw_64/include/QtCore -isystem D:/Qt/6.7.3/mingw_64/include -isystem D:/Qt/6.7.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.7.3/mingw_64/include/QtGui -isystem D:/Qt/6.7.3/mingw_64/include/QtWidgets
-  OBJECT_DIR = CMakeFiles\Labs-2-cours.dir
-  OBJECT_FILE_DIR = CMakeFiles\Labs-2-cours.dir\source\auth_models
-
 build CMakeFiles/Labs-2-cours.dir/source/database/Database.cpp.obj: CXX_COMPILER__Labs-2-cours_unscanned_Debug D$:/Labs-2-cours/Labs-2-cours/source/database/Database.cpp || cmake_object_order_depends_target_Labs-2-cours
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\Labs-2-cours.dir\source\database\Database.cpp.obj.d
@@ -249,6 +241,14 @@ build CMakeFiles/Labs-2-cours.dir/source/interface/FiltersWindow.cpp.obj: CXX_CO
   OBJECT_DIR = CMakeFiles\Labs-2-cours.dir
   OBJECT_FILE_DIR = CMakeFiles\Labs-2-cours.dir\source\interface
 
+build CMakeFiles/Labs-2-cours.dir/source/MyStack.cpp.obj: CXX_COMPILER__Labs-2-cours_unscanned_Debug D$:/Labs-2-cours/Labs-2-cours/source/MyStack.cpp || cmake_object_order_depends_target_Labs-2-cours
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Labs-2-cours.dir\source\MyStack.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -isystem D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/include -isystem D:/Qt/6.7.3/mingw_64/include/QtCore -isystem D:/Qt/6.7.3/mingw_64/include -isystem D:/Qt/6.7.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.7.3/mingw_64/include/QtGui -isystem D:/Qt/6.7.3/mingw_64/include/QtWidgets
+  OBJECT_DIR = CMakeFiles\Labs-2-cours.dir
+  OBJECT_FILE_DIR = CMakeFiles\Labs-2-cours.dir\source
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Labs-2-cours
@@ -257,7 +257,7 @@ build CMakeFiles/Labs-2-cours.dir/source/interface/FiltersWindow.cpp.obj: CXX_CO
 #############################################
 # Link the executable Labs-2-cours.exe
 
-build Labs-2-cours.exe: CXX_EXECUTABLE_LINKER__Labs-2-cours_Debug CMakeFiles/Labs-2-cours.dir/Labs-2-cours_autogen/mocs_compilation.cpp.obj CMakeFiles/Labs-2-cours.dir/SQLiteLibrary/sqlite3.c.obj CMakeFiles/Labs-2-cours.dir/source/main.cpp.obj CMakeFiles/Labs-2-cours.dir/source/models/Movie.cpp.obj CMakeFiles/Labs-2-cours.dir/source/interface/MainWindow.cpp.obj CMakeFiles/Labs-2-cours.dir/source/database/MoviesDBManager.cpp.obj CMakeFiles/Labs-2-cours.dir/source/repositories/IMoviesRepository.cpp.obj CMakeFiles/Labs-2-cours.dir/source/MovieErrorExceptions.cpp.obj CMakeFiles/Labs-2-cours.dir/source/interface/loginwindow.cpp.obj CMakeFiles/Labs-2-cours.dir/source/auth_models/User.cpp.obj CMakeFiles/Labs-2-cours.dir/source/UserErrorExceptions.cpp.obj CMakeFiles/Labs-2-cours.dir/source/database/UsersDBManager.cpp.obj CMakeFiles/Labs-2-cours.dir/source/repositories/IUsersRepository.cpp.obj CMakeFiles/Labs-2-cours.dir/source/auth_models/UserRole.cpp.obj CMakeFiles/Labs-2-cours.dir/source/database/Database.cpp.obj CMakeFiles/Labs-2-cours.dir/source/search/search_engine.cpp.obj CMakeFiles/Labs-2-cours.dir/source/interface/MovieCard.cpp.obj CMakeFiles/Labs-2-cours.dir/source/interface/MovieCardInfo.cpp.obj CMakeFiles/Labs-2-cours.dir/source/search/GenreFilter.cpp.obj CMakeFiles/Labs-2-cours.dir/source/search/YearFilter.cpp.obj CMakeFiles/Labs-2-cours.dir/source/search/RuntimeFilter.cpp.obj CMakeFiles/Labs-2-cours.dir/source/search/RatingFilter.cpp.obj CMakeFiles/Labs-2-cours.dir/source/search/AgeLimitFilter.cpp.obj CMakeFiles/Labs-2-cours.dir/source/search/CompositeFilters.cpp.obj CMakeFiles/Labs-2-cours.dir/source/interface/FiltersWindow.cpp.obj | D$:/Qt/6.7.3/mingw_64/lib/libQt6Widgets.a D$:/Qt/6.7.3/mingw_64/lib/libQt6Gui.a D$:/Qt/6.7.3/mingw_64/lib/libQt6Core.a || Labs-2-cours_autogen Labs-2-cours_autogen_timestamp_deps
+build Labs-2-cours.exe: CXX_EXECUTABLE_LINKER__Labs-2-cours_Debug CMakeFiles/Labs-2-cours.dir/Labs-2-cours_autogen/mocs_compilation.cpp.obj CMakeFiles/Labs-2-cours.dir/SQLiteLibrary/sqlite3.c.obj CMakeFiles/Labs-2-cours.dir/source/main.cpp.obj CMakeFiles/Labs-2-cours.dir/source/models/Movie.cpp.obj CMakeFiles/Labs-2-cours.dir/source/interface/MainWindow.cpp.obj CMakeFiles/Labs-2-cours.dir/source/database/MoviesDBManager.cpp.obj CMakeFiles/Labs-2-cours.dir/source/repositories/IMoviesRepository.cpp.obj CMakeFiles/Labs-2-cours.dir/source/MovieErrorExceptions.cpp.obj CMakeFiles/Labs-2-cours.dir/source/interface/loginwindow.cpp.obj CMakeFiles/Labs-2-cours.dir/source/auth_models/User.cpp.obj CMakeFiles/Labs-2-cours.dir/source/UserErrorExceptions.cpp.obj CMakeFiles/Labs-2-cours.dir/source/database/UsersDBManager.cpp.obj CMakeFiles/Labs-2-cours.dir/source/repositories/IUsersRepository.cpp.obj CMakeFiles/Labs-2-cours.dir/source/database/Database.cpp.obj CMakeFiles/Labs-2-cours.dir/source/search/search_engine.cpp.obj CMakeFiles/Labs-2-cours.dir/source/interface/MovieCard.cpp.obj CMakeFiles/Labs-2-cours.dir/source/interface/MovieCardInfo.cpp.obj CMakeFiles/Labs-2-cours.dir/source/search/GenreFilter.cpp.obj CMakeFiles/Labs-2-cours.dir/source/search/YearFilter.cpp.obj CMakeFiles/Labs-2-cours.dir/source/search/RuntimeFilter.cpp.obj CMakeFiles/Labs-2-cours.dir/source/search/RatingFilter.cpp.obj CMakeFiles/Labs-2-cours.dir/source/search/AgeLimitFilter.cpp.obj CMakeFiles/Labs-2-cours.dir/source/search/CompositeFilters.cpp.obj CMakeFiles/Labs-2-cours.dir/source/interface/FiltersWindow.cpp.obj CMakeFiles/Labs-2-cours.dir/source/MyStack.cpp.obj | D$:/Qt/6.7.3/mingw_64/lib/libQt6Widgets.a D$:/Qt/6.7.3/mingw_64/lib/libQt6Gui.a D$:/Qt/6.7.3/mingw_64/lib/libQt6Core.a || Labs-2-cours_autogen Labs-2-cours_autogen_timestamp_deps
   FLAGS = -g
   LINK_LIBRARIES = D:/Qt/6.7.3/mingw_64/lib/libQt6Widgets.a  D:/Qt/6.7.3/mingw_64/lib/libQt6Gui.a  D:/Qt/6.7.3/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Labs-2-cours.dir

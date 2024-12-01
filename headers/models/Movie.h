@@ -6,6 +6,7 @@
 
 
 class Movie {
+    int id;
     std::string title;
     std::string description;
     std::string genre;
@@ -16,10 +17,12 @@ class Movie {
     std::string age_limit;
 
 public:
-    Movie(const std::string &title, const std::string &description, const std::string &genre,
+    Movie(int id, const std::string &title, const std::string &description, const std::string &genre,
           int realease_year, const std::string &runtime, float rating, int link_id, std::string& age_limit);
 
     ~Movie() = default;
+
+    [[nodiscard]] int get_id() const;
 
     [[nodiscard]] const std::string &get_title() const;
 

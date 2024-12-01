@@ -6,102 +6,337 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>589</width>
+    <height>377</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>FiltersWindow</string>
   </property>
-  <widget class="QLabel" name="GenreText">
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, 
+                                stop: 0 #1E1E1E, /* Начальный цвет (темный) */
+                                stop: 1 #001f3f); /* Конечный цвет (темно-синий) */
+    color: #FFFFFF; /* Цвет текста по умолчанию */
+}</string>
+  </property>
+  <widget class="QComboBox" name="GenreFilter">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>20</x>
      <y>20</y>
-     <width>49</width>
-     <height>16</height>
+     <width>101</width>
+     <height>31</height>
     </rect>
    </property>
-   <property name="text">
+   <property name="styleSheet">
+    <string notr="true">QComboBox {
+    background-color: #2E2E2E; /* Темный фон для комбобокса */
+    color: #FFFFFF; /* Белый текст */
+    border: 2px solid #0078d7; /* Цвет границы */
+    border-radius: 10px; /* Закругленные углы */
+    padding: 5px; /* Отступы */
+}
+
+QComboBox::drop-down {
+    background-color: #0056a1; /* Более сдержанный цвет для стрелки */
+    border: none; /* Убираем границу */
+    border-radius: 5px; /* Закругленные углы для стрелки */
+    width: 30px; /* Ширина кнопки */
+}
+
+QComboBox QAbstractItemView {
+    background-color: #2E2E2E; /* Темный фон для выпадающего списка */
+    color: #FFFFFF; /* Белый текст */
+}
+
+QComboBox:hover {
+    border: 2px solid #0056a1; /* Цвет границы при наведении */
+}</string>
+   </property>
+   <property name="placeholderText">
     <string>Genre</string>
    </property>
+   <item>
+    <property name="text">
+     <string>horror</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>drama</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>sci-fi</string>
+    </property>
+   </item>
   </widget>
-  <widget class="QLabel" name="AgeLimitText">
+  <widget class="QComboBox" name="AgeLimitFilter">
    <property name="geometry">
     <rect>
-     <x>290</x>
+     <x>130</x>
      <y>20</y>
-     <width>49</width>
-     <height>16</height>
+     <width>101</width>
+     <height>31</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Age Limit</string>
+   <property name="styleSheet">
+    <string notr="true">QComboBox {
+    background-color: #2E2E2E; /* Темный фон для комбобокса */
+    color: #FFFFFF; /* Белый текст */
+    border: 2px solid #0078d7; /* Цвет границы */
+    border-radius: 10px; /* Закругленные углы */
+    padding: 5px; /* Отступы */
+}
+
+QComboBox::drop-down {
+    background-color: #0056a1; /* Более сдержанный цвет для стрелки */
+    border: none; /* Убираем границу */
+    border-radius: 5px; /* Закругленные углы для стрелки */
+    width: 30px; /* Ширина кнопки */
+}
+
+QComboBox QAbstractItemView {
+    background-color: #2E2E2E; /* Темный фон для выпадающего списка */
+    color: #FFFFFF; /* Белый текст */
+}
+
+QComboBox:hover {
+    border: 2px solid #0056a1; /* Цвет границы при наведении */
+}
+</string>
    </property>
+   <property name="placeholderText">
+    <string>Age limit</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>0+</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>3+</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>6+</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>12+</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>16+</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>18+</string>
+    </property>
+   </item>
   </widget>
-  <widget class="QRadioButton" name="isHorror">
+  <widget class="QComboBox" name="RatingFilter">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>66</y>
-     <width>81</width>
-     <height>20</height>
+     <x>240</x>
+     <y>20</y>
+     <width>101</width>
+     <height>31</height>
     </rect>
    </property>
-   <property name="text">
-    <string>horror</string>
+   <property name="styleSheet">
+    <string notr="true">QComboBox {
+    background-color: #2E2E2E; /* Темный фон для комбобокса */
+    color: #FFFFFF; /* Белый текст */
+    border: 2px solid #0078d7; /* Цвет границы */
+    border-radius: 10px; /* Закругленные углы */
+    padding: 5px; /* Отступы */
+}
+
+QComboBox::drop-down {
+    background-color: #0056a1; /* Более сдержанный цвет для стрелки */
+    border: none; /* Убираем границу */
+    border-radius: 5px; /* Закругленные углы для стрелки */
+    width: 30px; /* Ширина кнопки */
+}
+
+QComboBox QAbstractItemView {
+    background-color: #2E2E2E; /* Темный фон для выпадающего списка */
+    color: #FFFFFF; /* Белый текст */
+}
+
+QComboBox:hover {
+    border: 2px solid #0056a1; /* Цвет границы при наведении */
+}</string>
    </property>
+   <property name="placeholderText">
+    <string>Rating</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>Increase</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Decrease</string>
+    </property>
+   </item>
   </widget>
-  <widget class="QRadioButton" name="radioButton_2">
+  <widget class="QComboBox" name="YearFilter">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>100</y>
-     <width>92</width>
-     <height>20</height>
+     <x>350</x>
+     <y>20</y>
+     <width>101</width>
+     <height>31</height>
     </rect>
    </property>
-   <property name="text">
-    <string>drama</string>
+   <property name="styleSheet">
+    <string notr="true">QComboBox {
+    background-color: #2E2E2E; /* Темный фон для комбобокса */
+    color: #FFFFFF; /* Белый текст */
+    border: 2px solid #0078d7; /* Цвет границы */
+    border-radius: 10px; /* Закругленные углы */
+    padding: 5px; /* Отступы */
+}
+
+QComboBox::drop-down {
+    background-color: #0056a1; /* Более сдержанный цвет для стрелки */
+    border: none; /* Убираем границу */
+    border-radius: 5px; /* Закругленные углы для стрелки */
+    width: 30px; /* Ширина кнопки */
+}
+
+QComboBox QAbstractItemView {
+    background-color: #2E2E2E; /* Темный фон для выпадающего списка */
+    color: #FFFFFF; /* Белый текст */
+}
+
+QComboBox:hover {
+    border: 2px solid #0056a1; /* Цвет границы при наведении */
+}</string>
    </property>
+   <property name="placeholderText">
+    <string>Year</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>Increase</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Decrease</string>
+    </property>
+   </item>
   </widget>
-  <widget class="QRadioButton" name="radioButton_3">
+  <widget class="QComboBox" name="RuntimeYear">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>60</y>
-     <width>92</width>
-     <height>20</height>
+     <x>460</x>
+     <y>20</y>
+     <width>101</width>
+     <height>31</height>
     </rect>
    </property>
-   <property name="text">
-    <string>18+</string>
+   <property name="styleSheet">
+    <string notr="true">QComboBox {
+    background-color: #2E2E2E; /* Темный фон для комбобокса */
+    color: #FFFFFF; /* Белый текст */
+    border: 2px solid #0078d7; /* Цвет границы */
+    border-radius: 10px; /* Закругленные углы */
+    padding: 5px; /* Отступы */
+}
+
+QComboBox::drop-down {
+    background-color: #0056a1; /* Более сдержанный цвет для стрелки */
+    border: none; /* Убираем границу */
+    border-radius: 5px; /* Закругленные углы для стрелки */
+    width: 30px; /* Ширина кнопки */
+}
+
+QComboBox QAbstractItemView {
+    background-color: #2E2E2E; /* Темный фон для выпадающего списка */
+    color: #FFFFFF; /* Белый текст */
+}
+
+QComboBox:hover {
+    border: 2px solid #0056a1; /* Цвет границы при наведении */
+}</string>
    </property>
+   <property name="placeholderText">
+    <string>Runtime</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>Increase</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Decrease</string>
+    </property>
+   </item>
   </widget>
-  <widget class="QRadioButton" name="radioButton_4">
+  <widget class="QPushButton" name="ApplyButton">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>90</y>
-     <width>92</width>
-     <height>20</height>
+     <x>460</x>
+     <y>330</y>
+     <width>101</width>
+     <height>31</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #2E2E2E; /* Темный фон */
+    color: #FFFFFF; /* Белый текст */
+    border: 2px solid #0078d7; /* Цвет границы */
+    border-radius: 10px; /* Закругленные углы */
+    padding: 5px; /* Отступы */
+}
+
+QPushButton:hover {
+    background-color: #1E1E1E; /* Цвет фона при наведении */
+}</string>
+   </property>
    <property name="text">
-    <string>12+</string>
+    <string>Apply</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="radioButton_5">
+  <widget class="QPushButton" name="ClearAllButton">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>120</y>
-     <width>92</width>
-     <height>20</height>
+     <x>350</x>
+     <y>330</y>
+     <width>101</width>
+     <height>31</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #2E2E2E; /* Темный фон */
+    color: #FFFFFF; /* Белый текст */
+    border: 2px solid #0078d7; /* Цвет границы */
+    border-radius: 10px; /* Закругленные углы */
+    padding: 5px; /* Отступы */
+}
+
+QPushButton:hover {
+    background-color: #1E1E1E; /* Цвет фона при наведении */
+}</string>
+   </property>
    <property name="text">
-    <string>16+</string>
+    <string>Clear All</string>
    </property>
   </widget>
  </widget>

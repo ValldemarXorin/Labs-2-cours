@@ -13,5 +13,7 @@ public:
     RuntimeFilter(bool ascending);
 
     std::vector<Movie> apply(std::vector<Movie> movies) override;
+
+    ~RuntimeFilter() override = default;
 };
 #endif //LABS_2_COURS_RUNTIMEFILTER_H

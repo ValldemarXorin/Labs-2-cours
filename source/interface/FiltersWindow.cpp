@@ -11,8 +11,22 @@
 FiltersWindow::FiltersWindow(QWidget *parent) :
         QWidget(parent), ui(new Ui::FiltersWindow) {
     ui->setupUi(this);
+
+    connect(ui->ApplyButton, &QPushButton::clicked,
+            this, &FiltersWindow::onApplyButtonClicked);
 }
 
 FiltersWindow::~FiltersWindow() {
     delete ui;
 }
+
+void FiltersWindow::onApplyButtonClicked() {
+    QString genre = ui->GenreFilter->currentText();
+    QString age_limit = ui->AgeLimitFilter->currentText();
+    QString rating = ui->RatingFilter->currentText();
+    QString year = ui->YearFilter->currentText();
+    QString runtime = ui->RuntimeYear->currentText();
+    this->close();
+    emit FiltersWindow::filters_applied(genre, age_limit, rating, year, runtime);
+}
+

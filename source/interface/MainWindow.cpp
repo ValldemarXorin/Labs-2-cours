@@ -9,8 +9,9 @@
 
 MainWindow::MainWindow(IMoviesRepository* movies, IUserRepository* users,
                        QWidget *parent) :
-        QMainWindow(parent), ui(new Ui::MainWindow), movies_repository(movies_repository), users(users),
-        search_engine(new SearchEngine(*movies)) {
+        QMainWindow(parent), ui(new Ui::MainWindow), movies_repository(movies), users(users),
+        search_engine(new SearchEngine(*movies)), filters_window(new FiltersWindow),
+        movies_for_search_list(movies->get_movies()), is_filter_apply(false) {
 
     ui->setupUi(this);
 
@@ -173,26 +174,50 @@ void MainWindow::on_MenuListLikedPage_itemClicked(QListWidgetItem *item) {
     }
 }
 
+void MainWindow::on_FiltersButtonSearchPage_clicked() {
+    filters_window->show();
+
+    connect(filters_window, &FiltersWindow::filters_applied,
+            this, &MainWindow::apply_filters);
+}
+
+void
+MainWindow::apply_filters(const QString &genre, const QString &age_limit, const QString &rating, const QString &year,
+                          const QString &runtime) {
+
+    CompositeFilter* compositeFilter = new CompositeFilter;
+    if (genre != "")
+        compositeFilter->addFilter(new GenreFilter(genre.toStdString()));
+    if (age_limit != "")
+        compositeFilter->addFilter(new AgeLimitFilter(age_limit.toStdString()));
+    if (rating == "Increase")
+        compositeFilter->addFilter((new RatingFilter(true)));
+    if (rating == "Decrease")
+        compositeFilter->addFilter((new RatingFilter(false)));
+    if (runtime == "Increase")
+        compositeFilter->addFilter(new RuntimeFilter(true));
+    if (runtime == "Decrese")
+        compositeFilter->addFilter(new RuntimeFilter(false));
+
+    movies_for_search_list = compositeFilter->apply(movies_for_search_list);
+
+    is_filter_apply = true;
+
+    using_search_enging();
+}
+
 void MainWindow::using_search_enging() {
     ui->MoviesListSearchPage->clear();
-    std::vector<Movie> movies;
     if (ui->SearchFieldSearchPage->text().toStdString().length() < precurrent_length_text_search_field)
-        movies = search_engine->search_by_fragment(ui->SearchFieldSearchPage->text().toStdString(), false);
+        movies_for_search_list = search_engine->search_by_fragment(ui->SearchFieldSearchPage->text().toStdString(), false);
     else
-        movies = search_engine->search_by_fragment(ui->SearchFieldSearchPage->text().toStdString(), true);
+        movies_for_search_list = search_engine->search_by_fragment(ui->SearchFieldSearchPage->text().toStdString(), true);
 
-    CompositeFilter compositeFilters;
-    if (ui->GenreFilter->currentIndex() != 0) {
-        compositeFilters.addFilter(new GenreFilter(ui->GenreFilter->currentText().toStdString()));
-        movies = compositeFilters.apply(movies);
-    }
-    if (ui->AgeLimitFilter->currentIndex() != 0) {
-        compositeFilters.addFilter(new AgeLimitFilter(ui->AgeLimitFilter->currentText().toStdString()));
-        movies = compositeFilters.apply(movies);
-    }
-    for (auto& movie: movies) {
+
+    for (auto& movie: movies_for_search_list) {
         add_movie_card(QString::fromStdString(movie.get_title()), QString::fromStdString(movie.get_genre()),
-                       QString::fromStdString("9.0"), QString::fromStdString("2005"),
+                       QString::fromStdString(std::to_string(movie.get_rating())),
+                       QString::fromStdString(std::to_string(movie.get_release_year())),
                        QString::fromStdString(movie.get_age_limit()));
     }
 }

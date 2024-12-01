@@ -5,16 +5,22 @@
 #ifndef LABS_2_COURS_USER_H
 #define LABS_2_COURS_USER_H
 
-#include "UserRole.h"
 #include "../UserErrorExceptions.h"
 #include <string>
 #include <string_view>
 
-class User: public UserRole, public UserErrorExceptions {
-public:
-    User(std::string_view email, std::string_view password, std::string_view role);
+class User: public UserErrorExceptions {
+    int id;
+    std::string email;
+    std::string password;
+    std::string role;
 
-    ~User() override = default;
+public:
+    User(int id, std::string_view email, std::string_view password, std::string_view role);
+
+    ~User() = default;
+
+    int get_id() const;
 
     std::string get_email() const;
 

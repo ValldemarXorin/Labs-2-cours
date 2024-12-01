@@ -13,5 +13,7 @@ public:
     GenreFilter(std::string g);
 
     std::vector<Movie> apply(std::vector<Movie> movies) override;
+
+    ~GenreFilter() override = default;
 };
 #endif //LABS_2_COURS_GENREFILTER_H

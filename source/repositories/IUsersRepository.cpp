@@ -14,14 +14,14 @@ IUserRepository::~IUserRepository() {
 
 void IUserRepository::add_user(const std::string &new_email, const std::string &new_password,
                                const std::string &new_role) {
-    users.emplace_back(User(new_email, new_password, new_role));
+    users.emplace_back(User(users.size() + 1, new_email, new_password, new_role));
 }
 
 void IUserRepository::delete_user(const std::string &email, const std::string &password,
                                   const std::string &role) {
-    User user_to_del(email, password, role);
     for (int i = 0; i < users.size(); ++i) {
-        if (users[i] == user_to_del) {
+        if (users[i].get_email() == email && users[i].get_password() == password &&
+            users[i].get_role() == role) {
             users.erase(users.begin() + i);
             return;
         }
@@ -30,9 +30,9 @@ void IUserRepository::delete_user(const std::string &email, const std::string &p
 }
 
 bool IUserRepository::user_exist(const std::string& email, const std::string& password, const std::string& role) const {
-    User check_user(email, password, role);
     for (const User& user: users) {
-        if (user == check_user)
+        if (user.get_email() == email && user.get_password() == password &&
+            user.get_role() == role)
             return true;
     }
     return false;

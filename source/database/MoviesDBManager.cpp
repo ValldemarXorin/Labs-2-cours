@@ -36,6 +36,7 @@ std::vector<Movie> MoviesDBManager::load_data_from_DB() {
                        -1, &stmt,nullptr);
 
     while (sqlite3_step(stmt) == SQLITE_ROW) {
+        int id = sqlite3_column_int(stmt, 0);
         std::string title = reinterpret_cast<const char*>(sqlite3_column_text(stmt, TITLE));
         std::string description = reinterpret_cast<const char*>(sqlite3_column_text(stmt, DESCRIPTION));
         std::string genre = reinterpret_cast<const char*>(sqlite3_column_text(stmt, GENRE));
@@ -45,7 +46,7 @@ std::vector<Movie> MoviesDBManager::load_data_from_DB() {
         std::string age_limit = reinterpret_cast<const char*>(sqlite3_column_text(stmt, AGE_LIMIT));
         int link_id = sqlite3_column_int(stmt, LINK_ID);
 
-        movies.emplace_back(title, description, genre, release_year, runtime, rating, link_id,
+        movies.emplace_back(movies.size() + 1, title, description, genre, release_year, runtime, rating, link_id,
                             age_limit); // Добавление фильма в вектор
     }
     sqlite3_finalize(stmt);
@@ -62,18 +63,19 @@ void MoviesDBManager::save_data_to_DB(std::vector<Movie> movies) {
 
     for (const auto& movie : movies) {
         sqlite3_prepare_v2(Database::get_instance(db_name)->get_db(),
-                           "INSERT INTO Movies (title, description, genre, release_year, runtime, rating, age_limit, link_id) "
-                           "VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+                           "INSERT INTO Movies (movie_id, title, description, genre, release_year, runtime, rating, age_limit, link_id) "
+                           "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
                            -1, &stmt, nullptr);
 
-        sqlite3_bind_text(stmt, TITLE, movie.get_title().c_str(), -1, SQLITE_TRANSIENT);
-        sqlite3_bind_text(stmt, DESCRIPTION, movie.get_description().c_str(), -1, SQLITE_TRANSIENT);
-        sqlite3_bind_text(stmt, GENRE, movie.get_genre().c_str(), -1, SQLITE_TRANSIENT);
-        sqlite3_bind_int(stmt, REALEASE_YEAR, movie.get_release_year());
-        sqlite3_bind_text(stmt, RUNTIME, movie.get_runtime().c_str(), -1, SQLITE_TRANSIENT);
-        sqlite3_bind_double(stmt, RATING, movie.get_rating());
-        sqlite3_bind_text(stmt, AGE_LIMIT, movie.get_age_limit().c_str(), -1, SQLITE_TRANSIENT);
-        sqlite3_bind_int(stmt, LINK_ID, movie.get_link_id());
+        sqlite3_bind_int(stmt, 1, movie.get_id());
+        sqlite3_bind_text(stmt, TITLE + 1, movie.get_title().c_str(), -1, SQLITE_TRANSIENT);
+        sqlite3_bind_text(stmt, DESCRIPTION + 1, movie.get_description().c_str(), -1, SQLITE_TRANSIENT);
+        sqlite3_bind_text(stmt, GENRE + 1, movie.get_genre().c_str(), -1, SQLITE_TRANSIENT);
+        sqlite3_bind_int(stmt, REALEASE_YEAR + 1, movie.get_release_year());
+        sqlite3_bind_text(stmt, RUNTIME + 1, movie.get_runtime().c_str(), -1, SQLITE_TRANSIENT);
+        sqlite3_bind_double(stmt, RATING + 1, movie.get_rating());
+        sqlite3_bind_text(stmt, AGE_LIMIT + 1, movie.get_age_limit().c_str(), -1, SQLITE_TRANSIENT);
+        sqlite3_bind_int(stmt, LINK_ID + 1, movie.get_link_id());
         sqlite3_step(stmt);
         sqlite3_reset(stmt);
     }

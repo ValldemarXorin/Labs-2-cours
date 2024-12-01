@@ -9,5 +9,7 @@ class ICompositFilters {
 public:
     virtual void addFilter(IFilter* filter) = 0;
     virtual void removeFilter(IFilter* filter) = 0;
+
+    virtual ~ICompositFilters() {};
 };
 #endif //LABS_2_COURS_ICOMPOSITFILTERS_H

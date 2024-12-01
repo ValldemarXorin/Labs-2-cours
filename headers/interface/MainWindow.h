@@ -11,6 +11,10 @@
 #include "../search/CompositeFilters.h"
 #include "../search/GenreFilter.h"
 #include "../search/AgeLimitFilter.h"
+#include "../search/RatingFilter.h"
+#include "../search/YearFilter.h"
+#include "../search/RuntimeFilter.h"
+#include "FiltersWindow.h"
 #include "MovieCard.h"
 #include "MovieCardInfo.h"
 #include <windows.h>
@@ -51,6 +55,11 @@ private slots:
 
     void on_MenuListTopsPage_itemClicked(QListWidgetItem *item);
 
+    void on_FiltersButtonSearchPage_clicked();
+
+    void apply_filters(const QString& genre, const QString& age_limit, const QString& rating,
+                       const QString& year, const QString& runtime);
+
     void using_search_enging();
 
     void add_movie_card(const QString& title, const QString& genre,
@@ -61,7 +70,10 @@ private:
     IUserRepository* users;
     IMoviesRepository* movies_repository;
     SearchEngine* search_engine;
+    FiltersWindow* filters_window;
     int precurrent_length_text_search_field{0};
+    std::vector<Movie> movies_for_search_list;
+    bool is_filter_apply;
     enum pages_ingex {AUTOSELECTION_MOVIE_PAGE_INDEX, SEARCH_PAGE_INDEX,
             LIKED_PAGE_INDEX, TOPS_PAGE_INDEX};
 };

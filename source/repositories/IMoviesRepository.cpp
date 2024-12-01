@@ -27,7 +27,7 @@ void IMoviesRepository::add_movie(const std::string &title, const std::string &d
         std::cout << "Incorrect input age limit. Template of correct input: 0+, 3+, 6+, 12+, 16+, 18+" << std::endl;
         return;
     }
-    movies.emplace_back(title, description, genre, realease_year, runtime, rating, link_id, age_limit);
+    movies.emplace_back(movies.size() + 1, title, description, genre, realease_year, runtime, rating, link_id, age_limit);
 }
 
 void IMoviesRepository::delete_movie(std::string_view title) {

@@ -13,5 +13,7 @@ public:
     YearFilter(int y);
 
     std::vector<Movie> apply(std::vector<Movie> movies) override;
+
+    ~YearFilter() override = default;
 };
 #endif //LABS_2_COURS_YEARFILTER_H
