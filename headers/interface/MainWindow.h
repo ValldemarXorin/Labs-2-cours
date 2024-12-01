@@ -63,7 +63,8 @@ private slots:
     void using_search_enging();
 
     void add_movie_card(const QString& title, const QString& genre,
-                              const QString& rating, const QString& release_year, const QString& age_limit);
+                              const QString& rating, const QString& release_year, const QString& age_limit,
+                              const QString& description);
 
 private:
     Ui::MainWindow *ui;

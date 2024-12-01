@@ -37,7 +37,7 @@ public:
     QLabel *Rating;
     QLabel *ActorsText;
     QLabel *Actors;
-    QLabel *label;
+    QLabel *Description;
     QToolButton *LikeButton;
 
     void setupUi(QWidget *MovieCardInfo)
@@ -113,10 +113,11 @@ public:
         Actors->setObjectName("Actors");
         Actors->setGeometry(QRect(290, 190, 271, 51));
         Actors->setAlignment(Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop);
-        label = new QLabel(MovieCardInfo);
-        label->setObjectName("label");
-        label->setGeometry(QRect(20, 265, 351, 151));
-        label->setAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop);
+        Description = new QLabel(MovieCardInfo);
+        Description->setObjectName("Description");
+        Description->setGeometry(QRect(20, 265, 351, 151));
+        Description->setAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop);
+        Description->setWordWrap(true);
         LikeButton = new QToolButton(MovieCardInfo);
         LikeButton->setObjectName("LikeButton");
         LikeButton->setGeometry(QRect(540, 370, 51, 51));
@@ -146,7 +147,7 @@ public:
         Rating->setText(QCoreApplication::translate("MovieCardInfo", "TextLabel", nullptr));
         ActorsText->setText(QCoreApplication::translate("MovieCardInfo", "Actors:", nullptr));
         Actors->setText(QCoreApplication::translate("MovieCardInfo", "TextLabel", nullptr));
-        label->setText(QCoreApplication::translate("MovieCardInfo", "TextLabel", nullptr));
+        Description->setText(QCoreApplication::translate("MovieCardInfo", "TextLabel", nullptr));
         LikeButton->setText(QCoreApplication::translate("MovieCardInfo", "...", nullptr));
     } // retranslateUi
 

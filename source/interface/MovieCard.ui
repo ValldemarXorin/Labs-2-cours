@@ -169,8 +169,27 @@ MovieCard QLabel#AgeLimitMovie {
      <x>50</x>
      <y>70</y>
      <width>91</width>
-     <height>24</height>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #2E2E2E; /* Темный фон */
+    color: #FFFFFF; /* Белый текст */
+    border: 2px solid #0078d7; /* Цвет границы */
+    border-radius: 10px; /* Закругленные углы */
+    padding: 5px; /* Отступы */
+    font-size: 14px; /* Размер шрифта */
+}
+
+QPushButton:hover {
+    background-color: #1E1E1E; /* Цвет фона при наведении */
+}
+
+QPushButton:pressed {
+    background-color: #0078d7; /* Цвет фона при нажатии */
+    color: #FFFFFF; /* Белый текст при нажатии */
+}</string>
    </property>
    <property name="text">
     <string>View Details</string>

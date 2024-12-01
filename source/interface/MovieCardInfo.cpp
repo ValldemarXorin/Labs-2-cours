@@ -11,7 +11,7 @@
 MovieCardInfo::MovieCardInfo(QWidget *parent) : QWidget(parent), ui(new Ui::MovieCardInfo) {
     ui->setupUi(this);
 
-    ui->LikeButton->setIcon(QIcon("D:/Labs-2-cours/Labs-2-cours/images/ActiveLike.png"));
+    ui->LikeButton->setIcon(QIcon("D:/Labs-2-cours/Labs-2-cours/images/InActiveLike.png"));
 }
 
 MovieCardInfo::~MovieCardInfo() {
@@ -19,10 +19,11 @@ MovieCardInfo::~MovieCardInfo() {
 }
 
 void MovieCardInfo::set_information(QString title, QString genre, QString release_year,
-                               QString runtime, QString age_limit) {
+                               QString runtime, QString age_limit, QString description) {
     ui->TitleMovie->setText(title);
     ui->Genre->setText(genre);
     ui->Year->setText(release_year);
     ui->Runtime->setText(runtime);
     ui->AgeLimit->setText(age_limit);
+    ui->Description->setText(description);
 }

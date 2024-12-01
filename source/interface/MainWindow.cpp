@@ -218,14 +218,14 @@ void MainWindow::using_search_enging() {
         add_movie_card(QString::fromStdString(movie.get_title()), QString::fromStdString(movie.get_genre()),
                        QString::fromStdString(std::to_string(movie.get_rating())),
                        QString::fromStdString(std::to_string(movie.get_release_year())),
-                       QString::fromStdString(movie.get_age_limit()));
+                       QString::fromStdString(movie.get_age_limit()), QString::fromStdString(movie.get_description()));
     }
 }
 
 void MainWindow::add_movie_card(const QString &title, const QString &genre, const QString &rating,
-                                      const QString &release_year, const QString &age_limit) {
+                                      const QString &release_year, const QString &age_limit, const QString &description) {
     auto movie_card = new MovieCard();
-    movie_card->set_movie_card_data(title, genre, rating, release_year, age_limit);
+    movie_card->set_movie_card_data(title, genre, rating, release_year, age_limit, description);
 
     auto item = new QListWidgetItem(ui->MoviesListSearchPage);
     item->setSizeHint(QSize(440, 127));

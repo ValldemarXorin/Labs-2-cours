@@ -23,7 +23,7 @@ public:
     void SetIconLikeButton();
 
     void set_information(QString title, QString genre, QString release_year, QString runtime,
-                         QString age_limit);
+                         QString age_limit, QString description);
 
 private:
     Ui::MovieCardInfo *ui;
