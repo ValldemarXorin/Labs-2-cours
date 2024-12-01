@@ -6,6 +6,8 @@
 #define LABS_2_COURS_MOVIECARDINFO_H
 
 #include <QWidget>
+#include "../models/Movie.h"
+#include "../MyStack.h"
 
 
 QT_BEGIN_NAMESPACE

@@ -5,12 +5,12 @@
 #include "../../headers/repositories/IMoviesRepository.h"
 #include <string_view>
 
-IMoviesRepository::IMoviesRepository() : MoviesDBManager() {
-    movies = MoviesDBManager::load_data_from_DB();
+IMoviesRepository::IMoviesRepository() : movies_db_manager(new MoviesDBManager) {
+    movies = movies_db_manager->load_data_from_DB();
 }
 
 IMoviesRepository::~IMoviesRepository() {
-    MoviesDBManager::save_data_to_DB(movies);
+    movies_db_manager->save_data_to_DB(movies);
 }
 
 void IMoviesRepository::add_movie(const std::string &title, const std::string &description, const std::string &genre,

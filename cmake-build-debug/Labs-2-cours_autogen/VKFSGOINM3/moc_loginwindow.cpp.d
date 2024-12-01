@@ -505,6 +505,7 @@ D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/VKFSGOINM3/m
   C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/wtypesbase.h \
   D:/Labs-2-cours/Labs-2-cours/SQLiteLibrary/sqlite3.h \
   D:/Labs-2-cours/Labs-2-cours/headers/MovieErrorExceptions.h \
+  D:/Labs-2-cours/Labs-2-cours/headers/MyStack.h \
   D:/Labs-2-cours/Labs-2-cours/headers/UserErrorExceptions.h \
   D:/Labs-2-cours/Labs-2-cours/headers/auth_models/User.h \
   D:/Labs-2-cours/Labs-2-cours/headers/database/DBManager.h \

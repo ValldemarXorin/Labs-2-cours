@@ -14,6 +14,7 @@
 #include "../search/RatingFilter.h"
 #include "../search/YearFilter.h"
 #include "../search/RuntimeFilter.h"
+#include "../MyStack.h"
 #include "FiltersWindow.h"
 #include "MovieCard.h"
 #include "MovieCardInfo.h"
@@ -72,6 +73,7 @@ private:
     IMoviesRepository* movies_repository;
     SearchEngine* search_engine;
     FiltersWindow* filters_window;
+    MyStack<Movie>* recently_checking;
     int precurrent_length_text_search_field{0};
     std::vector<Movie> movies_for_search_list;
     bool is_filter_apply;

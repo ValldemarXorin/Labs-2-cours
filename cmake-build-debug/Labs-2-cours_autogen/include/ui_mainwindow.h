@@ -38,8 +38,9 @@ public:
     QWidget *LikedPage;
     QListWidget *MoviesListLikedPage;
     QListWidget *MenuListLikedPage;
-    QLabel *label;
+    QLabel *LikedMoviesText;
     QPushButton *MenuButtonLikedPage;
+    QPushButton *RecentlyCheckingButton;
     QWidget *TopsPage;
     QListWidget *MenuListTopsPage;
     QPushButton *MenuButtonTopsPage;
@@ -348,16 +349,16 @@ public:
 "    background-color: #1E1E1E; /* \320\246\320\262\320\265\321\202 \321\204\320\276\320\275\320\260 \320\277\321\200\320\270 \320\275\320\260\320\262\320\265\320\264\320\265\320\275\320\270\320\270 */\n"
 "    color: #FFFFFF;\n"
 "}"));
-        label = new QLabel(LikedPage);
-        label->setObjectName("label");
-        label->setGeometry(QRect(260, 10, 201, 31));
-        label->setStyleSheet(QString::fromUtf8("QLabel {\n"
+        LikedMoviesText = new QLabel(LikedPage);
+        LikedMoviesText->setObjectName("LikedMoviesText");
+        LikedMoviesText->setGeometry(QRect(390, 10, 201, 31));
+        LikedMoviesText->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "		background-color: none;\n"
 "        color: #FFFFFF; /* \320\246\320\262\320\265\321\202 \321\202\320\265\320\272\321\201\321\202\320\260 */\n"
 "        font: bold 16pt; /* \320\237\321\200\320\276\320\277\320\270\321\201\320\275\320\276\320\271 \321\201\321\202\320\270\320\273\321\214 \321\202\320\265\320\272\321\201\321\202\320\260 */\n"
 "        text-align: center; /* \320\222\321\213\321\200\320\260\320\262\320\275\320\270\320\262\320\260\320\275\320\270\320\265 \321\202\320\265\320\272\321\201\321\202\320\260 \320\277\320\276 \321\206\320\265\320\275\321\202\321\200\321\203 */\n"
 "    }"));
-        label->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        LikedMoviesText->setAlignment(Qt::AlignmentFlag::AlignCenter);
         MenuButtonLikedPage = new QPushButton(LikedPage);
         MenuButtonLikedPage->setObjectName("MenuButtonLikedPage");
         MenuButtonLikedPage->setGeometry(QRect(20, 20, 75, 31));
@@ -373,11 +374,27 @@ public:
 "		background-color: #1E1E1E\n"
 "}\n"
 ""));
+        RecentlyCheckingButton = new QPushButton(LikedPage);
+        RecentlyCheckingButton->setObjectName("RecentlyCheckingButton");
+        RecentlyCheckingButton->setGeometry(QRect(200, 10, 111, 31));
+        RecentlyCheckingButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"        background-color: #2E2E2E; /* \320\242\320\265\320\274\320\275\321\213\320\271 \321\204\320\276\320\275 */\n"
+"        color: #FFFFFF; /* \320\221\320\265\320\273\321\213\320\271 \321\202\320\265\320\272\321\201\321\202 */\n"
+"        border: 2px solid #0078d7; /* \320\246\320\262\320\265\321\202 \320\263\321\200\320\260\320\275\320\270\321\206\321\213 */\n"
+"        border-radius: 10px; /* \320\227\320\260\320\272\321\200\321\203\320\263\320\273\320\265\320\275\320\275\321\213\320\265 \321\203\320\263\320\273\321\213 */\n"
+"        padding: 5px; /* \320\236\321\202\321\201\321\202\321\203\320\277\321\213 */\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"		background-color: #1E1E1E\n"
+"}\n"
+""));
         PageSwitcher->addWidget(LikedPage);
         MenuButtonLikedPage->raise();
         MoviesListLikedPage->raise();
         MenuListLikedPage->raise();
-        label->raise();
+        LikedMoviesText->raise();
+        RecentlyCheckingButton->raise();
         TopsPage = new QWidget();
         TopsPage->setObjectName("TopsPage");
         MenuListTopsPage = new QListWidget(TopsPage);
@@ -442,7 +459,7 @@ public:
 
         retranslateUi(mainwindow);
 
-        PageSwitcher->setCurrentIndex(1);
+        PageSwitcher->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(mainwindow);
@@ -500,8 +517,9 @@ public:
         ___qlistwidgetitem14->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
         MenuListLikedPage->setSortingEnabled(__sortingEnabled2);
 
-        label->setText(QCoreApplication::translate("MainWindow", "Liked Movies", nullptr));
+        LikedMoviesText->setText(QCoreApplication::translate("MainWindow", "Liked Movies", nullptr));
         MenuButtonLikedPage->setText(QCoreApplication::translate("MainWindow", "Menu", nullptr));
+        RecentlyCheckingButton->setText(QCoreApplication::translate("MainWindow", "Recently checking", nullptr));
 
         const bool __sortingEnabled3 = MenuListTopsPage->isSortingEnabled();
         MenuListTopsPage->setSortingEnabled(false);

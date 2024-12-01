@@ -10,13 +10,14 @@
 #include "../UserErrorExceptions.h"
 #include <vector>
 
-class IUserRepository : public UsersDBManager, public UserErrorExceptions {
+class IUserRepository : public UserErrorExceptions {
     std::vector<User> users;
+    DBManager<User>* user_db_manager;
 
 public:
     IUserRepository();
 
-    ~IUserRepository() override;
+    ~IUserRepository();
 
     void add_user(const std::string& new_email, const std::string& new_password,
                   const std::string& new_role);

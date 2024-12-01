@@ -4,12 +4,12 @@
 
 #include "../../headers/repositories/IUsersRepository.h"
 
-IUserRepository::IUserRepository() : UsersDBManager() {
-    users = UsersDBManager::load_data_from_DB();
+IUserRepository::IUserRepository() : user_db_manager(new UsersDBManager) {
+    users = user_db_manager->load_data_from_DB();
 }
 
 IUserRepository::~IUserRepository() {
-    UsersDBManager::save_data_to_DB(users);
+    user_db_manager->save_data_to_DB(users);
 }
 
 void IUserRepository::add_user(const std::string &new_email, const std::string &new_password,
