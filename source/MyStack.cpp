@@ -9,8 +9,11 @@ MyStack<TStack>::MyStack() : top(nullptr) {};
 
 template <typename TStack>
 MyStack<TStack>::~MyStack() {
-    while (!is_empty())
-        pop();
+    while (!is_empty()) {
+        StackNode<TStack>* temp_node = top;
+        top = top->next;
+        delete temp_node;
+    }
 }
 
 
@@ -39,4 +42,25 @@ void MyStack<TStack>::pop() {
     StackNode<TStack>* temp_node = top;
     top = top->next;
     delete temp_node;
+}
+
+template <typename TStack>
+template <typename T>
+T MyStack<TStack>::get(int index) const {
+    if (index < 0) {
+        throw std::out_of_range("Index cannot be negative");
+    }
+
+    StackNode<TStack>* current = top;
+    int currentIndex = 0;
+
+    while (current != nullptr) {
+        if (currentIndex == index) {
+            return static_cast<T>(current->data);
+        }
+        current = current->next;
+        currentIndex++;
+    }
+
+    throw std::out_of_range("Index out of range");
 }

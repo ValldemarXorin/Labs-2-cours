@@ -16,7 +16,7 @@ class Database {
     static  Database* instance;
 
 public:
-    Database(std::string& db_name);
+    explicit Database(std::string& db_name);
 
     ~Database();
 

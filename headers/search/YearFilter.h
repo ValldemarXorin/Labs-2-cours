@@ -10,7 +10,7 @@ private:
     int release_year;
 
 public:
-    YearFilter(int y);
+    explicit YearFilter(int y);
 
     std::vector<Movie> apply(std::vector<Movie> movies) override;
 

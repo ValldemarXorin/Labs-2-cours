@@ -10,8 +10,7 @@
 MainWindow::MainWindow(IMoviesRepository* movies, IUserRepository* users,
                        QWidget *parent) :
         QMainWindow(parent), ui(new Ui::MainWindow), movies_repository(movies), users(users),
-        search_engine(new SearchEngine(*movies)), filters_window(new FiltersWindow),
-        movies_for_search_list(movies->get_movies()), is_filter_apply(false) {
+        search_engine(new SearchEngine(*movies)), filters_window(new FiltersWindow), movies_for_search_list(movies->get_movies()), is_filter_apply(false) {
 
     ui->setupUi(this);
 

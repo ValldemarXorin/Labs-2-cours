@@ -10,7 +10,7 @@ private:
     bool isAscending;
 
 public:
-    RuntimeFilter(bool ascending);
+    explicit RuntimeFilter(bool ascending);
 
     std::vector<Movie> apply(std::vector<Movie> movies) override;
 

@@ -11,7 +11,7 @@ struct StackNode {
     TNode data;
     StackNode* next;
 
-    StackNode(const TNode& value) : data(value), next(nullptr) {};
+    explicit StackNode(const TNode& value) : data(value), next(nullptr) {};
 };
 
 template <typename TStack>
@@ -29,5 +29,8 @@ public:
     void pop();
 
     bool is_empty() const;
+
+    template <typename T>
+    T get(int index) const;
 };
 #endif //LABS_2_COURS_MYSTACK_H

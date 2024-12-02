@@ -10,7 +10,7 @@ private:
     std::string genre;
 
 public:
-    GenreFilter(std::string g);
+    explicit GenreFilter(std::string g);
 
     std::vector<Movie> apply(std::vector<Movie> movies) override;
 

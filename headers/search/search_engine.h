@@ -12,7 +12,7 @@ class SearchEngine {
     std::vector<Movie> movies;
     IMoviesRepository movies_repository;
 public:
-    SearchEngine(IMoviesRepository movies_repository);
+    explicit SearchEngine(IMoviesRepository movies_repository);
 
     std::vector<Movie> search_by_fragment(std::string title_fragment, bool get_back);
 };

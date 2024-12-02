@@ -11,7 +11,7 @@ private:
     bool isAscending;
 
 public:
-    RatingFilter(bool ascending);
+    explicit RatingFilter(bool ascending);
 
     std::vector<Movie> apply(std::vector<Movie> movies) override;
 
