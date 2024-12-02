@@ -1,9 +1,9 @@
 #include <iostream>
 #include "../headers/models/Movie.h"
-#include "..\SQLiteLibrary\sqlite3.h"
-#include "..\headers\repositories\IMoviesRepository.h"
-#include "..\headers\interface\MainWindow.h"
-#include "..\headers\interface\loginwindow.h"
+#include "../SQLiteLibrary/sqlite3.h"
+#include "../headers/repositories/IMoviesRepository.h"
+#include "../headers/interface/MainWindow.h"
+#include "../headers/interface/loginwindow.h"
 #include <QApplication>
 #include <memory>
 
