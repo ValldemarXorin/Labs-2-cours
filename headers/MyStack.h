@@ -9,18 +9,18 @@
 template <typename TNode>
 struct StackNode {
     TNode data;
-    StackNode* next;
+    StackNode* next {nullptr};
 
-    explicit StackNode(const TNode& value) : data(value), next(nullptr) {};
+    explicit StackNode(const TNode& value) : data(value) {};
 };
 
 template <typename TStack>
 class MyStack {
-    StackNode<TStack>* top;
+    StackNode<TStack>* top {nullptr};
 
 public:
 
-    MyStack();
+    MyStack() = default;
 
     ~MyStack();
 

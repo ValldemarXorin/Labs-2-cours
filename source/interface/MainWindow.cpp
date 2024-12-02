@@ -10,7 +10,7 @@
 MainWindow::MainWindow(IMoviesRepository* movies, IUserRepository* users,
                        QWidget *parent) :
         QMainWindow(parent), ui(new Ui::MainWindow), movies_repository(movies), users(users),
-        search_engine(new SearchEngine(*movies)), filters_window(new FiltersWindow), movies_for_search_list(movies->get_movies()), is_filter_apply(false) {
+        search_engine(new SearchEngine(*movies)), movies_for_search_list(movies->get_movies()) {
 
     ui->setupUi(this);
 
@@ -184,7 +184,7 @@ void
 MainWindow::apply_filters(const QString &genre, const QString &age_limit, const QString &rating, const QString &year,
                           const QString &runtime) {
 
-    CompositeFilter* compositeFilter = new CompositeFilter;
+    auto compositeFilter = new CompositeFilter;
     if (genre != "")
         compositeFilter->addFilter(new GenreFilter(genre.toStdString()));
     if (age_limit != "")
@@ -197,6 +197,10 @@ MainWindow::apply_filters(const QString &genre, const QString &age_limit, const 
         compositeFilter->addFilter(new RuntimeFilter(true));
     if (runtime == "Decrese")
         compositeFilter->addFilter(new RuntimeFilter(false));
+    if (year == "Increase")
+        compositeFilter->addFilter(new YearFilter(true));
+    if (year == "Decrese")
+        compositeFilter->addFilter(new YearFilter(false));
 
     movies_for_search_list = compositeFilter->apply(movies_for_search_list);
 

@@ -8,7 +8,7 @@
 #include "ui_MovieCard.h"
 
 MovieCard::MovieCard(QWidget *parent) :
-        QWidget(parent), ui(new Ui::MovieCard), movie_card_info(new MovieCardInfo) {
+        QWidget(parent), ui(new Ui::MovieCard) {
     ui->setupUi(this);
 }
 

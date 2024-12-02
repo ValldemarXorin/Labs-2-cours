@@ -3,9 +3,6 @@
 //
 #include "../headers/MyStack.h"
 
-template <typename TStack>
-MyStack<TStack>::MyStack() : top(nullptr) {};
-
 
 template <typename TStack>
 MyStack<TStack>::~MyStack() {
@@ -25,7 +22,7 @@ bool MyStack<TStack>::is_empty() const {
 
 template <typename TStack>
 void MyStack<TStack>::push(const TStack &value) {
-    StackNode<TStack>* node = new StackNode<TStack>(value);
+    auto node = new StackNode<TStack>(value);
     if (is_empty())
         top = node;
     else {

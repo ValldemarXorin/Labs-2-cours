@@ -35,7 +35,7 @@ public:
 
 private:
     Ui::MovieCard *ui;
-    MovieCardInfo* movie_card_info;
+    MovieCardInfo* movie_card_info {new MovieCardInfo};
 };
 
 

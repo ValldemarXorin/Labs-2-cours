@@ -15,10 +15,10 @@
 template<typename T>
 class DBManager {
 protected:
-    std::string db_name;
+    std::string db_name {"MovieDatabase.sqlite"};
 
 public:
-    DBManager() : db_name("MovieDatabase.sqlite") {};
+    DBManager() = default;
 
     virtual ~DBManager() = default;
 

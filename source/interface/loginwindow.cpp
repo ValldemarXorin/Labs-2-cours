@@ -13,7 +13,8 @@
 
 LoginWindow::LoginWindow(IMoviesRepository* movies,
                          IUserRepository* users, QWidget *parent) :
-        QWidget(parent), ui(new Ui::LoginWindow), movies_repository(movies_repository), users(users) {
+        QWidget(parent), ui(new Ui::LoginWindow), movies_repository(movies), users(users),
+        mainWindow(new MainWindow(movies, users)){
 
     ui->setupUi(this);
 
@@ -22,8 +23,6 @@ LoginWindow::LoginWindow(IMoviesRepository* movies,
     ui->support->installEventFilter(this);
 
     ui->CheckPassword->setIcon(QIcon("D:/Labs-2-cours/Labs-2-cours/images/eye.png"));
-
-    mainWindow = new MainWindow(movies, users);
 }
 
 LoginWindow::~LoginWindow() {

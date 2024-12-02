@@ -72,11 +72,11 @@ private:
     IUserRepository* users;
     IMoviesRepository* movies_repository;
     SearchEngine* search_engine;
-    FiltersWindow* filters_window;
+    FiltersWindow* filters_window {new FiltersWindow};
     MyStack<Movie>* recently_checking;
     int precurrent_length_text_search_field{0};
     std::vector<Movie> movies_for_search_list;
-    bool is_filter_apply;
+    bool is_filter_apply {false};
     enum pages_ingex {AUTOSELECTION_MOVIE_PAGE_INDEX, SEARCH_PAGE_INDEX,
             LIKED_PAGE_INDEX, TOPS_PAGE_INDEX};
 };
