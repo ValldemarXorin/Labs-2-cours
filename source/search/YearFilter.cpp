@@ -3,14 +3,12 @@
 //
 #include "../../headers/search/YearFilter.h"
 
-YearFilter::YearFilter(int y) : release_year(y) {};
+YearFilter::YearFilter(bool ascending) : isAscending(ascending) {};
 
 std::vector<Movie> YearFilter::apply(std::vector<Movie> movies) {
-    std::vector<Movie> filtered_movies;
-    for (const auto& movie : movies) {
-        if (movie.get_release_year() == release_year) {
-            filtered_movies.push_back(movie);
-        }
-    }
-    return filtered_movies;
+    std::vector<Movie> sorted_movies = movies;
+    std::sort(sorted_movies.begin(), sorted_movies.end(), [this](const Movie& a, const Movie& b) {
+        return isAscending ? a.get_release_year() < b.get_release_year() : a.get_release_year() > b.get_release_year();
+    });
+    return sorted_movies;
 }

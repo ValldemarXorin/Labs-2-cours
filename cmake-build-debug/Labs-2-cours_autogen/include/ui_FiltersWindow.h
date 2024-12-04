@@ -43,6 +43,7 @@ public:
         GenreFilter->addItem(QString());
         GenreFilter->addItem(QString());
         GenreFilter->addItem(QString());
+        GenreFilter->addItem(QString());
         GenreFilter->setObjectName("GenreFilter");
         GenreFilter->setGeometry(QRect(20, 20, 101, 31));
         GenreFilter->setStyleSheet(QString::fromUtf8("QComboBox {\n"
@@ -71,6 +72,7 @@ public:
                         "056a1; /* \320\246\320\262\320\265\321\202 \320\263\321\200\320\260\320\275\320\270\321\206\321\213 \320\277\321\200\320\270 \320\275\320\260\320\262\320\265\320\264\320\265\320\275\320\270\320\270 */\n"
 "}"));
         AgeLimitFilter = new QComboBox(FiltersWindow);
+        AgeLimitFilter->addItem(QString());
         AgeLimitFilter->addItem(QString());
         AgeLimitFilter->addItem(QString());
         AgeLimitFilter->addItem(QString());
@@ -108,6 +110,7 @@ public:
         RatingFilter = new QComboBox(FiltersWindow);
         RatingFilter->addItem(QString());
         RatingFilter->addItem(QString());
+        RatingFilter->addItem(QString());
         RatingFilter->setObjectName("RatingFilter");
         RatingFilter->setGeometry(QRect(240, 20, 101, 31));
         RatingFilter->setStyleSheet(QString::fromUtf8("QComboBox {\n"
@@ -138,6 +141,7 @@ public:
         YearFilter = new QComboBox(FiltersWindow);
         YearFilter->addItem(QString());
         YearFilter->addItem(QString());
+        YearFilter->addItem(QString());
         YearFilter->setObjectName("YearFilter");
         YearFilter->setGeometry(QRect(350, 20, 101, 31));
         YearFilter->setStyleSheet(QString::fromUtf8("QComboBox {\n"
@@ -166,6 +170,7 @@ public:
                         "056a1; /* \320\246\320\262\320\265\321\202 \320\263\321\200\320\260\320\275\320\270\321\206\321\213 \320\277\321\200\320\270 \320\275\320\260\320\262\320\265\320\264\320\265\320\275\320\270\320\270 */\n"
 "}"));
         RuntimeYear = new QComboBox(FiltersWindow);
+        RuntimeYear->addItem(QString());
         RuntimeYear->addItem(QString());
         RuntimeYear->addItem(QString());
         RuntimeYear->setObjectName("RuntimeYear");
@@ -232,29 +237,34 @@ public:
     void retranslateUi(QWidget *FiltersWindow)
     {
         FiltersWindow->setWindowTitle(QCoreApplication::translate("FiltersWindow", "FiltersWindow", nullptr));
-        GenreFilter->setItemText(0, QCoreApplication::translate("FiltersWindow", "horror", nullptr));
-        GenreFilter->setItemText(1, QCoreApplication::translate("FiltersWindow", "drama", nullptr));
-        GenreFilter->setItemText(2, QCoreApplication::translate("FiltersWindow", "sci-fi", nullptr));
+        GenreFilter->setItemText(0, QCoreApplication::translate("FiltersWindow", "Genre", nullptr));
+        GenreFilter->setItemText(1, QCoreApplication::translate("FiltersWindow", "horror", nullptr));
+        GenreFilter->setItemText(2, QCoreApplication::translate("FiltersWindow", "drama", nullptr));
+        GenreFilter->setItemText(3, QCoreApplication::translate("FiltersWindow", "sci-fi", nullptr));
 
         GenreFilter->setPlaceholderText(QCoreApplication::translate("FiltersWindow", "Genre", nullptr));
-        AgeLimitFilter->setItemText(0, QCoreApplication::translate("FiltersWindow", "0+", nullptr));
-        AgeLimitFilter->setItemText(1, QCoreApplication::translate("FiltersWindow", "3+", nullptr));
-        AgeLimitFilter->setItemText(2, QCoreApplication::translate("FiltersWindow", "6+", nullptr));
-        AgeLimitFilter->setItemText(3, QCoreApplication::translate("FiltersWindow", "12+", nullptr));
-        AgeLimitFilter->setItemText(4, QCoreApplication::translate("FiltersWindow", "16+", nullptr));
-        AgeLimitFilter->setItemText(5, QCoreApplication::translate("FiltersWindow", "18+", nullptr));
+        AgeLimitFilter->setItemText(0, QCoreApplication::translate("FiltersWindow", "Age limit", nullptr));
+        AgeLimitFilter->setItemText(1, QCoreApplication::translate("FiltersWindow", "0+", nullptr));
+        AgeLimitFilter->setItemText(2, QCoreApplication::translate("FiltersWindow", "3+", nullptr));
+        AgeLimitFilter->setItemText(3, QCoreApplication::translate("FiltersWindow", "6+", nullptr));
+        AgeLimitFilter->setItemText(4, QCoreApplication::translate("FiltersWindow", "12+", nullptr));
+        AgeLimitFilter->setItemText(5, QCoreApplication::translate("FiltersWindow", "16+", nullptr));
+        AgeLimitFilter->setItemText(6, QCoreApplication::translate("FiltersWindow", "18+", nullptr));
 
         AgeLimitFilter->setPlaceholderText(QCoreApplication::translate("FiltersWindow", "Age limit", nullptr));
-        RatingFilter->setItemText(0, QCoreApplication::translate("FiltersWindow", "Increase", nullptr));
-        RatingFilter->setItemText(1, QCoreApplication::translate("FiltersWindow", "Decrease", nullptr));
+        RatingFilter->setItemText(0, QCoreApplication::translate("FiltersWindow", "Rating", nullptr));
+        RatingFilter->setItemText(1, QCoreApplication::translate("FiltersWindow", "Increase", nullptr));
+        RatingFilter->setItemText(2, QCoreApplication::translate("FiltersWindow", "Decrease", nullptr));
 
         RatingFilter->setPlaceholderText(QCoreApplication::translate("FiltersWindow", "Rating", nullptr));
-        YearFilter->setItemText(0, QCoreApplication::translate("FiltersWindow", "Increase", nullptr));
-        YearFilter->setItemText(1, QCoreApplication::translate("FiltersWindow", "Decrease", nullptr));
+        YearFilter->setItemText(0, QCoreApplication::translate("FiltersWindow", "Year", nullptr));
+        YearFilter->setItemText(1, QCoreApplication::translate("FiltersWindow", "Increase", nullptr));
+        YearFilter->setItemText(2, QCoreApplication::translate("FiltersWindow", "Decrease", nullptr));
 
         YearFilter->setPlaceholderText(QCoreApplication::translate("FiltersWindow", "Year", nullptr));
-        RuntimeYear->setItemText(0, QCoreApplication::translate("FiltersWindow", "Increase", nullptr));
-        RuntimeYear->setItemText(1, QCoreApplication::translate("FiltersWindow", "Decrease", nullptr));
+        RuntimeYear->setItemText(0, QCoreApplication::translate("FiltersWindow", "Runtime", nullptr));
+        RuntimeYear->setItemText(1, QCoreApplication::translate("FiltersWindow", "Increase", nullptr));
+        RuntimeYear->setItemText(2, QCoreApplication::translate("FiltersWindow", "Decrease", nullptr));
 
         RuntimeYear->setPlaceholderText(QCoreApplication::translate("FiltersWindow", "Runtime", nullptr));
         ApplyButton->setText(QCoreApplication::translate("FiltersWindow", "Apply", nullptr));

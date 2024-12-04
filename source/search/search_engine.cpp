@@ -3,12 +3,12 @@
 //
 #include "../../headers/search/search_engine.h"
 
-SearchEngine::SearchEngine(IMoviesRepository movies_repository) : movies_repository(movies_repository),
-                                                                    movies(movies_repository.get_movies()){}
+SearchEngine::SearchEngine(IMoviesRepository movies_repository) : movies_repository(movies_repository) {}
 
-std::vector<Movie> SearchEngine::search_by_fragment(std::string title_fragment, bool get_back) {
+std::vector<Movie>& SearchEngine::search_by_fragment(std::string title_fragment, std::vector<Movie>& movies,
+                                                    bool get_back, bool change_filters) {
     std::string title_movie;
-    if (get_back) {
+    if (get_back || change_filters) {
         movies = movies_repository.get_movies();
     }
     std::vector<Movie> result_movies;
@@ -20,5 +20,5 @@ std::vector<Movie> SearchEngine::search_by_fragment(std::string title_fragment, 
             result_movies.push_back(movie);
     }
     movies = result_movies;
-    return result_movies;
+    return movies;
 }

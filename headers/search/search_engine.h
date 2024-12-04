@@ -9,11 +9,12 @@
 #include <algorithm>
 
 class SearchEngine {
-    std::vector<Movie> movies;
+    //std::vector<Movie> movies;
     IMoviesRepository movies_repository;
 public:
     explicit SearchEngine(IMoviesRepository movies_repository);
 
-    std::vector<Movie> search_by_fragment(std::string title_fragment, bool get_back);
+    std::vector<Movie>& search_by_fragment(std::string title_fragment, std::vector<Movie>& movies,
+                                          bool get_back, bool change_filters);
 };
 #endif //LABS_2_COURS_SEARCH_ENGINE_H

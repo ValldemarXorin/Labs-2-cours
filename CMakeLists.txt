@@ -3,14 +3,15 @@ project(Labs-2-cours)
 
 set(CMAKE_CXX_STANDARD 20)
 
-
-
-set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
 set(CMAKE_PREFIX_PATH "D:/Qt/6.7.3/mingw_64")
+
+set(CURL_INCLUDE_DIR "C:/Users/vova3/vcpkg/installed/x64-windows/include")
+set(CURL_LIBRARY "C:/Users/vova3/vcpkg/installed/x64-windows/lib/libcurl.lib")
+set(NLOHMANN_JSON_INCLUDE_DIR "C:/Users/vova3/vcpkg/installed/x64-windows/include")
 
 find_package(Qt6 COMPONENTS
         Core
@@ -18,15 +19,9 @@ find_package(Qt6 COMPONENTS
         Widgets
         REQUIRED)
 
-#find_package(OpenSSl REQUIRED)
-
 qt6_wrap_ui(UI_HEADERS ${UI_FILES})
 
-# Укажите путь к папке, куда вы распаковали SQLite
-set(SQLITE3_DIR "${CMAKE_SOURCE_DIR}/SQLiteLibrary") # Замените <version> на актуальную папку#
-
-#set(OpenSSl "D:/Labs-2-cours/Labs-2-cours/openssl") #########################
-
+set(SQLITE3_DIR "${CMAKE_SOURCE_DIR}/SQLiteLibrary")
 
 add_executable(Labs-2-cours
         ${SQLITE3_DIR}/sqlite3.c
@@ -85,14 +80,20 @@ add_executable(Labs-2-cours
         source/interface/FiltersWindow.ui
         headers/MyStack.h
         source/MyStack.cpp
+        headers/top_movies/Top.h
+        source/top_movies/Top.cpp
+)
+
+include_directories(
+        ${CURL_INCLUDE_DIR}
+        ${NLOHMANN_JSON_INCLUDE_DIR}
 )
 
 target_link_libraries(Labs-2-cours
         Qt::Core
         Qt::Gui
         Qt::Widgets
-        #OpenSSl::SSL
-        #OpenSSl::Crypto
+        ${CURL_LIBRARY}
 )
 
 if (WIN32 AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)

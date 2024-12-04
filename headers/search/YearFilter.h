@@ -7,10 +7,10 @@
 #include "IFilter.h"
 class YearFilter : public IFilter {
 private:
-    int release_year;
+    bool isAscending;
 
 public:
-    explicit YearFilter(int y);
+    explicit YearFilter(bool ascending);
 
     std::vector<Movie> apply(std::vector<Movie> movies) override;
 

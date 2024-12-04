@@ -18,7 +18,7 @@ MovieCardInfo::~MovieCardInfo() {
     delete ui;
 }
 
-void MovieCardInfo::set_information(QString title, QString genre, QString release_year,
+void MovieCardInfo::set_information(QString title, QString genre, QString rating, QString release_year,
                                QString runtime, QString age_limit, QString description) {
     ui->TitleMovie->setText(title);
     ui->Genre->setText(genre);
@@ -26,4 +26,5 @@ void MovieCardInfo::set_information(QString title, QString genre, QString releas
     ui->Runtime->setText(runtime);
     ui->AgeLimit->setText(age_limit);
     ui->Description->setText(description);
+    ui->Rating->setText(rating);
 }

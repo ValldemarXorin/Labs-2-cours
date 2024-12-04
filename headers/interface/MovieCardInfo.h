@@ -9,7 +9,6 @@
 #include "../models/Movie.h"
 #include "../MyStack.h"
 
-
 QT_BEGIN_NAMESPACE
 namespace Ui { class MovieCardInfo; }
 QT_END_NAMESPACE
@@ -24,7 +23,7 @@ public:
 
     void SetIconLikeButton();
 
-    void set_information(QString title, QString genre, QString release_year, QString runtime,
+    void set_information(QString title, QString genre, QString rating, QString release_year, QString runtime,
                          QString age_limit, QString description);
 
 private:

@@ -177,45 +177,57 @@ void MainWindow::on_FiltersButtonSearchPage_clicked() {
     filters_window->show();
 
     connect(filters_window, &FiltersWindow::filters_applied,
-            this, &MainWindow::apply_filters);
+            this, &MainWindow::get_filters);
 }
 
-void
-MainWindow::apply_filters(const QString &genre, const QString &age_limit, const QString &rating, const QString &year,
-                          const QString &runtime) {
-
-    auto compositeFilter = new CompositeFilter;
-    if (genre != "")
-        compositeFilter->addFilter(new GenreFilter(genre.toStdString()));
-    if (age_limit != "")
-        compositeFilter->addFilter(new AgeLimitFilter(age_limit.toStdString()));
-    if (rating == "Increase")
-        compositeFilter->addFilter((new RatingFilter(true)));
-    if (rating == "Decrease")
-        compositeFilter->addFilter((new RatingFilter(false)));
-    if (runtime == "Increase")
-        compositeFilter->addFilter(new RuntimeFilter(true));
-    if (runtime == "Decrese")
-        compositeFilter->addFilter(new RuntimeFilter(false));
-    if (year == "Increase")
-        compositeFilter->addFilter(new YearFilter(true));
-    if (year == "Decrese")
-        compositeFilter->addFilter(new YearFilter(false));
-
-    movies_for_search_list = compositeFilter->apply(movies_for_search_list);
+void MainWindow::get_filters(const QString &genre, const QString &age_limit, const QString &rating, const QString &year,
+                             const QString &runtime) {
+    genre_filter = genre;
+    age_limit_filter = age_limit;
+    rating_filter = rating;
+    year_filter = year;
+    runtime_filter = runtime;
 
     is_filter_apply = true;
 
     using_search_enging();
 }
 
+void
+MainWindow::apply_filters() {
+
+    auto compositeFilter = new CompositeFilter;
+    if (genre_filter != "Genre")
+        compositeFilter->addFilter(new GenreFilter(genre_filter.toStdString()));
+    if (age_limit_filter != "Age limit")
+        compositeFilter->addFilter(new AgeLimitFilter(age_limit_filter.toStdString()));
+    if (rating_filter == "Increase")
+        compositeFilter->addFilter((new RatingFilter(true)));
+    if (rating_filter == "Decrease")
+        compositeFilter->addFilter((new RatingFilter(false)));
+    if (runtime_filter == "Increase")
+        compositeFilter->addFilter(new RuntimeFilter(true));
+    if (runtime_filter == "Decrease")
+        compositeFilter->addFilter(new RuntimeFilter(false));
+    if (year_filter == "Increase")
+        compositeFilter->addFilter(new YearFilter(true));
+    if (year_filter == "Decrease")
+        compositeFilter->addFilter(new YearFilter(false));
+
+    movies_for_search_list = compositeFilter->apply(movies_for_search_list);
+}
+
 void MainWindow::using_search_enging() {
     ui->MoviesListSearchPage->clear();
     if (ui->SearchFieldSearchPage->text().toStdString().length() < precurrent_length_text_search_field)
-        movies_for_search_list = search_engine->search_by_fragment(ui->SearchFieldSearchPage->text().toStdString(), false);
+        movies_for_search_list = search_engine->search_by_fragment(ui->SearchFieldSearchPage->text().toStdString(),
+                                                                   movies_for_search_list, false, is_filter_apply);
     else
-        movies_for_search_list = search_engine->search_by_fragment(ui->SearchFieldSearchPage->text().toStdString(), true);
+        movies_for_search_list = search_engine->search_by_fragment(ui->SearchFieldSearchPage->text().toStdString(),
+                                                                   movies_for_search_list, true, is_filter_apply);
 
+    if (is_filter_apply)
+        apply_filters();
 
     for (auto& movie: movies_for_search_list) {
         add_movie_card(QString::fromStdString(movie.get_title()), QString::fromStdString(movie.get_genre()),

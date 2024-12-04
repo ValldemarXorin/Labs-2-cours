@@ -60,6 +60,11 @@ QComboBox:hover {
    </property>
    <item>
     <property name="text">
+     <string>Genre</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
      <string>horror</string>
     </property>
    </item>
@@ -112,6 +117,11 @@ QComboBox:hover {
    <property name="placeholderText">
     <string>Age limit</string>
    </property>
+   <item>
+    <property name="text">
+     <string>Age limit</string>
+    </property>
+   </item>
    <item>
     <property name="text">
      <string>0+</string>
@@ -182,6 +192,11 @@ QComboBox:hover {
    </property>
    <item>
     <property name="text">
+     <string>Rating</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
      <string>Increase</string>
     </property>
    </item>
@@ -230,6 +245,11 @@ QComboBox:hover {
    </property>
    <item>
     <property name="text">
+     <string>Year</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
      <string>Increase</string>
     </property>
    </item>
@@ -276,6 +296,11 @@ QComboBox:hover {
    <property name="placeholderText">
     <string>Runtime</string>
    </property>
+   <item>
+    <property name="text">
+     <string>Runtime</string>
+    </property>
+   </item>
    <item>
     <property name="text">
      <string>Increase</string>

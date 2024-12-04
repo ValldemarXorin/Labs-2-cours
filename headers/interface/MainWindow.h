@@ -58,8 +58,10 @@ private slots:
 
     void on_FiltersButtonSearchPage_clicked();
 
-    void apply_filters(const QString& genre, const QString& age_limit, const QString& rating,
-                       const QString& year, const QString& runtime);
+    void get_filters(const QString& genre, const QString& age_limit, const QString& rating,
+                     const QString& year, const QString& runtime);
+
+    void apply_filters();
 
     void using_search_enging();
 
@@ -79,6 +81,11 @@ private:
     bool is_filter_apply {false};
     enum pages_ingex {AUTOSELECTION_MOVIE_PAGE_INDEX, SEARCH_PAGE_INDEX,
             LIKED_PAGE_INDEX, TOPS_PAGE_INDEX};
+    QString genre_filter;
+    QString age_limit_filter;
+    QString rating_filter;
+    QString year_filter;
+    QString runtime_filter;
 };
 
 
