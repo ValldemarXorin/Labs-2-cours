@@ -5,8 +5,8 @@
 
 AgeLimitFilter::AgeLimitFilter(const std::string &limit) : age_limit(limit) {}
 
-std::vector<Movie> AgeLimitFilter::apply(std::vector<Movie> movies) {
-    std::vector<Movie> filtered_movies;
+MyVector<Movie> AgeLimitFilter::apply(MyVector<Movie> movies) {
+    MyVector<Movie> filtered_movies;
     for (const auto& movie : movies) {
         if (movie.get_age_limit() == age_limit) {
             filtered_movies.push_back(movie);

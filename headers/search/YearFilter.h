@@ -12,7 +12,7 @@ private:
 public:
     explicit YearFilter(bool ascending);
 
-    std::vector<Movie> apply(std::vector<Movie> movies) override;
+    MyVector<Movie> apply(MyVector<Movie> movies) override;
 
     ~YearFilter() override = default;
 };

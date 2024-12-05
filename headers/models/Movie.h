@@ -17,8 +17,23 @@ class Movie {
     std::string age_limit;
 
 public:
+    Movie();
+
     Movie(int id, const std::string &title, const std::string &description, const std::string &genre,
           int realease_year, const std::string &runtime, float rating, int link_id, std::string& age_limit);
+
+    // Копирующий конструктор
+    Movie(const Movie& other);
+
+    // Перемещающий конструктор
+    Movie(Movie&& other) noexcept;
+
+    // Копирующий оператор присваивания
+    Movie& operator=(const Movie& other);
+
+    // Перемещающий оператор присваивания
+    Movie& operator=(Movie&& other) noexcept;
+
 
     ~Movie() = default;
 

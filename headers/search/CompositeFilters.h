@@ -6,15 +6,16 @@
 #define LABS_2_COURS_COMPOSITEFILTERS_H
 #include "IFilter.h"
 #include "ICompositFilters.h"
+#include "../MyVector.h"
 
 class CompositeFilter : public IFilter, public ICompositFilters {
 private:
-    std::vector<IFilter*> filters;
+    MyVector<IFilter*> filters;
 
 public:
     void addFilter(IFilter* filter);
 
-    std::vector<Movie> apply(std::vector<Movie> movies) override;
+    MyVector<Movie> apply(MyVector<Movie> movies) override;
 
     void removeFilter(IFilter* filter) override;
 

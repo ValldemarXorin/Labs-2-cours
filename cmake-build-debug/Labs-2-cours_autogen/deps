@@ -548,7 +548,7 @@ Labs-2-cours_autogen/timestamp: \
 	D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/CMakeFiles/3.29.6/CMakeSystem.cmake \
 	D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/moc_predefs.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/MovieErrorExceptions.h \
-	D:/Labs-2-cours/Labs-2-cours/headers/MyStack.h \
+	D:/Labs-2-cours/Labs-2-cours/headers/MyVector.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/UserErrorExceptions.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/auth_models/User.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/database/DBManager.h \
@@ -573,9 +573,7 @@ Labs-2-cours_autogen/timestamp: \
 	D:/Labs-2-cours/Labs-2-cours/headers/search/RuntimeFilter.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/search/YearFilter.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/search/search_engine.h \
-	D:/Labs-2-cours/Labs-2-cours/headers/top_movies/Top.h \
 	D:/Labs-2-cours/Labs-2-cours/source/MovieErrorExceptions.cpp \
-	D:/Labs-2-cours/Labs-2-cours/source/MyStack.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/UserErrorExceptions.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/auth_models/User.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/database/Database.cpp \
@@ -597,7 +595,6 @@ Labs-2-cours_autogen/timestamp: \
 	D:/Labs-2-cours/Labs-2-cours/source/search/RuntimeFilter.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/search/YearFilter.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/search/search_engine.cpp \
-	D:/Labs-2-cours/Labs-2-cours/source/top_movies/Top.cpp \
 	D:/Qt/6.7.3/mingw_64/include/QtCore/QCryptographicHash \
 	D:/Qt/6.7.3/mingw_64/include/QtCore/QPropertyAnimation \
 	D:/Qt/6.7.3/mingw_64/include/QtCore/QString \

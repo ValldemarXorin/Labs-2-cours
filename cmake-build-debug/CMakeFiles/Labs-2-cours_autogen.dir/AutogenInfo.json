@@ -277,9 +277,9 @@
 			null
 		],
 		[
-			"D:/Labs-2-cours/Labs-2-cours/headers/MyStack.h",
+			"D:/Labs-2-cours/Labs-2-cours/headers/MyVector.h",
 			"MU",
-			"K6S233IZAZ/moc_MyStack.cpp",
+			"K6S233IZAZ/moc_MyVector.cpp",
 			null
 		],
 		[
@@ -425,12 +425,6 @@
 			"MU",
 			"N75IJGAIRM/moc_search_engine.cpp",
 			null
-		],
-		[
-			"D:/Labs-2-cours/Labs-2-cours/headers/top_movies/Top.h",
-			"MU",
-			"UHF7X6JEA7/moc_Top.cpp",
-			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -458,7 +452,6 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"C:/Users/vova3/vcpkg/installed/x64-windows/include",
 		"D:/Qt/6.7.3/mingw_64/include/QtCore",
 		"D:/Qt/6.7.3/mingw_64/include",
 		"D:/Qt/6.7.3/mingw_64/mkspecs/win32-g++",
@@ -511,7 +504,6 @@
 			"MU",
 			null
 		],
-		[ "D:/Labs-2-cours/Labs-2-cours/source/MyStack.cpp", "MU", null ],
 		[
 			"D:/Labs-2-cours/Labs-2-cours/source/UserErrorExceptions.cpp",
 			"MU",
@@ -608,8 +600,7 @@
 			"D:/Labs-2-cours/Labs-2-cours/source/search/search_engine.cpp",
 			"MU",
 			null
-		],
-		[ "D:/Labs-2-cours/Labs-2-cours/source/top_movies/Top.cpp", "MU", null ]
+		]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

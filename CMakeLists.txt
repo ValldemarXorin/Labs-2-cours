@@ -9,10 +9,6 @@ set(CMAKE_AUTOUIC ON)
 
 set(CMAKE_PREFIX_PATH "D:/Qt/6.7.3/mingw_64")
 
-set(CURL_INCLUDE_DIR "C:/Users/vova3/vcpkg/installed/x64-windows/include")
-set(CURL_LIBRARY "C:/Users/vova3/vcpkg/installed/x64-windows/lib/libcurl.lib")
-set(NLOHMANN_JSON_INCLUDE_DIR "C:/Users/vova3/vcpkg/installed/x64-windows/include")
-
 find_package(Qt6 COMPONENTS
         Core
         Gui
@@ -78,22 +74,13 @@ add_executable(Labs-2-cours
         source/interface/FiltersWindow.cpp
         headers/interface/FiltersWindow.h
         source/interface/FiltersWindow.ui
-        headers/MyStack.h
-        source/MyStack.cpp
-        headers/top_movies/Top.h
-        source/top_movies/Top.cpp
-)
-
-include_directories(
-        ${CURL_INCLUDE_DIR}
-        ${NLOHMANN_JSON_INCLUDE_DIR}
+        headers/MyVector.h
 )
 
 target_link_libraries(Labs-2-cours
         Qt::Core
         Qt::Gui
         Qt::Widgets
-        ${CURL_LIBRARY}
 )
 
 if (WIN32 AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)

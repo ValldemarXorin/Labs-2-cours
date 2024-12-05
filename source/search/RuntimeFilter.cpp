@@ -5,10 +5,10 @@
 
 RuntimeFilter::RuntimeFilter(bool ascending) : isAscending(ascending) {};
 
-std::vector<Movie> RuntimeFilter::apply(std::vector<Movie> movies) {
-    std::vector<Movie> sorted_movies = movies;
-    std::sort(sorted_movies.begin(), sorted_movies.end(), [this](const Movie& a, const Movie& b) {
+MyVector<Movie> RuntimeFilter::apply(MyVector<Movie> movies) {
+    std::function<bool(const Movie&, const Movie&)> comp = [this](const Movie& a, const Movie& b) {
         return isAscending ? a.get_runtime() < b.get_runtime() : a.get_runtime() > b.get_runtime();
-    });
-    return sorted_movies;
+    };
+    movies.sort(comp);
+    return movies;
 }

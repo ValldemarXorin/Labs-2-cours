@@ -12,7 +12,7 @@ private:
 public:
     explicit GenreFilter(std::string g);
 
-    std::vector<Movie> apply(std::vector<Movie> movies) override;
+    MyVector<Movie> apply(MyVector<Movie> movies) override;
 
     ~GenreFilter() override = default;
 };

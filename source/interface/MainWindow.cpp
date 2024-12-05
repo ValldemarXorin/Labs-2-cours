@@ -214,7 +214,9 @@ MainWindow::apply_filters() {
     if (year_filter == "Decrease")
         compositeFilter->addFilter(new YearFilter(false));
 
-    movies_for_search_list = compositeFilter->apply(movies_for_search_list);
+    MyVector<Movie> temp_movies_for_search_list;
+    temp_movies_for_search_list.fromStdVector(movies_for_search_list);
+    movies_for_search_list = compositeFilter->apply(temp_movies_for_search_list).toStdVector();
 }
 
 void MainWindow::using_search_enging() {

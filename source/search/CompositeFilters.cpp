@@ -3,8 +3,8 @@
 //
 #include "../../headers/search/CompositeFilters.h"
 
-std::vector<Movie> CompositeFilter::apply(std::vector<Movie> movies) {
-    std::vector<Movie> result = movies;
+MyVector<Movie> CompositeFilter::apply(MyVector<Movie> movies) {
+    MyVector<Movie> result = movies;
 
     for (auto filter : filters) {
         result = filter->apply(result);
@@ -18,7 +18,7 @@ void CompositeFilter::addFilter(IFilter *filter) {
 }
 
 void CompositeFilter::removeFilter(IFilter *filter) {
-    filters.erase(std::remove(filters.begin(), filters.end(), filter), filters.end());
+    filters.remove(filter);
 }
 
 CompositeFilter::~CompositeFilter() noexcept {

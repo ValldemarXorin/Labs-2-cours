@@ -13,7 +13,7 @@ private:
 public:
     explicit RatingFilter(bool ascending);
 
-    std::vector<Movie> apply(std::vector<Movie> movies) override;
+    MyVector<Movie> apply(MyVector<Movie> movies) override;
 
     ~RatingFilter() override = default;
 };

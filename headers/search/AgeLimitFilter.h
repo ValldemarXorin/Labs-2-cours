@@ -13,7 +13,7 @@ private:
 public:
     explicit AgeLimitFilter(const std::string& limit);
 
-    std::vector<Movie> apply(std::vector<Movie> movies) override;
+    MyVector<Movie> apply(MyVector<Movie> movies) override;
 
     ~AgeLimitFilter() override = default;
 };

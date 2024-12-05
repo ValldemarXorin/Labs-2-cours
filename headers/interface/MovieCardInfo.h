@@ -7,7 +7,7 @@
 
 #include <QWidget>
 #include "../models/Movie.h"
-#include "../MyStack.h"
+#include "../MyVector.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MovieCardInfo; }
