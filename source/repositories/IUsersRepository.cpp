@@ -50,11 +50,11 @@ User* IUserRepository::get_user(std::string email, std::string password) {
     bool user_exist = false;
     for (auto &user: users) {
         if (user.get_email() == email && user.get_password() == password) {
-            return &user;
             user_exist = true;
+            return &user;
         }
     }
-    if (user_exist)
+    if (!user_exist)
         return nullptr;
 }
 
