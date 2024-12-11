@@ -5,11 +5,10 @@
 #ifndef LABS_2_COURS_USER_H
 #define LABS_2_COURS_USER_H
 
-#include "../UserErrorExceptions.h"
 #include <string>
 #include <string_view>
 
-class User: public UserErrorExceptions {
+class User {
     int id;
     std::string email;
     std::string password;

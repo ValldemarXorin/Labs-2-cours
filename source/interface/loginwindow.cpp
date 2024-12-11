@@ -33,13 +33,23 @@ void LoginWindow::on_SingIn_clicked() {
     QString email = ui->email->text();
     QString password = ui->password->text();
 
-    if (!users->email_is_valid(email.toStdString()) ||
-        !users->password_is_vaild(password.toStdString())) {
+    try {
+        users->email_is_valid(email.toStdString());
+        users->password_is_vaild(password.toStdString());
+    }
+    catch (const std::invalid_argument &e) {
         ui->ErrorMessage->setText("Error: check email and password.");
+        std::cerr << "Error: " << e.what() << std::endl;
         return;
     }
+
+
     password = QString(QCryptographicHash::hash(password.toUtf8(), QCryptographicHash::Sha256).toHex());
-    if (!users->user_exist(email.toStdString(), password.toStdString(), "user")) {
+
+    try {
+        users->user_exist(email.toStdString(), password.toStdString(), "user", users->get_all_users());
+    }
+    catch (const std::invalid_argument &e) {
         ui->ErrorMessage->setText("Error: This user does not exist.");
         return;
     }
@@ -57,13 +67,20 @@ void LoginWindow::on_SingUp_clicked() {
     QString email = ui->email->text();
     QString password = ui->password->text();
 
-    if (!users->email_is_valid(email.toStdString()) ||
-        !users->password_is_vaild(password.toStdString())) {
+    try {
+        users->email_is_valid(email.toStdString());
+        users->password_is_vaild(password.toStdString());
+    }
+    catch (const std::invalid_argument &e) {
         ui->ErrorMessage->setText("Error: check email and password.");
+        std::cerr << "Error: " << e.what() << std::endl;
         return;
     }
 
-    if(users->email_exist(email.toStdString())) {
+    try {
+        users->email_exist(email.toStdString(), users->get_all_users());
+    }
+    catch (const std::invalid_argument &e) {
         ui->ErrorMessage->setText("Error: This user already exist.");
         return;
     }

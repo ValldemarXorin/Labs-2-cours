@@ -5,14 +5,22 @@
 #ifndef LABS_2_COURS_USERERROREXCEPTIONS_H
 #define LABS_2_COURS_USERERROREXCEPTIONS_H
 
+#include "auth_models/User.h"
 #include <string>
 #include <regex>
+#include <stdexcept>
+#include <vector>
 
 class UserErrorExceptions {
 public:
 
-    bool email_is_valid(const std::string& email) const;
+    void email_is_valid(const std::string& email) const;
 
-    bool password_is_vaild(const std::string& password) const;
+    void password_is_vaild(const std::string& password) const;
+
+    void email_exist(const std::string& email, const std::vector<User>& all_users) const;
+
+    void user_exist(const std::string& email, const std::string& password, const std::string& role,
+                    const std::vector<User>& all_users) const;
 };
 #endif //LABS_2_COURS_USERERROREXCEPTIONS_H
