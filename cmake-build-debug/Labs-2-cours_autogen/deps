@@ -561,9 +561,11 @@ Labs-2-cours_autogen/timestamp: \
 	D:/Labs-2-cours/Labs-2-cours/headers/interface/MovieCard.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/interface/MovieCardInfo.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/interface/loginwindow.h \
+	D:/Labs-2-cours/Labs-2-cours/headers/models/LikedMovie.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/models/Movie.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/repositories/IMoviesRepository.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/repositories/IUsersRepository.h \
+	D:/Labs-2-cours/Labs-2-cours/headers/repositories/LikedRepository.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/search/AgeLimitFilter.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/search/CompositeFilters.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/search/GenreFilter.h \
@@ -577,6 +579,7 @@ Labs-2-cours_autogen/timestamp: \
 	D:/Labs-2-cours/Labs-2-cours/source/UserErrorExceptions.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/auth_models/User.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/database/Database.cpp \
+	D:/Labs-2-cours/Labs-2-cours/source/database/LikedDBManager.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/database/MoviesDBManager.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/database/UsersDBManager.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/interface/FiltersWindow.cpp \
@@ -585,9 +588,11 @@ Labs-2-cours_autogen/timestamp: \
 	D:/Labs-2-cours/Labs-2-cours/source/interface/MovieCardInfo.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/interface/loginwindow.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/main.cpp \
+	D:/Labs-2-cours/Labs-2-cours/source/models/LikedMovie.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/models/Movie.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/repositories/IMoviesRepository.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/repositories/IUsersRepository.cpp \
+	D:/Labs-2-cours/Labs-2-cours/source/repositories/LikedRepository.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/search/AgeLimitFilter.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/search/CompositeFilters.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/search/GenreFilter.cpp \

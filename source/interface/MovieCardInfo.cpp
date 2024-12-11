@@ -19,7 +19,7 @@ MovieCardInfo::~MovieCardInfo() {
 }
 
 void MovieCardInfo::set_information(QString title, QString genre, QString rating, QString release_year,
-                               QString runtime, QString age_limit, QString description) {
+                               QString runtime, QString age_limit, QString description, int id) {
     ui->TitleMovie->setText(title);
     ui->Genre->setText(genre);
     ui->Year->setText(release_year);
@@ -27,4 +27,13 @@ void MovieCardInfo::set_information(QString title, QString genre, QString rating
     ui->AgeLimit->setText(age_limit);
     ui->Description->setText(description);
     ui->Rating->setText(rating);
+    movie_id = id;
+}
+
+void MovieCardInfo::OnLikeButtonClicked() {
+    emit prepare_to_add_liked_movie(movie_id);
+}
+
+QToolButton* MovieCardInfo::get_like_button() {
+    return ui->LikeButton;
 }

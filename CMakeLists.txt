@@ -75,6 +75,11 @@ add_executable(Labs-2-cours
         headers/interface/FiltersWindow.h
         source/interface/FiltersWindow.ui
         headers/MyVector.h
+        source/database/LikedDBManager.cpp
+        headers/models/LikedMovie.h
+        source/models/LikedMovie.cpp
+        headers/repositories/LikedRepository.h
+        source/repositories/LikedRepository.cpp
 )
 
 target_link_libraries(Labs-2-cours

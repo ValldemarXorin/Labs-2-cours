@@ -390,8 +390,11 @@ D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/VKFSGOINM3/m
   D:/Qt/6.7.3/mingw_64/include/QtGui/qtransform.h \
   D:/Qt/6.7.3/mingw_64/include/QtGui/qwindowdefs.h \
   D:/Qt/6.7.3/mingw_64/include/QtGui/qwindowdefs_win.h \
+  D:/Qt/6.7.3/mingw_64/include/QtWidgets/QToolButton \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/QWidget \
+  D:/Qt/6.7.3/mingw_64/include/QtWidgets/qabstractbutton.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qsizepolicy.h \
+  D:/Qt/6.7.3/mingw_64/include/QtWidgets/qtoolbutton.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qtwidgets-config.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qtwidgetsglobal.h \

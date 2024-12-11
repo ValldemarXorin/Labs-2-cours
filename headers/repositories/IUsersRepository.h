@@ -29,5 +29,9 @@ public:
                     const std::string& role) const;
 
     bool email_exist(const std::string& email);
+
+    User* get_user(std::string email, std::string password);
+
+    std::vector<User> get_all_users();
 };
 #endif //LABS_2_COURS_IUSERSREPOSITORY_H

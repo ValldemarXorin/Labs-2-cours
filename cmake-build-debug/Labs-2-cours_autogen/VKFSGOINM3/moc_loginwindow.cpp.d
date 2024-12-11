@@ -510,15 +510,18 @@ D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/VKFSGOINM3/m
   D:/Labs-2-cours/Labs-2-cours/headers/auth_models/User.h \
   D:/Labs-2-cours/Labs-2-cours/headers/database/DBManager.h \
   D:/Labs-2-cours/Labs-2-cours/headers/database/Database.h \
+  D:/Labs-2-cours/Labs-2-cours/headers/database/LikedDBManager.h \
   D:/Labs-2-cours/Labs-2-cours/headers/database/MoviesDBManager.h \
   D:/Labs-2-cours/Labs-2-cours/headers/database/UsersDBManager.h \
   D:/Labs-2-cours/Labs-2-cours/headers/interface/FiltersWindow.h \
   D:/Labs-2-cours/Labs-2-cours/headers/interface/MainWindow.h \
   D:/Labs-2-cours/Labs-2-cours/headers/interface/MovieCard.h \
   D:/Labs-2-cours/Labs-2-cours/headers/interface/MovieCardInfo.h \
+  D:/Labs-2-cours/Labs-2-cours/headers/models/LikedMovie.h \
   D:/Labs-2-cours/Labs-2-cours/headers/models/Movie.h \
   D:/Labs-2-cours/Labs-2-cours/headers/repositories/IMoviesRepository.h \
   D:/Labs-2-cours/Labs-2-cours/headers/repositories/IUsersRepository.h \
+  D:/Labs-2-cours/Labs-2-cours/headers/repositories/LikedRepository.h \
   D:/Labs-2-cours/Labs-2-cours/headers/search/AgeLimitFilter.h \
   D:/Labs-2-cours/Labs-2-cours/headers/search/CompositeFilters.h \
   D:/Labs-2-cours/Labs-2-cours/headers/search/GenreFilter.h \

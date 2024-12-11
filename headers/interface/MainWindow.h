@@ -7,6 +7,7 @@
 
 #include "../repositories/IUsersRepository.h"
 #include "../repositories/IMoviesRepository.h"
+#include "../repositories/LikedRepository.h"
 #include "../search/search_engine.h"
 #include "../search/CompositeFilters.h"
 #include "../search/GenreFilter.h"
@@ -34,8 +35,8 @@ class MainWindow : public QMainWindow {
 Q_OBJECT
 
 public:
-    explicit MainWindow(IMoviesRepository* movies_repository, IUserRepository* users,
-                        QWidget *parent = nullptr);
+    explicit MainWindow(IMoviesRepository* movies_repository, IUserRepository* users, LikedRepository* liked_movies,
+                        User* current_user, QWidget *parent = nullptr);
 
     ~MainWindow() override;
 
@@ -58,6 +59,10 @@ private slots:
 
     void on_FiltersButtonSearchPage_clicked();
 
+    void show_liked_movies();
+
+    void add_liked_movie(int movie_id);
+
     void get_filters(const QString& genre, const QString& age_limit, const QString& rating,
                      const QString& year, const QString& runtime);
 
@@ -65,17 +70,25 @@ private slots:
 
     void using_search_enging();
 
-    void add_movie_card(const QString& title, const QString& genre,
+    void add_movie_card_search_page(const QString& title, const QString& genre,
                               const QString& rating, const QString& release_year, const QString& age_limit,
-                              const QString& description);
+                              const QString& description, int id);
+
+    void add_movie_card_liked(const QString& title, const QString& genre,
+                                    const QString& rating, const QString& release_year, const QString& age_limit,
+                                    const QString& description, int id);
+
+    //void delete_liked_movie();
 
 private:
     Ui::MainWindow *ui;
     IUserRepository* users;
     IMoviesRepository* movies_repository;
+    LikedRepository* liked_movies;
     SearchEngine* search_engine;
     FiltersWindow* filters_window {new FiltersWindow};
     MyVector<Movie>* recently_checking;
+    User* current_user;
     int precurrent_length_text_search_field{0};
     std::vector<Movie> movies_for_search_list;
     bool is_filter_apply {false};

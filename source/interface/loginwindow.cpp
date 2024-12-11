@@ -12,9 +12,9 @@
 
 
 LoginWindow::LoginWindow(IMoviesRepository* movies,
-                         IUserRepository* users, QWidget *parent) :
+                         IUserRepository* users, LikedRepository* liked_movies, QWidget *parent) :
         QWidget(parent), ui(new Ui::LoginWindow), movies_repository(movies), users(users),
-        mainWindow(new MainWindow(movies, users)){
+        liked_movies(liked_movies) {
 
     ui->setupUi(this);
 
@@ -43,6 +43,11 @@ void LoginWindow::on_SingIn_clicked() {
         ui->ErrorMessage->setText("Error: This user does not exist.");
         return;
     }
+
+    User* current_user = users->get_user(email.toStdString(), password.toStdString());
+
+    mainWindow = new MainWindow(movies_repository, users, liked_movies, current_user);
+
     mainWindow->show();
     this->close();
 }
@@ -65,6 +70,12 @@ void LoginWindow::on_SingUp_clicked() {
 
     password = QString(QCryptographicHash::hash(password.toUtf8(), QCryptographicHash::Sha256).toHex());
     users->add_user(email.toStdString(), password.toStdString(), "user");
+
+    User* current_user = new User(users->get_all_users()[users->get_all_users().size() - 1].get_id(),
+                                 email.toStdString(), password.toStdString(), "user");
+
+    mainWindow = new MainWindow(movies_repository, users, liked_movies, current_user);
+
     mainWindow->show();
     this->close();
 }

@@ -25,7 +25,7 @@ Q_OBJECT
 
 public:
     explicit LoginWindow( IMoviesRepository* movies_repository,
-                          IUserRepository* users, QWidget *parent = nullptr);
+                          IUserRepository* users, LikedRepository* liked_movies, QWidget *parent = nullptr);
 
     ~LoginWindow() override;
 
@@ -43,6 +43,7 @@ private:
     MainWindow *mainWindow;
     IUserRepository *users;
     IMoviesRepository *movies_repository;
+    LikedRepository* liked_movies;
 };
 
 

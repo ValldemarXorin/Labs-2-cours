@@ -2,6 +2,7 @@
 #include "../headers/models/Movie.h"
 #include "../SQLiteLibrary/sqlite3.h"
 #include "../headers/repositories/IMoviesRepository.h"
+#include "../headers/repositories/LikedRepository.h"
 #include "../headers/interface/MainWindow.h"
 #include "../headers/interface/loginwindow.h"
 #include <QApplication>
@@ -13,8 +14,9 @@ int main(int argc, char* argv[]) {
 
     IUserRepository users;
     IMoviesRepository movies;
+    LikedRepository liked_movies;
 
-    LoginWindow loginWindow(&movies, &users);
+    LoginWindow loginWindow(&movies, &users, &liked_movies);
     loginWindow.show();
 
     return app.exec();

@@ -10,6 +10,9 @@
 MovieCard::MovieCard(QWidget *parent) :
         QWidget(parent), ui(new Ui::MovieCard) {
     ui->setupUi(this);
+
+    connect(movie_card_info->get_like_button(), &QToolButton::clicked,
+            movie_card_info, &MovieCardInfo::OnLikeButtonClicked);
 }
 
 MovieCard::~MovieCard() {
@@ -17,13 +20,14 @@ MovieCard::~MovieCard() {
 }
 
 void MovieCard::set_movie_card_data(const QString &title, const QString &genre, const QString &rating,
-                                    const QString &release_year, const QString &age_limit, const QString& description) {
+                                    const QString &release_year, const QString &age_limit, const QString& description,
+                                    int id) {
     ui->TitleMovie->setText(title);
     ui->GenreMovie->setText(genre);
     ui->RatingMovie->setText(rating);
     ui->YearMovie->setText(release_year);
     ui->AgeLimitMovie->setText(age_limit);
-    movie_card_info->set_information(title, genre, rating, release_year, "01:00:55", age_limit, description);
+    movie_card_info->set_information(title, genre, rating, release_year, "01:00:55", age_limit, description, id);
 }
 
 QPushButton* MovieCard::getViewDetailsButton() {

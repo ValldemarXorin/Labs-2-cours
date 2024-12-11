@@ -14,7 +14,7 @@ IUserRepository::~IUserRepository() {
 
 void IUserRepository::add_user(const std::string &new_email, const std::string &new_password,
                                const std::string &new_role) {
-    users.emplace_back(User(users.size() + 1, new_email, new_password, new_role));
+    users.emplace_back(User(users[users.size() - 1].get_id() + 1, new_email, new_password, new_role));
 }
 
 void IUserRepository::delete_user(const std::string &email, const std::string &password,
@@ -44,4 +44,15 @@ bool IUserRepository::email_exist(const std::string &email) {
             return true;
     }
     return false;
+}
+
+User* IUserRepository::get_user(std::string email, std::string password) {
+    for (auto &user: users) {
+        if (user.get_email() == email && user.get_password() == password)
+            return &user;
+    }
+}
+
+std::vector<User> IUserRepository::get_all_users() {
+    return users;
 }

@@ -510,14 +510,17 @@ D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/VKFSGOINM3/m
   D:/Labs-2-cours/Labs-2-cours/headers/auth_models/User.h \
   D:/Labs-2-cours/Labs-2-cours/headers/database/DBManager.h \
   D:/Labs-2-cours/Labs-2-cours/headers/database/Database.h \
+  D:/Labs-2-cours/Labs-2-cours/headers/database/LikedDBManager.h \
   D:/Labs-2-cours/Labs-2-cours/headers/database/MoviesDBManager.h \
   D:/Labs-2-cours/Labs-2-cours/headers/database/UsersDBManager.h \
   D:/Labs-2-cours/Labs-2-cours/headers/interface/FiltersWindow.h \
   D:/Labs-2-cours/Labs-2-cours/headers/interface/MovieCard.h \
   D:/Labs-2-cours/Labs-2-cours/headers/interface/MovieCardInfo.h \
+  D:/Labs-2-cours/Labs-2-cours/headers/models/LikedMovie.h \
   D:/Labs-2-cours/Labs-2-cours/headers/models/Movie.h \
   D:/Labs-2-cours/Labs-2-cours/headers/repositories/IMoviesRepository.h \
   D:/Labs-2-cours/Labs-2-cours/headers/repositories/IUsersRepository.h \
+  D:/Labs-2-cours/Labs-2-cours/headers/repositories/LikedRepository.h \
   D:/Labs-2-cours/Labs-2-cours/headers/search/AgeLimitFilter.h \
   D:/Labs-2-cours/Labs-2-cours/headers/search/CompositeFilters.h \
   D:/Labs-2-cours/Labs-2-cours/headers/search/GenreFilter.h \
@@ -685,6 +688,7 @@ D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/VKFSGOINM3/m
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/QListWidget \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/QMainWindow \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/QPushButton \
+  D:/Qt/6.7.3/mingw_64/include/QtWidgets/QToolButton \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/QWidget \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qabstractbutton.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
@@ -704,6 +708,7 @@ D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/VKFSGOINM3/m
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qstyleoption.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qtabbar.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qtabwidget.h \
+  D:/Qt/6.7.3/mingw_64/include/QtWidgets/qtoolbutton.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qtwidgets-config.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qtwidgetsglobal.h \

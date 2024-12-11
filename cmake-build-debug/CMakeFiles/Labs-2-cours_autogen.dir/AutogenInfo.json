@@ -355,6 +355,12 @@
 			null
 		],
 		[
+			"D:/Labs-2-cours/Labs-2-cours/headers/models/LikedMovie.h",
+			"MU",
+			"5JQWYGIYPV/moc_LikedMovie.cpp",
+			null
+		],
+		[
 			"D:/Labs-2-cours/Labs-2-cours/headers/models/Movie.h",
 			"MU",
 			"5JQWYGIYPV/moc_Movie.cpp",
@@ -370,6 +376,12 @@
 			"D:/Labs-2-cours/Labs-2-cours/headers/repositories/IUsersRepository.h",
 			"MU",
 			"HJSF5B6AL7/moc_IUsersRepository.cpp",
+			null
+		],
+		[
+			"D:/Labs-2-cours/Labs-2-cours/headers/repositories/LikedRepository.h",
+			"MU",
+			"HJSF5B6AL7/moc_LikedRepository.cpp",
 			null
 		],
 		[
@@ -520,6 +532,11 @@
 			null
 		],
 		[
+			"D:/Labs-2-cours/Labs-2-cours/source/database/LikedDBManager.cpp",
+			"MU",
+			null
+		],
+		[
 			"D:/Labs-2-cours/Labs-2-cours/source/database/MoviesDBManager.cpp",
 			"MU",
 			null
@@ -555,6 +572,11 @@
 			null
 		],
 		[ "D:/Labs-2-cours/Labs-2-cours/source/main.cpp", "MU", null ],
+		[
+			"D:/Labs-2-cours/Labs-2-cours/source/models/LikedMovie.cpp",
+			"MU",
+			null
+		],
 		[ "D:/Labs-2-cours/Labs-2-cours/source/models/Movie.cpp", "MU", null ],
 		[
 			"D:/Labs-2-cours/Labs-2-cours/source/repositories/IMoviesRepository.cpp",
@@ -563,6 +585,11 @@
 		],
 		[
 			"D:/Labs-2-cours/Labs-2-cours/source/repositories/IUsersRepository.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Labs-2-cours/Labs-2-cours/source/repositories/LikedRepository.cpp",
 			"MU",
 			null
 		],

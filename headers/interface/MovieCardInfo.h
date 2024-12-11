@@ -6,6 +6,7 @@
 #define LABS_2_COURS_MOVIECARDINFO_H
 
 #include <QWidget>
+#include <QToolButton>
 #include "../models/Movie.h"
 #include "../MyVector.h"
 
@@ -24,10 +25,18 @@ public:
     void SetIconLikeButton();
 
     void set_information(QString title, QString genre, QString rating, QString release_year, QString runtime,
-                         QString age_limit, QString description);
+                         QString age_limit, QString description, int id);
+
+    void OnLikeButtonClicked();
+
+    QToolButton* get_like_button();
+
+    signals:
+    void prepare_to_add_liked_movie(int movie_id_to_add);
 
 private:
     Ui::MovieCardInfo *ui;
+    int movie_id;
 };
 
 
