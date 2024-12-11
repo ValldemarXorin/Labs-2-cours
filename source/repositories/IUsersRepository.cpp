@@ -47,10 +47,15 @@ bool IUserRepository::email_exist(const std::string &email) {
 }
 
 User* IUserRepository::get_user(std::string email, std::string password) {
+    bool user_exist = false;
     for (auto &user: users) {
-        if (user.get_email() == email && user.get_password() == password)
+        if (user.get_email() == email && user.get_password() == password) {
             return &user;
+            user_exist = true;
+        }
     }
+    if (user_exist)
+        return nullptr;
 }
 
 std::vector<User> IUserRepository::get_all_users() {
