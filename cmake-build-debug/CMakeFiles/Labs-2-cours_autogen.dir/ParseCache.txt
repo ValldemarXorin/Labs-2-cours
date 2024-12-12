@@ -403,8 +403,8 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/FiltersWindow.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qwidget.h
 D:/Labs-2-cours/Labs-2-cours/headers/MyVector.h
 D:/Labs-2-cours/Labs-2-cours/headers/models/Movie.h
-D:/Labs-2-cours/Labs-2-cours/headers/database/Database.h
 D:/Labs-2-cours/Labs-2-cours/source/UserErrorExceptions.cpp
+D:/Labs-2-cours/Labs-2-cours/headers/database/Database.h
 D:/Labs-2-cours/Labs-2-cours/headers/database/DBManager.h
 D:/Labs-2-cours/Labs-2-cours/headers/UserErrorExceptions.h
 D:/Labs-2-cours/Labs-2-cours/headers/auth_models/User.h
@@ -486,6 +486,10 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/MainWindow.h
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception.h
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_defines.h
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_ptr.h
+ mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_dir.h
+ mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_fwd.h
+ mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h
+ mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_path.h
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/functexcept.h
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/functional_hash.h
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hash_bytes.h
@@ -589,6 +593,7 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/MainWindow.h
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/climits
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/clocale
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cmath
+ mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/codecvt
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/compare
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/concepts
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstddef
@@ -610,6 +615,7 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/MainWindow.h
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/numeric_traits.h
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/string_conversions.h
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/type_traits.h
+ mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/filesystem
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/format
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/functional
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/initializer_list
@@ -915,6 +921,7 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/MainWindow.h
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/wtypesbase.h
  mdp:D:/Labs-2-cours/Labs-2-cours/SQLiteLibrary/sqlite3.h
  mdp:D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/moc_predefs.h
+ mdp:D:/Labs-2-cours/Labs-2-cours/headers/JSONMovieCollection.h
  mdp:D:/Labs-2-cours/Labs-2-cours/headers/MovieErrorExceptions.h
  mdp:D:/Labs-2-cours/Labs-2-cours/headers/MyVector.h
  mdp:D:/Labs-2-cours/Labs-2-cours/headers/UserErrorExceptions.h
@@ -942,6 +949,11 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/MainWindow.h
  mdp:D:/Labs-2-cours/Labs-2-cours/headers/search/RuntimeFilter.h
  mdp:D:/Labs-2-cours/Labs-2-cours/headers/search/YearFilter.h
  mdp:D:/Labs-2-cours/Labs-2-cours/headers/search/search_engine.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/QDebug
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/QFile
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/QJsonArray
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/QJsonDocument
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/QJsonObject
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/QPropertyAnimation
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/q20functional.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/q20memory.h
@@ -963,6 +975,9 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/MainWindow.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qbytearrayalgorithms.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qbytearraylist.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qbytearrayview.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qcalendar.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qcborcommon.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qcborvalue.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qchar.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qcompare.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qcompare_impl.h
@@ -976,10 +991,13 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/MainWindow.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qcontiguouscache.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qdarwinhelpers.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qdatastream.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qdatetime.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qdebug.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qeasingcurve.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qendian.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qexceptionhandling.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qfile.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qfiledevice.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qflags.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qfloat16.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qforeach.h
@@ -990,10 +1008,15 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/MainWindow.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qglobalstatic.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qhash.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qhashfunctions.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qiodevice.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qiodevicebase.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qitemselectionmodel.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qiterable.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qiterator.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qjsonarray.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qjsondocument.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qjsonobject.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qjsonvalue.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qlatin1stringview.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qline.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qlist.h
@@ -1061,7 +1084,9 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/MainWindow.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qtversionchecks.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qtypeinfo.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qtypes.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qurl.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qutf8stringview.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/quuid.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qvariant.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qvariantanimation.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qvarlengtharray.h
@@ -2025,6 +2050,10 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/loginwindow.h
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception.h
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_defines.h
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_ptr.h
+ mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_dir.h
+ mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_fwd.h
+ mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h
+ mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_path.h
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/functexcept.h
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/functional_hash.h
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hash_bytes.h
@@ -2128,6 +2157,7 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/loginwindow.h
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/climits
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/clocale
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cmath
+ mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/codecvt
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/compare
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/concepts
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstddef
@@ -2149,6 +2179,7 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/loginwindow.h
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/numeric_traits.h
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/string_conversions.h
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/type_traits.h
+ mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/filesystem
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/format
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/functional
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/initializer_list
@@ -2454,6 +2485,7 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/loginwindow.h
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/wtypesbase.h
  mdp:D:/Labs-2-cours/Labs-2-cours/SQLiteLibrary/sqlite3.h
  mdp:D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/moc_predefs.h
+ mdp:D:/Labs-2-cours/Labs-2-cours/headers/JSONMovieCollection.h
  mdp:D:/Labs-2-cours/Labs-2-cours/headers/MovieErrorExceptions.h
  mdp:D:/Labs-2-cours/Labs-2-cours/headers/MyVector.h
  mdp:D:/Labs-2-cours/Labs-2-cours/headers/UserErrorExceptions.h
@@ -2483,6 +2515,11 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/loginwindow.h
  mdp:D:/Labs-2-cours/Labs-2-cours/headers/search/YearFilter.h
  mdp:D:/Labs-2-cours/Labs-2-cours/headers/search/search_engine.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/QCryptographicHash
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/QDebug
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/QFile
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/QJsonArray
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/QJsonDocument
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/QJsonObject
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/QPropertyAnimation
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/QString
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/q20functional.h
@@ -2505,6 +2542,9 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/loginwindow.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qbytearrayalgorithms.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qbytearraylist.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qbytearrayview.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qcalendar.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qcborcommon.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qcborvalue.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qchar.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qcompare.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qcompare_impl.h
@@ -2519,10 +2559,13 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/loginwindow.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qcryptographichash.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qdarwinhelpers.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qdatastream.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qdatetime.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qdebug.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qeasingcurve.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qendian.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qexceptionhandling.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qfile.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qfiledevice.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qflags.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qfloat16.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qforeach.h
@@ -2538,6 +2581,10 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/loginwindow.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qitemselectionmodel.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qiterable.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qiterator.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qjsonarray.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qjsondocument.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qjsonobject.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qjsonvalue.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qlatin1stringview.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qline.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qlist.h
@@ -2607,6 +2654,7 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/loginwindow.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qtypes.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qurl.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qutf8stringview.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/quuid.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qvariant.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qvariantanimation.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qvarlengtharray.h
@@ -2713,3 +2761,5 @@ D:/Labs-2-cours/Labs-2-cours/source/top_movies/Top.cpp
 D:/Labs-2-cours/Labs-2-cours/headers/models/LikedMovie.h
 D:/Labs-2-cours/Labs-2-cours/headers/repositories/LikedRepository.h
 D:/Labs-2-cours/Labs-2-cours/source/repositories/LikedRepository.cpp
+D:/Labs-2-cours/Labs-2-cours/headers/JSONMovieCollection.h
+D:/Labs-2-cours/Labs-2-cours/source/JSONMovieCollection.cpp

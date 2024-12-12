@@ -271,6 +271,12 @@
 			null
 		],
 		[
+			"D:/Labs-2-cours/Labs-2-cours/headers/JSONMovieCollection.h",
+			"MU",
+			"K6S233IZAZ/moc_JSONMovieCollection.cpp",
+			null
+		],
+		[
 			"D:/Labs-2-cours/Labs-2-cours/headers/MovieErrorExceptions.h",
 			"MU",
 			"K6S233IZAZ/moc_MovieErrorExceptions.cpp",
@@ -511,6 +517,11 @@
 	"SOURCES" : 
 	[
 		[ "D:/Labs-2-cours/Labs-2-cours/SQLiteLibrary/sqlite3.c", "MU", null ],
+		[
+			"D:/Labs-2-cours/Labs-2-cours/source/JSONMovieCollection.cpp",
+			"MU",
+			null
+		],
 		[
 			"D:/Labs-2-cours/Labs-2-cours/source/MovieErrorExceptions.cpp",
 			"MU",

@@ -80,6 +80,8 @@ add_executable(Labs-2-cours
         source/models/LikedMovie.cpp
         headers/repositories/LikedRepository.h
         source/repositories/LikedRepository.cpp
+        headers/JSONMovieCollection.h
+        source/JSONMovieCollection.cpp
 )
 
 target_link_libraries(Labs-2-cours

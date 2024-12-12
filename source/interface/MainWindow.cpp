@@ -11,7 +11,7 @@ MainWindow::MainWindow(IMoviesRepository* movies, IUserRepository* users, LikedR
                        QWidget *parent) :
         QMainWindow(parent), ui(new Ui::MainWindow), movies_repository(movies), users(users), liked_movies(liked_movies),
         search_engine(new SearchEngine(*movies)), movies_for_search_list(movies->get_movies()),
-        current_user(current_user) {
+        current_user(current_user), json_movie_collection(new JSONMovieCollection("MyLiked")) {
 
     ui->setupUi(this);
 
@@ -304,5 +304,44 @@ void MainWindow::show_liked_movies() {
     }
 }
 
+void MainWindow::on_LoadToFileButton_clicked() {
+    filters_window_json->show();
+
+    connect(filters_window_json, &FiltersWindow::filters_applied,
+            this, &MainWindow::apply_filters_json);
+}
+
+void MainWindow::apply_filters_json(const QString &genre, const QString &age_limit, const QString &rating,
+                                    const QString &year, const QString &runtime) {
+    auto compositeFilter = new CompositeFilter;
+    if (genre != "Genre")
+        compositeFilter->addFilter(new GenreFilter(genre.toStdString()));
+    if (age_limit != "Age limit")
+        compositeFilter->addFilter(new AgeLimitFilter(age_limit.toStdString()));
+    if (rating == "Increase")
+        compositeFilter->addFilter((new RatingFilter(true)));
+    if (rating == "Decrease")
+        compositeFilter->addFilter((new RatingFilter(false)));
+    if (runtime == "Increase")
+        compositeFilter->addFilter(new RuntimeFilter(true));
+    if (runtime == "Decrease")
+        compositeFilter->addFilter(new RuntimeFilter(false));
+    if (year == "Increase")
+        compositeFilter->addFilter(new YearFilter(true));
+    if (year == "Decrease")
+        compositeFilter->addFilter(new YearFilter(false));
+
+    liked_movies_for_json.fromStdVector(liked_movies->get_liked_movies(current_user->get_id()));
+    liked_movies_for_json = compositeFilter->apply(liked_movies_for_json);
+
+    for (auto& temp: liked_movies_for_json) {
+        qDebug() << temp.get_rating();
+    }
+
+    QJsonArray json_array_to_load_data;
+
+    json_array_to_load_data = json_movie_collection->prepare_json(liked_movies_for_json.toStdVector());
+    json_movie_collection->export_to_json(json_array_to_load_data);
+}
 
 

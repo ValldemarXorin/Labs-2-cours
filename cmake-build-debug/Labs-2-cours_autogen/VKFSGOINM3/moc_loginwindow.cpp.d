@@ -76,6 +76,10 @@ D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/VKFSGOINM3/m
   C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_defines.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_ptr.h \
+  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_dir.h \
+  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_fwd.h \
+  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h \
+  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_path.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/functexcept.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/functional_hash.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hash_bytes.h \
@@ -179,6 +183,7 @@ D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/VKFSGOINM3/m
   C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/climits \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/clocale \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cmath \
+  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/codecvt \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/compare \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/concepts \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstddef \
@@ -200,6 +205,7 @@ D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/VKFSGOINM3/m
   C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/numeric_traits.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/string_conversions.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/type_traits.h \
+  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/filesystem \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/format \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/functional \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/initializer_list \
@@ -504,6 +510,7 @@ D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/VKFSGOINM3/m
   C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/wtypes.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/wtypesbase.h \
   D:/Labs-2-cours/Labs-2-cours/SQLiteLibrary/sqlite3.h \
+  D:/Labs-2-cours/Labs-2-cours/headers/JSONMovieCollection.h \
   D:/Labs-2-cours/Labs-2-cours/headers/MovieErrorExceptions.h \
   D:/Labs-2-cours/Labs-2-cours/headers/MyVector.h \
   D:/Labs-2-cours/Labs-2-cours/headers/UserErrorExceptions.h \
@@ -532,6 +539,11 @@ D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/VKFSGOINM3/m
   D:/Labs-2-cours/Labs-2-cours/headers/search/YearFilter.h \
   D:/Labs-2-cours/Labs-2-cours/headers/search/search_engine.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/QCryptographicHash \
+  D:/Qt/6.7.3/mingw_64/include/QtCore/QDebug \
+  D:/Qt/6.7.3/mingw_64/include/QtCore/QFile \
+  D:/Qt/6.7.3/mingw_64/include/QtCore/QJsonArray \
+  D:/Qt/6.7.3/mingw_64/include/QtCore/QJsonDocument \
+  D:/Qt/6.7.3/mingw_64/include/QtCore/QJsonObject \
   D:/Qt/6.7.3/mingw_64/include/QtCore/QPropertyAnimation \
   D:/Qt/6.7.3/mingw_64/include/QtCore/QString \
   D:/Qt/6.7.3/mingw_64/include/QtCore/q20functional.h \
@@ -554,6 +566,9 @@ D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/VKFSGOINM3/m
   D:/Qt/6.7.3/mingw_64/include/QtCore/qbytearrayalgorithms.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/qbytearraylist.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/qbytearrayview.h \
+  D:/Qt/6.7.3/mingw_64/include/QtCore/qcalendar.h \
+  D:/Qt/6.7.3/mingw_64/include/QtCore/qcborcommon.h \
+  D:/Qt/6.7.3/mingw_64/include/QtCore/qcborvalue.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/qchar.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/qcompare.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/qcompare_impl.h \
@@ -568,10 +583,13 @@ D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/VKFSGOINM3/m
   D:/Qt/6.7.3/mingw_64/include/QtCore/qcryptographichash.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/qdarwinhelpers.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/qdatastream.h \
+  D:/Qt/6.7.3/mingw_64/include/QtCore/qdatetime.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/qdebug.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/qeasingcurve.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/qendian.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/qexceptionhandling.h \
+  D:/Qt/6.7.3/mingw_64/include/QtCore/qfile.h \
+  D:/Qt/6.7.3/mingw_64/include/QtCore/qfiledevice.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/qflags.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/qfloat16.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/qforeach.h \
@@ -587,6 +605,10 @@ D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/VKFSGOINM3/m
   D:/Qt/6.7.3/mingw_64/include/QtCore/qitemselectionmodel.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/qiterable.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/qiterator.h \
+  D:/Qt/6.7.3/mingw_64/include/QtCore/qjsonarray.h \
+  D:/Qt/6.7.3/mingw_64/include/QtCore/qjsondocument.h \
+  D:/Qt/6.7.3/mingw_64/include/QtCore/qjsonobject.h \
+  D:/Qt/6.7.3/mingw_64/include/QtCore/qjsonvalue.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/qlatin1stringview.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/qline.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/qlist.h \
@@ -656,6 +678,7 @@ D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/VKFSGOINM3/m
   D:/Qt/6.7.3/mingw_64/include/QtCore/qtypes.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/qurl.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/qutf8stringview.h \
+  D:/Qt/6.7.3/mingw_64/include/QtCore/quuid.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/qvariant.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/qvariantanimation.h \
   D:/Qt/6.7.3/mingw_64/include/QtCore/qvarlengtharray.h \

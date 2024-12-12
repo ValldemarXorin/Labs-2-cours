@@ -510,7 +510,7 @@ QPushButton:hover {
        <string>Menu</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="RecentlyCheckingButton">
+     <widget class="QPushButton" name="LoadToFileButton">
       <property name="geometry">
        <rect>
         <x>200</x>
@@ -534,14 +534,14 @@ QPushButton:hover {
 </string>
       </property>
       <property name="text">
-       <string>Recently checking</string>
+       <string>Load to file</string>
       </property>
      </widget>
      <zorder>MenuButtonLikedPage</zorder>
      <zorder>MoviesListLikedPage</zorder>
      <zorder>MenuListLikedPage</zorder>
      <zorder>LikedMoviesText</zorder>
-     <zorder>RecentlyCheckingButton</zorder>
+     <zorder>LoadToFileButton</zorder>
     </widget>
     <widget class="QWidget" name="TopsPage">
      <widget class="QListWidget" name="MenuListTopsPage">

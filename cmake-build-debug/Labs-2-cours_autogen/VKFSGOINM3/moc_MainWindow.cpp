@@ -64,7 +64,9 @@ constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::string
     "release_year",
     "description",
     "id",
-    "add_movie_card_liked"
+    "add_movie_card_liked",
+    "on_LoadToFileButton_clicked",
+    "apply_filters_json"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -77,7 +79,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-      16,   14, // methods
+      18,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -85,22 +87,24 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  110,    2, 0x08,    1 /* Private */,
-       3,    0,  111,    2, 0x08,    2 /* Private */,
-       4,    0,  112,    2, 0x08,    3 /* Private */,
-       5,    0,  113,    2, 0x08,    4 /* Private */,
-       6,    1,  114,    2, 0x08,    5 /* Private */,
-       9,    1,  117,    2, 0x08,    7 /* Private */,
-      10,    1,  120,    2, 0x08,    9 /* Private */,
-      11,    1,  123,    2, 0x08,   11 /* Private */,
-      12,    0,  126,    2, 0x08,   13 /* Private */,
-      13,    0,  127,    2, 0x08,   14 /* Private */,
-      14,    1,  128,    2, 0x08,   15 /* Private */,
-      16,    5,  131,    2, 0x08,   17 /* Private */,
-      22,    0,  142,    2, 0x08,   23 /* Private */,
-      23,    0,  143,    2, 0x08,   24 /* Private */,
-      24,    7,  144,    2, 0x08,   25 /* Private */,
-      29,    7,  159,    2, 0x08,   33 /* Private */,
+       1,    0,  122,    2, 0x08,    1 /* Private */,
+       3,    0,  123,    2, 0x08,    2 /* Private */,
+       4,    0,  124,    2, 0x08,    3 /* Private */,
+       5,    0,  125,    2, 0x08,    4 /* Private */,
+       6,    1,  126,    2, 0x08,    5 /* Private */,
+       9,    1,  129,    2, 0x08,    7 /* Private */,
+      10,    1,  132,    2, 0x08,    9 /* Private */,
+      11,    1,  135,    2, 0x08,   11 /* Private */,
+      12,    0,  138,    2, 0x08,   13 /* Private */,
+      13,    0,  139,    2, 0x08,   14 /* Private */,
+      14,    1,  140,    2, 0x08,   15 /* Private */,
+      16,    5,  143,    2, 0x08,   17 /* Private */,
+      22,    0,  154,    2, 0x08,   23 /* Private */,
+      23,    0,  155,    2, 0x08,   24 /* Private */,
+      24,    7,  156,    2, 0x08,   25 /* Private */,
+      29,    7,  171,    2, 0x08,   33 /* Private */,
+      30,    0,  186,    2, 0x08,   41 /* Private */,
+      31,    5,  187,    2, 0x08,   42 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -119,6 +123,8 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
     QMetaType::Void,
     QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::Int,   25,   17,   19,   26,   18,   27,   28,
     QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::Int,   25,   17,   19,   26,   18,   27,   28,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString,   17,   18,   19,   20,   21,
 
        0        // eod
 };
@@ -187,7 +193,16 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'on_LoadToFileButton_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'apply_filters_json'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>
     >,
     nullptr
 } };
@@ -214,6 +229,8 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 13: _t->using_search_enging(); break;
         case 14: _t->add_movie_card_search_page((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[5])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[6])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[7]))); break;
         case 15: _t->add_movie_card_liked((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[5])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[6])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[7]))); break;
+        case 16: _t->on_LoadToFileButton_clicked(); break;
+        case 17: _t->apply_filters_json((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[5]))); break;
         default: ;
         }
     }
@@ -238,13 +255,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 16)
+        if (_id < 18)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 16;
+        _id -= 18;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 16)
+        if (_id < 18)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 16;
+        _id -= 18;
     }
     return _id;
 }

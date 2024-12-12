@@ -36,6 +36,13 @@ public:
         Iterator operator+(int d);
         Iterator operator-(int d);
         int operator-(const Iterator& other);
+
+        T* operator->() { return ptr; }
+        const T* operator->() const { return ptr; }
+
+        Iterator operator--() { return Iterator(--ptr); }
+        const Iterator operator++(int) { return Iterator(ptr++); }
+        const Iterator operator--(int) { return Iterator(ptr--); }
     };
 
     Iterator begin();
@@ -300,6 +307,7 @@ template<typename T>
 template <typename Comparator>
 void MyVector<T>::sort(Comparator comp) {
     std::sort(data, data + size, comp);
+    //std::sort(begin(), end(), comp);
 }
 
 #endif //LABS_2_COURS_MYVECTOR_H

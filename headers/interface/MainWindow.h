@@ -16,6 +16,7 @@
 #include "../search/YearFilter.h"
 #include "../search/RuntimeFilter.h"
 #include "../MyVector.h"
+#include "../JSONMovieCollection.h"
 #include "FiltersWindow.h"
 #include "MovieCard.h"
 #include "MovieCardInfo.h"
@@ -25,6 +26,10 @@
 #include <QStandardItemModel>
 #include <QPropertyAnimation>
 #include <QListWidget>
+#include <QJsonArray>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QFile>
 
 
 QT_BEGIN_NAMESPACE
@@ -80,6 +85,11 @@ private slots:
 
     //void delete_liked_movie();
 
+    void on_LoadToFileButton_clicked();
+
+    void apply_filters_json(const QString& genre, const QString& age_limit, const QString& rating,
+                            const QString& year, const QString& runtime);
+
 private:
     Ui::MainWindow *ui;
     IUserRepository* users;
@@ -87,7 +97,8 @@ private:
     LikedRepository* liked_movies;
     SearchEngine* search_engine;
     FiltersWindow* filters_window {new FiltersWindow};
-    MyVector<Movie>* recently_checking;
+    FiltersWindow* filters_window_json {new FiltersWindow};
+    MyVector<Movie> liked_movies_for_json;
     User* current_user;
     int precurrent_length_text_search_field{0};
     std::vector<Movie> movies_for_search_list;
@@ -99,6 +110,7 @@ private:
     QString rating_filter;
     QString year_filter;
     QString runtime_filter;
+    JSONMovieCollection* json_movie_collection;
 };
 
 

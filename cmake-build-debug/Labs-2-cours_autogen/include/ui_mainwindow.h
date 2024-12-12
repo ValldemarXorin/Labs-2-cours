@@ -40,7 +40,7 @@ public:
     QListWidget *MenuListLikedPage;
     QLabel *LikedMoviesText;
     QPushButton *MenuButtonLikedPage;
-    QPushButton *RecentlyCheckingButton;
+    QPushButton *LoadToFileButton;
     QWidget *TopsPage;
     QListWidget *MenuListTopsPage;
     QPushButton *MenuButtonTopsPage;
@@ -374,10 +374,10 @@ public:
 "		background-color: #1E1E1E\n"
 "}\n"
 ""));
-        RecentlyCheckingButton = new QPushButton(LikedPage);
-        RecentlyCheckingButton->setObjectName("RecentlyCheckingButton");
-        RecentlyCheckingButton->setGeometry(QRect(200, 10, 111, 31));
-        RecentlyCheckingButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        LoadToFileButton = new QPushButton(LikedPage);
+        LoadToFileButton->setObjectName("LoadToFileButton");
+        LoadToFileButton->setGeometry(QRect(200, 10, 111, 31));
+        LoadToFileButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "        background-color: #2E2E2E; /* \320\242\320\265\320\274\320\275\321\213\320\271 \321\204\320\276\320\275 */\n"
 "        color: #FFFFFF; /* \320\221\320\265\320\273\321\213\320\271 \321\202\320\265\320\272\321\201\321\202 */\n"
 "        border: 2px solid #0078d7; /* \320\246\320\262\320\265\321\202 \320\263\321\200\320\260\320\275\320\270\321\206\321\213 */\n"
@@ -394,7 +394,7 @@ public:
         MoviesListLikedPage->raise();
         MenuListLikedPage->raise();
         LikedMoviesText->raise();
-        RecentlyCheckingButton->raise();
+        LoadToFileButton->raise();
         TopsPage = new QWidget();
         TopsPage->setObjectName("TopsPage");
         MenuListTopsPage = new QListWidget(TopsPage);
@@ -519,7 +519,7 @@ public:
 
         LikedMoviesText->setText(QCoreApplication::translate("MainWindow", "Liked Movies", nullptr));
         MenuButtonLikedPage->setText(QCoreApplication::translate("MainWindow", "Menu", nullptr));
-        RecentlyCheckingButton->setText(QCoreApplication::translate("MainWindow", "Recently checking", nullptr));
+        LoadToFileButton->setText(QCoreApplication::translate("MainWindow", "Load to file", nullptr));
 
         const bool __sortingEnabled3 = MenuListTopsPage->isSortingEnabled();
         MenuListTopsPage->setSortingEnabled(false);
