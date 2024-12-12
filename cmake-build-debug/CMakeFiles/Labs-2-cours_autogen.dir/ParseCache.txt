@@ -4,6 +4,8 @@ D:/Labs-2-cours/Labs-2-cours/source/interface/MovieCard.cpp
 D:/Labs-2-cours/Labs-2-cours/SQLiteLibrary/sqlite3.h
 D:/Labs-2-cours/Labs-2-cours/headers/search/search_engine.h
 D:/Labs-2-cours/Labs-2-cours/headers/MovieErrorExceptions.h
+D:/Labs-2-cours/Labs-2-cours/headers/MyVector.h
+D:/Labs-2-cours/Labs-2-cours/headers/models/Movie.h
 D:/Labs-2-cours/Labs-2-cours/headers/interface/FiltersWindow.h
  mmc:Q_OBJECT
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/algorithm
@@ -401,8 +403,6 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/FiltersWindow.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qtwidgetsexports.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qwidget.h
-D:/Labs-2-cours/Labs-2-cours/headers/MyVector.h
-D:/Labs-2-cours/Labs-2-cours/headers/models/Movie.h
 D:/Labs-2-cours/Labs-2-cours/source/UserErrorExceptions.cpp
 D:/Labs-2-cours/Labs-2-cours/headers/database/Database.h
 D:/Labs-2-cours/Labs-2-cours/headers/database/DBManager.h

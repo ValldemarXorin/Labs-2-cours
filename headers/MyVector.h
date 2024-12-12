@@ -18,9 +18,15 @@ class MyVector {
 
 public:
 
-    class Iterator {
+class Iterator {
         T* ptr;
     public:
+        using iterator_category = std::random_access_iterator_tag;
+        using value_type = T;
+        using difference_type = ptrdiff_t;
+        using pointer = T*;
+        using reference = T&;
+
         Iterator(T* p);
 
         T& operator*();
@@ -306,8 +312,7 @@ MyVector<T> MyVector<T>::find(Predicate pred) {
 template<typename T>
 template <typename Comparator>
 void MyVector<T>::sort(Comparator comp) {
-    std::sort(data, data + size, comp);
-    //std::sort(begin(), end(), comp);
+    std::sort(begin(), end(), comp);
 }
 
 #endif //LABS_2_COURS_MYVECTOR_H
