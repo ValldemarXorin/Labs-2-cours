@@ -1,6 +1,3 @@
-//
-// Created by vova3 on 30.10.2024.
-//
 
 #include "../headers/UserErrorExceptions.h"
 
