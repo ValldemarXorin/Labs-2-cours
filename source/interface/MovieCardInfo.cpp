@@ -19,7 +19,7 @@ MovieCardInfo::~MovieCardInfo() {
 }
 
 void MovieCardInfo::set_information(QString title, QString genre, QString rating, QString release_year,
-                               QString runtime, QString age_limit, QString description, int id) {
+                               QString runtime, QString age_limit, QString description, int id, bool isLiked) {
     ui->TitleMovie->setText(title);
     ui->Genre->setText(genre);
     ui->Year->setText(release_year);
@@ -27,11 +27,33 @@ void MovieCardInfo::set_information(QString title, QString genre, QString rating
     ui->AgeLimit->setText(age_limit);
     ui->Description->setText(description);
     ui->Rating->setText(rating);
+
+
     movie_id = id;
+    is_liked = isLiked;
+
+
+    if (is_liked == true)
+        ui->LikeButton->setIcon(QIcon("D:/Labs-2-cours/Labs-2-cours/images/ActiveLike.png"));
+    else
+        ui->LikeButton->setIcon(QIcon("D:/Labs-2-cours/Labs-2-cours/images/InActiveLike.png"));
 }
 
 void MovieCardInfo::OnLikeButtonClicked() {
-    emit prepare_to_add_liked_movie(movie_id);
+    if (is_liked == true) {
+        is_liked = false;
+        ui->LikeButton->setIcon(QIcon("D:/Labs-2-cours/Labs-2-cours/images/InActiveLike.png"));
+        emit prepare_to_del_liked_movie(movie_id);
+        return;
+    }
+    else {
+        is_liked = true;
+        ui->LikeButton->setIcon(QIcon("D:/Labs-2-cours/Labs-2-cours/images/ActiveLike.png"));
+        emit prepare_to_add_liked_movie(movie_id);
+        return;
+    }
+
+
 }
 
 QToolButton* MovieCardInfo::get_like_button() {

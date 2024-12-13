@@ -7,12 +7,20 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
+#set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libstdc++ -static-libgcc")
+
 set(CMAKE_PREFIX_PATH "D:/Qt/6.7.3/mingw_64")
+
+#find_package(CURL REQUIRED)
+
+set(CURL_INCLUDE_DIR "D:/cURL/include")  # Укажите путь к заголовочным файлам cURL
+set(CURL_LIBRARY "D:/cURL/lib/libcurl.dll.a")  # Укажите путь к библиотеке cURL
 
 find_package(Qt6 COMPONENTS
         Core
         Gui
         Widgets
+        Network
         REQUIRED)
 
 qt6_wrap_ui(UI_HEADERS ${UI_FILES})
@@ -82,12 +90,18 @@ add_executable(Labs-2-cours
         source/repositories/LikedRepository.cpp
         headers/JSONMovieCollection.h
         source/JSONMovieCollection.cpp
+        headers/TopParser.h
+        source/TopParser.cpp
 )
+
+include_directories(${CURL_INCLUDE_DIR})
 
 target_link_libraries(Labs-2-cours
         Qt::Core
         Qt::Gui
         Qt::Widgets
+        Qt::Network
+        ${CURL_LIBRARY}
 )
 
 if (WIN32 AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)

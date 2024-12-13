@@ -27,7 +27,7 @@ public:
 
     void set_movie_card_data(const QString& title, const QString& genre,
                         const QString& rating, const QString& release_year, const QString& age_limit,
-                        const QString& description, int id);
+                        const QString& description, int id, bool isLiked);
 
     QPushButton* getViewDetailsButton();
 

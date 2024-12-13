@@ -9,6 +9,11 @@
 #include <memory>
 
 
+
+
+#include "../headers/TopParser.h"
+
+
 int main(int argc, char* argv[]) {
     QApplication app(argc, argv);
 
@@ -20,4 +25,8 @@ int main(int argc, char* argv[]) {
     loginWindow.show();
 
     return app.exec();
+
+//    TopParser parser; // Создание объекта парсера
+//    parser.fetch_movies(); // Запуск функции для получения фильмов
+//    return 0; // Запуск цикла событий
 }

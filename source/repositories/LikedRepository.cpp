@@ -30,14 +30,14 @@ void LikedRepository::add_liked_movie(int user_id, int movie_id, std::vector<Mov
     ++next_available_id;
 }
 
-//void LikedRepository::delete_liked_movie(int user_id, int movie_id) {
-//    for (auto it = liked_movies.begin(); it != liked_movies.end(); ) {
-//        if (it->get_user_id() == user_id && it->get_movie_id() && movie_id)
-//            it = liked_movies.erase(it);
-//        else
-//            ++it;
-//    }
-//}
+void LikedRepository::delete_liked_movie(int user_id, int movie_id) {
+    for (auto it = liked_movies.begin(); it != liked_movies.end(); ) {
+        if (it->get_user_id() == user_id && it->get_movie().get_id() == movie_id)
+            it = liked_movies.erase(it);
+        else
+            ++it;
+    }
+}
 
 std::vector<Movie> LikedRepository::get_liked_movies(int user_id) {
     std::vector<Movie> user_liked_movie;

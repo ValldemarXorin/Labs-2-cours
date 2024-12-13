@@ -247,7 +247,16 @@ void MainWindow::add_movie_card_search_page(const QString &title, const QString 
                                       const QString &release_year, const QString &age_limit, const QString &description,
                                       int id) {
     auto movie_card = new MovieCard();
-    movie_card->set_movie_card_data(title, genre, rating, release_year, age_limit, description, id);
+
+    bool is_liked = false;
+    for (auto& like_movie: liked_movies->get_liked_movies(current_user->get_id())) {
+        if (like_movie.get_id() == id) {
+            is_liked = true;
+            break;
+        }
+    }
+
+    movie_card->set_movie_card_data(title, genre, rating, release_year, age_limit, description, id, is_liked);
 
     auto item = new QListWidgetItem(ui->MoviesListSearchPage);
     item->setSizeHint(QSize(440, 127));
@@ -259,6 +268,9 @@ void MainWindow::add_movie_card_search_page(const QString &title, const QString 
 
     connect(movie_card->getMovieCardInfo(), &MovieCardInfo::prepare_to_add_liked_movie,
             this, &MainWindow::add_liked_movie);
+
+    connect(movie_card->getMovieCardInfo(), &MovieCardInfo::prepare_to_del_liked_movie,
+            this, &MainWindow::delete_liked_movie);
 }
 
 void MainWindow::add_liked_movie(int movie_id) {
@@ -274,11 +286,24 @@ void MainWindow::add_liked_movie(int movie_id) {
     show_liked_movies();
 }
 
+void MainWindow::delete_liked_movie(int movie_id) {
+    liked_movies->delete_liked_movie(current_user->get_id(), movie_id);
+    show_liked_movies();
+}
+
 void MainWindow::add_movie_card_liked(const QString &title, const QString &genre, const QString &rating,
                                       const QString &release_year, const QString &age_limit, const QString &description,
                                       int id) {
     auto movie_card = new MovieCard();
-    movie_card->set_movie_card_data(title, genre, rating, release_year, age_limit, description, id);
+
+    bool is_liked = false;
+    for (auto& like_movie: liked_movies->get_liked_movies(current_user->get_id())) {
+        if (like_movie.get_id() == id) {
+            is_liked = true;
+            break;
+        }
+    }
+    movie_card->set_movie_card_data(title, genre, rating, release_year, age_limit, description, id, is_liked);
 
     auto item = new QListWidgetItem(ui->MoviesListLikedPage);
     item->setSizeHint(QSize(440, 127));
@@ -291,8 +316,8 @@ void MainWindow::add_movie_card_liked(const QString &title, const QString &genre
     connect(movie_card->getMovieCardInfo(), &MovieCardInfo::prepare_to_add_liked_movie,
             this, &MainWindow::add_liked_movie);
 
-    connect(movie_card->getMovieCardInfo()->get_like_button(), &QToolButton::clicked,
-            movie_card->getMovieCardInfo(), &MovieCardInfo::OnLikeButtonClicked);
+    connect(movie_card->getMovieCardInfo(), &MovieCardInfo::prepare_to_del_liked_movie,
+           this, &MainWindow::delete_liked_movie);
 }
 
 void MainWindow::show_liked_movies() {

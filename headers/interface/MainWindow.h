@@ -68,6 +68,8 @@ private slots:
 
     void add_liked_movie(int movie_id);
 
+    void delete_liked_movie(int movie_id);
+
     void get_filters(const QString& genre, const QString& age_limit, const QString& rating,
                      const QString& year, const QString& runtime);
 
@@ -82,8 +84,6 @@ private slots:
     void add_movie_card_liked(const QString& title, const QString& genre,
                                     const QString& rating, const QString& release_year, const QString& age_limit,
                                     const QString& description, int id);
-
-    //void delete_liked_movie();
 
     void on_LoadToFileButton_clicked();
 

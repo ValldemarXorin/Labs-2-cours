@@ -7,6 +7,7 @@
 
 #include <QWidget>
 #include <QToolButton>
+//#include "../repositories/LikedRepository.h"
 #include "../models/Movie.h"
 #include "../MyVector.h"
 
@@ -25,7 +26,7 @@ public:
     void SetIconLikeButton();
 
     void set_information(QString title, QString genre, QString rating, QString release_year, QString runtime,
-                         QString age_limit, QString description, int id);
+                         QString age_limit, QString description, int id, bool isLiked);
 
     void OnLikeButtonClicked();
 
@@ -34,9 +35,12 @@ public:
     signals:
     void prepare_to_add_liked_movie(int movie_id_to_add);
 
+    void prepare_to_del_liked_movie(int movie_id_to_del);
+
 private:
     Ui::MovieCardInfo *ui;
     int movie_id;
+    bool is_liked {false};
 };
 
 
