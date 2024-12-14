@@ -17,9 +17,9 @@ size_t TopParser::WriteCallback(void* contents, size_t size, size_t nmemb, std::
 
 void TopParser::fetch_movies() {
     CURL* curl = curl_easy_init();
-    if(curl) {
+    if (curl) {
         std::string readBuffer;
-        curl_easy_setopt(curl, CURLOPT_URL, "https://kinopoiskapiunofficial.tech/api/v2.2/films/301");
+        curl_easy_setopt(curl, CURLOPT_URL, "https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_100_POPULAR_FILMS&page=1");
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, &readBuffer);
 
@@ -32,10 +32,22 @@ void TopParser::fetch_movies() {
         curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
 
         CURLcode res = curl_easy_perform(curl);
-        if(res != CURLE_OK) {
+        if (res != CURLE_OK) {
             std::cerr << "curl_easy_perform() failed: " << curl_easy_strerror(res) << std::endl;
         } else {
             std::cout << "Response: " << readBuffer << std::endl;
+
+//            // Десериализация JSON
+//            try {
+//                json jsonResponse = json::parse(readBuffer);
+//                // Обработка данных из jsonResponse
+//                for (const auto& film : jsonResponse["films"]) {
+//                    std::cout << "Film: " << film["name"] << ", Rating: " << film["rating"] << std::endl;
+//                }
+//            } catch (json::parse_error& e) {
+//                std::cerr << "Ошибка парсинга JSON: " << e.what() << std::endl;
+//            }
+//        }
         }
 
         // Очистка

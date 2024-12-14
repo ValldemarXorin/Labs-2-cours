@@ -10,11 +10,16 @@ set(CMAKE_AUTOUIC ON)
 #set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libstdc++ -static-libgcc")
 
 set(CMAKE_PREFIX_PATH "D:/Qt/6.7.3/mingw_64")
+set(CMAKE_PREFIX_PATH "C:/Users/vova3/vcpkg/installed/x64-windows")
+set(CMAKE_TOOLCHAIN_FILE "C:/Users/vova3/vcpkg/scripts/buildsystems/vcpkg.cmake")
 
 #find_package(CURL REQUIRED)
 
 set(CURL_INCLUDE_DIR "D:/cURL/include")  # Укажите путь к заголовочным файлам cURL
 set(CURL_LIBRARY "D:/cURL/lib/libcurl.dll.a")  # Укажите путь к библиотеке cURL
+include_directories("C:/Users/vova3/vcpkg/installed/x64-windows/include")
+
+find_package(nlohmann_json REQUIRED)
 
 find_package(Qt6 COMPONENTS
         Core
@@ -102,6 +107,7 @@ target_link_libraries(Labs-2-cours
         Qt::Widgets
         Qt::Network
         ${CURL_LIBRARY}
+        nlohmann_json
 )
 
 if (WIN32 AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)

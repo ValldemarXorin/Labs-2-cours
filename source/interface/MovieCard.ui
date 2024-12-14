@@ -47,9 +47,10 @@ MovieCard QLabel#AgeLimitMovie {
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: white; /* Белый цвет текста */
-    background-color: transparent; /* Прозрачный фон */
-    font-size: 14px; /* Размер шрифта */
+    background-color: none;
+    color: #FFFFFF; /* Цвет текста */
+   	font: bold 13pt; /* Прописной стиль текста */
+   	text-align: center; /* Выравнивание текста по центру */
     padding: 5px; /* Отступы */
 	qproperty-wordWrap: true;
     qproperty-scaledContents: true;
@@ -66,16 +67,17 @@ MovieCard QLabel#AgeLimitMovie {
    <property name="geometry">
     <rect>
      <x>340</x>
-     <y>40</y>
+     <y>50</y>
      <width>91</width>
      <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: white; /* Белый цвет текста */
-    background-color: transparent; /* Прозрачный фон */
-    font-size: 14px; /* Размер шрифта */
+    background-color: none;
+        color: #FFFFFF; /* Цвет текста */
+        font: bold 12pt; /* Прописной стиль текста */
+        text-align: center; /* Выравнивание текста по центру */
     padding: 5px; /* Отступы */
 	qproperty-wordWrap: true;
     qproperty-scaledContents: true;
@@ -92,16 +94,17 @@ MovieCard QLabel#AgeLimitMovie {
    <property name="geometry">
     <rect>
      <x>250</x>
-     <y>50</y>
+     <y>60</y>
      <width>81</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: white; /* Белый цвет текста */
-    background-color: transparent; /* Прозрачный фон */
-    font-size: 14px; /* Размер шрифта */
+   background-color: none;
+        color: #FFFFFF; /* Цвет текста */
+        font: bold 12pt; /* Прописной стиль текста */
+        text-align: center; /* Выравнивание текста по центру */
     padding: 5px; /* Отступы */
 	qproperty-wordWrap: true;
     qproperty-scaledContents: true;
@@ -125,9 +128,10 @@ MovieCard QLabel#AgeLimitMovie {
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: white; /* Белый цвет текста */
-    background-color: transparent; /* Прозрачный фон */
-    font-size: 14px; /* Размер шрифта */
+    background-color: none;
+     color: #FFFFFF; /* Цвет текста */
+     font: bold 12pt; /* Прописной стиль текста */
+     text-align: center; /* Выравнивание текста по центру */
     padding: 5px; /* Отступы */
 	qproperty-wordWrap: true;
     qproperty-scaledContents: true;
@@ -145,15 +149,16 @@ MovieCard QLabel#AgeLimitMovie {
     <rect>
      <x>350</x>
      <y>10</y>
-     <width>71</width>
-     <height>21</height>
+     <width>91</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: white; /* Белый цвет текста */
-    background-color: transparent; /* Прозрачный фон */
-    font-size: 14px; /* Размер шрифта */
+    background-color: none;
+        color: #FFFFFF; /* Цвет текста */
+        font: bold 12pt; /* Прописной стиль текста */
+        text-align: center; /* Выравнивание текста по центру */
     padding: 5px; /* Отступы */
 	qproperty-wordWrap: true;
     qproperty-scaledContents: true;
@@ -166,9 +171,9 @@ MovieCard QLabel#AgeLimitMovie {
   <widget class="QPushButton" name="ViewDetailsButton">
    <property name="geometry">
     <rect>
-     <x>50</x>
+     <x>40</x>
      <y>70</y>
-     <width>91</width>
+     <width>101</width>
      <height>31</height>
     </rect>
    </property>
@@ -176,6 +181,8 @@ MovieCard QLabel#AgeLimitMovie {
     <string notr="true">QPushButton {
     background-color: #2E2E2E; /* Темный фон */
     color: #FFFFFF; /* Белый текст */
+        font: bold 16pt; /* Прописной стиль текста */
+        text-align: center; /* Выравнивание текста по центру */
     border: 2px solid #0078d7; /* Цвет границы */
     border-radius: 10px; /* Закругленные углы */
     padding: 5px; /* Отступы */

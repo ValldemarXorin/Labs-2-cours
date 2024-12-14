@@ -38,6 +38,11 @@
 		"C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake",
 		"C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake",
 		"C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake",
+		"C:/Users/vova3/vcpkg/installed/x64-windows/share/nlohmann_json/nlohmann_jsonConfigVersion.cmake",
+		"C:/Users/vova3/vcpkg/installed/x64-windows/share/nlohmann_json/nlohmann_jsonConfig.cmake",
+		"C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake",
+		"C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/FindPackageMessage.cmake",
+		"C:/Users/vova3/vcpkg/installed/x64-windows/share/nlohmann_json/nlohmann_jsonTargets.cmake",
 		"D:/Qt/6.7.3/mingw_64/lib/cmake/Qt6/Qt6ConfigVersion.cmake",
 		"D:/Qt/6.7.3/mingw_64/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake",
 		"D:/Qt/6.7.3/mingw_64/lib/cmake/Qt6/Qt6Config.cmake",
@@ -508,6 +513,7 @@
 	"MOC_INCLUDES" : 
 	[
 		"D:/cURL/include",
+		"C:/Users/vova3/vcpkg/installed/x64-windows/include",
 		"D:/Qt/6.7.3/mingw_64/include/QtCore",
 		"D:/Qt/6.7.3/mingw_64/include",
 		"D:/Qt/6.7.3/mingw_64/mkspecs/win32-g++",

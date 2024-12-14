@@ -459,7 +459,7 @@ public:
 
         retranslateUi(mainwindow);
 
-        PageSwitcher->setCurrentIndex(2);
+        PageSwitcher->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(mainwindow);

@@ -28,7 +28,6 @@ void MovieCardInfo::set_information(QString title, QString genre, QString rating
     ui->Description->setText(description);
     ui->Rating->setText(rating);
 
-
     movie_id = id;
     is_liked = isLiked;
 

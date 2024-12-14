@@ -402,6 +402,9 @@ ZLIB_LIBRARY_DEBUG:FILEPATH=ZLIB_LIBRARY_DEBUG-NOTFOUND
 //Path to a library.
 ZLIB_LIBRARY_RELEASE:FILEPATH=C:/Users/vova3/vcpkg/installed/x64-windows/lib/zlib.lib
 
+//The directory containing a CMake configuration file for nlohmann_json.
+nlohmann_json_DIR:PATH=C:/Users/vova3/vcpkg/installed/x64-windows/share/nlohmann_json
+
 
 ########################
 # INTERNAL cache entries
@@ -609,6 +612,8 @@ FIND_PACKAGE_MESSAGE_DETAILS_CURL:INTERNAL=[C:/Users/vova3/vcpkg/installed/x64-w
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding WrapAtomic
 FIND_PACKAGE_MESSAGE_DETAILS_WrapAtomic:INTERNAL=[1][v()]
+//Details about finding nlohmann_json
+FIND_PACKAGE_MESSAGE_DETAILS_nlohmann_json:INTERNAL=[C:/Users/vova3/vcpkg/installed/x64-windows/share/nlohmann_json/nlohmann_jsonConfig.cmake][v3.11.3()]
 //Test HAVE_STDATOMIC
 HAVE_STDATOMIC:INTERNAL=1
 //ADVANCED property for variable: LIB_EAY

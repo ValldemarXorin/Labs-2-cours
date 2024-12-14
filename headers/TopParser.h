@@ -6,6 +6,7 @@
 #define LABS_2_COURS_TOPPARSER_H
 #include <iostream>
 #include <curl/curl.h>
+#include <nlohmann/json.hpp>
 
 class TopParser {
 public:
