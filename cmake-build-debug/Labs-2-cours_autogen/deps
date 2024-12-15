@@ -80,6 +80,7 @@ Labs-2-cours_autogen/timestamp: \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/bmi2intrin.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/bmiintrin.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/algorithm \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/any \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/array \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/atomic \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward/auto_ptr.h \
@@ -112,15 +113,20 @@ Labs-2-cours_autogen/timestamp: \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_defines.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_ptr.h \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/forward_list.h \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/forward_list.tcc \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_dir.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_fwd.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_path.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/functexcept.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/functional_hash.h \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/gslice.h \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/gslice_array.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hash_bytes.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hashtable.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hashtable_policy.h \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/indirect_array.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/invoke.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ios_base.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc \
@@ -134,6 +140,7 @@ Labs-2-cours_autogen/timestamp: \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets_nonio.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets_nonio.tcc \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/localefwd.h \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/mask_array.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/max_size_type.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/memory_resource.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/memoryfwd.h \
@@ -148,6 +155,8 @@ Labs-2-cours_autogen/timestamp: \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/predefined_ops.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ptr_traits.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/quoted_string.h \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.h \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.tcc \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/range_access.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algo.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algobase.h \
@@ -172,6 +181,7 @@ Labs-2-cours_autogen/timestamp: \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr_atomic.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr_base.h \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/slice_array.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/specfun.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/sstream.tcc \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_abs.h \
@@ -210,8 +220,13 @@ Labs-2-cours_autogen/timestamp: \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator_args.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/utility.h \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/valarray_after.h \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/valarray_array.h \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/valarray_array.tcc \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/valarray_before.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/vector.tcc \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bitset \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cassert \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cctype \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cerrno \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/charconv \
@@ -243,6 +258,7 @@ Labs-2-cours_autogen/timestamp: \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/type_traits.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/filesystem \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/format \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/forward_list \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/functional \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/initializer_list \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iomanip \
@@ -266,6 +282,8 @@ Labs-2-cours_autogen/timestamp: \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_algorithm_defs.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_numeric_defs.h \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/random \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ranges \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/regex \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/span \
@@ -294,6 +312,7 @@ Labs-2-cours_autogen/timestamp: \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/typeinfo \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/unordered_map \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/utility \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/valarray \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/variant \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/vector \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
@@ -307,6 +326,7 @@ Labs-2-cours_autogen/timestamp: \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/time_members.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/cetintrin.h \
@@ -413,8 +433,10 @@ Labs-2-cours_autogen/timestamp: \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/handleapi.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/heapapi.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/imm.h \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/in6addr.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/inaddr.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/interlockedapi.h \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/inttypes.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/ioapiset.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/jobapi.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/joystickapi.h \
@@ -432,6 +454,7 @@ Labs-2-cours_autogen/timestamp: \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/mmiscapi2.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/mmsyscom.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/mmsystem.h \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/mstcpip.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/msxml.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/namedpipeapi.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/namespaceapi.h \
@@ -457,9 +480,9 @@ Labs-2-cours_autogen/timestamp: \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/psdk_inc/_ip_mreq1.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/psdk_inc/_ip_types.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/psdk_inc/_socket_types.h \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/psdk_inc/_ws1_undef.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/psdk_inc/_wsa_errnos.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/psdk_inc/_wsadata.h \
-	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/psdk_inc/_xmitfile.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/psdk_inc/intrin-impl.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/pshpack1.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/pshpack2.h \
@@ -470,6 +493,7 @@ Labs-2-cours_autogen/timestamp: \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/pthread_signal.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/pthread_time.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/pthread_unistd.h \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/qos.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/realtimeapiset.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/reason.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/rpc.h \
@@ -537,14 +561,63 @@ Labs-2-cours_autogen/timestamp: \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/winscard.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/winsmcrd.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/winsock.h \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/winsock2.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/winspool.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/winsvc.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/winuser.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/winver.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/wnnc.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/wow64apiset.h \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/ws2def.h \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/ws2ipdef.h \
+	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/ws2tcpip.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/wtypes.h \
 	C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/wtypesbase.h \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/adl_serializer.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/byte_container_with_subtype.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/abi_macros.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/conversions/from_json.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/conversions/to_chars.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/conversions/to_json.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/exceptions.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/hash.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/input/binary_reader.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/input/input_adapters.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/input/json_sax.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/input/lexer.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/input/parser.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/input/position_t.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/iterators/internal_iterator.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/iterators/iter_impl.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/iterators/iteration_proxy.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/iterators/iterator_traits.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/iterators/json_reverse_iterator.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/iterators/primitive_iterator.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/json_custom_base_class.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/json_pointer.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/json_ref.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/macro_scope.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/macro_unscope.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/meta/call_std/begin.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/meta/call_std/end.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/meta/cpp_future.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/meta/detected.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/meta/identity_tag.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/meta/is_sax.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/meta/std_fs.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/meta/type_traits.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/meta/void_t.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/output/binary_writer.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/output/output_adapters.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/output/serializer.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/string_concat.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/string_escape.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/detail/value_t.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/json.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/json_fwd.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/ordered_map.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/thirdparty/hedley/hedley.hpp \
+	C:/Users/vova3/vcpkg/installed/x64-windows/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
 	C:/Users/vova3/vcpkg/installed/x64-windows/share/nlohmann_json/nlohmann_jsonConfig.cmake \
 	C:/Users/vova3/vcpkg/installed/x64-windows/share/nlohmann_json/nlohmann_jsonConfigVersion.cmake \
 	C:/Users/vova3/vcpkg/installed/x64-windows/share/nlohmann_json/nlohmann_jsonTargets.cmake \
@@ -558,6 +631,7 @@ Labs-2-cours_autogen/timestamp: \
 	D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/moc_predefs.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/JSONMovieCollection.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/MovieErrorExceptions.h \
+	D:/Labs-2-cours/Labs-2-cours/headers/MovieRecommender.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/MyVector.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/TopParser.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/UserErrorExceptions.h \
@@ -588,6 +662,7 @@ Labs-2-cours_autogen/timestamp: \
 	D:/Labs-2-cours/Labs-2-cours/headers/search/search_engine.h \
 	D:/Labs-2-cours/Labs-2-cours/source/JSONMovieCollection.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/MovieErrorExceptions.cpp \
+	D:/Labs-2-cours/Labs-2-cours/source/MovieRecommender.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/TopParser.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/UserErrorExceptions.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/auth_models/User.cpp \
@@ -1020,6 +1095,16 @@ Labs-2-cours_autogen/timestamp: \
 	D:/Qt/6.7.3/mingw_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateConfigVersionImpl.cmake \
 	D:/Qt/6.7.3/mingw_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateTargets.cmake \
 	D:/Qt/6.7.3/mingw_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateVersionlessTargets.cmake \
+	D:/cURL/include/curl/curl.h \
+	D:/cURL/include/curl/curlver.h \
+	D:/cURL/include/curl/easy.h \
+	D:/cURL/include/curl/header.h \
+	D:/cURL/include/curl/mprintf.h \
+	D:/cURL/include/curl/multi.h \
+	D:/cURL/include/curl/options.h \
+	D:/cURL/include/curl/system.h \
+	D:/cURL/include/curl/urlapi.h \
+	D:/cURL/include/curl/websockets.h \
 	D:/Labs-2-cours/Labs-2-cours/source/interface/FiltersWindow.ui \
 	D:/Labs-2-cours/Labs-2-cours/source/interface/MovieCard.ui \
 	D:/Labs-2-cours/Labs-2-cours/source/interface/MovieCardInfo.ui \

@@ -29,6 +29,13 @@ public:
     QWidget *AutoselectionMoviePage;
     QListWidget *MenuListAutoselectionMoviePage;
     QPushButton *MenuButtonAutoselectionMoviePage;
+    QListWidget *FavoritesAutoselectionMoviePage;
+    QListWidget *RandomAutoselectionMoviePage;
+    QLabel *LabelInteresting;
+    QLabel *LabelMabyInteresting;
+    QPushButton *AutoselectionButtonAutoselectionMoviePage;
+    QPushButton *FiltersButtonAutoselectionMoviePage;
+    QLabel *ErrorAutoselectionMoviePage;
     QWidget *SearchPage;
     QLineEdit *SearchFieldSearchPage;
     QListWidget *MenuListSearchPage;
@@ -44,6 +51,8 @@ public:
     QWidget *TopsPage;
     QListWidget *MenuListTopsPage;
     QPushButton *MenuButtonTopsPage;
+    QListWidget *TopMoviesListTopsPage;
+    QLabel *TopLabelTopsPage;
 
     void setupUi(QMainWindow *mainwindow)
     {
@@ -118,9 +127,170 @@ public:
 "		background-color: #1E1E1E\n"
 "}\n"
 ""));
+        FavoritesAutoselectionMoviePage = new QListWidget(AutoselectionMoviePage);
+        FavoritesAutoselectionMoviePage->setObjectName("FavoritesAutoselectionMoviePage");
+        FavoritesAutoselectionMoviePage->setGeometry(QRect(140, 100, 451, 155));
+        FavoritesAutoselectionMoviePage->setStyleSheet(QString::fromUtf8("QListWidget {\n"
+"    background-color: #2E2E2E; /* \320\242\320\265\320\274\320\275\321\213\320\271 \321\204\320\276\320\275 \320\264\320\273\321\217 \321\201\320\277\320\270\321\201\320\272\320\260 */\n"
+"    border: 2px solid #0078d7; /* \320\246\320\262\320\265\321\202 \320\263\321\200\320\260\320\275\320\270\321\206\321\213 */\n"
+"    border-radius: 10px; /* \320\227\320\260\320\272\321\200\321\203\320\263\320\273\320\265\320\275\320\275\321\213\320\265 \321\203\320\263\320\273\321\213 */\n"
+"    padding: 5px; /* \320\236\321\202\321\201\321\202\321\203\320\277\321\213 */\n"
+"}\n"
+"\n"
+"QScrollBar:vertical, QScrollBar:horizontal {\n"
+"    width: 6px; /* \320\250\320\270\321\200\320\270\320\275\320\260 \320\262\320\265\321\200\321\202\320\270\320\272\320\260\320\273\321\214\320\275\320\276\320\263\320\276 \321\201\320\272\321\200\320\276\320\273\320\273\320\260 */\n"
+"    background-color: #1E1E1E; /* \320\246\320\262\320\265\321\202 \321\204\320\276\320\275\320\260 \321\201\320\272\321\200\320\276\320\273"
+                        "\320\273\320\260 */\n"
+"}\n"
+"\n"
+"QScrollBar::handle {\n"
+"    background-color: #0078d7; /* \320\246\320\262\320\265\321\202 \320\277\320\276\320\273\320\267\321\203\320\275\320\272\320\260 \321\201\320\272\321\200\320\276\320\273\320\273\320\260 */\n"
+"    border-radius: 3px; /* \320\227\320\260\320\272\321\200\321\203\320\263\320\273\320\265\320\275\320\275\321\213\320\265 \321\203\320\263\320\273\321\213 \320\277\320\276\320\273\320\267\321\203\320\275\320\272\320\260 */\n"
+"}\n"
+"\n"
+"QScrollBar::add-line, QScrollBar::sub-line {\n"
+"    background-color: transparent; /* \320\243\320\261\320\270\321\200\320\260\320\265\320\274 \321\201\321\202\321\200\320\265\320\273\320\272\320\270 \320\277\321\200\320\276\320\272\321\200\321\203\321\202\320\272\320\270 */\n"
+"}\n"
+"\n"
+"QListWidget::item {\n"
+"    background-color: #2E2E2E; /* \320\242\320\265\320\274\320\275\321\213\320\271 \321\204\320\276\320\275 \320\264\320\273\321\217 \321\215\320\273\320\265\320\274\320\265\320\275\321\202\320\276\320\262 */\n"
+""
+                        "    color: #FFFFFF; /* \320\221\320\265\320\273\321\213\320\271 \321\202\320\265\320\272\321\201\321\202 */\n"
+"    padding: 10px; /* \320\236\321\202\321\201\321\202\321\203\320\277\321\213 \320\264\320\273\321\217 \321\215\320\273\320\265\320\274\320\265\320\275\321\202\320\276\320\262 */\n"
+"    border: 1px solid #0078d7; /* \320\246\320\262\320\265\321\202 \320\263\321\200\320\260\320\275\320\270\321\206\321\213 \321\215\320\273\320\265\320\274\320\265\320\275\321\202\320\276\320\262 */\n"
+"    border-radius: 5px; /* \320\227\320\260\320\272\321\200\321\203\320\263\320\273\320\265\320\275\320\275\321\213\320\265 \321\203\320\263\320\273\321\213 \320\264\320\273\321\217 \321\215\320\273\320\265\320\274\320\265\320\275\321\202\320\276\320\262 */\n"
+"}\n"
+"\n"
+"QListWidget::item:selected {\n"
+"    background-color: #0078d7; /* \320\246\320\262\320\265\321\202 \321\204\320\276\320\275\320\260 \320\262\321\213\320\261\321\200\320\260\320\275\320\275\320\276\320\263\320\276 \321\215\320\273\320\265\320\274\320\265"
+                        "\320\275\321\202\320\260 */\n"
+"    color: #FFFFFF; /* \320\221\320\265\320\273\321\213\320\271 \321\202\320\265\320\272\321\201\321\202 \320\264\320\273\321\217 \320\262\321\213\320\261\321\200\320\260\320\275\320\275\320\276\320\263\320\276 \321\215\320\273\320\265\320\274\320\265\320\275\321\202\320\260 */\n"
+"}\n"
+"\n"
+"QListWidget::item:hover {\n"
+"    background-color: #1E1E1E; /* \320\246\320\262\320\265\321\202 \321\204\320\276\320\275\320\260 \320\277\321\200\320\270 \320\275\320\260\320\262\320\265\320\264\320\265\320\275\320\270\320\270 */\n"
+"}\n"
+""));
+        RandomAutoselectionMoviePage = new QListWidget(AutoselectionMoviePage);
+        RandomAutoselectionMoviePage->setObjectName("RandomAutoselectionMoviePage");
+        RandomAutoselectionMoviePage->setGeometry(QRect(140, 290, 451, 127));
+        RandomAutoselectionMoviePage->setStyleSheet(QString::fromUtf8("QListWidget {\n"
+"    background-color: #2E2E2E; /* \320\242\320\265\320\274\320\275\321\213\320\271 \321\204\320\276\320\275 \320\264\320\273\321\217 \321\201\320\277\320\270\321\201\320\272\320\260 */\n"
+"    border: 2px solid #0078d7; /* \320\246\320\262\320\265\321\202 \320\263\321\200\320\260\320\275\320\270\321\206\321\213 */\n"
+"    border-radius: 10px; /* \320\227\320\260\320\272\321\200\321\203\320\263\320\273\320\265\320\275\320\275\321\213\320\265 \321\203\320\263\320\273\321\213 */\n"
+"    padding: 5px; /* \320\236\321\202\321\201\321\202\321\203\320\277\321\213 */\n"
+"}\n"
+"\n"
+"QScrollBar:vertical, QScrollBar:horizontal {\n"
+"    width: 6px; /* \320\250\320\270\321\200\320\270\320\275\320\260 \320\262\320\265\321\200\321\202\320\270\320\272\320\260\320\273\321\214\320\275\320\276\320\263\320\276 \321\201\320\272\321\200\320\276\320\273\320\273\320\260 */\n"
+"    background-color: #1E1E1E; /* \320\246\320\262\320\265\321\202 \321\204\320\276\320\275\320\260 \321\201\320\272\321\200\320\276\320\273"
+                        "\320\273\320\260 */\n"
+"}\n"
+"\n"
+"QScrollBar::handle {\n"
+"    background-color: #0078d7; /* \320\246\320\262\320\265\321\202 \320\277\320\276\320\273\320\267\321\203\320\275\320\272\320\260 \321\201\320\272\321\200\320\276\320\273\320\273\320\260 */\n"
+"    border-radius: 3px; /* \320\227\320\260\320\272\321\200\321\203\320\263\320\273\320\265\320\275\320\275\321\213\320\265 \321\203\320\263\320\273\321\213 \320\277\320\276\320\273\320\267\321\203\320\275\320\272\320\260 */\n"
+"}\n"
+"\n"
+"QScrollBar::add-line, QScrollBar::sub-line {\n"
+"    background-color: transparent; /* \320\243\320\261\320\270\321\200\320\260\320\265\320\274 \321\201\321\202\321\200\320\265\320\273\320\272\320\270 \320\277\321\200\320\276\320\272\321\200\321\203\321\202\320\272\320\270 */\n"
+"}\n"
+"\n"
+"QListWidget::item {\n"
+"    background-color: #2E2E2E; /* \320\242\320\265\320\274\320\275\321\213\320\271 \321\204\320\276\320\275 \320\264\320\273\321\217 \321\215\320\273\320\265\320\274\320\265\320\275\321\202\320\276\320\262 */\n"
+""
+                        "    color: #FFFFFF; /* \320\221\320\265\320\273\321\213\320\271 \321\202\320\265\320\272\321\201\321\202 */\n"
+"    padding: 10px; /* \320\236\321\202\321\201\321\202\321\203\320\277\321\213 \320\264\320\273\321\217 \321\215\320\273\320\265\320\274\320\265\320\275\321\202\320\276\320\262 */\n"
+"    border: 1px solid #0078d7; /* \320\246\320\262\320\265\321\202 \320\263\321\200\320\260\320\275\320\270\321\206\321\213 \321\215\320\273\320\265\320\274\320\265\320\275\321\202\320\276\320\262 */\n"
+"    border-radius: 5px; /* \320\227\320\260\320\272\321\200\321\203\320\263\320\273\320\265\320\275\320\275\321\213\320\265 \321\203\320\263\320\273\321\213 \320\264\320\273\321\217 \321\215\320\273\320\265\320\274\320\265\320\275\321\202\320\276\320\262 */\n"
+"}\n"
+"\n"
+"QListWidget::item:selected {\n"
+"    background-color: #0078d7; /* \320\246\320\262\320\265\321\202 \321\204\320\276\320\275\320\260 \320\262\321\213\320\261\321\200\320\260\320\275\320\275\320\276\320\263\320\276 \321\215\320\273\320\265\320\274\320\265"
+                        "\320\275\321\202\320\260 */\n"
+"    color: #FFFFFF; /* \320\221\320\265\320\273\321\213\320\271 \321\202\320\265\320\272\321\201\321\202 \320\264\320\273\321\217 \320\262\321\213\320\261\321\200\320\260\320\275\320\275\320\276\320\263\320\276 \321\215\320\273\320\265\320\274\320\265\320\275\321\202\320\260 */\n"
+"}\n"
+"\n"
+"QListWidget::item:hover {\n"
+"    background-color: #1E1E1E; /* \320\246\320\262\320\265\321\202 \321\204\320\276\320\275\320\260 \320\277\321\200\320\270 \320\275\320\260\320\262\320\265\320\264\320\265\320\275\320\270\320\270 */\n"
+"}\n"
+""));
+        LabelInteresting = new QLabel(AutoselectionMoviePage);
+        LabelInteresting->setObjectName("LabelInteresting");
+        LabelInteresting->setGeometry(QRect(270, 260, 201, 20));
+        LabelInteresting->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	font-size: 15px;\n"
+"	font-weight: 600;\n"
+"	background-color: none;\n"
+"    color: #FFFFFF; /* \320\246\320\262\320\265\321\202 \321\202\320\265\320\272\321\201\321\202\320\260 */\n"
+"}font-size: 13 px;\n"
+"	font-weight: 600;\n"
+"	background-color: none;\n"
+"    color: #FFFFFF; /* \320\246\320\262\320\265\321\202 \321\202\320\265\320\272\321\201\321\202\320\260 */"));
+        LabelInteresting->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        LabelMabyInteresting = new QLabel(AutoselectionMoviePage);
+        LabelMabyInteresting->setObjectName("LabelMabyInteresting");
+        LabelMabyInteresting->setGeometry(QRect(270, 70, 201, 20));
+        LabelMabyInteresting->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	font-size: 15px;\n"
+"	font-weight: 600;\n"
+"	background-color: none;\n"
+"    color: #FFFFFF; /* \320\246\320\262\320\265\321\202 \321\202\320\265\320\272\321\201\321\202\320\260 */\n"
+"}font-size: 13 px;\n"
+"	font-weight: 600;\n"
+"	background-color: none;\n"
+"    color: #FFFFFF; /* \320\246\320\262\320\265\321\202 \321\202\320\265\320\272\321\201\321\202\320\260 */"));
+        LabelMabyInteresting->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        AutoselectionButtonAutoselectionMoviePage = new QPushButton(AutoselectionMoviePage);
+        AutoselectionButtonAutoselectionMoviePage->setObjectName("AutoselectionButtonAutoselectionMoviePage");
+        AutoselectionButtonAutoselectionMoviePage->setGeometry(QRect(430, 20, 95, 31));
+        AutoselectionButtonAutoselectionMoviePage->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"        background-color: #2E2E2E; /* \320\242\320\265\320\274\320\275\321\213\320\271 \321\204\320\276\320\275 */\n"
+"        color: #FFFFFF; /* \320\221\320\265\320\273\321\213\320\271 \321\202\320\265\320\272\321\201\321\202 */\n"
+"        border: 2px solid #0078d7; /* \320\246\320\262\320\265\321\202 \320\263\321\200\320\260\320\275\320\270\321\206\321\213 */\n"
+"        border-radius: 10px; /* \320\227\320\260\320\272\321\200\321\203\320\263\320\273\320\265\320\275\320\275\321\213\320\265 \321\203\320\263\320\273\321\213 */\n"
+"        padding: 5px; /* \320\236\321\202\321\201\321\202\321\203\320\277\321\213 */\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"		background-color: #1E1E1E\n"
+"}\n"
+""));
+        FiltersButtonAutoselectionMoviePage = new QPushButton(AutoselectionMoviePage);
+        FiltersButtonAutoselectionMoviePage->setObjectName("FiltersButtonAutoselectionMoviePage");
+        FiltersButtonAutoselectionMoviePage->setGeometry(QRect(214, 20, 95, 31));
+        FiltersButtonAutoselectionMoviePage->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"        background-color: #2E2E2E; /* \320\242\320\265\320\274\320\275\321\213\320\271 \321\204\320\276\320\275 */\n"
+"        color: #FFFFFF; /* \320\221\320\265\320\273\321\213\320\271 \321\202\320\265\320\272\321\201\321\202 */\n"
+"        border: 2px solid #0078d7; /* \320\246\320\262\320\265\321\202 \320\263\321\200\320\260\320\275\320\270\321\206\321\213 */\n"
+"        border-radius: 10px; /* \320\227\320\260\320\272\321\200\321\203\320\263\320\273\320\265\320\275\320\275\321\213\320\265 \321\203\320\263\320\273\321\213 */\n"
+"        padding: 5px; /* \320\236\321\202\321\201\321\202\321\203\320\277\321\213 */\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"		background-color: #1E1E1E\n"
+"}\n"
+""));
+        ErrorAutoselectionMoviePage = new QLabel(AutoselectionMoviePage);
+        ErrorAutoselectionMoviePage->setObjectName("ErrorAutoselectionMoviePage");
+        ErrorAutoselectionMoviePage->setGeometry(QRect(248, 420, 231, 20));
+        ErrorAutoselectionMoviePage->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	font-size: 15px;\n"
+"	font-weight: 600;\n"
+"	background-color: none;\n"
+"    color: red; /* \320\246\320\262\320\265\321\202 \321\202\320\265\320\272\321\201\321\202\320\260 */\n"
+"}"));
+        ErrorAutoselectionMoviePage->setAlignment(Qt::AlignmentFlag::AlignCenter);
         PageSwitcher->addWidget(AutoselectionMoviePage);
         MenuButtonAutoselectionMoviePage->raise();
         MenuListAutoselectionMoviePage->raise();
+        FavoritesAutoselectionMoviePage->raise();
+        RandomAutoselectionMoviePage->raise();
+        LabelInteresting->raise();
+        LabelMabyInteresting->raise();
+        AutoselectionButtonAutoselectionMoviePage->raise();
+        FiltersButtonAutoselectionMoviePage->raise();
+        ErrorAutoselectionMoviePage->raise();
         SearchPage = new QWidget();
         SearchPage->setObjectName("SearchPage");
         SearchFieldSearchPage = new QLineEdit(SearchPage);
@@ -452,14 +622,70 @@ public:
 "		background-color: #1E1E1E\n"
 "}\n"
 ""));
+        TopMoviesListTopsPage = new QListWidget(TopsPage);
+        TopMoviesListTopsPage->setObjectName("TopMoviesListTopsPage");
+        TopMoviesListTopsPage->setGeometry(QRect(150, 50, 451, 381));
+        TopMoviesListTopsPage->setStyleSheet(QString::fromUtf8("QListWidget {\n"
+"    background-color: #2E2E2E; /* \320\242\320\265\320\274\320\275\321\213\320\271 \321\204\320\276\320\275 \320\264\320\273\321\217 \321\201\320\277\320\270\321\201\320\272\320\260 */\n"
+"    border: 2px solid #0078d7; /* \320\246\320\262\320\265\321\202 \320\263\321\200\320\260\320\275\320\270\321\206\321\213 */\n"
+"    border-radius: 10px; /* \320\227\320\260\320\272\321\200\321\203\320\263\320\273\320\265\320\275\320\275\321\213\320\265 \321\203\320\263\320\273\321\213 */\n"
+"    padding: 5px; /* \320\236\321\202\321\201\321\202\321\203\320\277\321\213 */\n"
+"}\n"
+"\n"
+"QScrollBar:vertical, QScrollBar:horizontal {\n"
+"    width: 6px; /* \320\250\320\270\321\200\320\270\320\275\320\260 \320\262\320\265\321\200\321\202\320\270\320\272\320\260\320\273\321\214\320\275\320\276\320\263\320\276 \321\201\320\272\321\200\320\276\320\273\320\273\320\260 */\n"
+"    background-color: #1E1E1E; /* \320\246\320\262\320\265\321\202 \321\204\320\276\320\275\320\260 \321\201\320\272\321\200\320\276\320\273"
+                        "\320\273\320\260 */\n"
+"}\n"
+"\n"
+"QScrollBar::handle {\n"
+"    background-color: #0078d7; /* \320\246\320\262\320\265\321\202 \320\277\320\276\320\273\320\267\321\203\320\275\320\272\320\260 \321\201\320\272\321\200\320\276\320\273\320\273\320\260 */\n"
+"    border-radius: 3px; /* \320\227\320\260\320\272\321\200\321\203\320\263\320\273\320\265\320\275\320\275\321\213\320\265 \321\203\320\263\320\273\321\213 \320\277\320\276\320\273\320\267\321\203\320\275\320\272\320\260 */\n"
+"}\n"
+"\n"
+"QScrollBar::add-line, QScrollBar::sub-line {\n"
+"    background-color: transparent; /* \320\243\320\261\320\270\321\200\320\260\320\265\320\274 \321\201\321\202\321\200\320\265\320\273\320\272\320\270 \320\277\321\200\320\276\320\272\321\200\321\203\321\202\320\272\320\270 */\n"
+"}\n"
+"\n"
+"QListWidget::item {\n"
+"    background-color: #2E2E2E; /* \320\242\320\265\320\274\320\275\321\213\320\271 \321\204\320\276\320\275 \320\264\320\273\321\217 \321\215\320\273\320\265\320\274\320\265\320\275\321\202\320\276\320\262 */\n"
+""
+                        "    color: #FFFFFF; /* \320\221\320\265\320\273\321\213\320\271 \321\202\320\265\320\272\321\201\321\202 */\n"
+"    padding: 10px; /* \320\236\321\202\321\201\321\202\321\203\320\277\321\213 \320\264\320\273\321\217 \321\215\320\273\320\265\320\274\320\265\320\275\321\202\320\276\320\262 */\n"
+"    border: 1px solid #0078d7; /* \320\246\320\262\320\265\321\202 \320\263\321\200\320\260\320\275\320\270\321\206\321\213 \321\215\320\273\320\265\320\274\320\265\320\275\321\202\320\276\320\262 */\n"
+"    border-radius: 5px; /* \320\227\320\260\320\272\321\200\321\203\320\263\320\273\320\265\320\275\320\275\321\213\320\265 \321\203\320\263\320\273\321\213 \320\264\320\273\321\217 \321\215\320\273\320\265\320\274\320\265\320\275\321\202\320\276\320\262 */\n"
+"}\n"
+"\n"
+"QListWidget::item:selected {\n"
+"    background-color: #0078d7; /* \320\246\320\262\320\265\321\202 \321\204\320\276\320\275\320\260 \320\262\321\213\320\261\321\200\320\260\320\275\320\275\320\276\320\263\320\276 \321\215\320\273\320\265\320\274\320\265"
+                        "\320\275\321\202\320\260 */\n"
+"    color: #FFFFFF; /* \320\221\320\265\320\273\321\213\320\271 \321\202\320\265\320\272\321\201\321\202 \320\264\320\273\321\217 \320\262\321\213\320\261\321\200\320\260\320\275\320\275\320\276\320\263\320\276 \321\215\320\273\320\265\320\274\320\265\320\275\321\202\320\260 */\n"
+"}\n"
+"\n"
+"QListWidget::item:hover {\n"
+"    background-color: #1E1E1E; /* \320\246\320\262\320\265\321\202 \321\204\320\276\320\275\320\260 \320\277\321\200\320\270 \320\275\320\260\320\262\320\265\320\264\320\265\320\275\320\270\320\270 */\n"
+"}\n"
+""));
+        TopLabelTopsPage = new QLabel(TopsPage);
+        TopLabelTopsPage->setObjectName("TopLabelTopsPage");
+        TopLabelTopsPage->setGeometry(QRect(240, 10, 261, 31));
+        TopLabelTopsPage->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"		background-color: none;\n"
+"        color: #FFFFFF; /* \320\246\320\262\320\265\321\202 \321\202\320\265\320\272\321\201\321\202\320\260 */\n"
+"        font: bold 16pt; /* \320\237\321\200\320\276\320\277\320\270\321\201\320\275\320\276\320\271 \321\201\321\202\320\270\320\273\321\214 \321\202\320\265\320\272\321\201\321\202\320\260 */\n"
+"        text-align: center; /* \320\222\321\213\321\200\320\260\320\262\320\275\320\270\320\262\320\260\320\275\320\270\320\265 \321\202\320\265\320\272\321\201\321\202\320\260 \320\277\320\276 \321\206\320\265\320\275\321\202\321\200\321\203 */\n"
+"    }"));
+        TopLabelTopsPage->setAlignment(Qt::AlignmentFlag::AlignCenter);
         PageSwitcher->addWidget(TopsPage);
         MenuButtonTopsPage->raise();
         MenuListTopsPage->raise();
+        TopMoviesListTopsPage->raise();
+        TopLabelTopsPage->raise();
         mainwindow->setCentralWidget(centralwidget);
 
         retranslateUi(mainwindow);
 
-        PageSwitcher->setCurrentIndex(0);
+        PageSwitcher->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(mainwindow);
@@ -484,6 +710,11 @@ public:
         MenuListAutoselectionMoviePage->setSortingEnabled(__sortingEnabled);
 
         MenuButtonAutoselectionMoviePage->setText(QCoreApplication::translate("MainWindow", "Menu", nullptr));
+        LabelInteresting->setText(QCoreApplication::translate("MainWindow", "\320\242\320\260\320\272 \320\266\320\265 \320\274\320\276\320\266\320\265\321\202 \320\277\320\276\320\275\321\200\320\260\320\262\320\270\321\202\321\214\321\201\321\217:", nullptr));
+        LabelMabyInteresting->setText(QCoreApplication::translate("MainWindow", "\320\242\320\276 \321\207\321\202\320\276 \320\262\320\260\320\274 \320\261\321\203\320\264\320\265\321\202 \320\270\320\275\321\202\320\265\321\200\320\265\321\201\320\275\320\276:", nullptr));
+        AutoselectionButtonAutoselectionMoviePage->setText(QCoreApplication::translate("MainWindow", "Autoselection", nullptr));
+        FiltersButtonAutoselectionMoviePage->setText(QCoreApplication::translate("MainWindow", "Filters", nullptr));
+        ErrorAutoselectionMoviePage->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         SearchFieldSearchPage->setPlaceholderText(QCoreApplication::translate("MainWindow", "Search", nullptr));
 
         const bool __sortingEnabled1 = MenuListSearchPage->isSortingEnabled();
@@ -536,6 +767,7 @@ public:
         MenuListTopsPage->setSortingEnabled(__sortingEnabled3);
 
         MenuButtonTopsPage->setText(QCoreApplication::translate("MainWindow", "Menu", nullptr));
+        TopLabelTopsPage->setText(QCoreApplication::translate("MainWindow", "Top Movies (Kinopoisk)", nullptr));
     } // retranslateUi
 
 };

@@ -44,8 +44,18 @@ public:
         GenreFilter->addItem(QString());
         GenreFilter->addItem(QString());
         GenreFilter->addItem(QString());
+        GenreFilter->addItem(QString());
+        GenreFilter->addItem(QString());
+        GenreFilter->addItem(QString());
+        GenreFilter->addItem(QString());
+        GenreFilter->addItem(QString());
+        GenreFilter->addItem(QString());
+        GenreFilter->addItem(QString());
+        GenreFilter->addItem(QString());
+        GenreFilter->addItem(QString());
+        GenreFilter->addItem(QString());
         GenreFilter->setObjectName("GenreFilter");
-        GenreFilter->setGeometry(QRect(20, 20, 101, 31));
+        GenreFilter->setGeometry(QRect(20, 20, 101, 61));
         GenreFilter->setStyleSheet(QString::fromUtf8("QComboBox {\n"
 "    background-color: #2E2E2E; /* \320\242\320\265\320\274\320\275\321\213\320\271 \321\204\320\276\320\275 \320\264\320\273\321\217 \320\272\320\276\320\274\320\261\320\276\320\261\320\276\320\272\321\201\320\260 */\n"
 "    color: #FFFFFF; /* \320\221\320\265\320\273\321\213\320\271 \321\202\320\265\320\272\321\201\321\202 */\n"
@@ -80,7 +90,7 @@ public:
         AgeLimitFilter->addItem(QString());
         AgeLimitFilter->addItem(QString());
         AgeLimitFilter->setObjectName("AgeLimitFilter");
-        AgeLimitFilter->setGeometry(QRect(130, 20, 101, 31));
+        AgeLimitFilter->setGeometry(QRect(130, 20, 101, 61));
         AgeLimitFilter->setStyleSheet(QString::fromUtf8("QComboBox {\n"
 "    background-color: #2E2E2E; /* \320\242\320\265\320\274\320\275\321\213\320\271 \321\204\320\276\320\275 \320\264\320\273\321\217 \320\272\320\276\320\274\320\261\320\276\320\261\320\276\320\272\321\201\320\260 */\n"
 "    color: #FFFFFF; /* \320\221\320\265\320\273\321\213\320\271 \321\202\320\265\320\272\321\201\321\202 */\n"
@@ -112,7 +122,7 @@ public:
         RatingFilter->addItem(QString());
         RatingFilter->addItem(QString());
         RatingFilter->setObjectName("RatingFilter");
-        RatingFilter->setGeometry(QRect(240, 20, 101, 31));
+        RatingFilter->setGeometry(QRect(240, 20, 101, 61));
         RatingFilter->setStyleSheet(QString::fromUtf8("QComboBox {\n"
 "    background-color: #2E2E2E; /* \320\242\320\265\320\274\320\275\321\213\320\271 \321\204\320\276\320\275 \320\264\320\273\321\217 \320\272\320\276\320\274\320\261\320\276\320\261\320\276\320\272\321\201\320\260 */\n"
 "    color: #FFFFFF; /* \320\221\320\265\320\273\321\213\320\271 \321\202\320\265\320\272\321\201\321\202 */\n"
@@ -143,7 +153,7 @@ public:
         YearFilter->addItem(QString());
         YearFilter->addItem(QString());
         YearFilter->setObjectName("YearFilter");
-        YearFilter->setGeometry(QRect(350, 20, 101, 31));
+        YearFilter->setGeometry(QRect(350, 20, 101, 61));
         YearFilter->setStyleSheet(QString::fromUtf8("QComboBox {\n"
 "    background-color: #2E2E2E; /* \320\242\320\265\320\274\320\275\321\213\320\271 \321\204\320\276\320\275 \320\264\320\273\321\217 \320\272\320\276\320\274\320\261\320\276\320\261\320\276\320\272\321\201\320\260 */\n"
 "    color: #FFFFFF; /* \320\221\320\265\320\273\321\213\320\271 \321\202\320\265\320\272\321\201\321\202 */\n"
@@ -174,7 +184,7 @@ public:
         RuntimeYear->addItem(QString());
         RuntimeYear->addItem(QString());
         RuntimeYear->setObjectName("RuntimeYear");
-        RuntimeYear->setGeometry(QRect(460, 20, 101, 31));
+        RuntimeYear->setGeometry(QRect(460, 20, 101, 61));
         RuntimeYear->setStyleSheet(QString::fromUtf8("QComboBox {\n"
 "    background-color: #2E2E2E; /* \320\242\320\265\320\274\320\275\321\213\320\271 \321\204\320\276\320\275 \320\264\320\273\321\217 \320\272\320\276\320\274\320\261\320\276\320\261\320\276\320\272\321\201\320\260 */\n"
 "    color: #FFFFFF; /* \320\221\320\265\320\273\321\213\320\271 \321\202\320\265\320\272\321\201\321\202 */\n"
@@ -237,13 +247,23 @@ public:
     void retranslateUi(QWidget *FiltersWindow)
     {
         FiltersWindow->setWindowTitle(QCoreApplication::translate("FiltersWindow", "FiltersWindow", nullptr));
-        GenreFilter->setItemText(0, QCoreApplication::translate("FiltersWindow", "Genre", nullptr));
-        GenreFilter->setItemText(1, QCoreApplication::translate("FiltersWindow", "horror", nullptr));
-        GenreFilter->setItemText(2, QCoreApplication::translate("FiltersWindow", "drama", nullptr));
-        GenreFilter->setItemText(3, QCoreApplication::translate("FiltersWindow", "sci-fi", nullptr));
+        GenreFilter->setItemText(0, QCoreApplication::translate("FiltersWindow", "\320\233\321\216\320\261\320\276\320\271 \320\266\320\260\320\275\321\200", nullptr));
+        GenreFilter->setItemText(1, QCoreApplication::translate("FiltersWindow", "\321\202\321\200\320\270\320\273\320\273\320\265\321\200", nullptr));
+        GenreFilter->setItemText(2, QCoreApplication::translate("FiltersWindow", "\320\264\321\200\320\260\320\274\320\260", nullptr));
+        GenreFilter->setItemText(3, QCoreApplication::translate("FiltersWindow", "\320\261\320\276\320\265\320\262\320\270\320\272", nullptr));
+        GenreFilter->setItemText(4, QCoreApplication::translate("FiltersWindow", "\320\272\321\200\320\270\320\274\320\270\320\275\320\260\320\273", nullptr));
+        GenreFilter->setItemText(5, QCoreApplication::translate("FiltersWindow", "\320\270\321\201\321\202\320\276\321\200\320\270\321\207\320\265\321\201\320\272\320\270\320\271", nullptr));
+        GenreFilter->setItemText(6, QCoreApplication::translate("FiltersWindow", "\320\277\321\200\320\270\320\272\320\273\321\216\321\207\320\265\320\275\321\207\320\265\321\201\320\272\320\270\320\271", nullptr));
+        GenreFilter->setItemText(7, QCoreApplication::translate("FiltersWindow", "\320\272\320\276\320\274\320\265\320\264\320\270\321\217", nullptr));
+        GenreFilter->setItemText(8, QCoreApplication::translate("FiltersWindow", "\321\201\320\265\320\274\320\265\320\271\320\275\321\213\320\271", nullptr));
+        GenreFilter->setItemText(9, QCoreApplication::translate("FiltersWindow", "\321\204\320\260\320\275\321\202\320\260\321\201\321\202\320\270\320\272\320\260", nullptr));
+        GenreFilter->setItemText(10, QCoreApplication::translate("FiltersWindow", "\320\260\320\275\320\270\320\274\320\260\321\206\320\270\321\217", nullptr));
+        GenreFilter->setItemText(11, QCoreApplication::translate("FiltersWindow", "\320\261\320\270\320\276\320\263\321\200\320\260\321\204\320\270\321\217", nullptr));
+        GenreFilter->setItemText(12, QCoreApplication::translate("FiltersWindow", "\320\262\320\276\320\265\320\275\320\275\321\213\320\271", nullptr));
+        GenreFilter->setItemText(13, QCoreApplication::translate("FiltersWindow", "\321\200\320\276\320\274\320\260\320\275\321\202\320\270\320\272\320\260", nullptr));
 
         GenreFilter->setPlaceholderText(QCoreApplication::translate("FiltersWindow", "Genre", nullptr));
-        AgeLimitFilter->setItemText(0, QCoreApplication::translate("FiltersWindow", "Age limit", nullptr));
+        AgeLimitFilter->setItemText(0, QCoreApplication::translate("FiltersWindow", "\320\233\321\216\320\261\320\276\320\271 \320\262\320\276\320\267\321\200\320\260\321\201\321\202", nullptr));
         AgeLimitFilter->setItemText(1, QCoreApplication::translate("FiltersWindow", "0+", nullptr));
         AgeLimitFilter->setItemText(2, QCoreApplication::translate("FiltersWindow", "3+", nullptr));
         AgeLimitFilter->setItemText(3, QCoreApplication::translate("FiltersWindow", "6+", nullptr));
@@ -252,19 +272,19 @@ public:
         AgeLimitFilter->setItemText(6, QCoreApplication::translate("FiltersWindow", "18+", nullptr));
 
         AgeLimitFilter->setPlaceholderText(QCoreApplication::translate("FiltersWindow", "Age limit", nullptr));
-        RatingFilter->setItemText(0, QCoreApplication::translate("FiltersWindow", "Rating", nullptr));
-        RatingFilter->setItemText(1, QCoreApplication::translate("FiltersWindow", "Increase", nullptr));
-        RatingFilter->setItemText(2, QCoreApplication::translate("FiltersWindow", "Decrease", nullptr));
+        RatingFilter->setItemText(0, QCoreApplication::translate("FiltersWindow", "\320\233\321\216\320\261\320\276\320\271 \321\200\320\265\320\271\321\202\320\270\320\275\320\263", nullptr));
+        RatingFilter->setItemText(1, QCoreApplication::translate("FiltersWindow", "\320\222\321\213\321\210\320\265", nullptr));
+        RatingFilter->setItemText(2, QCoreApplication::translate("FiltersWindow", "\320\235\320\270\320\266\320\265", nullptr));
 
         RatingFilter->setPlaceholderText(QCoreApplication::translate("FiltersWindow", "Rating", nullptr));
-        YearFilter->setItemText(0, QCoreApplication::translate("FiltersWindow", "Year", nullptr));
-        YearFilter->setItemText(1, QCoreApplication::translate("FiltersWindow", "Increase", nullptr));
-        YearFilter->setItemText(2, QCoreApplication::translate("FiltersWindow", "Decrease", nullptr));
+        YearFilter->setItemText(0, QCoreApplication::translate("FiltersWindow", "\320\233\321\216\320\261\320\276\320\271 \320\263\320\276\320\264", nullptr));
+        YearFilter->setItemText(1, QCoreApplication::translate("FiltersWindow", "\320\235\320\276\320\262\321\213\320\265", nullptr));
+        YearFilter->setItemText(2, QCoreApplication::translate("FiltersWindow", "\320\241\321\202\320\260\321\200\321\213\320\265", nullptr));
 
         YearFilter->setPlaceholderText(QCoreApplication::translate("FiltersWindow", "Year", nullptr));
-        RuntimeYear->setItemText(0, QCoreApplication::translate("FiltersWindow", "Runtime", nullptr));
-        RuntimeYear->setItemText(1, QCoreApplication::translate("FiltersWindow", "Increase", nullptr));
-        RuntimeYear->setItemText(2, QCoreApplication::translate("FiltersWindow", "Decrease", nullptr));
+        RuntimeYear->setItemText(0, QCoreApplication::translate("FiltersWindow", "\320\233\321\216\320\261\320\260\321\217 \320\264\320\273\320\270\321\202\320\265\320\273\321\214\320\275\320\276\321\201\321\202\321\214", nullptr));
+        RuntimeYear->setItemText(1, QCoreApplication::translate("FiltersWindow", "\320\224\320\273\320\270\320\275\320\275\320\265\320\265", nullptr));
+        RuntimeYear->setItemText(2, QCoreApplication::translate("FiltersWindow", "\320\232\320\276\321\200\320\276\321\207\320\265", nullptr));
 
         RuntimeYear->setPlaceholderText(QCoreApplication::translate("FiltersWindow", "Runtime", nullptr));
         ApplyButton->setText(QCoreApplication::translate("FiltersWindow", "Apply", nullptr));

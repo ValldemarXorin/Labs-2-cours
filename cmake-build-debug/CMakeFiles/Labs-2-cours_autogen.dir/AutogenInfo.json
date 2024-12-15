@@ -318,6 +318,12 @@
 			null
 		],
 		[
+			"D:/Labs-2-cours/Labs-2-cours/headers/MovieRecommender.h",
+			"MU",
+			"K6S233IZAZ/moc_MovieRecommender.cpp",
+			null
+		],
+		[
 			"D:/Labs-2-cours/Labs-2-cours/headers/MyVector.h",
 			"MU",
 			"K6S233IZAZ/moc_MyVector.cpp",
@@ -569,6 +575,11 @@
 		],
 		[
 			"D:/Labs-2-cours/Labs-2-cours/source/MovieErrorExceptions.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Labs-2-cours/Labs-2-cours/source/MovieRecommender.cpp",
 			"MU",
 			null
 		],

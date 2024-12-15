@@ -3,6 +3,7 @@
 
 #include <string>
 #include <iostream>
+#include <sstream>
 
 
 class Movie {
@@ -54,6 +55,10 @@ public:
     [[nodiscard]] int get_link_id() const;
 
     [[nodiscard]] const std::string &get_age_limit() const;
+
+    int get_int_age_limit() const;
+
+    int get_runtime_minutes() const;
 
     bool operator==(const Movie &other) const;
 };

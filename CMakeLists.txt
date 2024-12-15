@@ -97,6 +97,8 @@ add_executable(Labs-2-cours
         source/JSONMovieCollection.cpp
         headers/TopParser.h
         source/TopParser.cpp
+        headers/MovieRecommender.h
+        source/MovieRecommender.cpp
 )
 
 include_directories(${CURL_INCLUDE_DIR})

@@ -78,6 +78,19 @@ int Movie::get_link_id() const { return link_id; }
 
 const std::string &Movie::get_age_limit() const { return age_limit; }
 
+
+int Movie::get_int_age_limit() const {
+    return std::stoi(age_limit.substr(0, age_limit.size() - 1));
+}
+
+int Movie::get_runtime_minutes() const {
+    std::istringstream iss(runtime);
+    int hours, minutes, seconds;
+    char colon;
+    iss >> hours >> colon >> minutes >> colon >> seconds;
+    return hours * 60 + minutes;
+}
+
 bool Movie::operator==(const Movie &other) const {
     return title == other.title && description == other.description && genre == other.genre &&
     release_year == other.release_year && runtime == other.runtime && rating == other.rating &&

@@ -27,7 +27,7 @@
      <x>20</x>
      <y>20</y>
      <width>101</width>
-     <height>31</height>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -60,22 +60,72 @@ QComboBox:hover {
    </property>
    <item>
     <property name="text">
-     <string>Genre</string>
+     <string>Любой жанр</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>horror</string>
+     <string>триллер</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>drama</string>
+     <string>драма</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>sci-fi</string>
+     <string>боевик</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>криминал</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>исторический</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>приключенческий</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>комедия</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>семейный</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>фантастика</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>анимация</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>биография</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>военный</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>романтика</string>
     </property>
    </item>
   </widget>
@@ -85,7 +135,7 @@ QComboBox:hover {
      <x>130</x>
      <y>20</y>
      <width>101</width>
-     <height>31</height>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -119,7 +169,7 @@ QComboBox:hover {
    </property>
    <item>
     <property name="text">
-     <string>Age limit</string>
+     <string>Любой возраст</string>
     </property>
    </item>
    <item>
@@ -159,7 +209,7 @@ QComboBox:hover {
      <x>240</x>
      <y>20</y>
      <width>101</width>
-     <height>31</height>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -192,17 +242,17 @@ QComboBox:hover {
    </property>
    <item>
     <property name="text">
-     <string>Rating</string>
+     <string>Любой рейтинг</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>Increase</string>
+     <string>Выше</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>Decrease</string>
+     <string>Ниже</string>
     </property>
    </item>
   </widget>
@@ -212,7 +262,7 @@ QComboBox:hover {
      <x>350</x>
      <y>20</y>
      <width>101</width>
-     <height>31</height>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -245,17 +295,17 @@ QComboBox:hover {
    </property>
    <item>
     <property name="text">
-     <string>Year</string>
+     <string>Любой год</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>Increase</string>
+     <string>Новые</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>Decrease</string>
+     <string>Старые</string>
     </property>
    </item>
   </widget>
@@ -265,7 +315,7 @@ QComboBox:hover {
      <x>460</x>
      <y>20</y>
      <width>101</width>
-     <height>31</height>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -298,17 +348,17 @@ QComboBox:hover {
    </property>
    <item>
     <property name="text">
-     <string>Runtime</string>
+     <string>Любая длительность</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>Increase</string>
+     <string>Длиннее</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>Decrease</string>
+     <string>Короче</string>
     </property>
    </item>
   </widget>

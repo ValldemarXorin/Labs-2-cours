@@ -8,7 +8,7 @@ GenreFilter::GenreFilter(std::string g) : genre(g) {};
 MyVector<Movie> GenreFilter::apply(MyVector<Movie> movies) {
     MyVector<Movie> filtered_movies;
     for (const auto& movie : movies) {
-        if (movie.get_genre() == genre) {
+        if (movie.get_genre().find(genre) != std::string::npos) {
             filtered_movies.push_back(movie);
         }
     }

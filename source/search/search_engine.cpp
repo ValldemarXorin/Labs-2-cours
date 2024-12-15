@@ -7,16 +7,26 @@ SearchEngine::SearchEngine(IMoviesRepository movies_repository) : movies_reposit
 
 std::vector<Movie>& SearchEngine::search_by_fragment(std::string title_fragment, std::vector<Movie>& movies,
                                                     bool get_back, bool change_filters) {
+
     std::string title_movie;
+
+    std::wstring_convert<std::codecvt_utf8<wchar_t>> converter;
+    std::wstring wide_title_fragment = converter.from_bytes(title_fragment);
+
     if (get_back || change_filters) {
         movies = movies_repository.get_movies();
     }
     std::vector<Movie> result_movies;
     for(auto& movie: movies) {
         title_movie = movie.get_title();
-        std::transform(title_movie.begin(), title_movie.end(), title_movie.begin(), ::tolower);
-        std::transform(title_fragment.begin(), title_fragment.end(), title_fragment.begin(), ::tolower);
-        if (title_movie.find(title_fragment) == 0)
+
+
+        std::wstring wide_title_movie = converter.from_bytes(title_movie);
+
+        wide_title_fragment = to_lower_case(wide_title_fragment);
+        wide_title_movie = to_lower_case(wide_title_movie);
+
+        if (wide_title_movie.find(wide_title_fragment) == 0)
             result_movies.push_back(movie);
     }
     movies = result_movies;

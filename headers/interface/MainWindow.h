@@ -17,6 +17,8 @@
 #include "../search/RuntimeFilter.h"
 #include "../MyVector.h"
 #include "../JSONMovieCollection.h"
+#include "../MovieRecommender.h"
+#include "../TopParser.h"
 #include "FiltersWindow.h"
 #include "MovieCard.h"
 #include "MovieCardInfo.h"
@@ -85,10 +87,34 @@ private slots:
                                     const QString& rating, const QString& release_year, const QString& age_limit,
                                     const QString& description, int id);
 
-    void on_LoadToFileButton_clicked();
+    void add_movie_card_autoselection_favorites(const QString& title, const QString& genre,
+                                      const QString& rating, const QString& release_year, const QString& age_limit,
+                                      const QString& description, int id);
+
+    void add_movie_card_autoselection_random(const QString& title, const QString& genre,
+                                                const QString& rating, const QString& release_year, const QString& age_limit,
+                                                const QString& description, int id);
 
     void apply_filters_json(const QString& genre, const QString& age_limit, const QString& rating,
                             const QString& year, const QString& runtime);
+
+    void on_AutoselectionButtonAutoselectionMoviePage_clicked();
+
+    void on_LoadToFileButton_clicked();
+
+    void on_FiltersButtonAutoselectionMoviePage_clicked();
+
+    void recommend_movies_method(const QString& genre = "Genre", const QString& age_limit = "Age limit", const QString& rating = "Rating",
+                                 const QString& year = "Year", const QString& runtime = "Runtime");
+
+    void get_filters_autoselection(const QString& genre, const QString& age_limit, const QString& rating,
+                                    const QString& year, const QString& runtime);
+
+    void get_top_kinopoisk();
+
+    void add_movie_card_top(const QString& title, const QString& genre,
+                        const QString& rating, const QString& release_year, const QString& age_limit,
+                        const QString& description, int id);
 
 private:
     Ui::MainWindow *ui;
@@ -98,6 +124,7 @@ private:
     SearchEngine* search_engine;
     FiltersWindow* filters_window {new FiltersWindow};
     FiltersWindow* filters_window_json {new FiltersWindow};
+    FiltersWindow* filters_window_autoselection {new FiltersWindow};
     MyVector<Movie> liked_movies_for_json;
     User* current_user;
     int precurrent_length_text_search_field{0};
@@ -111,6 +138,13 @@ private:
     QString year_filter;
     QString runtime_filter;
     JSONMovieCollection* json_movie_collection;
+    MovieRecommender* recommend;
+    QString genre_filter_autoselection {"Genre"};
+    QString age_limit_filter_autoselection {"Age limit"};
+    QString rating_filter_autoselection {"Rating"};
+    QString year_filter_autoselection {"Year"};
+    QString runtime_filter_autoselection {"Runtime"};
+    TopParser* parser {new TopParser};
 };
 
 

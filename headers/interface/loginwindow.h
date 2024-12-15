@@ -8,6 +8,7 @@
 #include "MainWindow.h"
 #include "../repositories/IUsersRepository.h"
 #include "../repositories/IMoviesRepository.h"
+#include "../TopParser.h"
 #include <QWidget>
 #include <QLineEdit>
 #include <QToolButton>
@@ -44,6 +45,7 @@ private:
     IUserRepository *users;
     IMoviesRepository *movies_repository;
     LikedRepository* liked_movies;
+    TopParser* parser;
 };
 
 
