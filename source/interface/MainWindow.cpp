@@ -7,12 +7,15 @@
 #include "../../headers/interface/MainWindow.h"
 #include "ui_mainwindow.h"
 
+#include <chrono>
+
 MainWindow::MainWindow(IMoviesRepository* movies, IUserRepository* users, LikedRepository* liked_movies, User* current_user,
                        QWidget *parent) :
         QMainWindow(parent), ui(new Ui::MainWindow), movies_repository(movies), users(users), liked_movies(liked_movies),
         search_engine(new SearchEngine(*movies)), movies_for_search_list(movies->get_movies()),
         current_user(current_user), json_movie_collection(new JSONMovieCollection("MyLiked")),
-        recommend(new MovieRecommender(movies_repository->get_movies())){
+        recommend(new MovieRecommender(movies_repository->get_movies())),
+        admin_window(new AdminWindow(*movies_repository)){
 
     ui->setupUi(this);
 
@@ -21,10 +24,15 @@ MainWindow::MainWindow(IMoviesRepository* movies, IUserRepository* users, LikedR
 
     ui->ErrorAutoselectionMoviePage->setVisible(false);
 
+    if (current_user->get_role() == "user")
+        ui->AdminButton->setVisible(false);
+
     connect(ui->SearchFieldSearchPage, &QLineEdit::textChanged, this,
             &MainWindow::using_search_enging);
 
+
     get_top_kinopoisk();
+
     show_liked_movies();
 }
 
@@ -444,7 +452,7 @@ void MainWindow::on_FiltersButtonAutoselectionMoviePage_clicked() {
     ui->ErrorAutoselectionMoviePage->setVisible(false);
 }
 
-void MainWindow::on_AutoselectionButtonAutoselectionMoviePage_clicked() {
+void MainWindow::on_AutoselectionButton_clicked() {
     recommend_movies_method(genre_filter_autoselection, age_limit_filter_autoselection, rating_filter,
                             year_filter_autoselection, runtime_filter_autoselection);
     ui->ErrorAutoselectionMoviePage->setVisible(false);
@@ -540,6 +548,11 @@ void MainWindow::add_movie_card_top(const QString &title, const QString &genre, 
 
     connect(movie_card->getMovieCardInfo(), &MovieCardInfo::prepare_to_del_liked_movie,
             this, &MainWindow::delete_liked_movie);
+}
+
+
+void MainWindow::on_AdminButton_clicked() {
+    admin_window->show();
 }
 
 

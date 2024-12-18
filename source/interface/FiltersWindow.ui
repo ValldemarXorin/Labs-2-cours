@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>589</width>
-    <height>377</height>
+    <width>694</width>
+    <height>445</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,10 +24,10 @@
   <widget class="QComboBox" name="GenreFilter">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>20</y>
-     <width>101</width>
-     <height>61</height>
+     <x>490</x>
+     <y>40</y>
+     <width>161</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -53,10 +53,14 @@ QComboBox QAbstractItemView {
 
 QComboBox:hover {
     border: 2px solid #0056a1; /* Цвет границы при наведении */
-}</string>
+}
+</string>
+   </property>
+   <property name="editable">
+    <bool>false</bool>
    </property>
    <property name="placeholderText">
-    <string>Genre</string>
+    <string>Жанр</string>
    </property>
    <item>
     <property name="text">
@@ -128,14 +132,34 @@ QComboBox:hover {
      <string>романтика</string>
     </property>
    </item>
+   <item>
+    <property name="text">
+     <string>детектив</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>вестерн</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>научный</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>спорт</string>
+    </property>
+   </item>
   </widget>
   <widget class="QComboBox" name="AgeLimitFilter">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>20</y>
-     <width>101</width>
-     <height>61</height>
+     <x>490</x>
+     <y>110</y>
+     <width>161</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -165,7 +189,7 @@ QComboBox:hover {
 </string>
    </property>
    <property name="placeholderText">
-    <string>Age limit</string>
+    <string/>
    </property>
    <item>
     <property name="text">
@@ -206,10 +230,10 @@ QComboBox:hover {
   <widget class="QComboBox" name="RatingFilter">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>20</y>
-     <width>101</width>
-     <height>61</height>
+     <x>490</x>
+     <y>180</y>
+     <width>161</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -238,7 +262,7 @@ QComboBox:hover {
 }</string>
    </property>
    <property name="placeholderText">
-    <string>Rating</string>
+    <string/>
    </property>
    <item>
     <property name="text">
@@ -259,10 +283,10 @@ QComboBox:hover {
   <widget class="QComboBox" name="YearFilter">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>20</y>
-     <width>101</width>
-     <height>61</height>
+     <x>490</x>
+     <y>250</y>
+     <width>161</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -291,7 +315,7 @@ QComboBox:hover {
 }</string>
    </property>
    <property name="placeholderText">
-    <string>Year</string>
+    <string/>
    </property>
    <item>
     <property name="text">
@@ -312,10 +336,10 @@ QComboBox:hover {
   <widget class="QComboBox" name="RuntimeYear">
    <property name="geometry">
     <rect>
-     <x>460</x>
-     <y>20</y>
-     <width>101</width>
-     <height>61</height>
+     <x>490</x>
+     <y>320</y>
+     <width>161</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -343,8 +367,14 @@ QComboBox:hover {
     border: 2px solid #0056a1; /* Цвет границы при наведении */
 }</string>
    </property>
+   <property name="editable">
+    <bool>false</bool>
+   </property>
+   <property name="currentText">
+    <string>Любая длительность</string>
+   </property>
    <property name="placeholderText">
-    <string>Runtime</string>
+    <string/>
    </property>
    <item>
     <property name="text">
@@ -365,8 +395,8 @@ QComboBox:hover {
   <widget class="QPushButton" name="ApplyButton">
    <property name="geometry">
     <rect>
-     <x>460</x>
-     <y>330</y>
+     <x>350</x>
+     <y>400</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -385,14 +415,14 @@ QPushButton:hover {
 }</string>
    </property>
    <property name="text">
-    <string>Apply</string>
+    <string>Применить</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="ClearAllButton">
+  <widget class="QPushButton" name="PrepareButton">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>330</y>
+     <x>30</x>
+     <y>400</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -411,7 +441,57 @@ QPushButton:hover {
 }</string>
    </property>
    <property name="text">
-    <string>Clear All</string>
+    <string>Подготовить</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="PrepareMovies">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>40</y>
+     <width>415</width>
+     <height>321</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QListWidget {
+    background-color: #2E2E2E; /* Темный фон для списка */
+    border: 2px solid #0078d7; /* Цвет границы */
+    border-radius: 10px; /* Закругленные углы */
+    padding: 5px; /* Отступы */
+}
+
+QScrollBar:vertical, QScrollBar:horizontal {
+    width: 6px; /* Ширина вертикального скролла */
+    background-color: #1E1E1E; /* Цвет фона скролла */
+}
+
+QScrollBar::handle {
+    background-color: #0078d7; /* Цвет ползунка скролла */
+    border-radius: 3px; /* Закругленные углы ползунка */
+}
+
+QScrollBar::add-line, QScrollBar::sub-line {
+    background-color: transparent; /* Убираем стрелки прокрутки */
+}
+
+QListWidget::item {
+    background-color: #2E2E2E; /* Темный фон для элементов */
+    color: #FFFFFF; /* Белый текст */
+    padding: 10px; /* Отступы для элементов */
+    border: 1px solid #0078d7; /* Цвет границы элементов */
+    border-radius: 5px; /* Закругленные углы для элементов */
+}
+
+QListWidget::item:selected {
+    background-color: #0078d7; /* Цвет фона выбранного элемента */
+    color: #FFFFFF; /* Белый текст для выбранного элемента */
+}
+
+QListWidget::item:hover {
+    background-color: #1E1E1E; /* Цвет фона при наведении */
+}
+</string>
    </property>
   </widget>
  </widget>

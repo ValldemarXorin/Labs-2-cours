@@ -30,3 +30,13 @@ UserErrorExceptions::user_exist(const std::string &email, const std::string &pas
     }
     throw std::invalid_argument("User does not exist.");
 }
+
+bool UserErrorExceptions::password_administrator_is_valid(const std::string &password_administrator) const {
+    if (password_administrator == "Qp45gf29_3")
+        return true;
+
+    if (password_administrator.empty())
+        return false;
+
+    throw std::invalid_argument("Проверьте email и пароли.");
+}

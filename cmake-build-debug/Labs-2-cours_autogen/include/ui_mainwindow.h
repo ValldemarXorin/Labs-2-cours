@@ -33,9 +33,10 @@ public:
     QListWidget *RandomAutoselectionMoviePage;
     QLabel *LabelInteresting;
     QLabel *LabelMabyInteresting;
-    QPushButton *AutoselectionButtonAutoselectionMoviePage;
+    QPushButton *AutoselectionButton;
     QPushButton *FiltersButtonAutoselectionMoviePage;
     QLabel *ErrorAutoselectionMoviePage;
+    QPushButton *AdminButton;
     QWidget *SearchPage;
     QLineEdit *SearchFieldSearchPage;
     QListWidget *MenuListSearchPage;
@@ -241,10 +242,10 @@ public:
 "	background-color: none;\n"
 "    color: #FFFFFF; /* \320\246\320\262\320\265\321\202 \321\202\320\265\320\272\321\201\321\202\320\260 */"));
         LabelMabyInteresting->setAlignment(Qt::AlignmentFlag::AlignCenter);
-        AutoselectionButtonAutoselectionMoviePage = new QPushButton(AutoselectionMoviePage);
-        AutoselectionButtonAutoselectionMoviePage->setObjectName("AutoselectionButtonAutoselectionMoviePage");
-        AutoselectionButtonAutoselectionMoviePage->setGeometry(QRect(430, 20, 95, 31));
-        AutoselectionButtonAutoselectionMoviePage->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        AutoselectionButton = new QPushButton(AutoselectionMoviePage);
+        AutoselectionButton->setObjectName("AutoselectionButton");
+        AutoselectionButton->setGeometry(QRect(470, 20, 95, 31));
+        AutoselectionButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "        background-color: #2E2E2E; /* \320\242\320\265\320\274\320\275\321\213\320\271 \321\204\320\276\320\275 */\n"
 "        color: #FFFFFF; /* \320\221\320\265\320\273\321\213\320\271 \321\202\320\265\320\272\321\201\321\202 */\n"
 "        border: 2px solid #0078d7; /* \320\246\320\262\320\265\321\202 \320\263\321\200\320\260\320\275\320\270\321\206\321\213 */\n"
@@ -258,7 +259,7 @@ public:
 ""));
         FiltersButtonAutoselectionMoviePage = new QPushButton(AutoselectionMoviePage);
         FiltersButtonAutoselectionMoviePage->setObjectName("FiltersButtonAutoselectionMoviePage");
-        FiltersButtonAutoselectionMoviePage->setGeometry(QRect(214, 20, 95, 31));
+        FiltersButtonAutoselectionMoviePage->setGeometry(QRect(180, 20, 95, 31));
         FiltersButtonAutoselectionMoviePage->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "        background-color: #2E2E2E; /* \320\242\320\265\320\274\320\275\321\213\320\271 \321\204\320\276\320\275 */\n"
 "        color: #FFFFFF; /* \320\221\320\265\320\273\321\213\320\271 \321\202\320\265\320\272\321\201\321\202 */\n"
@@ -281,6 +282,21 @@ public:
 "    color: red; /* \320\246\320\262\320\265\321\202 \321\202\320\265\320\272\321\201\321\202\320\260 */\n"
 "}"));
         ErrorAutoselectionMoviePage->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        AdminButton = new QPushButton(AutoselectionMoviePage);
+        AdminButton->setObjectName("AdminButton");
+        AdminButton->setGeometry(QRect(320, 20, 101, 31));
+        AdminButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"        background-color: #2E2E2E; /* \320\242\320\265\320\274\320\275\321\213\320\271 \321\204\320\276\320\275 */\n"
+"        color: #FFFFFF; /* \320\221\320\265\320\273\321\213\320\271 \321\202\320\265\320\272\321\201\321\202 */\n"
+"        border: 2px solid #0078d7; /* \320\246\320\262\320\265\321\202 \320\263\321\200\320\260\320\275\320\270\321\206\321\213 */\n"
+"        border-radius: 10px; /* \320\227\320\260\320\272\321\200\321\203\320\263\320\273\320\265\320\275\320\275\321\213\320\265 \321\203\320\263\320\273\321\213 */\n"
+"        padding: 5px; /* \320\236\321\202\321\201\321\202\321\203\320\277\321\213 */\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"		background-color: #1E1E1E\n"
+"}\n"
+""));
         PageSwitcher->addWidget(AutoselectionMoviePage);
         MenuButtonAutoselectionMoviePage->raise();
         MenuListAutoselectionMoviePage->raise();
@@ -288,9 +304,10 @@ public:
         RandomAutoselectionMoviePage->raise();
         LabelInteresting->raise();
         LabelMabyInteresting->raise();
-        AutoselectionButtonAutoselectionMoviePage->raise();
+        AutoselectionButton->raise();
         FiltersButtonAutoselectionMoviePage->raise();
         ErrorAutoselectionMoviePage->raise();
+        AdminButton->raise();
         SearchPage = new QWidget();
         SearchPage->setObjectName("SearchPage");
         SearchFieldSearchPage = new QLineEdit(SearchPage);
@@ -685,7 +702,7 @@ public:
 
         retranslateUi(mainwindow);
 
-        PageSwitcher->setCurrentIndex(3);
+        PageSwitcher->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(mainwindow);
@@ -712,9 +729,10 @@ public:
         MenuButtonAutoselectionMoviePage->setText(QCoreApplication::translate("MainWindow", "Menu", nullptr));
         LabelInteresting->setText(QCoreApplication::translate("MainWindow", "\320\242\320\260\320\272 \320\266\320\265 \320\274\320\276\320\266\320\265\321\202 \320\277\320\276\320\275\321\200\320\260\320\262\320\270\321\202\321\214\321\201\321\217:", nullptr));
         LabelMabyInteresting->setText(QCoreApplication::translate("MainWindow", "\320\242\320\276 \321\207\321\202\320\276 \320\262\320\260\320\274 \320\261\321\203\320\264\320\265\321\202 \320\270\320\275\321\202\320\265\321\200\320\265\321\201\320\275\320\276:", nullptr));
-        AutoselectionButtonAutoselectionMoviePage->setText(QCoreApplication::translate("MainWindow", "Autoselection", nullptr));
-        FiltersButtonAutoselectionMoviePage->setText(QCoreApplication::translate("MainWindow", "Filters", nullptr));
+        AutoselectionButton->setText(QCoreApplication::translate("MainWindow", "\320\220\320\262\321\202\320\276\320\277\320\276\320\264\320\261\320\276\321\200", nullptr));
+        FiltersButtonAutoselectionMoviePage->setText(QCoreApplication::translate("MainWindow", "\320\244\320\270\320\273\321\214\321\202\321\200\321\213", nullptr));
         ErrorAutoselectionMoviePage->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        AdminButton->setText(QCoreApplication::translate("MainWindow", "\320\220\320\264\320\274\320\270\320\275\320\270\321\201\321\202\321\200\320\260\321\206\320\270\321\217", nullptr));
         SearchFieldSearchPage->setPlaceholderText(QCoreApplication::translate("MainWindow", "Search", nullptr));
 
         const bool __sortingEnabled1 = MenuListSearchPage->isSortingEnabled();

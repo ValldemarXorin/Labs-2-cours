@@ -22,6 +22,7 @@
 #include "FiltersWindow.h"
 #include "MovieCard.h"
 #include "MovieCardInfo.h"
+#include "AdminWindow.h"
 #include <windows.h>
 #include <QMainWindow>
 #include <QListView>
@@ -98,7 +99,7 @@ private slots:
     void apply_filters_json(const QString& genre, const QString& age_limit, const QString& rating,
                             const QString& year, const QString& runtime);
 
-    void on_AutoselectionButtonAutoselectionMoviePage_clicked();
+    void on_AutoselectionButton_clicked();
 
     void on_LoadToFileButton_clicked();
 
@@ -115,6 +116,8 @@ private slots:
     void add_movie_card_top(const QString& title, const QString& genre,
                         const QString& rating, const QString& release_year, const QString& age_limit,
                         const QString& description, int id);
+
+    void on_AdminButton_clicked();
 
 private:
     Ui::MainWindow *ui;
@@ -139,12 +142,13 @@ private:
     QString runtime_filter;
     JSONMovieCollection* json_movie_collection;
     MovieRecommender* recommend;
-    QString genre_filter_autoselection {"Genre"};
-    QString age_limit_filter_autoselection {"Age limit"};
-    QString rating_filter_autoselection {"Rating"};
-    QString year_filter_autoselection {"Year"};
-    QString runtime_filter_autoselection {"Runtime"};
+    QString genre_filter_autoselection {"Любой жанр"};
+    QString age_limit_filter_autoselection {"Любой возраст"};
+    QString rating_filter_autoselection {"Любой рейтинг"};
+    QString year_filter_autoselection {"Любой год"};
+    QString runtime_filter_autoselection {"Любая длительность"};
     TopParser* parser {new TopParser};
+    AdminWindow* admin_window {new AdminWindow};
 };
 
 

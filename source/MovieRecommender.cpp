@@ -124,9 +124,8 @@ MovieRecommender::recommendMovies(const std::vector<Movie> &liked_movies, const 
         std::vector<std::string> movie_genres;
         std::stringstream ss(movie.get_genre());
         while (getline(ss, temp, ',')) {
-            // Убираем пробелы в начале и конце
-            temp.erase(0, temp.find_first_not_of(" \n\r\t")); // Убираем пробелы слева
-            temp.erase(temp.find_last_not_of(" \n\r\t") + 1); // Убираем пробелы справа
+            temp.erase(0, temp.find_first_not_of(" \n\r\t"));
+            temp.erase(temp.find_last_not_of(" \n\r\t") + 1);
             movie_genres.push_back(temp);
         }
         double genreScore = genrePreferences[movie_genres[0]] + genrePreferences[movie_genres[1]] + genrePreferences[movie_genres[2]];

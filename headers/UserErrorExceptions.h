@@ -18,6 +18,8 @@ public:
 
     void password_is_vaild(const std::string& password) const;
 
+    bool password_administrator_is_valid(const std::string& password_administrator) const;
+
     void email_exist(const std::string& email, const std::vector<User>& all_users) const;
 
     void user_exist(const std::string& email, const std::string& password, const std::string& role,

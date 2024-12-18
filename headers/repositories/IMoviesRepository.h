@@ -26,8 +26,6 @@ public:
     void add_movie(const std::string &title, const std::string &description, const std::string &genre,
                    int realease_year, const std::string &runtime, float rating, int link_id, std::string& age_limit);
 
-    std::vector<Movie> find_movies_by_autocomplete(const std::string& part_of_autocomplete);
-
     void delete_movie(std::string_view title);
 
     void display_info() const;

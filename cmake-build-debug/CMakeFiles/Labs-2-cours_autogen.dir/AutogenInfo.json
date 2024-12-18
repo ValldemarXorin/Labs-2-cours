@@ -378,6 +378,12 @@
 			null
 		],
 		[
+			"D:/Labs-2-cours/Labs-2-cours/headers/interface/AdminWindow.h",
+			"MU",
+			"VKFSGOINM3/moc_AdminWindow.cpp",
+			null
+		],
+		[
 			"D:/Labs-2-cours/Labs-2-cours/headers/interface/FiltersWindow.h",
 			"MU",
 			"VKFSGOINM3/moc_FiltersWindow.cpp",
@@ -611,6 +617,11 @@
 		],
 		[
 			"D:/Labs-2-cours/Labs-2-cours/source/database/UsersDBManager.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Labs-2-cours/Labs-2-cours/source/interface/AdminWindow.cpp",
 			"MU",
 			null
 		],

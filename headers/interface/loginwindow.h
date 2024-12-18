@@ -39,6 +39,10 @@ private slots:
 
     void on_CheckPassword_released();
 
+    void on_CheckPasswordAdministrator_pressed();
+
+    void on_CheckPasswordAdministrator_released();
+
 private:
     Ui::LoginWindow *ui;
     MainWindow *mainWindow;

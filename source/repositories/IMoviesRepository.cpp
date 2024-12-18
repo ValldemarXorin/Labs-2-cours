@@ -15,7 +15,7 @@ IMoviesRepository::~IMoviesRepository() {
 
 void IMoviesRepository::add_movie(const std::string &title, const std::string &description, const std::string &genre,
                                   int realease_year, const std::string &runtime, float rating, int link_id, std::string& age_limit) {
-    if (!validate_time(runtime)) {
+    if (!validate_runtime(runtime)) {
         std::cout << "Incorrect input runtime. Template of correct input: HH:MM:SS" << std::endl;
         return;
     }

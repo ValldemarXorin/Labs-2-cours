@@ -43,6 +43,7 @@ std::vector<Movie> MoviesDBManager::load_data_from_DB() {
         int release_year = sqlite3_column_int(stmt, REALEASE_YEAR);
         std::string runtime = reinterpret_cast<const char*>(sqlite3_column_text(stmt, RUNTIME));
         float rating = sqlite3_column_double(stmt, RATING);
+        rating = std::round(rating * 10.0f) / 10.0f;
         std::string age_limit = reinterpret_cast<const char*>(sqlite3_column_text(stmt, AGE_LIMIT));
         int link_id = sqlite3_column_int(stmt, LINK_ID);
 
@@ -73,7 +74,9 @@ void MoviesDBManager::save_data_to_DB(std::vector<Movie> movies) {
         sqlite3_bind_text(stmt, GENRE + 1, movie.get_genre().c_str(), -1, SQLITE_TRANSIENT);
         sqlite3_bind_int(stmt, REALEASE_YEAR + 1, movie.get_release_year());
         sqlite3_bind_text(stmt, RUNTIME + 1, movie.get_runtime().c_str(), -1, SQLITE_TRANSIENT);
-        sqlite3_bind_double(stmt, RATING + 1, movie.get_rating());
+
+        int rounded_rating = movie.get_rating() * 10;
+        sqlite3_bind_double(stmt, RATING + 1, rounded_rating / 10.0);
         sqlite3_bind_text(stmt, AGE_LIMIT + 1, movie.get_age_limit().c_str(), -1, SQLITE_TRANSIENT);
         sqlite3_bind_int(stmt, LINK_ID + 1, movie.get_link_id());
         sqlite3_step(stmt);

@@ -32,7 +32,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="AutoselectionMoviePage">
      <widget class="QListWidget" name="MenuListAutoselectionMoviePage">
@@ -283,10 +283,10 @@ QListWidget::item:hover {
        <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QPushButton" name="AutoselectionButtonAutoselectionMoviePage">
+     <widget class="QPushButton" name="AutoselectionButton">
       <property name="geometry">
        <rect>
-        <x>430</x>
+        <x>470</x>
         <y>20</y>
         <width>95</width>
         <height>31</height>
@@ -307,13 +307,13 @@ QPushButton:hover {
 </string>
       </property>
       <property name="text">
-       <string>Autoselection</string>
+       <string>Автоподбор</string>
       </property>
      </widget>
      <widget class="QPushButton" name="FiltersButtonAutoselectionMoviePage">
       <property name="geometry">
        <rect>
-        <x>214</x>
+        <x>180</x>
         <y>20</y>
         <width>95</width>
         <height>31</height>
@@ -334,7 +334,7 @@ QPushButton:hover {
 </string>
       </property>
       <property name="text">
-       <string>Filters</string>
+       <string>Фильтры</string>
       </property>
      </widget>
      <widget class="QLabel" name="ErrorAutoselectionMoviePage">
@@ -361,15 +361,43 @@ QPushButton:hover {
        <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
+     <widget class="QPushButton" name="AdminButton">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>20</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        background-color: #2E2E2E; /* Темный фон */
+        color: #FFFFFF; /* Белый текст */
+        border: 2px solid #0078d7; /* Цвет границы */
+        border-radius: 10px; /* Закругленные углы */
+        padding: 5px; /* Отступы */
+    }
+
+QPushButton:hover {
+		background-color: #1E1E1E
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Администрация</string>
+      </property>
+     </widget>
      <zorder>MenuButtonAutoselectionMoviePage</zorder>
      <zorder>MenuListAutoselectionMoviePage</zorder>
      <zorder>FavoritesAutoselectionMoviePage</zorder>
      <zorder>RandomAutoselectionMoviePage</zorder>
      <zorder>LabelInteresting</zorder>
      <zorder>LabelMabyInteresting</zorder>
-     <zorder>AutoselectionButtonAutoselectionMoviePage</zorder>
+     <zorder>AutoselectionButton</zorder>
      <zorder>FiltersButtonAutoselectionMoviePage</zorder>
      <zorder>ErrorAutoselectionMoviePage</zorder>
+     <zorder>AdminButton</zorder>
     </widget>
     <widget class="QWidget" name="SearchPage">
      <widget class="QLineEdit" name="SearchFieldSearchPage">

@@ -641,6 +641,7 @@ Labs-2-cours_autogen/timestamp: \
 	D:/Labs-2-cours/Labs-2-cours/headers/database/LikedDBManager.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/database/MoviesDBManager.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/database/UsersDBManager.h \
+	D:/Labs-2-cours/Labs-2-cours/headers/interface/AdminWindow.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/interface/FiltersWindow.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/interface/MainWindow.h \
 	D:/Labs-2-cours/Labs-2-cours/headers/interface/MovieCard.h \
@@ -670,6 +671,7 @@ Labs-2-cours_autogen/timestamp: \
 	D:/Labs-2-cours/Labs-2-cours/source/database/LikedDBManager.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/database/MoviesDBManager.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/database/UsersDBManager.cpp \
+	D:/Labs-2-cours/Labs-2-cours/source/interface/AdminWindow.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/interface/FiltersWindow.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/interface/MainWindow.cpp \
 	D:/Labs-2-cours/Labs-2-cours/source/interface/MovieCard.cpp \
@@ -1105,6 +1107,7 @@ Labs-2-cours_autogen/timestamp: \
 	D:/cURL/include/curl/system.h \
 	D:/cURL/include/curl/urlapi.h \
 	D:/cURL/include/curl/websockets.h \
+	D:/Labs-2-cours/Labs-2-cours/source/interface/AdminWindow.ui \
 	D:/Labs-2-cours/Labs-2-cours/source/interface/FiltersWindow.ui \
 	D:/Labs-2-cours/Labs-2-cours/source/interface/MovieCard.ui \
 	D:/Labs-2-cours/Labs-2-cours/source/interface/MovieCardInfo.ui \

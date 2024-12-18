@@ -20,13 +20,18 @@ MovieCardInfo::~MovieCardInfo() {
 
 void MovieCardInfo::set_information(QString title, QString genre, QString rating, QString release_year,
                                QString runtime, QString age_limit, QString description, int id, bool isLiked) {
+
+    std::string normal_rating = rating.toStdString();
+    size_t dot_position = normal_rating.find('.');
+    normal_rating = normal_rating.substr(0, dot_position + 2);
+
     ui->TitleMovie->setText(title);
     ui->Genre->setText(genre);
     ui->Year->setText(release_year);
     ui->Runtime->setText(runtime);
     ui->AgeLimit->setText(age_limit);
     ui->Description->setText(description);
-    ui->Rating->setText(rating);
+    ui->Rating->setText(QString::fromStdString(normal_rating));
 
     movie_id = id;
     is_liked = isLiked;

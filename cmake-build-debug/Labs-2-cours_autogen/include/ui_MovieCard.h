@@ -22,7 +22,6 @@ class Ui_MovieCard
 public:
     QLabel *TitleMovie;
     QLabel *RatingMovie;
-    QLabel *YearMovie;
     QLabel *GenreMovie;
     QLabel *AgeLimitMovie;
     QPushButton *ViewDetailsButton;
@@ -69,7 +68,7 @@ public:
         TitleMovie->setAlignment(Qt::AlignmentFlag::AlignCenter);
         RatingMovie = new QLabel(MovieCard);
         RatingMovie->setObjectName("RatingMovie");
-        RatingMovie->setGeometry(QRect(340, 50, 91, 41));
+        RatingMovie->setGeometry(QRect(350, 70, 91, 41));
         RatingMovie->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "    background-color: none;\n"
 "        color: #FFFFFF; /* \320\246\320\262\320\265\321\202 \321\202\320\265\320\272\321\201\321\202\320\260 */\n"
@@ -79,23 +78,10 @@ public:
 "	qproperty-wordWrap: true;\n"
 "    qproperty-scaledContents: true;\n"
 "}"));
-        RatingMovie->setAlignment(Qt::AlignmentFlag::AlignCenter);
-        YearMovie = new QLabel(MovieCard);
-        YearMovie->setObjectName("YearMovie");
-        YearMovie->setGeometry(QRect(250, 60, 81, 31));
-        YearMovie->setStyleSheet(QString::fromUtf8("QLabel {\n"
-"   background-color: none;\n"
-"        color: #FFFFFF; /* \320\246\320\262\320\265\321\202 \321\202\320\265\320\272\321\201\321\202\320\260 */\n"
-"        font: bold 12pt; /* \320\237\321\200\320\276\320\277\320\270\321\201\320\275\320\276\320\271 \321\201\321\202\320\270\320\273\321\214 \321\202\320\265\320\272\321\201\321\202\320\260 */\n"
-"        text-align: center; /* \320\222\321\213\321\200\320\260\320\262\320\275\320\270\320\262\320\260\320\275\320\270\320\265 \321\202\320\265\320\272\321\201\321\202\320\260 \320\277\320\276 \321\206\320\265\320\275\321\202\321\200\321\203 */\n"
-"    padding: 5px; /* \320\236\321\202\321\201\321\202\321\203\320\277\321\213 */\n"
-"	qproperty-wordWrap: true;\n"
-"    qproperty-scaledContents: true;\n"
-"}"));
-        YearMovie->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        RatingMovie->setAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter);
         GenreMovie = new QLabel(MovieCard);
         GenreMovie->setObjectName("GenreMovie");
-        GenreMovie->setGeometry(QRect(240, 0, 101, 41));
+        GenreMovie->setGeometry(QRect(190, 0, 151, 111));
         GenreMovie->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "    background-color: none;\n"
 "     color: #FFFFFF; /* \320\246\320\262\320\265\321\202 \321\202\320\265\320\272\321\201\321\202\320\260 */\n"
@@ -152,7 +138,6 @@ public:
         MovieCard->setWindowTitle(QCoreApplication::translate("MovieCard", "MovieCard", nullptr));
         TitleMovie->setText(QCoreApplication::translate("MovieCard", "TextLabel", nullptr));
         RatingMovie->setText(QCoreApplication::translate("MovieCard", "TextLabel", nullptr));
-        YearMovie->setText(QCoreApplication::translate("MovieCard", "TextLabel", nullptr));
         GenreMovie->setText(QCoreApplication::translate("MovieCard", "TextLabel", nullptr));
         AgeLimitMovie->setText(QCoreApplication::translate("MovieCard", "TextLabel", nullptr));
         ViewDetailsButton->setText(QCoreApplication::translate("MovieCard", "View Details", nullptr));

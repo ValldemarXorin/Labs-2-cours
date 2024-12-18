@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AdminWindow</class>
+ <widget class="QWidget" name="AdminWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>579</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AdminWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, 
+                                stop: 0 #1E1E1E, /* Начальный цвет (темный) */
+                                stop: 1 #001f3f); /* Конечный цвет (темно-синий) */
+    color: #FFFFFF; /* Цвет текста по умолчанию */
+}</string>
+  </property>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>-1</y>
+     <width>600</width>
+     <height>579</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="AddPage">
+    <widget class="QPushButton" name="toUpdatePaageAddPage">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>30</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI Black</family>
+       <pointsize>10</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+        background-color: #2E2E2E; /* Темный фон */
+        color: #FFFFFF; /* Белый текст */
+        border: 2px solid #0078d7; /* Цвет границы */
+        border-radius: 10px; /* Закругленные углы */
+        padding: 5px; /* Отступы */
+    }
+
+QPushButton:hover {
+		background-color: #1E1E1E
+}</string>
+     </property>
+     <property name="text">
+      <string>Обновление</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="toAddPageAddPage">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>30</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI Black</family>
+       <pointsize>10</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+        background-color: #2E2E2E; /* Темный фон */
+        color: #FFFFFF; /* Белый текст */
+        border: 2px solid #0078d7; /* Цвет границы */
+        border-radius: 10px; /* Закругленные углы */
+        padding: 5px; /* Отступы */
+    }
+
+QPushButton:hover {
+		background-color: #1E1E1E
+}</string>
+     </property>
+     <property name="text">
+      <string>Добавление</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="toRemovePageAddPage">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>30</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI Black</family>
+       <pointsize>10</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+        background-color: #2E2E2E; /* Темный фон */
+        color: #FFFFFF; /* Белый текст */
+        border: 2px solid #0078d7; /* Цвет границы */
+        border-radius: 10px; /* Закругленные углы */
+        padding: 5px; /* Отступы */
+    }
+
+QPushButton:hover {
+		background-color: #1E1E1E
+}</string>
+     </property>
+     <property name="text">
+      <string>Удаление</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="titleAddPage">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>110</y>
+       <width>211</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+        background-color: #2E2E2E; /* Темный фон */
+        color: #FFFFFF; /* Белый текст */
+        border: 2px solid #0078d7; /* Цвет границы */
+        border-radius: 10px; /* Закругленные углы */
+        padding: 5px; /* Отступы */
+    }
+
+QLineEdit:hover {
+		background-color: #1E1E1E
+}
+
+    QLineEdit:focus {
+        border: 2px solid #0056a1; /* Цвет границы при фокусе */
+        background-color: #3E3E3E; /* Цвет фона при фокусе */
+    }</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Название</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="yearAddPage">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>200</y>
+       <width>211</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+        background-color: #2E2E2E; /* Темный фон */
+        color: #FFFFFF; /* Белый текст */
+        border: 2px solid #0078d7; /* Цвет границы */
+        border-radius: 10px; /* Закругленные углы */
+        padding: 5px; /* Отступы */
+    }
+
+QLineEdit:hover {
+		background-color: #1E1E1E
+}
+
+    QLineEdit:focus {
+        border: 2px solid #0056a1; /* Цвет границы при фокусе */
+        background-color: #3E3E3E; /* Цвет фона при фокусе */
+    }</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Год выхода</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="genreAddPage">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>290</y>
+       <width>211</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+        background-color: #2E2E2E; /* Темный фон */
+        color: #FFFFFF; /* Белый текст */
+        border: 2px solid #0078d7; /* Цвет границы */
+        border-radius: 10px; /* Закругленные углы */
+        padding: 5px; /* Отступы */
+    }
+
+QLineEdit:hover {
+		background-color: #1E1E1E
+}
+
+    QLineEdit:focus {
+        border: 2px solid #0056a1; /* Цвет границы при фокусе */
+        background-color: #3E3E3E; /* Цвет фона при фокусе */
+    }</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Жанры</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="descriptionAddPage">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>110</y>
+       <width>211</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+        background-color: #2E2E2E; /* Темный фон */
+        color: #FFFFFF; /* Белый текст */
+        border: 2px solid #0078d7; /* Цвет границы */
+        border-radius: 10px; /* Закругленные углы */
+        padding: 5px; /* Отступы */
+    }
+
+QLineEdit:hover {
+		background-color: #1E1E1E
+}
+
+    QLineEdit:focus {
+        border: 2px solid #0056a1; /* Цвет границы при фокусе */
+        background-color: #3E3E3E; /* Цвет фона при фокусе */
+    }</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Краткое описание</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ratingAddPage">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>200</y>
+       <width>211</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+        background-color: #2E2E2E; /* Темный фон */
+        color: #FFFFFF; /* Белый текст */
+        border: 2px solid #0078d7; /* Цвет границы */
+        border-radius: 10px; /* Закругленные углы */
+        padding: 5px; /* Отступы */
+    }
+
+QLineEdit:hover {
+		background-color: #1E1E1E
+}
+
+    QLineEdit:focus {
+        border: 2px solid #0056a1; /* Цвет границы при фокусе */
+        background-color: #3E3E3E; /* Цвет фона при фокусе */
+    }</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Рейтинг</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="runtimeAddPage">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>290</y>
+       <width>211</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+        background-color: #2E2E2E; /* Темный фон */
+        color: #FFFFFF; /* Белый текст */
+        border: 2px solid #0078d7; /* Цвет границы */
+        border-radius: 10px; /* Закругленные углы */
+        padding: 5px; /* Отступы */
+    }
+
+QLineEdit:hover {
+		background-color: #1E1E1E
+}
+
+    QLineEdit:focus {
+        border: 2px solid #0056a1; /* Цвет границы при фокусе */
+        background-color: #3E3E3E; /* Цвет фона при фокусе */
+    }</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Длительность</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="AddMoviePageAddPage">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>470</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI Black</family>
+       <pointsize>10</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+        background-color: #2E2E2E; /* Темный фон */
+        color: #FFFFFF; /* Белый текст */
+        border: 2px solid #0078d7; /* Цвет границы */
+        border-radius: 10px; /* Закругленные углы */
+        padding: 5px; /* Отступы */
+    }
+
+QPushButton:hover {
+		background-color: #1E1E1E
+}</string>
+     </property>
+     <property name="text">
+      <string>Добавить фильм</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="trailerAddPage">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>380</y>
+       <width>211</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+        background-color: #2E2E2E; /* Темный фон */
+        color: #FFFFFF; /* Белый текст */
+        border: 2px solid #0078d7; /* Цвет границы */
+        border-radius: 10px; /* Закругленные углы */
+        padding: 5px; /* Отступы */
+    }
+
+QLineEdit:hover {
+		background-color: #1E1E1E
+}
+
+    QLineEdit:focus {
+        border: 2px solid #0056a1; /* Цвет границы при фокусе */
+        background-color: #3E3E3E; /* Цвет фона при фокусе */
+    }</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Ссылка на трейлер</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ageLimitAddPAge">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>380</y>
+       <width>211</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+        background-color: #2E2E2E; /* Темный фон */
+        color: #FFFFFF; /* Белый текст */
+        border: 2px solid #0078d7; /* Цвет границы */
+        border-radius: 10px; /* Закругленные углы */
+        padding: 5px; /* Отступы */
+    }
+
+QLineEdit:hover {
+		background-color: #1E1E1E
+}
+
+    QLineEdit:focus {
+        border: 2px solid #0056a1; /* Цвет границы при фокусе */
+        background-color: #3E3E3E; /* Цвет фона при фокусе */
+    }</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Возрастное ограничение</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="posterAddPage">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>470</y>
+       <width>211</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+        background-color: #2E2E2E; /* Темный фон */
+        color: #FFFFFF; /* Белый текст */
+        border: 2px solid #0078d7; /* Цвет границы */
+        border-radius: 10px; /* Закругленные углы */
+        padding: 5px; /* Отступы */
+    }
+
+QLineEdit:hover {
+		background-color: #1E1E1E
+}
+
+    QLineEdit:focus {
+        border: 2px solid #0056a1; /* Цвет границы при фокусе */
+        background-color: #3E3E3E; /* Цвет фона при фокусе */
+    }</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Ссылка на постер</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ErrorYearAddPage">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>240</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+		background-color: none;
+        color: red; /* Цвет текста */
+        font: bold 10pt; /* Прописной стиль текста */
+        text-align: center; /* Выравнивание текста по центру */
+    }</string>
+     </property>
+     <property name="text">
+      <string>Неверный ввод года.    Формат: XXXX</string>
+     </property>
+     <property name="scaledContents">
+      <bool>false</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ErrorRatingAddPage">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>240</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+		background-color: none;
+        color: red; /* Цвет текста */
+        font: bold 10pt; /* Прописной стиль текста */
+        text-align: center; /* Выравнивание текста по центру */
+    }</string>
+     </property>
+     <property name="text">
+      <string>Неверный ввод рейтинга.   Формат: X.X</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ErrorGenreAddPage">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>330</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+		background-color: none;
+        color: red; /* Цвет текста */
+        font: bold 10pt; /* Прописной стиль текста */
+        text-align: center; /* Выравнивание текста по центру */
+    }</string>
+     </property>
+     <property name="text">
+      <string>Неверный ввод жанров.   Формат: жанр, жанр, жанр</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ErrorRuntimeAddPage">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>330</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+		background-color: none;
+        color: red; /* Цвет текста */
+        font: bold 10pt; /* Прописной стиль текста */
+        text-align: center; /* Выравнивание текста по центру */
+    }</string>
+     </property>
+     <property name="text">
+      <string>Неверный ввод длительности.   Формат: HH:MM:SS</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ErrorAgeLimitAddPage">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>420</y>
+       <width>251</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+		background-color: none;
+        color: red; /* Цвет текста */
+        font: bold 10pt; /* Прописной стиль текста */
+        text-align: center; /* Выравнивание текста по центру */
+    }</string>
+     </property>
+     <property name="text">
+      <string>Неверный ввод возрастного ограничения. Формат: XX+ или X+</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ErrorTrailerAddPage">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>420</y>
+       <width>261</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+		background-color: none;
+        color: red; /* Цвет текста */
+        font: bold 10pt; /* Прописной стиль текста */
+        text-align: center; /* Выравнивание текста по центру */
+    }</string>
+     </property>
+     <property name="text">
+      <string>Неверный ввод ссылки на трейлер. Формат: https://www.youtube.com/</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ErrorPosterAddPage">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>510</y>
+       <width>281</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+		background-color: none;
+        color: red; /* Цвет текста */
+        font: bold 10pt; /* Прописной стиль текста */
+        text-align: center; /* Выравнивание текста по центру */
+    }</string>
+     </property>
+     <property name="text">
+      <string>Неверный ввод ссылки на постер. Формат: D:/Labs-2-cours/Labs-2-cours/images</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ErrorDescriptionAddPage">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>150</y>
+       <width>181</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+		background-color: none;
+        color: red; /* Цвет текста */
+        font: bold 10pt; /* Прописной стиль текста */
+        text-align: center; /* Выравнивание текста по центру */
+    }</string>
+     </property>
+     <property name="text">
+      <string>Данное поле не может быть пустым</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ErrorTitleAddPage">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>150</y>
+       <width>181</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+		background-color: none;
+        color: red; /* Цвет текста */
+        font: bold 10pt; /* Прописной стиль текста */
+        text-align: center; /* Выравнивание текста по центру */
+    }</string>
+     </property>
+     <property name="text">
+      <string>Данное поле не может быть пустым</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="UpdatePage">
+    <widget class="QPushButton" name="toUpdatePageUpdatePage_2">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>30</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI Black</family>
+       <pointsize>10</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+        background-color: #2E2E2E; /* Темный фон */
+        color: #FFFFFF; /* Белый текст */
+        border: 2px solid #0078d7; /* Цвет границы */
+        border-radius: 10px; /* Закругленные углы */
+        padding: 5px; /* Отступы */
+    }
+
+QPushButton:hover {
+		background-color: #1E1E1E
+}</string>
+     </property>
+     <property name="text">
+      <string>Обновление</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="toAddpageUpdatePage">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>30</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI Black</family>
+       <pointsize>10</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+        background-color: #2E2E2E; /* Темный фон */
+        color: #FFFFFF; /* Белый текст */
+        border: 2px solid #0078d7; /* Цвет границы */
+        border-radius: 10px; /* Закругленные углы */
+        padding: 5px; /* Отступы */
+    }
+
+QPushButton:hover {
+		background-color: #1E1E1E
+}</string>
+     </property>
+     <property name="text">
+      <string>Добавление</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="toRemovePageUpdatePage">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>30</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI Black</family>
+       <pointsize>10</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+        background-color: #2E2E2E; /* Темный фон */
+        color: #FFFFFF; /* Белый текст */
+        border: 2px solid #0078d7; /* Цвет границы */
+        border-radius: 10px; /* Закругленные углы */
+        padding: 5px; /* Отступы */
+    }
+
+QPushButton:hover {
+		background-color: #1E1E1E
+}</string>
+     </property>
+     <property name="text">
+      <string>Удаление</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="RemovePage">
+    <widget class="QPushButton" name="toAddPageRemovePage">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>30</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI Black</family>
+       <pointsize>10</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+        background-color: #2E2E2E; /* Темный фон */
+        color: #FFFFFF; /* Белый текст */
+        border: 2px solid #0078d7; /* Цвет границы */
+        border-radius: 10px; /* Закругленные углы */
+        padding: 5px; /* Отступы */
+    }
+
+QPushButton:hover {
+		background-color: #1E1E1E
+}</string>
+     </property>
+     <property name="text">
+      <string>Добавление</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="toUpdatePageRemovePage">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>30</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI Black</family>
+       <pointsize>10</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+        background-color: #2E2E2E; /* Темный фон */
+        color: #FFFFFF; /* Белый текст */
+        border: 2px solid #0078d7; /* Цвет границы */
+        border-radius: 10px; /* Закругленные углы */
+        padding: 5px; /* Отступы */
+    }
+
+QPushButton:hover {
+		background-color: #1E1E1E
+}</string>
+     </property>
+     <property name="text">
+      <string>Обновление</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="toRemovePageRemovePage">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>30</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI Black</family>
+       <pointsize>10</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+        background-color: #2E2E2E; /* Темный фон */
+        color: #FFFFFF; /* Белый текст */
+        border: 2px solid #0078d7; /* Цвет границы */
+        border-radius: 10px; /* Закругленные углы */
+        padding: 5px; /* Отступы */
+    }
+
+QPushButton:hover {
+		background-color: #1E1E1E
+}</string>
+     </property>
+     <property name="text">
+      <string>Удаление</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

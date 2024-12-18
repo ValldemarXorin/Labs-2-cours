@@ -595,6 +595,7 @@ D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/VKFSGOINM3/m
   D:/Labs-2-cours/Labs-2-cours/headers/database/LikedDBManager.h \
   D:/Labs-2-cours/Labs-2-cours/headers/database/MoviesDBManager.h \
   D:/Labs-2-cours/Labs-2-cours/headers/database/UsersDBManager.h \
+  D:/Labs-2-cours/Labs-2-cours/headers/interface/AdminWindow.h \
   D:/Labs-2-cours/Labs-2-cours/headers/interface/FiltersWindow.h \
   D:/Labs-2-cours/Labs-2-cours/headers/interface/MovieCard.h \
   D:/Labs-2-cours/Labs-2-cours/headers/interface/MovieCardInfo.h \
