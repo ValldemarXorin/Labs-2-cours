@@ -50,6 +50,7 @@ private:
     IMoviesRepository *movies_repository;
     LikedRepository* liked_movies;
     TopParser* parser;
+    std::vector<Movie> top_movies;
 };
 
 

@@ -77,6 +77,8 @@ constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::string
     "recommend_movies_method",
     "get_filters_autoselection",
     "get_top_kinopoisk",
+    "std::vector<Movie>",
+    "top_movies",
     "add_movie_card_top",
     "on_AdminButton_clicked"
 );
@@ -129,9 +131,9 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
       39,    1,  379,    2, 0x28,   98 /* Private | MethodCloned */,
       39,    0,  382,    2, 0x28,  100 /* Private | MethodCloned */,
       40,    5,  383,    2, 0x08,  101 /* Private */,
-      41,    0,  394,    2, 0x08,  107 /* Private */,
-      42,   10,  395,    2, 0x08,  108 /* Private */,
-      43,    0,  416,    2, 0x08,  119 /* Private */,
+      41,    1,  394,    2, 0x08,  107 /* Private */,
+      44,   10,  397,    2, 0x08,  109 /* Private */,
+      45,    0,  418,    2, 0x08,  120 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -164,7 +166,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
     QMetaType::Void, QMetaType::QString,   18,
     QMetaType::Void,
     QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString,   18,   19,   20,   21,   22,
-    QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 42,   43,
     QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::Int,   26,   18,   20,   27,   19,   28,   22,   30,   31,   29,
     QMetaType::Void,
 
@@ -318,6 +320,7 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         // method 'get_top_kinopoisk'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<std::vector<Movie>, std::false_type>,
         // method 'add_movie_card_top'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
@@ -372,7 +375,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 27: _t->recommend_movies_method((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 28: _t->recommend_movies_method(); break;
         case 29: _t->get_filters_autoselection((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[5]))); break;
-        case 30: _t->get_top_kinopoisk(); break;
+        case 30: _t->get_top_kinopoisk((*reinterpret_cast< std::add_pointer_t<std::vector<Movie>>>(_a[1]))); break;
         case 31: _t->add_movie_card_top((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[5])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[6])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[7])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[8])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[9])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[10]))); break;
         case 32: _t->on_AdminButton_clicked(); break;
         default: ;

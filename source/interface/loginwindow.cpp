@@ -12,6 +12,8 @@ LoginWindow::LoginWindow(IMoviesRepository* movies,
 
     ui->setupUi(this);
 
+    top_movies = parser->fetch_movies(movies_repository->get_movies());
+
     ui->password->setEchoMode(QLineEdit::Password);
     ui->PasswordAdministrator->setEchoMode(QLineEdit::Password);
 
@@ -60,7 +62,7 @@ void LoginWindow::on_SingIn_clicked() {
 
     User* current_user = users->get_user(email.toStdString(), password.toStdString());
 
-    mainWindow = new MainWindow(movies_repository, users, liked_movies, current_user);
+    mainWindow = new MainWindow(movies_repository, users, liked_movies, current_user, top_movies);
 
     mainWindow->show();
 
@@ -109,7 +111,7 @@ void LoginWindow::on_SingUp_clicked() {
                                 email.toStdString(), password.toStdString(), "user");
     }
 
-    mainWindow = new MainWindow(movies_repository, users, liked_movies, current_user);
+    mainWindow = new MainWindow(movies_repository, users, liked_movies, current_user, top_movies);
 
     mainWindow->show();
     this->close();

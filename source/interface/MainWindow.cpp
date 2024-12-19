@@ -10,7 +10,7 @@
 #include <chrono>
 
 MainWindow::MainWindow(IMoviesRepository* movies, IUserRepository* users, LikedRepository* liked_movies, User* current_user,
-                       QWidget *parent) :
+                       std::vector<Movie> top_movies, QWidget *parent) :
         QMainWindow(parent), ui(new Ui::MainWindow), movies_repository(movies), users(users), liked_movies(liked_movies),
         search_engine(new SearchEngine(*movies)), movies_for_search_list(movies->get_movies()),
         current_user(current_user), json_movie_collection(new JSONMovieCollection("MyLiked")),
@@ -31,7 +31,7 @@ MainWindow::MainWindow(IMoviesRepository* movies, IUserRepository* users, LikedR
             &MainWindow::using_search_enging);
 
 
-    get_top_kinopoisk();
+    get_top_kinopoisk(top_movies);
 
     show_liked_movies();
 }
@@ -520,20 +520,20 @@ void MainWindow::recommend_movies_method(const QString &genre, const QString &ag
     }
 }
 
-void MainWindow::get_top_kinopoisk() {
-    std::vector<Movie> temp_movies = parser->fetch_movies(movies_repository->get_movies());
-
-    for (const auto& movie: temp_movies)
+void MainWindow::get_top_kinopoisk(std::vector<Movie> top_movies) {
+    for (const auto& movie: top_movies)
         add_movie_card_top(QString::fromStdString(movie.get_title()),
-                                            QString::fromStdString(movie.get_genre()),
-                                            QString::fromStdString(std::to_string(movie.get_rating())),
-                                            QString::fromStdString(std::to_string(movie.get_release_year())),
-                                            QString::fromStdString(movie.get_age_limit()),
-                                            QString::fromStdString(movie.get_description()),
-                                            QString::fromStdString(movie.get_runtime()),
-                                            QString::fromStdString(movie.get_poster_link()),
-                                            QString::fromStdString(movie.get_trailer_link()),
-                                            movie.get_id());
+                           QString::fromStdString(movie.get_genre()),
+                           QString::fromStdString(std::to_string(movie.get_rating())),
+                           QString::fromStdString(std::to_string(movie.get_release_year())),
+                           QString::fromStdString(movie.get_age_limit()),
+                           QString::fromStdString(movie.get_description()),
+                           QString::fromStdString(movie.get_runtime()),
+                           QString::fromStdString(movie.get_poster_link()),
+                           QString::fromStdString(movie.get_trailer_link()),
+                           movie.get_id());
+
+
 }
 
 void MainWindow::add_movie_card_top(const QString &title, const QString &genre, const QString &rating,

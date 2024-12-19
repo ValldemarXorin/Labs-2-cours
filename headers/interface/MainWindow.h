@@ -44,7 +44,7 @@ Q_OBJECT
 
 public:
     explicit MainWindow(IMoviesRepository* movies_repository, IUserRepository* users, LikedRepository* liked_movies,
-                        User* current_user, QWidget *parent = nullptr);
+                        User* current_user, std::vector<Movie> top_movies, QWidget *parent = nullptr);
 
     ~MainWindow() override;
 
@@ -115,7 +115,7 @@ private slots:
     void get_filters_autoselection(const QString& genre, const QString& age_limit, const QString& rating,
                                     const QString& year, const QString& runtime);
 
-    void get_top_kinopoisk();
+    void get_top_kinopoisk(std::vector<Movie> top_movies);
 
     void add_movie_card_top(const QString& title, const QString& genre,
                         const QString& rating, const QString& release_year, const QString& age_limit,
