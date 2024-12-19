@@ -23,7 +23,7 @@ std::vector<LikedMovie> LikedDBManager::load_data_from_DB() {
     sqlite3_stmt *stmt;
     std::string sql = "SELECT Liked.liked_id, Liked.user_id, Liked.movie_id, Movies.movie_id, Movies.title, "
                       "Movies.description, Movies.genre, Movies.release_year, Movies.runtime, "
-                      "Movies.rating, Movies.age_limit, Movies.link_id "
+                      "Movies.rating, Movies.age_limit, Movies.poster_link, Movies.trailer_link "
                       "FROM Liked "
                       "JOIN Movies ON Movies.movie_id=Liked.movie_id";
 
@@ -41,11 +41,13 @@ std::vector<LikedMovie> LikedDBManager::load_data_from_DB() {
         std::string runtime = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 8));
         float rating = sqlite3_column_double(stmt, 9);
         std::string age_limit = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 10));
-        int link_id = sqlite3_column_int(stmt, 11);
+        std::string poster_link = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 11));
+        std::string trailer_link = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 12));
+
 
         liked_movies.emplace_back(liked_id, user_id, Movie(movie_id, title, description, genre,
-                                                           release_year, runtime, rating, link_id,
-                                                           age_limit));
+                                                           release_year, runtime, rating, age_limit,
+                                                           poster_link, trailer_link));
     }
     sqlite3_finalize(stmt);
 

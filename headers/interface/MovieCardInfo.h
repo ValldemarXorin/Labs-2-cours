@@ -26,7 +26,8 @@ public:
     void SetIconLikeButton();
 
     void set_information(QString title, QString genre, QString rating, QString release_year, QString runtime,
-                         QString age_limit, QString description, int id, bool isLiked);
+                         QString age_limit, QString description, int id, QString poster_link, QString trailer_link,
+                         bool isLiked);
 
     void OnLikeButtonClicked();
 

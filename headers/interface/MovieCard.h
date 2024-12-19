@@ -27,7 +27,8 @@ public:
 
     void set_movie_card_data(const QString& title, const QString& genre,
                         const QString& rating, const QString& release_year, const QString& age_limit,
-                        const QString& description, int id, bool isLiked);
+                        const QString& description, int id, const QString &runtime,
+                        const QString& poster_link, const QString& trailer_link, bool isLiked);
 
     QPushButton* getViewDetailsButton();
 
@@ -36,6 +37,17 @@ public:
 private:
     Ui::MovieCard *ui;
     MovieCardInfo* movie_card_info {new MovieCardInfo};
+    QString title_card;
+    QString genre_card;
+    QString rating_card;
+    QString release_year_card;
+    QString age_limit_card;
+    QString description_card;
+    QString runtime_card;
+    QString poster_link_card;
+    QString trailer_link_card;
+    int movie_id_card;
+    bool isLiked_card;
 };
 
 

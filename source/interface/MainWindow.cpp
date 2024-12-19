@@ -15,7 +15,7 @@ MainWindow::MainWindow(IMoviesRepository* movies, IUserRepository* users, LikedR
         search_engine(new SearchEngine(*movies)), movies_for_search_list(movies->get_movies()),
         current_user(current_user), json_movie_collection(new JSONMovieCollection("MyLiked")),
         recommend(new MovieRecommender(movies_repository->get_movies())),
-        admin_window(new AdminWindow(*movies_repository)){
+        admin_window(new AdminWindow(movies_repository)){
 
     ui->setupUi(this);
 
@@ -251,13 +251,14 @@ void MainWindow::using_search_enging() {
                        QString::fromStdString(std::to_string(movie.get_rating())),
                        QString::fromStdString(std::to_string(movie.get_release_year())),
                        QString::fromStdString(movie.get_age_limit()), QString::fromStdString(movie.get_description()),
-                       movie.get_id());
+                       movie.get_id(), QString::fromStdString(movie.get_poster_link()), QString::fromStdString(movie.get_trailer_link()),
+                       QString::fromStdString(movie.get_runtime()));
     }
 }
 
 void MainWindow::add_movie_card_search_page(const QString &title, const QString &genre, const QString &rating,
                                       const QString &release_year, const QString &age_limit, const QString &description,
-                                      int id) {
+                                      int id, const QString& poster_link, const QString& trailer_link, const QString& runtime) {
     auto movie_card = new MovieCard();
 
     bool is_liked = false;
@@ -268,7 +269,8 @@ void MainWindow::add_movie_card_search_page(const QString &title, const QString 
         }
     }
 
-    movie_card->set_movie_card_data(title, genre, rating, release_year, age_limit, description, id, is_liked);
+    movie_card->set_movie_card_data(title, genre, rating, release_year, age_limit, description, id, runtime,
+                                    poster_link, trailer_link, is_liked);
 
     auto item = new QListWidgetItem(ui->MoviesListSearchPage);
     item->setSizeHint(QSize(440, 127));
@@ -305,6 +307,7 @@ void MainWindow::delete_liked_movie(int movie_id) {
 
 void MainWindow::add_movie_card_liked(const QString &title, const QString &genre, const QString &rating,
                                       const QString &release_year, const QString &age_limit, const QString &description,
+                                      const QString &runtime, const QString &poster_link, const QString &trailer_link,
                                       int id) {
     auto movie_card = new MovieCard();
 
@@ -315,7 +318,7 @@ void MainWindow::add_movie_card_liked(const QString &title, const QString &genre
             break;
         }
     }
-    movie_card->set_movie_card_data(title, genre, rating, release_year, age_limit, description, id, is_liked);
+    movie_card->set_movie_card_data(title, genre, rating, release_year, age_limit, description, id, runtime,  poster_link, trailer_link, is_liked);
 
     auto item = new QListWidgetItem(ui->MoviesListLikedPage);
     item->setSizeHint(QSize(440, 127));
@@ -337,6 +340,7 @@ void MainWindow::show_liked_movies() {
     for (auto& liked_movie: liked_movies->get_liked_movies(current_user->get_id())) {
         add_movie_card_liked(QString::fromStdString(liked_movie.get_title()), QString::fromStdString(liked_movie.get_genre()), QString::fromStdString(std::to_string(liked_movie.get_rating())),
                              QString::fromStdString(std::to_string(liked_movie.get_release_year())), QString::fromStdString(liked_movie.get_age_limit()), QString::fromStdString(liked_movie.get_description()),
+                             QString::fromStdString(liked_movie.get_runtime()), QString::fromStdString(liked_movie.get_poster_link()), QString::fromStdString(liked_movie.get_trailer_link()),
                              liked_movie.get_id());
     }
 }
@@ -383,7 +387,8 @@ void MainWindow::apply_filters_json(const QString &genre, const QString &age_lim
 
 void MainWindow::add_movie_card_autoselection_favorites(const QString &title, const QString &genre, const QString &rating,
                                               const QString &release_year, const QString &age_limit,
-                                              const QString &description, int id) {
+                                              const QString &description, const QString &runtime, const QString &poster_link,
+                                              const QString &trailer_link, int id) {
     auto movie_card = new MovieCard();
 
     bool is_liked = false;
@@ -393,7 +398,7 @@ void MainWindow::add_movie_card_autoselection_favorites(const QString &title, co
             break;
         }
     }
-    movie_card->set_movie_card_data(title, genre, rating, release_year, age_limit, description, id, is_liked);
+    movie_card->set_movie_card_data(title, genre, rating, release_year, age_limit, description, id, runtime, poster_link, trailer_link, is_liked);
 
     auto item = new QListWidgetItem(ui->FavoritesAutoselectionMoviePage);
     item->setSizeHint(QSize(440, 127));
@@ -412,7 +417,8 @@ void MainWindow::add_movie_card_autoselection_favorites(const QString &title, co
 
 void MainWindow::add_movie_card_autoselection_random(const QString &title, const QString &genre, const QString &rating,
                                                      const QString &release_year, const QString &age_limit,
-                                                     const QString &description, int id) {
+                                                     const QString &description, const QString &runtime, const QString &poster_link,
+                                                     const QString &trailer_link, int id) {
 
     auto movie_card = new MovieCard();
 
@@ -423,7 +429,7 @@ void MainWindow::add_movie_card_autoselection_random(const QString &title, const
             break;
         }
     }
-    movie_card->set_movie_card_data(title, genre, rating, release_year, age_limit, description, id, is_liked);
+    movie_card->set_movie_card_data(title, genre, rating, release_year, age_limit, description, id, runtime, poster_link, trailer_link, is_liked);
 
     auto item = new QListWidgetItem(ui->RandomAutoselectionMoviePage);
     item->setSizeHint(QSize(440, 127));
@@ -487,6 +493,9 @@ void MainWindow::recommend_movies_method(const QString &genre, const QString &ag
                                                    QString::fromStdString(std::to_string(recommend_movies[i].get_release_year())),
                                                    QString::fromStdString(recommend_movies[i].get_age_limit()),
                                                    QString::fromStdString(recommend_movies[i].get_description()),
+                                                   QString::fromStdString(recommend_movies[i].get_runtime()),
+                                                   QString::fromStdString(recommend_movies[i].get_poster_link()),
+                                                   QString::fromStdString(recommend_movies[i].get_trailer_link()),
                                                    recommend_movies[i].get_id());
 
         for (int i = recommend_movies.size() - 2; i < recommend_movies.size(); ++i)
@@ -496,6 +505,9 @@ void MainWindow::recommend_movies_method(const QString &genre, const QString &ag
                                                 QString::fromStdString(std::to_string(recommend_movies[i].get_release_year())),
                                                 QString::fromStdString(recommend_movies[i].get_age_limit()),
                                                 QString::fromStdString(recommend_movies[i].get_description()),
+                                                QString::fromStdString(recommend_movies[i].get_runtime()),
+                                                QString::fromStdString(recommend_movies[i].get_poster_link()),
+                                                QString::fromStdString(recommend_movies[i].get_trailer_link()),
                                                 recommend_movies[i].get_id());
     }
     catch (std::runtime_error& e) {
@@ -518,11 +530,15 @@ void MainWindow::get_top_kinopoisk() {
                                             QString::fromStdString(std::to_string(movie.get_release_year())),
                                             QString::fromStdString(movie.get_age_limit()),
                                             QString::fromStdString(movie.get_description()),
+                                            QString::fromStdString(movie.get_runtime()),
+                                            QString::fromStdString(movie.get_poster_link()),
+                                            QString::fromStdString(movie.get_trailer_link()),
                                             movie.get_id());
 }
 
 void MainWindow::add_movie_card_top(const QString &title, const QString &genre, const QString &rating,
                                 const QString &release_year, const QString &age_limit, const QString &description,
+                                const QString &runtime, const QString &poster_link, const QString &trailer_link,
                                 int id) {
     auto movie_card = new MovieCard();
 
@@ -533,7 +549,8 @@ void MainWindow::add_movie_card_top(const QString &title, const QString &genre, 
             break;
         }
     }
-    movie_card->set_movie_card_data(title, genre, rating, release_year, age_limit, description, id, is_liked);
+    movie_card->set_movie_card_data(title, genre, rating, release_year, age_limit, description, id, runtime,
+                                    poster_link, trailer_link, is_liked);
 
     auto item = new QListWidgetItem(ui->TopMoviesListTopsPage);
     item->setSizeHint(QSize(440, 127));

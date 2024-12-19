@@ -4,6 +4,13 @@
 
 #include "../headers/TopParser.h"
 
+#include <fstream>
+#include <ctime>
+#include <nlohmann/json.hpp>
+
+using json = nlohmann::json;
+
+// Конструктор TopParser
 TopParser::TopParser() {
     curl_global_init(CURL_GLOBAL_DEFAULT);
 }
@@ -63,13 +70,11 @@ std::vector<Movie> TopParser::parse_movies(const std::string& responseString, co
             std::string title = film.contains("nameRu") && !film["nameRu"].is_null() ? film["nameRu"].get<std::string>() : "N/A";
             int release_year = film.contains("year") && !film["year"].is_null() ? std::stoi(film["year"].get<std::string>()) : 0;
 
-            int id, link_id;
             for (const auto& db_movie : all_movies) {
                 if (db_movie.get_title() == title && db_movie.get_release_year() == release_year) {
                     movies.emplace_back(db_movie);
                     break;
                 }
-
             }
         }
     } catch (const std::exception& e) {
@@ -80,6 +85,116 @@ std::vector<Movie> TopParser::parse_movies(const std::string& responseString, co
 }
 
 std::vector<Movie> TopParser::fetch_movies(const std::vector<Movie>& all_movies) {
+    if (is_file_recent()) {
+        return load_movies_from_file();
+    }
     std::string response = perform_request(apiUrl, apiKey);
-    return parse_movies(response, all_movies);
+    auto movies = parse_movies(response, all_movies);
+    save_movies_to_file(movies);
+    return movies;
+}
+
+void TopParser::save_movies_to_file(const std::vector<Movie>& movies) {
+    // Получение текущей даты и времени
+    std::time_t now = std::time(nullptr);
+    char buffer[100];
+    std::strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S", std::localtime(&now));
+    std::string current_time(buffer);
+
+    // Подготовка JSON-объекта для сохранения
+    json outputJson;
+    outputJson["parse_datetime"] = current_time;
+    outputJson["movies"] = json::array();
+
+    for (const auto& movie : movies) {
+        json movieJson;
+        movieJson["title"] = movie.get_title();
+        movieJson["description"] = movie.get_description();
+        movieJson["genre"] = movie.get_genre();
+        movieJson["release_year"] = movie.get_release_year();
+        movieJson["runtime"] = movie.get_runtime();
+        movieJson["rating"] = movie.get_rating();
+        movieJson["age_limit"] = movie.get_age_limit();
+        movieJson["poster_link"] = movie.get_poster_link();
+        movieJson["trailer_link"] = movie.get_trailer_link();
+        outputJson["movies"].push_back(movieJson);
+    }
+
+    // Сохранение в файл
+    std::ofstream outFile("top_movies.json");
+    if (!outFile.is_open()) {
+        throw std::runtime_error("Failed to open file for writing");
+    }
+    outFile << outputJson.dump(4); // Форматирование с отступом в 4 пробела
+    outFile.close();
+}
+
+std::vector<Movie> TopParser::load_movies_from_file() {
+    std::ifstream inFile("top_movies.json");
+    if (!inFile.is_open()) {
+        throw std::runtime_error("Failed to open file for reading");
+    }
+
+    json inputJson;
+    inFile >> inputJson;
+    inFile.close();
+
+    std::vector<Movie> movies;
+    for (const auto& movieJson : inputJson["movies"]) {
+        movies.emplace_back(
+                movieJson.value("id", 0),
+                movieJson.value("title", "N/A"),
+                movieJson.value("description", "N/A"),
+                movieJson.value("genre", "N/A"),
+                movieJson.value("release_year", 0),
+                movieJson.value("runtime", "N/A"),
+                movieJson.value("rating", 0.0f),
+                movieJson.value("age_limit", "N/A"),
+                movieJson.value("poster_link", "N/A"),
+                movieJson.value("trailer_link", "N/A")
+        );
+    }
+
+    return movies;
+}
+
+bool TopParser::is_file_recent() {
+    std::ifstream inFile("top_movies.json");
+    if (!inFile.is_open()) {
+        return false;
+    }
+
+    json inputJson;
+    inFile >> inputJson;
+    inFile.close();
+
+    std::string lastParseTime = inputJson.value("parse_datetime", "");
+    if (lastParseTime.empty()) {
+        return false;
+    }
+
+    std::tm lastParseTm = {};
+    std::istringstream ss(lastParseTime);
+    ss >> std::get_time(&lastParseTm, "%Y-%m-%d %H:%M:%S");
+    if (ss.fail()) {
+        return false;
+    }
+
+    std::time_t lastParseEpoch = std::mktime(&lastParseTm);
+    std::time_t now = std::time(nullptr);
+
+    return std::difftime(now, lastParseEpoch) <= 86400; // 86400 секунд = 1 день
+}
+
+std::string TopParser::get_last_update_time() {
+    std::ifstream inFile("top_movies.json");
+    if (!inFile.is_open()) {
+        throw std::runtime_error("Failed to open file for reading");
+    }
+
+    json inputJson;
+    inFile >> inputJson;
+    inFile.close();
+
+    return inputJson.value("parse_datetime", "Unknown");
 }

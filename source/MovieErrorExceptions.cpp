@@ -26,36 +26,47 @@ bool MovieErrorExceptions::is_exist_genre(const std::string& genre) const {
 }
 
 bool MovieErrorExceptions::validate_genre(const std::string& genres) const {
+    if (genres.empty() || genres.front() == ' ' || genres.back() == ' ')
+        return false;
+
     std::istringstream stream(genres);
     std::string genre;
     std::vector<std::string> valid_genres;
     size_t pos = 0;
     int count_genres = 0;
 
-    if (genres.empty() || genres.front() == ' ' || genres.back() == ' ')
-        return false;
-
+    // Проверяем каждый жанр, разделенный ", "
     while (true) {
         size_t comma = genres.find(", ", pos);
 
+        // Последний жанр (после последней запятой)
         if (comma == std::string::npos) {
             genre = genres.substr(pos);
-            if (genre.empty() || !is_exist_genre(genre)) return false;
+
+            // Проверка пустого жанра или существования
+            if (genre.empty() || !is_exist_genre(genre))
+                return false;
+
             valid_genres.push_back(genre);
+            count_genres++;
             break;
         }
 
+        // Промежуточные жанры
         genre = genres.substr(pos, comma - pos);
-        if (genre.empty() || !is_exist_genre(genre)) return false;
+
+        // Проверка пустого жанра или существования
+        if (genre.empty() || !is_exist_genre(genre))
+            return false;
 
         valid_genres.push_back(genre);
-        pos = comma + 2;
+        pos = comma + 2; // Переход на следующий жанр (учитываем ", ")
         count_genres++;
     }
 
-    if (count_genres != 3) return false;
-
-    if (valid_genres.empty()) return false;
+    // Убедиться, что количество жанров равно строго 3
+    if (count_genres != 3)
+        return false;
 
     return true;
 }
@@ -71,5 +82,6 @@ bool MovieErrorExceptions::validate_trailer(const std::string &trailer) const {
 }
 
 bool MovieErrorExceptions::validate_poster(const std::string &poster) const {
-    return false;
+    std::regex path_regex(R"(^D:/Labs-2-cours/Labs-2-cours/images/)");
+    return std::regex_search(poster, path_regex);
 }

@@ -21,7 +21,8 @@ MovieCard::~MovieCard() {
 
 void MovieCard::set_movie_card_data(const QString &title, const QString &genre, const QString &rating,
                                     const QString &release_year, const QString &age_limit, const QString& description,
-                                    int id, bool isLiked) {
+                                    int id, const QString &runtime,
+                                    const QString& poster_link, const QString& trailer_link, bool isLiked) {
     std::string normal_rating = rating.toStdString();
     size_t dot_position = normal_rating.find('.');
     normal_rating = normal_rating.substr(0, dot_position + 2);
@@ -30,7 +31,17 @@ void MovieCard::set_movie_card_data(const QString &title, const QString &genre, 
     ui->RatingMovie->setText(QString::fromStdString(normal_rating));
     //ui->YearMovie->setText(release_year);
     ui->AgeLimitMovie->setText(age_limit);
-    movie_card_info->set_information(title, genre, rating, release_year, "01:00:55", age_limit, description, id, isLiked);
+    title_card = title;
+    genre_card = genre;
+    rating_card = rating;
+    release_year_card = release_year;
+    age_limit_card = age_limit;
+    description_card = description;
+    movie_id_card = id;
+    runtime_card = runtime;
+    poster_link_card = poster_link;
+    trailer_link_card = trailer_link;
+    isLiked_card = isLiked;
 }
 
 QPushButton* MovieCard::getViewDetailsButton() {
@@ -38,5 +49,8 @@ QPushButton* MovieCard::getViewDetailsButton() {
 }
 
 MovieCardInfo* MovieCard::getMovieCardInfo() {
+    movie_card_info->set_information(title_card, genre_card, rating_card, release_year_card,
+                                     runtime_card, age_limit_card, description_card,
+                                     movie_id_card, poster_link_card, trailer_link_card, isLiked_card);
     return movie_card_info;
 }

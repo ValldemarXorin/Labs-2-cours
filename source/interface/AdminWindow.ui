@@ -340,7 +340,7 @@ QLineEdit:hover {
       <string>Длительность</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="AddMoviePageAddPage">
+    <widget class="QPushButton" name="addMoviePageAddPage">
      <property name="geometry">
       <rect>
        <x>420</x>
@@ -714,6 +714,33 @@ QLineEdit:hover {
      </property>
      <property name="text">
       <string>Данное поле не может быть пустым</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="SuccessfulAddAddPage">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>510</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+		background-color: none;
+        color: green; /* Цвет текста */
+        font: bold 10pt; /* Прописной стиль текста */
+        text-align: center; /* Выравнивание текста по центру */
+    }</string>
+     </property>
+     <property name="text">
+      <string>Фильм успешно добавлен</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignmentFlag::AlignCenter</set>

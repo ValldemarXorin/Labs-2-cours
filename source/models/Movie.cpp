@@ -3,26 +3,26 @@
 Movie::Movie() {};
 
 Movie::Movie(int id, const std::string &title, const std::string &description, const std::string &genre,
-             int realease_year, const std::string &runtime, float rating, int link_id, std::string& age_limit)
+             int realease_year, const std::string &runtime, float rating, const std::string& age_limit, const std::string& poster_link,
+             const std::string& trailer_link)
              : id(id), title(title), description(description), genre(genre), release_year(realease_year),
-             runtime(runtime), rating(rating), link_id(link_id), age_limit(age_limit) {};
+             runtime(runtime), rating(rating), poster_link(poster_link), trailer_link(trailer_link), age_limit(age_limit) {};
 
 Movie::Movie(const Movie &other)
         : id(other.id), title(other.title), description(other.description),
           genre(other.genre), release_year(other.release_year),
           runtime(other.runtime), rating(other.rating),
-          link_id(other.link_id), age_limit(other.age_limit) {};
+          poster_link(other.poster_link), trailer_link(other.trailer_link), age_limit(other.age_limit) {};
 
 Movie::Movie(Movie &&other) noexcept
         : id(other.id), title(std::move(other.title)),
           description(std::move(other.description)), genre(std::move(other.genre)),
           release_year(other.release_year), runtime(std::move(other.runtime)),
-          rating(other.rating), link_id(other.link_id),
+          rating(other.rating), poster_link(other.poster_link), trailer_link(other.trailer_link),
           age_limit(std::move(other.age_limit)) {
     other.id = 0;
     other.release_year = 0;
     other.rating = 0.0f;
-    other.link_id = 0;
 };
 
 Movie &Movie::operator=(const Movie &other)  {
@@ -34,7 +34,8 @@ Movie &Movie::operator=(const Movie &other)  {
         release_year = other.release_year;
         runtime = other.runtime;
         rating = other.rating;
-        link_id = other.link_id;
+        poster_link = other.poster_link;
+        trailer_link = other.trailer_link;
         age_limit = other.age_limit;
     }
     return *this;
@@ -49,13 +50,13 @@ Movie &Movie::operator=(Movie &&other) noexcept  {
         release_year = other.release_year;
         runtime = std::move(other.runtime);
         rating = other.rating;
-        link_id = other.link_id;
+        poster_link = other.poster_link;
+        trailer_link = other.trailer_link;
         age_limit = std::move(other.age_limit);
 
         other.id = 0;
         other.release_year = 0;
         other.rating = 0.0f;
-        other.link_id = 0;
     }
     return *this;
 }
@@ -74,7 +75,9 @@ const std::string &Movie::get_runtime() const { return runtime; }
 
 float Movie::get_rating() const { return rating; }
 
-int Movie::get_link_id() const { return link_id; }
+const std::string& Movie::get_poster_link() const { return poster_link; }
+
+const std::string &Movie::get_trailer_link() const { return trailer_link; }
 
 const std::string &Movie::get_age_limit() const { return age_limit; }
 
@@ -94,5 +97,5 @@ int Movie::get_runtime_minutes() const {
 bool Movie::operator==(const Movie &other) const {
     return title == other.title && description == other.description && genre == other.genre &&
     release_year == other.release_year && runtime == other.runtime && rating == other.rating &&
-    link_id == other.link_id && age_limit == other.age_limit;
+    poster_link == other.poster_link && trailer_link == other.trailer_link && age_limit == other.age_limit;
 }

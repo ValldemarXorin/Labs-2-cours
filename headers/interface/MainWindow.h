@@ -82,19 +82,23 @@ private slots:
 
     void add_movie_card_search_page(const QString& title, const QString& genre,
                               const QString& rating, const QString& release_year, const QString& age_limit,
-                              const QString& description, int id);
+                              const QString& description, int id, const QString& poster_link, const QString& trailer_link,
+                              const QString& runtime);
 
     void add_movie_card_liked(const QString& title, const QString& genre,
                                     const QString& rating, const QString& release_year, const QString& age_limit,
-                                    const QString& description, int id);
+                                    const QString& description, const QString &runtime, const QString &poster_link,
+                                    const QString &trailer_link, int id);
 
     void add_movie_card_autoselection_favorites(const QString& title, const QString& genre,
                                       const QString& rating, const QString& release_year, const QString& age_limit,
-                                      const QString& description, int id);
+                                      const QString& description, const QString &runtime, const QString &poster_link,
+                                      const QString &trailer_link, int id);
 
     void add_movie_card_autoselection_random(const QString& title, const QString& genre,
                                                 const QString& rating, const QString& release_year, const QString& age_limit,
-                                                const QString& description, int id);
+                                                const QString& description, const QString &runtime, const QString &poster_link,
+                                                const QString &trailer_link, int id);
 
     void apply_filters_json(const QString& genre, const QString& age_limit, const QString& rating,
                             const QString& year, const QString& runtime);
@@ -115,7 +119,8 @@ private slots:
 
     void add_movie_card_top(const QString& title, const QString& genre,
                         const QString& rating, const QString& release_year, const QString& age_limit,
-                        const QString& description, int id);
+                        const QString& description, const QString &runtime, const QString &poster_link,
+                        const QString &trailer_link, int id);
 
     void on_AdminButton_clicked();
 
@@ -148,7 +153,7 @@ private:
     QString year_filter_autoselection {"Любой год"};
     QString runtime_filter_autoselection {"Любая длительность"};
     TopParser* parser {new TopParser};
-    AdminWindow* admin_window {new AdminWindow};
+    AdminWindow* admin_window;
 };
 
 

@@ -18,15 +18,15 @@ class AdminWindow : public QWidget {
 Q_OBJECT
 
 public:
-    explicit AdminWindow(IMoviesRepository& movies_repository, QWidget *parent = nullptr);
+    explicit AdminWindow(IMoviesRepository *movies_repository, QWidget *parent = nullptr);
 
     ~AdminWindow() override;
 
-    void on_AddMoviePageAddPage_clicked();
+    void on_addMoviePageAddPage_clicked();
 
 private:
     Ui::AdminWindow *ui;
-    IMoviesRepository movies_repository;
+    IMoviesRepository* movies_repository;
 };
 
 

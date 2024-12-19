@@ -19,11 +19,14 @@ MovieCardInfo::~MovieCardInfo() {
 }
 
 void MovieCardInfo::set_information(QString title, QString genre, QString rating, QString release_year,
-                               QString runtime, QString age_limit, QString description, int id, bool isLiked) {
+                               QString runtime, QString age_limit, QString description, int id, QString poster_link,
+                               QString trailer_link, bool isLiked) {
 
     std::string normal_rating = rating.toStdString();
     size_t dot_position = normal_rating.find('.');
     normal_rating = normal_rating.substr(0, dot_position + 2);
+
+    QString html_link = QString(R"(<a href="%1">Трейлер</a>)").arg(trailer_link);
 
     ui->TitleMovie->setText(title);
     ui->Genre->setText(genre);
@@ -32,6 +35,16 @@ void MovieCardInfo::set_information(QString title, QString genre, QString rating
     ui->AgeLimit->setText(age_limit);
     ui->Description->setText(description);
     ui->Rating->setText(QString::fromStdString(normal_rating));
+    ui->TrailerLink->setOpenExternalLinks(true);
+    ui->TrailerLink->setText(trailer_link);
+    ui->TrailerLink->setText(html_link);
+    ui->TrailerLink->setTextFormat(Qt::RichText);
+    ui->TrailerLink->setTextInteractionFlags(Qt::TextBrowserInteraction);
+    ui->PosterLink->setPixmap(QPixmap(poster_link));
+    ui->PosterLink->setScaledContents(true);
+    ui->starIcon->setPixmap(QPixmap("D:/Labs-2-cours/Labs-2-cours/images/star.png"));
+    ui->starIcon->setScaledContents(true);
+
 
     movie_id = id;
     is_liked = isLiked;

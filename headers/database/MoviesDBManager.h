@@ -13,7 +13,7 @@
 
 class MoviesDBManager : public DBManager<Movie> {
     enum {TITLE = 1, DESCRIPTION, GENRE, REALEASE_YEAR, RUNTIME,
-            RATING, AGE_LIMIT, LINK_ID};
+            RATING, AGE_LIMIT, POSTER_LINK, TRAILER_LINK};
 
 public:
     MoviesDBManager();

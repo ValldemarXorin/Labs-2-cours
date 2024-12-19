@@ -17,6 +17,7 @@
 class IMoviesRepository : public MovieErrorExceptions {
     std::vector<Movie> movies;
     DBManager<Movie>* movies_db_manager;
+    int next_available_id;
 
 public:
     IMoviesRepository();
@@ -24,11 +25,10 @@ public:
     ~IMoviesRepository();
 
     void add_movie(const std::string &title, const std::string &description, const std::string &genre,
-                   int realease_year, const std::string &runtime, float rating, int link_id, std::string& age_limit);
+                   int realease_year, const std::string &runtime, float rating, const std::string& age_limit,
+                   const std::string& poster_link, const std::string& trailer_link);
 
     void delete_movie(std::string_view title);
-
-    void display_info() const;
 
     std::vector<Movie> get_movies();
 

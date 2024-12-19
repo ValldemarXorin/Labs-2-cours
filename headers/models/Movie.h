@@ -14,14 +14,16 @@ class Movie {
     int release_year;
     std::string runtime;
     float rating;
-    int link_id;
+    std::string poster_link;
+    std::string trailer_link;
     std::string age_limit;
 
 public:
     Movie();
 
     Movie(int id, const std::string &title, const std::string &description, const std::string &genre,
-          int realease_year, const std::string &runtime, float rating, int link_id, std::string& age_limit);
+          int realease_year, const std::string &runtime, float rating, const std::string& age_limit, const std::string& poster_link,
+          const std::string& trailer_link);
 
     // Копирующий конструктор
     Movie(const Movie& other);
@@ -52,7 +54,9 @@ public:
 
     [[nodiscard]] float get_rating() const;
 
-    [[nodiscard]] int get_link_id() const;
+    [[nodiscard]] const std::string& get_poster_link() const;
+
+    [[nodiscard]] const std::string& get_trailer_link() const;
 
     [[nodiscard]] const std::string &get_age_limit() const;
 
