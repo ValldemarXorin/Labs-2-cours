@@ -77,10 +77,16 @@ constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::string
     "recommend_movies_method",
     "get_filters_autoselection",
     "get_top_kinopoisk",
-    "std::vector<Movie>",
+    "std::vector<Movie>&",
     "top_movies",
     "add_movie_card_top",
-    "on_AdminButton_clicked"
+    "on_AdminButton_clicked",
+    "load_next_movies",
+    "size_t",
+    "count",
+    "load_next_liked_movies",
+    "batch_size",
+    "load_next_top_movies"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -93,7 +99,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-      33,   14, // methods
+      39,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -101,39 +107,45 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  212,    2, 0x08,    1 /* Private */,
-       3,    0,  213,    2, 0x08,    2 /* Private */,
-       4,    0,  214,    2, 0x08,    3 /* Private */,
-       5,    0,  215,    2, 0x08,    4 /* Private */,
-       6,    1,  216,    2, 0x08,    5 /* Private */,
-       9,    1,  219,    2, 0x08,    7 /* Private */,
-      10,    1,  222,    2, 0x08,    9 /* Private */,
-      11,    1,  225,    2, 0x08,   11 /* Private */,
-      12,    0,  228,    2, 0x08,   13 /* Private */,
-      13,    0,  229,    2, 0x08,   14 /* Private */,
-      14,    1,  230,    2, 0x08,   15 /* Private */,
-      16,    1,  233,    2, 0x08,   17 /* Private */,
-      17,    5,  236,    2, 0x08,   19 /* Private */,
-      23,    0,  247,    2, 0x08,   25 /* Private */,
-      24,    0,  248,    2, 0x08,   26 /* Private */,
-      25,   10,  249,    2, 0x08,   27 /* Private */,
-      32,   10,  270,    2, 0x08,   38 /* Private */,
-      33,   10,  291,    2, 0x08,   49 /* Private */,
-      34,   10,  312,    2, 0x08,   60 /* Private */,
-      35,    5,  333,    2, 0x08,   71 /* Private */,
-      36,    0,  344,    2, 0x08,   77 /* Private */,
-      37,    0,  345,    2, 0x08,   78 /* Private */,
-      38,    0,  346,    2, 0x08,   79 /* Private */,
-      39,    5,  347,    2, 0x08,   80 /* Private */,
-      39,    4,  358,    2, 0x28,   86 /* Private | MethodCloned */,
-      39,    3,  367,    2, 0x28,   91 /* Private | MethodCloned */,
-      39,    2,  374,    2, 0x28,   95 /* Private | MethodCloned */,
-      39,    1,  379,    2, 0x28,   98 /* Private | MethodCloned */,
-      39,    0,  382,    2, 0x28,  100 /* Private | MethodCloned */,
-      40,    5,  383,    2, 0x08,  101 /* Private */,
-      41,    1,  394,    2, 0x08,  107 /* Private */,
-      44,   10,  397,    2, 0x08,  109 /* Private */,
-      45,    0,  418,    2, 0x08,  120 /* Private */,
+       1,    0,  248,    2, 0x08,    1 /* Private */,
+       3,    0,  249,    2, 0x08,    2 /* Private */,
+       4,    0,  250,    2, 0x08,    3 /* Private */,
+       5,    0,  251,    2, 0x08,    4 /* Private */,
+       6,    1,  252,    2, 0x08,    5 /* Private */,
+       9,    1,  255,    2, 0x08,    7 /* Private */,
+      10,    1,  258,    2, 0x08,    9 /* Private */,
+      11,    1,  261,    2, 0x08,   11 /* Private */,
+      12,    0,  264,    2, 0x08,   13 /* Private */,
+      13,    0,  265,    2, 0x08,   14 /* Private */,
+      14,    1,  266,    2, 0x08,   15 /* Private */,
+      16,    1,  269,    2, 0x08,   17 /* Private */,
+      17,    5,  272,    2, 0x08,   19 /* Private */,
+      23,    0,  283,    2, 0x08,   25 /* Private */,
+      24,    0,  284,    2, 0x08,   26 /* Private */,
+      25,   10,  285,    2, 0x08,   27 /* Private */,
+      32,   10,  306,    2, 0x08,   38 /* Private */,
+      33,   10,  327,    2, 0x08,   49 /* Private */,
+      34,   10,  348,    2, 0x08,   60 /* Private */,
+      35,    5,  369,    2, 0x08,   71 /* Private */,
+      36,    0,  380,    2, 0x08,   77 /* Private */,
+      37,    0,  381,    2, 0x08,   78 /* Private */,
+      38,    0,  382,    2, 0x08,   79 /* Private */,
+      39,    5,  383,    2, 0x08,   80 /* Private */,
+      39,    4,  394,    2, 0x28,   86 /* Private | MethodCloned */,
+      39,    3,  403,    2, 0x28,   91 /* Private | MethodCloned */,
+      39,    2,  410,    2, 0x28,   95 /* Private | MethodCloned */,
+      39,    1,  415,    2, 0x28,   98 /* Private | MethodCloned */,
+      39,    0,  418,    2, 0x28,  100 /* Private | MethodCloned */,
+      40,    5,  419,    2, 0x08,  101 /* Private */,
+      41,    1,  430,    2, 0x08,  107 /* Private */,
+      44,   10,  433,    2, 0x08,  109 /* Private */,
+      45,    0,  454,    2, 0x08,  120 /* Private */,
+      46,    1,  455,    2, 0x08,  121 /* Private */,
+      46,    0,  458,    2, 0x28,  123 /* Private | MethodCloned */,
+      49,    1,  459,    2, 0x08,  124 /* Private */,
+      49,    0,  462,    2, 0x28,  126 /* Private | MethodCloned */,
+      51,    2,  463,    2, 0x08,  127 /* Private */,
+      51,    1,  468,    2, 0x28,  130 /* Private | MethodCloned */,
 
  // slots: parameters
     QMetaType::Void,
@@ -169,6 +181,12 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
     QMetaType::Void, 0x80000000 | 42,   43,
     QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::Int,   26,   18,   20,   27,   19,   28,   22,   30,   31,   29,
     QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 47,   48,
+    QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 47,   50,
+    QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 42, 0x80000000 | 47,   43,   50,
+    QMetaType::Void, 0x80000000 | 42,   43,
 
        0        // eod
 };
@@ -320,7 +338,7 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         // method 'get_top_kinopoisk'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<std::vector<Movie>, std::false_type>,
+        QtPrivate::TypeAndForceComplete<std::vector<Movie> &, std::false_type>,
         // method 'add_movie_card_top'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
@@ -334,7 +352,24 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         // method 'on_AdminButton_clicked'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'load_next_movies'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<size_t, std::false_type>,
+        // method 'load_next_movies'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'load_next_liked_movies'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<size_t, std::false_type>,
+        // method 'load_next_liked_movies'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'load_next_top_movies'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<std::vector<Movie> &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<size_t, std::false_type>,
+        // method 'load_next_top_movies'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<std::vector<Movie> &, std::false_type>
     >,
     nullptr
 } };
@@ -375,9 +410,15 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 27: _t->recommend_movies_method((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 28: _t->recommend_movies_method(); break;
         case 29: _t->get_filters_autoselection((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[5]))); break;
-        case 30: _t->get_top_kinopoisk((*reinterpret_cast< std::add_pointer_t<std::vector<Movie>>>(_a[1]))); break;
+        case 30: _t->get_top_kinopoisk((*reinterpret_cast< std::add_pointer_t<std::vector<Movie>&>>(_a[1]))); break;
         case 31: _t->add_movie_card_top((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[5])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[6])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[7])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[8])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[9])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[10]))); break;
         case 32: _t->on_AdminButton_clicked(); break;
+        case 33: _t->load_next_movies((*reinterpret_cast< std::add_pointer_t<size_t>>(_a[1]))); break;
+        case 34: _t->load_next_movies(); break;
+        case 35: _t->load_next_liked_movies((*reinterpret_cast< std::add_pointer_t<size_t>>(_a[1]))); break;
+        case 36: _t->load_next_liked_movies(); break;
+        case 37: _t->load_next_top_movies((*reinterpret_cast< std::add_pointer_t<std::vector<Movie>&>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<size_t>>(_a[2]))); break;
+        case 38: _t->load_next_top_movies((*reinterpret_cast< std::add_pointer_t<std::vector<Movie>&>>(_a[1]))); break;
         default: ;
         }
     }
@@ -402,13 +443,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 33)
+        if (_id < 39)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 33;
+        _id -= 39;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 33)
+        if (_id < 39)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 33;
+        _id -= 39;
     }
     return _id;
 }

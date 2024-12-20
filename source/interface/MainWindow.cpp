@@ -31,6 +31,14 @@ MainWindow::MainWindow(IMoviesRepository* movies, IUserRepository* users, LikedR
             &MainWindow::using_search_enging);
 
 
+    connect(ui->MoviesListSearchPage->verticalScrollBar(), &QScrollBar::valueChanged, this, [this]() {
+        if (ui->MoviesListSearchPage->verticalScrollBar()->value() ==
+            ui->MoviesListSearchPage->verticalScrollBar()->maximum()) {
+            load_next_movies();
+        }
+    });
+
+
     get_top_kinopoisk(top_movies);
 
     show_liked_movies();
@@ -234,28 +242,6 @@ MainWindow::apply_filters() {
     movies_for_search_list = compositeFilter->apply(temp_movies_for_search_list).toStdVector();
 }
 
-void MainWindow::using_search_enging() {
-    ui->MoviesListSearchPage->clear();
-    if (ui->SearchFieldSearchPage->text().toStdString().length() < precurrent_length_text_search_field)
-        movies_for_search_list = search_engine->search_by_fragment(ui->SearchFieldSearchPage->text().toStdString(),
-                                                                   movies_for_search_list, false, is_filter_apply);
-    else
-        movies_for_search_list = search_engine->search_by_fragment(ui->SearchFieldSearchPage->text().toStdString(),
-                                                                   movies_for_search_list, true, is_filter_apply);
-
-    if (is_filter_apply)
-        apply_filters();
-
-    for (auto& movie: movies_for_search_list) {
-        add_movie_card_search_page(QString::fromStdString(movie.get_title()), QString::fromStdString(movie.get_genre()),
-                       QString::fromStdString(std::to_string(movie.get_rating())),
-                       QString::fromStdString(std::to_string(movie.get_release_year())),
-                       QString::fromStdString(movie.get_age_limit()), QString::fromStdString(movie.get_description()),
-                       movie.get_id(), QString::fromStdString(movie.get_poster_link()), QString::fromStdString(movie.get_trailer_link()),
-                       QString::fromStdString(movie.get_runtime()));
-    }
-}
-
 void MainWindow::add_movie_card_search_page(const QString &title, const QString &genre, const QString &rating,
                                       const QString &release_year, const QString &age_limit, const QString &description,
                                       int id, const QString& poster_link, const QString& trailer_link, const QString& runtime) {
@@ -287,6 +273,45 @@ void MainWindow::add_movie_card_search_page(const QString &title, const QString 
             this, &MainWindow::delete_liked_movie);
 }
 
+void MainWindow::using_search_enging() {
+    ui->MoviesListSearchPage->clear();
+
+    const auto search_text = ui->SearchFieldSearchPage->text().toStdString();
+    const bool is_text_shorter = search_text.length() < precurrent_length_text_search_field;
+
+    movies_for_search_list = search_engine->search_by_fragment(
+            search_text, movies_for_search_list, !is_text_shorter, is_filter_apply
+    );
+
+    if (is_filter_apply) {
+        apply_filters();
+    }
+
+    next_movie_index = 0;
+
+    load_next_movies();
+}
+
+void MainWindow::load_next_movies(size_t count) {
+    size_t end_index = std::min(next_movie_index + count, movies_for_search_list.size());
+    for (size_t i = next_movie_index; i < end_index; ++i) {
+        const auto& movie = movies_for_search_list[i];
+        add_movie_card_search_page(
+                QString::fromStdString(movie.get_title()),
+                QString::fromStdString(movie.get_genre()),
+                QString::number(movie.get_rating()),
+                QString::number(movie.get_release_year()),
+                QString::fromStdString(movie.get_age_limit()),
+                QString::fromStdString(movie.get_description()),
+                movie.get_id(),
+                QString::fromStdString(movie.get_poster_link()),
+                QString::fromStdString(movie.get_trailer_link()),
+                QString::fromStdString(movie.get_runtime())
+        );
+    }
+    next_movie_index = end_index;
+}
+
 void MainWindow::add_liked_movie(int movie_id) {
     bool is_exist = false;
     for (auto& liked_movie: liked_movies->get_liked_movies(current_user->get_id())) {
@@ -311,13 +336,12 @@ void MainWindow::add_movie_card_liked(const QString &title, const QString &genre
                                       int id) {
     auto movie_card = new MovieCard();
 
-    bool is_liked = false;
-    for (auto& like_movie: liked_movies->get_liked_movies(current_user->get_id())) {
-        if (like_movie.get_id() == id) {
-            is_liked = true;
-            break;
-        }
-    }
+    bool is_liked = std::any_of(
+            liked_movies->get_liked_movies(current_user->get_id()).begin(),
+            liked_movies->get_liked_movies(current_user->get_id()).end(),
+            [id](const Movie& movie) { return movie.get_id() == id; }
+    );
+
     movie_card->set_movie_card_data(title, genre, rating, release_year, age_limit, description, id, runtime,  poster_link, trailer_link, is_liked);
 
     auto item = new QListWidgetItem(ui->MoviesListLikedPage);
@@ -332,18 +356,46 @@ void MainWindow::add_movie_card_liked(const QString &title, const QString &genre
             this, &MainWindow::add_liked_movie);
 
     connect(movie_card->getMovieCardInfo(), &MovieCardInfo::prepare_to_del_liked_movie,
-           this, &MainWindow::delete_liked_movie);
+            this, &MainWindow::delete_liked_movie);
+}
+
+void MainWindow::load_next_liked_movies(size_t batch_size) {
+    std::vector<Movie> liked_movie_list = liked_movies->get_liked_movies(current_user->get_id());
+    size_t end_index = std::min(next_movie_index_liked + batch_size, liked_movie_list.size());
+    for (size_t i = next_movie_index_liked; i < end_index; ++i) {
+        const auto& liked_movie = liked_movie_list[i];
+        add_movie_card_liked(
+                QString::fromStdString(liked_movie.get_title()),
+                QString::fromStdString(liked_movie.get_genre()),
+                QString::number(liked_movie.get_rating()),
+                QString::number(liked_movie.get_release_year()),
+                QString::fromStdString(liked_movie.get_age_limit()),
+                QString::fromStdString(liked_movie.get_description()),
+                QString::fromStdString(liked_movie.get_runtime()),
+                QString::fromStdString(liked_movie.get_poster_link()),
+                QString::fromStdString(liked_movie.get_trailer_link()),
+                liked_movie.get_id()
+        );
+    }
+    next_movie_index_liked = end_index;
 }
 
 void MainWindow::show_liked_movies() {
     ui->MoviesListLikedPage->clear();
-    for (auto& liked_movie: liked_movies->get_liked_movies(current_user->get_id())) {
-        add_movie_card_liked(QString::fromStdString(liked_movie.get_title()), QString::fromStdString(liked_movie.get_genre()), QString::fromStdString(std::to_string(liked_movie.get_rating())),
-                             QString::fromStdString(std::to_string(liked_movie.get_release_year())), QString::fromStdString(liked_movie.get_age_limit()), QString::fromStdString(liked_movie.get_description()),
-                             QString::fromStdString(liked_movie.get_runtime()), QString::fromStdString(liked_movie.get_poster_link()), QString::fromStdString(liked_movie.get_trailer_link()),
-                             liked_movie.get_id());
-    }
+
+    auto liked_movie_list = liked_movies->get_liked_movies(current_user->get_id());
+    next_movie_index_liked = 0;
+
+    load_next_liked_movies();
+
+    connect(ui->MoviesListLikedPage->verticalScrollBar(), &QScrollBar::valueChanged, this, [this]() {
+        if (ui->MoviesListLikedPage->verticalScrollBar()->value() ==
+            ui->MoviesListLikedPage->verticalScrollBar()->maximum()) {
+            load_next_liked_movies();
+        }
+    });
 }
+
 
 void MainWindow::on_LoadToFileButton_clicked() {
     filters_window_json->show();
@@ -520,20 +572,16 @@ void MainWindow::recommend_movies_method(const QString &genre, const QString &ag
     }
 }
 
-void MainWindow::get_top_kinopoisk(std::vector<Movie> top_movies) {
-    for (const auto& movie: top_movies)
-        add_movie_card_top(QString::fromStdString(movie.get_title()),
-                           QString::fromStdString(movie.get_genre()),
-                           QString::fromStdString(std::to_string(movie.get_rating())),
-                           QString::fromStdString(std::to_string(movie.get_release_year())),
-                           QString::fromStdString(movie.get_age_limit()),
-                           QString::fromStdString(movie.get_description()),
-                           QString::fromStdString(movie.get_runtime()),
-                           QString::fromStdString(movie.get_poster_link()),
-                           QString::fromStdString(movie.get_trailer_link()),
-                           movie.get_id());
+void MainWindow::get_top_kinopoisk(std::vector<Movie> &top_movies) {
+    load_next_top_movies(top_movies);
+    top_movies_for_list = top_movies;
 
-
+    connect(ui->TopMoviesListTopsPage->verticalScrollBar(), &QScrollBar::valueChanged, this, [this]() {
+        if (ui->TopMoviesListTopsPage->verticalScrollBar()->value() ==
+            ui->TopMoviesListTopsPage->verticalScrollBar()->maximum()) {
+            load_next_top_movies(top_movies_for_list);
+        }
+    });
 }
 
 void MainWindow::add_movie_card_top(const QString &title, const QString &genre, const QString &rating,
@@ -565,6 +613,28 @@ void MainWindow::add_movie_card_top(const QString &title, const QString &genre, 
 
     connect(movie_card->getMovieCardInfo(), &MovieCardInfo::prepare_to_del_liked_movie,
             this, &MainWindow::delete_liked_movie);
+}
+
+void MainWindow::load_next_top_movies(std::vector<Movie> &top_movies, size_t batch_size) {
+    size_t end_index = std::min(next_movie_index_top + batch_size, top_movies.size());
+    for (size_t i = next_movie_index_top; i < end_index; ++i) {
+        const auto& top_movie = top_movies[i];
+        add_movie_card_top(
+                QString::fromStdString(top_movie.get_title()),
+                QString::fromStdString(top_movie.get_genre()),
+                QString::number(top_movie.get_rating()),
+                QString::number(top_movie.get_release_year()),
+                QString::fromStdString(top_movie.get_age_limit()),
+                QString::fromStdString(top_movie.get_description()),
+                QString::fromStdString(top_movie.get_runtime()),
+                QString::fromStdString(top_movie.get_poster_link()),
+                QString::fromStdString(top_movie.get_trailer_link()),
+                top_movie.get_id()
+        );
+    }
+    next_movie_index_top = end_index;
+
+
 }
 
 

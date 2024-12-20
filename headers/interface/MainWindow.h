@@ -33,6 +33,7 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QFile>
+#include <QScrollBar>
 
 
 QT_BEGIN_NAMESPACE
@@ -115,7 +116,7 @@ private slots:
     void get_filters_autoselection(const QString& genre, const QString& age_limit, const QString& rating,
                                     const QString& year, const QString& runtime);
 
-    void get_top_kinopoisk(std::vector<Movie> top_movies);
+    void get_top_kinopoisk(std::vector<Movie> &top_movies);
 
     void add_movie_card_top(const QString& title, const QString& genre,
                         const QString& rating, const QString& release_year, const QString& age_limit,
@@ -123,6 +124,12 @@ private slots:
                         const QString &trailer_link, int id);
 
     void on_AdminButton_clicked();
+
+    void load_next_movies(size_t count = 5);
+
+    void load_next_liked_movies(size_t batch_size = 5);
+
+    void load_next_top_movies(std::vector<Movie> &top_movies, size_t batch_size = 5);
 
 private:
     Ui::MainWindow *ui;
@@ -154,6 +161,10 @@ private:
     QString runtime_filter_autoselection {"Любая длительность"};
     TopParser* parser {new TopParser};
     AdminWindow* admin_window;
+    int next_movie_index;
+    size_t next_movie_index_liked;
+    size_t next_movie_index_top;
+    std::vector<Movie> top_movies_for_list;
 };
 
 

@@ -804,6 +804,7 @@ D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/VKFSGOINM3/m
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/QListWidget \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/QMainWindow \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/QPushButton \
+  D:/Qt/6.7.3/mingw_64/include/QtWidgets/QScrollBar \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/QToolButton \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/QWidget \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qabstractbutton.h \
@@ -820,6 +821,7 @@ D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/VKFSGOINM3/m
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qmainwindow.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qpushbutton.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qrubberband.h \
+  D:/Qt/6.7.3/mingw_64/include/QtWidgets/qscrollbar.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qsizepolicy.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qslider.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qstyle.h \

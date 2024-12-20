@@ -407,9 +407,7 @@ D:/Labs-2-cours/Labs-2-cours/headers/MyVector.h
 D:/Labs-2-cours/Labs-2-cours/headers/TopParser.h
 D:/Labs-2-cours/Labs-2-cours/headers/database/DBManager.h
 D:/Labs-2-cours/Labs-2-cours/headers/UserErrorExceptions.h
-D:/Labs-2-cours/Labs-2-cours/source/search/RuntimeFilter.cpp
-D:/Labs-2-cours/Labs-2-cours/source/repositories/IMoviesRepository.cpp
-D:/Labs-2-cours/Labs-2-cours/headers/repositories/IMoviesRepository.h
+D:/Labs-2-cours/Labs-2-cours/headers/auth_models/User.h
 D:/Labs-2-cours/Labs-2-cours/headers/interface/MainWindow.h
  mmc:Q_OBJECT
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/adxintrin.h
@@ -1205,6 +1203,7 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/MainWindow.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/QListWidget
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/QMainWindow
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/QPushButton
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/QScrollBar
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/QToolButton
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/QWidget
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qabstractbutton.h
@@ -1219,6 +1218,7 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/MainWindow.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qmainwindow.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qpushbutton.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qrubberband.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qscrollbar.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qsizepolicy.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qslider.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qstyle.h
@@ -1240,7 +1240,12 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/MainWindow.h
  mdp:D:/cURL/include/curl/system.h
  mdp:D:/cURL/include/curl/urlapi.h
  mdp:D:/cURL/include/curl/websockets.h
-D:/Labs-2-cours/Labs-2-cours/headers/auth_models/User.h
+D:/Labs-2-cours/Labs-2-cours/headers/repositories/IMoviesRepository.h
+D:/Labs-2-cours/Labs-2-cours/source/repositories/IMoviesRepository.cpp
+D:/Labs-2-cours/Labs-2-cours/source/search/RuntimeFilter.cpp
+D:/Labs-2-cours/Labs-2-cours/headers/database/Database.h
+D:/Labs-2-cours/Labs-2-cours/source/UserErrorExceptions.cpp
+D:/Labs-2-cours/Labs-2-cours/headers/MovieRecommender.h
 D:/Labs-2-cours/Labs-2-cours/headers/interface/AdminWindow.h
  mmc:Q_OBJECT
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/algorithm
@@ -1668,20 +1673,15 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/AdminWindow.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qtwidgetsexports.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qwidget.h
-D:/Labs-2-cours/Labs-2-cours/headers/MovieRecommender.h
-D:/Labs-2-cours/Labs-2-cours/source/UserErrorExceptions.cpp
-D:/Labs-2-cours/Labs-2-cours/headers/database/Database.h
-D:/Labs-2-cours/Labs-2-cours/headers/search/GenreFilter.h
 D:/Labs-2-cours/Labs-2-cours/headers/database/LikedDBManager.h
+D:/Labs-2-cours/Labs-2-cours/headers/search/GenreFilter.h
 D:/Labs-2-cours/Labs-2-cours/headers/database/MoviesDBManager.h
-D:/Labs-2-cours/Labs-2-cours/source/MovieRecommender.cpp
-D:/Labs-2-cours/Labs-2-cours/source/interface/loginwindow.cpp
- uic:ui_LoginWindow.h
+D:/Labs-2-cours/Labs-2-cours/headers/database/UsersDBManager.h
 D:/Labs-2-cours/Labs-2-cours/source/interface/MainWindow.cpp
  uic:ui_mainwindow.h
-D:/Labs-2-cours/Labs-2-cours/headers/database/UsersDBManager.h
-D:/Labs-2-cours/Labs-2-cours/source/models/LikedMovie.cpp
-D:/Labs-2-cours/Labs-2-cours/source/database/LikedDBManager.cpp
+D:/Labs-2-cours/Labs-2-cours/source/interface/loginwindow.cpp
+ uic:ui_LoginWindow.h
+D:/Labs-2-cours/Labs-2-cours/source/MovieRecommender.cpp
 D:/Labs-2-cours/Labs-2-cours/headers/interface/MovieCard.h
  mmc:Q_OBJECT
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/algorithm
@@ -2088,6 +2088,8 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/MovieCard.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qtwidgetsexports.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qwidget.h
+D:/Labs-2-cours/Labs-2-cours/source/database/LikedDBManager.cpp
+D:/Labs-2-cours/Labs-2-cours/source/models/LikedMovie.cpp
 D:/Labs-2-cours/Labs-2-cours/headers/interface/MovieCardInfo.h
  mmc:Q_OBJECT
  mdp:C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/algorithm
@@ -3299,6 +3301,7 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/loginwindow.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/QListWidget
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/QMainWindow
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/QPushButton
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/QScrollBar
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/QToolButton
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/QWidget
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qabstractbutton.h
@@ -3315,6 +3318,7 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/loginwindow.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qmainwindow.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qpushbutton.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qrubberband.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qscrollbar.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qsizepolicy.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qslider.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qstyle.h
@@ -3336,30 +3340,30 @@ D:/Labs-2-cours/Labs-2-cours/headers/interface/loginwindow.h
  mdp:D:/cURL/include/curl/system.h
  mdp:D:/cURL/include/curl/urlapi.h
  mdp:D:/cURL/include/curl/websockets.h
-D:/Labs-2-cours/Labs-2-cours/headers/repositories/LikedRepository.h
 D:/Labs-2-cours/Labs-2-cours/headers/models/LikedMovie.h
+D:/Labs-2-cours/Labs-2-cours/headers/repositories/LikedRepository.h
 D:/Labs-2-cours/Labs-2-cours/headers/repositories/IUsersRepository.h
 D:/Labs-2-cours/Labs-2-cours/headers/search/AgeLimitFilter.h
-D:/Labs-2-cours/Labs-2-cours/source/search/AgeLimitFilter.cpp
 D:/Labs-2-cours/Labs-2-cours/headers/search/CompositeFilters.h
+D:/Labs-2-cours/Labs-2-cours/source/search/AgeLimitFilter.cpp
 D:/Labs-2-cours/Labs-2-cours/headers/search/ICompositFilters.h
-D:/Labs-2-cours/Labs-2-cours/source/search/YearFilter.cpp
 D:/Labs-2-cours/Labs-2-cours/headers/search/IFilter.h
+D:/Labs-2-cours/Labs-2-cours/source/search/YearFilter.cpp
 D:/Labs-2-cours/Labs-2-cours/headers/search/RatingFilter.h
 D:/Labs-2-cours/Labs-2-cours/headers/search/RuntimeFilter.h
 D:/Labs-2-cours/Labs-2-cours/headers/search/YearFilter.h
 D:/Labs-2-cours/Labs-2-cours/SQLiteLibrary/sqlite3.c
 D:/Labs-2-cours/Labs-2-cours/source/JSONMovieCollection.cpp
-D:/Labs-2-cours/Labs-2-cours/source/database/MoviesDBManager.cpp
 D:/Labs-2-cours/Labs-2-cours/source/MovieErrorExceptions.cpp
+D:/Labs-2-cours/Labs-2-cours/source/database/MoviesDBManager.cpp
 D:/Labs-2-cours/Labs-2-cours/source/TopParser.cpp
-D:/Labs-2-cours/Labs-2-cours/source/models/Movie.cpp
 D:/Labs-2-cours/Labs-2-cours/source/auth_models/User.cpp
-D:/Labs-2-cours/Labs-2-cours/source/search/CompositeFilters.cpp
+D:/Labs-2-cours/Labs-2-cours/source/models/Movie.cpp
 D:/Labs-2-cours/Labs-2-cours/source/database/Database.cpp
+D:/Labs-2-cours/Labs-2-cours/source/search/CompositeFilters.cpp
+D:/Labs-2-cours/Labs-2-cours/source/database/UsersDBManager.cpp
 D:/Labs-2-cours/Labs-2-cours/source/interface/AdminWindow.cpp
  uic:ui_AdminWindow.h
-D:/Labs-2-cours/Labs-2-cours/source/database/UsersDBManager.cpp
 D:/Labs-2-cours/Labs-2-cours/source/interface/FiltersWindow.cpp
  uic:ui_FiltersWindow.h
 D:/Labs-2-cours/Labs-2-cours/source/interface/MovieCardInfo.cpp
