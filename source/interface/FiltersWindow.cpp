@@ -30,3 +30,6 @@ void FiltersWindow::onApplyButtonClicked() {
     emit FiltersWindow::filters_applied(genre, age_limit, rating, year, runtime);
 }
 
+void FiltersWindow::closeEvent(QCloseEvent *event) {
+    emit filters_window_close();
+}

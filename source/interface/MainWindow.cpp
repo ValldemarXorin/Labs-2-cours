@@ -48,6 +48,10 @@ MainWindow::~MainWindow() {
     delete ui;
 }
 
+void MainWindow::mainwindow_set_enabled_true() {
+    this->setEnabled(true);
+}
+
 void MainWindow::on_MenuButtonAutoselectionMoviePage_clicked() {
     ui->MenuListAutoselectionMoviePage->setFixedWidth(118);
     ui->MenuButtonAutoselectionMoviePage->setVisible(false);
@@ -197,10 +201,15 @@ void MainWindow::on_MenuListLikedPage_itemClicked(QListWidgetItem *item) {
 }
 
 void MainWindow::on_FiltersButtonSearchPage_clicked() {
+    this->setEnabled(false);
     filters_window->show();
+
 
     connect(filters_window, &FiltersWindow::filters_applied,
             this, &MainWindow::get_filters);
+
+    connect(filters_window, &FiltersWindow::filters_window_close,
+            this, &MainWindow::mainwindow_set_enabled_true);
 }
 
 void MainWindow::get_filters(const QString &genre, const QString &age_limit, const QString &rating, const QString &year,
@@ -336,11 +345,13 @@ void MainWindow::add_movie_card_liked(const QString &title, const QString &genre
                                       int id) {
     auto movie_card = new MovieCard();
 
-    bool is_liked = std::any_of(
-            liked_movies->get_liked_movies(current_user->get_id()).begin(),
-            liked_movies->get_liked_movies(current_user->get_id()).end(),
-            [id](const Movie& movie) { return movie.get_id() == id; }
-    );
+    bool is_liked = false;
+    for (auto& like_movie: liked_movies->get_liked_movies(current_user->get_id())) {
+        if (like_movie.get_id() == id) {
+            is_liked = true;
+            break;
+        }
+    }
 
     movie_card->set_movie_card_data(title, genre, rating, release_year, age_limit, description, id, runtime,  poster_link, trailer_link, is_liked);
 

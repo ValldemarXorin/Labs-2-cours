@@ -23,11 +23,13 @@ public:
 public slots:
     void onApplyButtonClicked();
 
-    //void on_ClearAllButton_clicked();
+    void closeEvent(QCloseEvent *event) override;
 
     signals:
     void filters_applied(const QString& genre, const QString& age_limit, const QString& rating,
                          const QString& year, const QString& runtime);
+
+    void filters_window_close();
 
 private:
     Ui::FiltersWindow *ui;

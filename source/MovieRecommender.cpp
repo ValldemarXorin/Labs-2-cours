@@ -43,7 +43,7 @@ MovieRecommender::findClosestByCriteria(const std::vector<Movie> &candidates, in
         throw std::runtime_error("No candidates available for selection.");
     }
 
-    double mid_diff;
+    double mid_diff = 0;
     std::vector<std::pair<Movie, int>> diffs;
     for (const auto& movie : candidates) {
         int diff = byAge ? std::abs(movie.get_int_age_limit() - target) : std::abs(movie.get_runtime_minutes() - target);

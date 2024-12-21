@@ -49,7 +49,7 @@ private:
     IUserRepository *users;
     IMoviesRepository *movies_repository;
     LikedRepository* liked_movies;
-    TopParser* parser;
+    TopParser* parser {new TopParser};
     std::vector<Movie> top_movies;
 };
 

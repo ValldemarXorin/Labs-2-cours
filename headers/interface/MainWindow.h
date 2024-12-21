@@ -34,6 +34,9 @@
 #include <QJsonObject>
 #include <QFile>
 #include <QScrollBar>
+#include <unistd.h>
+#include <QFuture>
+#include <QtConcurrent/QtConcurrent>
 
 
 QT_BEGIN_NAMESPACE
@@ -50,6 +53,9 @@ public:
     ~MainWindow() override;
 
 private slots:
+
+    void mainwindow_set_enabled_true();
+
     void on_MenuButtonAutoselectionMoviePage_clicked();
 
     void on_MenuButtonSearchPage_clicked();

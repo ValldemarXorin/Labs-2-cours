@@ -60,6 +60,13 @@ public:
         if (mainwindow->objectName().isEmpty())
             mainwindow->setObjectName("mainwindow");
         mainwindow->resize(615, 445);
+        QSizePolicy sizePolicy(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(mainwindow->sizePolicy().hasHeightForWidth());
+        mainwindow->setSizePolicy(sizePolicy);
+        mainwindow->setMinimumSize(QSize(615, 445));
+        mainwindow->setMaximumSize(QSize(615, 445));
         mainwindow->setStyleSheet(QString::fromUtf8("QWidget {\n"
 "                background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, \n"
 "                                    stop: 0 #1E1E1E, /* \320\235\320\260\321\207\320\260\320\273\321\214\320\275\321\213\320\271 \321\206\320\262\320\265\321\202 (\321\202\320\265\320\274\320\275\321\213\320\271) */\n"

@@ -88,9 +88,15 @@ std::vector<Movie> TopParser::fetch_movies(const std::vector<Movie>& all_movies)
     if (is_file_recent()) {
         return load_movies_from_file();
     }
-    std::string response = perform_request(apiUrl, apiKey);
-    auto movies = parse_movies(response, all_movies);
-    save_movies_to_file(movies);
+    std::vector<Movie> movies;
+    try {
+        std::string response = perform_request(apiUrl, apiKey);
+        movies = parse_movies(response, all_movies);
+        save_movies_to_file(movies);
+    }
+    catch (std::runtime_error& e) {
+        movies = load_movies_from_file();
+    }
     return movies;
 }
 
@@ -183,7 +189,7 @@ bool TopParser::is_file_recent() {
     std::time_t lastParseEpoch = std::mktime(&lastParseTm);
     std::time_t now = std::time(nullptr);
 
-    return std::difftime(now, lastParseEpoch) <= 86400; // 86400 секунд = 1 день
+    return std::difftime(now, lastParseEpoch) <= 86; // 86400 секунд = 1 день
 }
 
 std::string TopParser::get_last_update_time() {

@@ -31,8 +31,8 @@ private:
     std::vector<Movie> load_movies_from_file();
     bool is_file_recent();
 
-    const std::string apiUrl = "https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_250_BEST_FILMS&page=1";
-    const std::string apiKey = "465e660a-218c-4f1b-b072-ac7daa1b6e81";
+    std::string apiUrl = "https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_250_BEST_FILMS&page=1";
+    std::string apiKey = "465e660a-218c-4f1b-b072-ac7daa1b6e81";
 };
 
 #endif //LABS_2_COURS_TOPPARSER_H
