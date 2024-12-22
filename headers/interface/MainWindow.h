@@ -19,6 +19,7 @@
 #include "../JSONMovieCollection.h"
 #include "../MovieRecommender.h"
 #include "../TopParser.h"
+#include "FiltersWindowSearch.h"
 #include "FiltersWindow.h"
 #include "MovieCard.h"
 #include "MovieCardInfo.h"
@@ -110,6 +111,9 @@ private slots:
     void apply_filters_json(const QString& genre, const QString& age_limit, const QString& rating,
                             const QString& year, const QString& runtime);
 
+    void prepare_filters_json(const QString& genre, const QString& age_limit, const QString& rating,
+                              const QString& year, const QString& runtime);
+
     void on_AutoselectionButton_clicked();
 
     void on_LoadToFileButton_clicked();
@@ -137,15 +141,18 @@ private slots:
 
     void load_next_top_movies(std::vector<Movie> &top_movies, size_t batch_size = 5);
 
+    signals:
+    void prepare_liked_movies_for_json(std::vector<Movie> liked_movies, std::vector<Movie> json_movies);
+
 private:
     Ui::MainWindow *ui;
     IUserRepository* users;
     IMoviesRepository* movies_repository;
     LikedRepository* liked_movies;
     SearchEngine* search_engine;
-    FiltersWindow* filters_window {new FiltersWindow};
+    FiltersWindowSearch* filters_window {new FiltersWindowSearch};
     FiltersWindow* filters_window_json {new FiltersWindow};
-    FiltersWindow* filters_window_autoselection {new FiltersWindow};
+    FiltersWindowSearch* filters_window_autoselection {new FiltersWindowSearch};
     MyVector<Movie> liked_movies_for_json;
     User* current_user;
     int precurrent_length_text_search_field{0};
@@ -169,7 +176,7 @@ private:
     AdminWindow* admin_window;
     int next_movie_index;
     size_t next_movie_index_liked;
-    size_t next_movie_index_top;
+    size_t next_movie_index_top {0};
     std::vector<Movie> top_movies_for_list;
 };
 

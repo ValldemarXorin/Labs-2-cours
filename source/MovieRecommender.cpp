@@ -1,6 +1,6 @@
-//
-// Created by vova3 on 15.12.2024.
-//
+////
+//// Created by vova3 on 15.12.2024.
+////
 
 #include "../headers/MovieRecommender.h"
 
@@ -89,6 +89,8 @@ MovieRecommender::recommendMovies(const std::vector<Movie> &liked_movies, const 
                                  const std::string &ageFilter, const std::string &ratingFilter,
                                  const std::string &runtimeFilter, const std::string &yearFilter)  {
 
+    auto start = std::chrono::high_resolution_clock::now();
+
     if (liked_movies.empty()) {
         if (movies.size() < 5) {
             throw std::runtime_error("Not enough movies available for random selection.");
@@ -101,7 +103,33 @@ MovieRecommender::recommendMovies(const std::vector<Movie> &liked_movies, const 
         static std::mt19937 gen(rd());
         std::shuffle(indices.begin(), indices.end(), gen);
 
-        for (int i = 0; i < 5; ++i) {
+        int high = 5;
+        for (int i = 0; i < high; ++i) {
+            if (genreFilter != "Любой жанр" && movies[indices[i]].get_genre().find(genreFilter) == std::string::npos) {
+                ++high;
+                if (high >= movies.size()) break;
+                continue;
+            }
+            if (ageFilter != "Любой возраст" && movies[indices[i]].get_age_limit() != ageFilter) {
+                ++high;
+                if (high >= movies.size()) break;
+                continue;
+            }
+            if (ratingFilter != "Любой рейтинг" && ((ratingFilter == "Выше" && movies[indices[i]].get_rating() <= 7) || (ratingFilter == "Ниже" && movies[indices[i]].get_rating() > 7))) {
+                ++high;
+                if (high >= movies.size()) break;
+                continue;
+            }
+            if (runtimeFilter != "Любая длительность" && ((runtimeFilter == "Длиннее" && movies[indices[i]].get_runtime_minutes() <= 120) || (runtimeFilter == "Короче" && movies[indices[i]].get_runtime_minutes() > 120))) {
+                ++high;
+                if (high >= movies.size()) break;
+                continue;
+            }
+            if (yearFilter != "Любой год" && ((yearFilter == "Новые" && movies[indices[i]].get_release_year() < 2000) || (yearFilter == "Старые" && movies[indices[i]].get_release_year() >= 2000))) {
+                ++high;
+                if (high >= movies.size()) break;
+                continue;
+            }
             randomRecommendations.push_back(movies[indices[i]]);
         }
         return randomRecommendations;
@@ -179,5 +207,7 @@ MovieRecommender::recommendMovies(const std::vector<Movie> &liked_movies, const 
         }
     }
 
+    auto end = std::chrono::high_resolution_clock::now();
+    qDebug() << end - start;
     return recommendations;
 }

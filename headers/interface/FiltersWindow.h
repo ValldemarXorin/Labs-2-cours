@@ -6,6 +6,9 @@
 #define LABS_2_COURS_FILTERSWINDOW_H
 
 #include <QWidget>
+#include "MovieCard.h"
+#include "../repositories/LikedRepository.h"
+#include <string>
 
 
 QT_BEGIN_NAMESPACE
@@ -25,11 +28,26 @@ public slots:
 
     void closeEvent(QCloseEvent *event) override;
 
+    void onPrepareButtonClicked();
+
+    void add_movie_cards_json(std::vector<Movie> liked_movies, std::vector<Movie> json_movies);
+
+    void add_liked_movie_prepare(int movie_id);
+
+    void delete_liked_movie_prepare(int movie_id);
+
     signals:
     void filters_applied(const QString& genre, const QString& age_limit, const QString& rating,
                          const QString& year, const QString& runtime);
 
     void filters_window_close();
+
+    void filters_prepare(const QString& genre, const QString& age_limit, const QString& rating,
+                         const QString& year, const QString& runtime);
+
+    void add_liked_movie(int movie_id);
+
+    void delete_liked_movie(int movie_id);
 
 private:
     Ui::FiltersWindow *ui;

@@ -102,6 +102,9 @@ add_executable(Labs-2-cours
         source/interface/AdminWindow.cpp
         headers/interface/AdminWindow.h
         source/interface/AdminWindow.ui
+        source/interface/FiltersWindowSearch.cpp
+        headers/interface/FiltersWindowSearch.h
+        source/interface/FiltersWindowSearch.ui
 )
 
 include_directories(${CURL_INCLUDE_DIR})

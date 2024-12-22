@@ -16,6 +16,9 @@
 #include <numeric>
 #include "models/Movie.h"
 
+#include <chrono>
+#include <QDebug>
+
 class MovieRecommender {
 private:
     std::vector<Movie> movies;

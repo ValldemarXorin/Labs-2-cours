@@ -390,6 +390,12 @@
 			null
 		],
 		[
+			"D:/Labs-2-cours/Labs-2-cours/headers/interface/FiltersWindowSearch.h",
+			"MU",
+			"VKFSGOINM3/moc_FiltersWindowSearch.cpp",
+			null
+		],
+		[
 			"D:/Labs-2-cours/Labs-2-cours/headers/interface/MainWindow.h",
 			"MU",
 			"VKFSGOINM3/moc_MainWindow.cpp",
@@ -627,6 +633,11 @@
 		],
 		[
 			"D:/Labs-2-cours/Labs-2-cours/source/interface/FiltersWindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Labs-2-cours/Labs-2-cours/source/interface/FiltersWindowSearch.cpp",
 			"MU",
 			null
 		],

@@ -205,10 +205,10 @@ void MainWindow::on_FiltersButtonSearchPage_clicked() {
     filters_window->show();
 
 
-    connect(filters_window, &FiltersWindow::filters_applied,
+    connect(filters_window, &FiltersWindowSearch::filters_applied,
             this, &MainWindow::get_filters);
 
-    connect(filters_window, &FiltersWindow::filters_window_close,
+    connect(filters_window, &FiltersWindowSearch::filters_window_close,
             this, &MainWindow::mainwindow_set_enabled_true);
 }
 
@@ -411,32 +411,51 @@ void MainWindow::show_liked_movies() {
 void MainWindow::on_LoadToFileButton_clicked() {
     filters_window_json->show();
 
+    connect(filters_window_json, &FiltersWindow::filters_prepare,
+            this, &MainWindow::prepare_filters_json);
+
     connect(filters_window_json, &FiltersWindow::filters_applied,
             this, &MainWindow::apply_filters_json);
+
+    connect(this, &MainWindow::prepare_liked_movies_for_json,
+            filters_window_json, &FiltersWindow::add_movie_cards_json);
+
 }
 
-void MainWindow::apply_filters_json(const QString &genre, const QString &age_limit, const QString &rating,
-                                    const QString &year, const QString &runtime) {
+void MainWindow::prepare_filters_json(const QString &genre, const QString &age_limit, const QString &rating,
+                                      const QString &year, const QString &runtime) {
     auto compositeFilter = new CompositeFilter;
-    if (genre_filter != "Любой жанр")
-        compositeFilter->addFilter(new GenreFilter(genre_filter.toStdString()));
-    if (age_limit_filter != "Любой возраст")
-        compositeFilter->addFilter(new AgeLimitFilter(age_limit_filter.toStdString()));
-    if (rating_filter == "Выше")
+    if (genre != "Любой жанр")
+        compositeFilter->addFilter(new GenreFilter(genre.toStdString()));
+    if (age_limit != "Любой возраст")
+        compositeFilter->addFilter(new AgeLimitFilter(age_limit.toStdString()));
+    if (rating == "Выше")
         compositeFilter->addFilter((new RatingFilter(true)));
-    if (rating_filter == "Ниже")
+    if (rating == "Ниже")
         compositeFilter->addFilter((new RatingFilter(false)));
-    if (runtime_filter == "Длиннее")
+    if (runtime == "Длиннее")
         compositeFilter->addFilter(new RuntimeFilter(true));
-    if (runtime_filter == "Короче")
+    if (runtime == "Короче")
         compositeFilter->addFilter(new RuntimeFilter(false));
-    if (year_filter == "Новые")
+    if (year == "Новые")
         compositeFilter->addFilter(new YearFilter(true));
-    if (year_filter == "Старые")
+    if (year == "Старые")
         compositeFilter->addFilter(new YearFilter(false));
 
     liked_movies_for_json.fromStdVector(liked_movies->get_liked_movies(current_user->get_id()));
     liked_movies_for_json = compositeFilter->apply(liked_movies_for_json);
+
+    emit prepare_liked_movies_for_json(liked_movies->get_liked_movies(current_user->get_id()), liked_movies_for_json.toStdVector());
+
+    connect(filters_window_json, &FiltersWindow::add_liked_movie,
+            this, &MainWindow::add_liked_movie);
+
+    connect(filters_window_json, &FiltersWindow::delete_liked_movie,
+            this, &MainWindow::delete_liked_movie);
+}
+
+void MainWindow::apply_filters_json(const QString &genre, const QString &age_limit, const QString &rating,
+                                    const QString &year, const QString &runtime) {
 
     for (auto& temp: liked_movies_for_json) {
         qDebug() << temp.get_rating();
@@ -512,10 +531,10 @@ void MainWindow::add_movie_card_autoselection_random(const QString &title, const
 void MainWindow::on_FiltersButtonAutoselectionMoviePage_clicked() {
     filters_window_autoselection->show();
 
-    connect(filters_window_autoselection, &FiltersWindow::filters_applied,
+    connect(filters_window_autoselection, &FiltersWindowSearch::filters_applied,
             this, &MainWindow::get_filters_autoselection);
 
-    connect(filters_window_autoselection, &FiltersWindow::filters_applied,
+    connect(filters_window_autoselection, &FiltersWindowSearch::filters_applied,
                 this, &MainWindow::recommend_movies_method);
 
     ui->ErrorAutoselectionMoviePage->setVisible(false);
@@ -548,7 +567,10 @@ void MainWindow::recommend_movies_method(const QString &genre, const QString &ag
         recommend_movies = recommend->recommendMovies(liked_movies->get_liked_movies(current_user->get_id()),
                                                       genre.toStdString(), age_limit.toStdString(),
                                                       rating.toStdString(), runtime.toStdString(), year.toStdString());
-
+        if (recommend_movies.size() == 0) {
+            ui->ErrorAutoselectionMoviePage->setVisible(true);
+            return;
+        }
         for (int i = 0; i < recommend_movies.size() - 2; ++i)
             add_movie_card_autoselection_favorites(QString::fromStdString(recommend_movies[i].get_title()),
                                                    QString::fromStdString(recommend_movies[i].get_genre()),
