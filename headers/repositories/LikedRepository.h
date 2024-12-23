@@ -7,6 +7,7 @@
 #include "../database/DBManager.h"
 #include "../database/LikedDBManager.h"
 #include "../auth_models/User.h"
+#include <algorithm>
 
 class LikedRepository {
     DBManager<LikedMovie>* liked_movies_db_manager;
@@ -21,6 +22,8 @@ public:
     void add_liked_movie(int user_id, int movie_id, std::vector<Movie> all_movies);
 
     void delete_liked_movie(int user_id, int movie_id);
+
+    void delete_user_liked_movie(int user_id);
 
     std::vector<Movie> get_liked_movies(int user_id);
 };

@@ -22,9 +22,23 @@ AdminWindow::AdminWindow(IMoviesRepository* movies_repository, QWidget *parent) 
     ui->ErrorTrailerAddPage->setVisible(false);
     ui->ErrorYearAddPage->setVisible(false);
     ui->SuccessfulAddAddPage->setVisible(false);
+    ui->ErrorGenreRemovePage->setVisible(false);
+    ui->ErrorPosterRemovePage->setVisible(false);
+    ui->ErrorTitleRemovePage->setVisible(false);
+    ui->ErrorYearRemovePage->setVisible(false);
+    ui->SuccessfulRemoveAddPage->setVisible(false);
 
     connect(ui->addMoviePageAddPage, &QPushButton::clicked,
             this, &AdminWindow::on_addMoviePageAddPage_clicked);
+
+    connect(ui->removeMoviePageRemovePage, &QPushButton::clicked,
+            this, &AdminWindow::on_removeMoviePageRemovePage_clicked);
+
+    connect(ui->toAddPage, &QPushButton::clicked,
+            this, &AdminWindow::go_to_add);
+
+    connect(ui->toRemovePage, &QPushButton::clicked,
+            this, &AdminWindow::go_to_delete);
 }
 
 AdminWindow::~AdminWindow() {
@@ -110,6 +124,61 @@ void AdminWindow::on_addMoviePageAddPage_clicked() {
         }
         else
             ui->SuccessfulAddAddPage->setVisible(false);
-
     }
+    emit movie_add_complete();
 }
+
+void AdminWindow::on_removeMoviePageRemovePage_clicked() {
+    bool is_continue = true;
+
+    if (ui->titleRemovePage->text().isEmpty()) {
+        ui->ErrorTitleRemovePage->setVisible(true);
+        is_continue = false;
+    }
+    else
+        ui->ErrorTitleRemovePage->setVisible(false);
+
+    if (!movies_repository->validate_year(ui->yearRemovePage->text().toInt())) {
+        ui->ErrorYearRemovePage->setVisible(true);
+        is_continue = false;
+    }
+    else
+        ui->ErrorYearRemovePage->setVisible(false);
+
+    if (!movies_repository->validate_genre(ui->genreRemovePage->text().toStdString())) {
+        ui->ErrorGenreRemovePage->setVisible(true);
+        is_continue = false;
+    }
+    else
+        ui->ErrorGenreRemovePage->setVisible(false);
+
+    if (!movies_repository->validate_poster(ui->posterRemovePage->text().toStdString())) {
+        ui->ErrorPosterRemovePage->setVisible(true);
+        is_continue = false;
+    }
+    else
+        ui->ErrorPosterRemovePage->setVisible(false);
+
+    if (is_continue) {
+        movies_repository->delete_movie(ui->titleRemovePage->text().toStdString());
+
+        ui->titleRemovePage->clear();
+        ui->genreRemovePage->clear();
+        ui->yearRemovePage->clear();
+        ui->posterRemovePage->clear();
+        ui->SuccessfulRemoveAddPage->setVisible(true);
+    }
+    else
+        ui->SuccessfulRemoveAddPage->setVisible(false);
+
+    emit movie_remove_complete();
+}
+
+void AdminWindow::go_to_add() {
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+void AdminWindow::go_to_delete() {
+    ui->stackedWidget->setCurrentIndex(1);
+}
+

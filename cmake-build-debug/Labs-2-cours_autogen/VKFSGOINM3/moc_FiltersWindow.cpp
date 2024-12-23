@@ -58,7 +58,9 @@ constexpr auto qt_meta_stringdata_CLASSFiltersWindowENDCLASS = QtMocHelpers::str
     "liked_movies",
     "json_movies",
     "add_liked_movie_prepare",
-    "delete_liked_movie_prepare"
+    "delete_liked_movie_prepare",
+    "loadNextBatch",
+    "batchSize"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -71,7 +73,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSFiltersWindowENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-      11,   14, // methods
+      13,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -79,19 +81,21 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSFiltersWindowENDCLASS[] = {
        5,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    5,   80,    2, 0x06,    1 /* Public */,
-       8,    0,   91,    2, 0x06,    7 /* Public */,
-       9,    5,   92,    2, 0x06,    8 /* Public */,
-      10,    1,  103,    2, 0x06,   14 /* Public */,
-      12,    1,  106,    2, 0x06,   16 /* Public */,
+       1,    5,   92,    2, 0x06,    1 /* Public */,
+       8,    0,  103,    2, 0x06,    7 /* Public */,
+       9,    5,  104,    2, 0x06,    8 /* Public */,
+      10,    1,  115,    2, 0x06,   14 /* Public */,
+      12,    1,  118,    2, 0x06,   16 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-      13,    0,  109,    2, 0x0a,   18 /* Public */,
-      14,    1,  110,    2, 0x0a,   19 /* Public */,
-      17,    0,  113,    2, 0x0a,   21 /* Public */,
-      18,    2,  114,    2, 0x0a,   22 /* Public */,
-      22,    1,  119,    2, 0x0a,   25 /* Public */,
-      23,    1,  122,    2, 0x0a,   27 /* Public */,
+      13,    0,  121,    2, 0x0a,   18 /* Public */,
+      14,    1,  122,    2, 0x0a,   19 /* Public */,
+      17,    0,  125,    2, 0x0a,   21 /* Public */,
+      18,    2,  126,    2, 0x0a,   22 /* Public */,
+      22,    1,  131,    2, 0x0a,   25 /* Public */,
+      23,    1,  134,    2, 0x0a,   27 /* Public */,
+      24,    1,  137,    2, 0x0a,   29 /* Public */,
+      24,    0,  140,    2, 0x2a,   31 /* Public | MethodCloned */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString,    3,    4,    5,    6,    7,
@@ -107,6 +111,8 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSFiltersWindowENDCLASS[] = {
     QMetaType::Void, 0x80000000 | 19, 0x80000000 | 19,   20,   21,
     QMetaType::Void, QMetaType::Int,   11,
     QMetaType::Void, QMetaType::Int,   11,
+    QMetaType::Void, QMetaType::Int,   25,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -158,7 +164,12 @@ Q_CONSTINIT const QMetaObject FiltersWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         // method 'delete_liked_movie_prepare'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'loadNextBatch'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'loadNextBatch'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
 } };
@@ -180,6 +191,8 @@ void FiltersWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 8: _t->add_movie_cards_json((*reinterpret_cast< std::add_pointer_t<std::vector<Movie>>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<std::vector<Movie>>>(_a[2]))); break;
         case 9: _t->add_liked_movie_prepare((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         case 10: _t->delete_liked_movie_prepare((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 11: _t->loadNextBatch((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 12: _t->loadNextBatch(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -241,13 +254,13 @@ int FiltersWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 11)
+        if (_id < 13)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 11;
+        _id -= 13;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 11)
+        if (_id < 13)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 11;
+        _id -= 13;
     }
     return _id;
 }

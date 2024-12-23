@@ -19,7 +19,8 @@ class SearchEngine {
 public:
     explicit SearchEngine(IMoviesRepository movies_repository);
 
-    std::vector<Movie>& search_by_fragment(std::string title_fragment, std::vector<Movie>& movies,
+    std::vector<Movie>& search_by_fragment(std::string title_fragment, IMoviesRepository& movies_repository,
+                                           std::vector<Movie>& movies,
                                           bool get_back, bool change_filters);
 };
 #endif //LABS_2_COURS_SEARCH_ENGINE_H

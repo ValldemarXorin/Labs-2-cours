@@ -289,7 +289,7 @@ void MainWindow::using_search_enging() {
     const bool is_text_shorter = search_text.length() < precurrent_length_text_search_field;
 
     movies_for_search_list = search_engine->search_by_fragment(
-            search_text, movies_for_search_list, !is_text_shorter, is_filter_apply
+            search_text, *movies_repository, movies_for_search_list, !is_text_shorter, is_filter_apply
     );
 
     if (is_filter_apply) {
@@ -673,7 +673,17 @@ void MainWindow::load_next_top_movies(std::vector<Movie> &top_movies, size_t bat
 
 void MainWindow::on_AdminButton_clicked() {
     admin_window->show();
+
+    connect(admin_window, &AdminWindow::movie_add_complete,
+            this, &MainWindow::change_movies_for_search_list);
+
+    connect(admin_window, &AdminWindow::movie_remove_complete,
+            this, &MainWindow::change_movies_for_search_list);
 }
 
+
+void MainWindow::change_movies_for_search_list() {
+    movies_for_search_list = movies_repository->get_movies();
+}
 
 

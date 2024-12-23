@@ -5,7 +5,8 @@
 
 SearchEngine::SearchEngine(IMoviesRepository movies_repository) : movies_repository(movies_repository) {}
 
-std::vector<Movie>& SearchEngine::search_by_fragment(std::string title_fragment, std::vector<Movie>& movies,
+std::vector<Movie>& SearchEngine::search_by_fragment(std::string title_fragment, IMoviesRepository& movies_repository,
+                                                     std::vector<Movie>& movies,
                                                     bool get_back, bool change_filters) {
 
     std::string title_movie;

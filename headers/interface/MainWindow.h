@@ -141,6 +141,8 @@ private slots:
 
     void load_next_top_movies(std::vector<Movie> &top_movies, size_t batch_size = 5);
 
+    void change_movies_for_search_list();
+
     signals:
     void prepare_liked_movies_for_json(std::vector<Movie> liked_movies, std::vector<Movie> json_movies);
 

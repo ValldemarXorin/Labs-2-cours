@@ -77,7 +77,7 @@ public:
         centralwidget->setObjectName("centralwidget");
         PageSwitcher = new QStackedWidget(centralwidget);
         PageSwitcher->setObjectName("PageSwitcher");
-        PageSwitcher->setGeometry(QRect(0, 0, 621, 451));
+        PageSwitcher->setGeometry(QRect(10, 0, 621, 451));
         AutoselectionMoviePage = new QWidget();
         AutoselectionMoviePage->setObjectName("AutoselectionMoviePage");
         MenuListAutoselectionMoviePage = new QListWidget(AutoselectionMoviePage);

@@ -24,6 +24,19 @@ public:
 
     void on_addMoviePageAddPage_clicked();
 
+public slots:
+
+    void on_removeMoviePageRemovePage_clicked();
+
+    void go_to_delete();
+
+    void go_to_add();
+
+    signals:
+    void movie_add_complete();
+
+    void movie_remove_complete();
+
 private:
     Ui::AdminWindow *ui;
     IMoviesRepository* movies_repository;

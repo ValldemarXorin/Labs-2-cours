@@ -56,7 +56,7 @@ void LoginWindow::on_SingIn_clicked() {
             users->user_exist(email.toStdString(), password.toStdString(), "user", users->get_all_users());
     }
     catch (const std::invalid_argument &e) {
-        ui->ErrorMessage->setText("Пользователь с данной почтой уже существует.");
+        ui->ErrorMessage->setText("Пользователя с такой почтой и паролями не существует.");
         return;
     }
 
@@ -92,7 +92,7 @@ void LoginWindow::on_SingUp_clicked() {
         users->email_exist(email.toStdString(), users->get_all_users());
     }
     catch (const std::invalid_argument &e) {
-        ui->ErrorMessage->setText("Error: This user already exist.");
+        ui->ErrorMessage->setText("Пользователь с данной почтой уже существует.");
         return;
     }
 

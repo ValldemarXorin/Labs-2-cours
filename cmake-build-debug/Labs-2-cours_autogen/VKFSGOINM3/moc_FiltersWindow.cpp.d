@@ -400,10 +400,13 @@ D:/Labs-2-cours/Labs-2-cours/cmake-build-debug/Labs-2-cours_autogen/VKFSGOINM3/m
   D:/Qt/6.7.3/mingw_64/include/QtGui/qwindowdefs.h \
   D:/Qt/6.7.3/mingw_64/include/QtGui/qwindowdefs_win.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/QPushButton \
+  D:/Qt/6.7.3/mingw_64/include/QtWidgets/QScrollBar \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/QToolButton \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/QWidget \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qabstractbutton.h \
+  D:/Qt/6.7.3/mingw_64/include/QtWidgets/qabstractslider.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qpushbutton.h \
+  D:/Qt/6.7.3/mingw_64/include/QtWidgets/qscrollbar.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qsizepolicy.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qtoolbutton.h \
   D:/Qt/6.7.3/mingw_64/include/QtWidgets/qtwidgets-config.h \

@@ -92,7 +92,8 @@ constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::string
     "count",
     "load_next_liked_movies",
     "batch_size",
-    "load_next_top_movies"
+    "load_next_top_movies",
+    "change_movies_for_search_list"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -105,7 +106,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-      42,   14, // methods
+      43,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -113,50 +114,51 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    2,  266,    2, 0x06,    1 /* Public */,
+       1,    2,  272,    2, 0x06,    1 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       6,    0,  271,    2, 0x08,    4 /* Private */,
-       7,    0,  272,    2, 0x08,    5 /* Private */,
-       8,    0,  273,    2, 0x08,    6 /* Private */,
-       9,    0,  274,    2, 0x08,    7 /* Private */,
-      10,    0,  275,    2, 0x08,    8 /* Private */,
-      11,    1,  276,    2, 0x08,    9 /* Private */,
-      14,    1,  279,    2, 0x08,   11 /* Private */,
-      15,    1,  282,    2, 0x08,   13 /* Private */,
-      16,    1,  285,    2, 0x08,   15 /* Private */,
-      17,    0,  288,    2, 0x08,   17 /* Private */,
-      18,    0,  289,    2, 0x08,   18 /* Private */,
-      19,    1,  290,    2, 0x08,   19 /* Private */,
-      21,    1,  293,    2, 0x08,   21 /* Private */,
-      22,    5,  296,    2, 0x08,   23 /* Private */,
-      28,    0,  307,    2, 0x08,   29 /* Private */,
-      29,    0,  308,    2, 0x08,   30 /* Private */,
-      30,   10,  309,    2, 0x08,   31 /* Private */,
-      37,   10,  330,    2, 0x08,   42 /* Private */,
-      38,   10,  351,    2, 0x08,   53 /* Private */,
-      39,   10,  372,    2, 0x08,   64 /* Private */,
-      40,    5,  393,    2, 0x08,   75 /* Private */,
-      41,    5,  404,    2, 0x08,   81 /* Private */,
-      42,    0,  415,    2, 0x08,   87 /* Private */,
-      43,    0,  416,    2, 0x08,   88 /* Private */,
-      44,    0,  417,    2, 0x08,   89 /* Private */,
-      45,    5,  418,    2, 0x08,   90 /* Private */,
-      45,    4,  429,    2, 0x28,   96 /* Private | MethodCloned */,
-      45,    3,  438,    2, 0x28,  101 /* Private | MethodCloned */,
-      45,    2,  445,    2, 0x28,  105 /* Private | MethodCloned */,
-      45,    1,  450,    2, 0x28,  108 /* Private | MethodCloned */,
-      45,    0,  453,    2, 0x28,  110 /* Private | MethodCloned */,
-      46,    5,  454,    2, 0x08,  111 /* Private */,
-      47,    1,  465,    2, 0x08,  117 /* Private */,
-      50,   10,  468,    2, 0x08,  119 /* Private */,
-      51,    0,  489,    2, 0x08,  130 /* Private */,
-      52,    1,  490,    2, 0x08,  131 /* Private */,
-      52,    0,  493,    2, 0x28,  133 /* Private | MethodCloned */,
-      55,    1,  494,    2, 0x08,  134 /* Private */,
-      55,    0,  497,    2, 0x28,  136 /* Private | MethodCloned */,
-      57,    2,  498,    2, 0x08,  137 /* Private */,
-      57,    1,  503,    2, 0x28,  140 /* Private | MethodCloned */,
+       6,    0,  277,    2, 0x08,    4 /* Private */,
+       7,    0,  278,    2, 0x08,    5 /* Private */,
+       8,    0,  279,    2, 0x08,    6 /* Private */,
+       9,    0,  280,    2, 0x08,    7 /* Private */,
+      10,    0,  281,    2, 0x08,    8 /* Private */,
+      11,    1,  282,    2, 0x08,    9 /* Private */,
+      14,    1,  285,    2, 0x08,   11 /* Private */,
+      15,    1,  288,    2, 0x08,   13 /* Private */,
+      16,    1,  291,    2, 0x08,   15 /* Private */,
+      17,    0,  294,    2, 0x08,   17 /* Private */,
+      18,    0,  295,    2, 0x08,   18 /* Private */,
+      19,    1,  296,    2, 0x08,   19 /* Private */,
+      21,    1,  299,    2, 0x08,   21 /* Private */,
+      22,    5,  302,    2, 0x08,   23 /* Private */,
+      28,    0,  313,    2, 0x08,   29 /* Private */,
+      29,    0,  314,    2, 0x08,   30 /* Private */,
+      30,   10,  315,    2, 0x08,   31 /* Private */,
+      37,   10,  336,    2, 0x08,   42 /* Private */,
+      38,   10,  357,    2, 0x08,   53 /* Private */,
+      39,   10,  378,    2, 0x08,   64 /* Private */,
+      40,    5,  399,    2, 0x08,   75 /* Private */,
+      41,    5,  410,    2, 0x08,   81 /* Private */,
+      42,    0,  421,    2, 0x08,   87 /* Private */,
+      43,    0,  422,    2, 0x08,   88 /* Private */,
+      44,    0,  423,    2, 0x08,   89 /* Private */,
+      45,    5,  424,    2, 0x08,   90 /* Private */,
+      45,    4,  435,    2, 0x28,   96 /* Private | MethodCloned */,
+      45,    3,  444,    2, 0x28,  101 /* Private | MethodCloned */,
+      45,    2,  451,    2, 0x28,  105 /* Private | MethodCloned */,
+      45,    1,  456,    2, 0x28,  108 /* Private | MethodCloned */,
+      45,    0,  459,    2, 0x28,  110 /* Private | MethodCloned */,
+      46,    5,  460,    2, 0x08,  111 /* Private */,
+      47,    1,  471,    2, 0x08,  117 /* Private */,
+      50,   10,  474,    2, 0x08,  119 /* Private */,
+      51,    0,  495,    2, 0x08,  130 /* Private */,
+      52,    1,  496,    2, 0x08,  131 /* Private */,
+      52,    0,  499,    2, 0x28,  133 /* Private | MethodCloned */,
+      55,    1,  500,    2, 0x08,  134 /* Private */,
+      55,    0,  503,    2, 0x28,  136 /* Private | MethodCloned */,
+      57,    2,  504,    2, 0x08,  137 /* Private */,
+      57,    1,  509,    2, 0x28,  140 /* Private | MethodCloned */,
+      58,    0,  512,    2, 0x08,  142 /* Private */,
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3, 0x80000000 | 3,    4,    5,
@@ -203,6 +205,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
     QMetaType::Void,
     QMetaType::Void, 0x80000000 | 48, 0x80000000 | 53,   49,   56,
     QMetaType::Void, 0x80000000 | 48,   49,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -398,7 +401,9 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<size_t, std::false_type>,
         // method 'load_next_top_movies'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<std::vector<Movie> &, std::false_type>
+        QtPrivate::TypeAndForceComplete<std::vector<Movie> &, std::false_type>,
+        // method 'change_movies_for_search_list'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
 } };
@@ -451,6 +456,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 39: _t->load_next_liked_movies(); break;
         case 40: _t->load_next_top_movies((*reinterpret_cast< std::add_pointer_t<std::vector<Movie>&>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<size_t>>(_a[2]))); break;
         case 41: _t->load_next_top_movies((*reinterpret_cast< std::add_pointer_t<std::vector<Movie>&>>(_a[1]))); break;
+        case 42: _t->change_movies_for_search_list(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -484,13 +490,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 42)
+        if (_id < 43)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 42;
+        _id -= 43;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 42)
+        if (_id < 43)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 42;
+        _id -= 43;
     }
     return _id;
 }

@@ -6,6 +6,7 @@
 #define LABS_2_COURS_FILTERSWINDOW_H
 
 #include <QWidget>
+#include <QScrollBar>
 #include "MovieCard.h"
 #include "../repositories/LikedRepository.h"
 #include <string>
@@ -36,6 +37,8 @@ public slots:
 
     void delete_liked_movie_prepare(int movie_id);
 
+    void loadNextBatch(int batchSize = 5);
+
     signals:
     void filters_applied(const QString& genre, const QString& age_limit, const QString& rating,
                          const QString& year, const QString& runtime);
@@ -51,6 +54,9 @@ public slots:
 
 private:
     Ui::FiltersWindow *ui;
+    std::vector<Movie> liked_movies;
+    std::vector<Movie> json_movies;
+    int currentBatchIndex;
 };
 
 

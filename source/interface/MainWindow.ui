@@ -43,7 +43,7 @@
    <widget class="QStackedWidget" name="PageSwitcher">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>10</x>
       <y>0</y>
       <width>621</width>
       <height>451</height>

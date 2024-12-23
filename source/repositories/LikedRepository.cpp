@@ -48,3 +48,10 @@ std::vector<Movie> LikedRepository::get_liked_movies(int user_id) {
     return  user_liked_movie;
 }
 
+void LikedRepository::delete_user_liked_movie(int user_id) {
+    liked_movies.erase(std::remove_if(liked_movies.begin(), liked_movies.end(),
+                                      [user_id](const LikedMovie &liked_movie) {
+                                          return liked_movie.get_user_id() == user_id;
+                                      }),
+                       liked_movies.end());
+}
